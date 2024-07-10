@@ -1,6 +1,6 @@
 (*) **Project Structure**  
 -- app: handle system's logic  
-|----- controllers: only use to directional  
+|----- controllers: only use to directional (always note the route above the function)  
 |----- middlewares: only use to process the pre-request  
 |----- models: only use to mapping with database  
 |----- repository: get the necessary data from database only  
@@ -12,9 +12,9 @@
 -- public: vendor for static informations  
 |----- css: (main, base, responsive, grid,...)  
 |----- font  
-|----- img: divided by page  
+|----- img: divided by function  
 |----- js: use 'module ES6' and Class Component  
-|----- video: divided by page  
+|----- video: divided by function  
 -- route: redirect by router  
 |----- .htaccess  
 -- views: views only  

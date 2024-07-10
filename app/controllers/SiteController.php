@@ -8,12 +8,14 @@ class SiteController{
         $this->siteService = new SiteService();
     }
 
+//    [GET] /
     public function index(){
         $this->siteService->index();
         $content = 'home';
         return include "./views/layout/index.php";
     }
 
+//    [POST] /student
     public function index_POST(){
         header('Content-Type: application/json');
         $data = json_decode(file_get_contents('php://input'), true);
