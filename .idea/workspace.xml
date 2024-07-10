@@ -4,31 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f6e08222-9fb7-42e7-bd76-c84638e5b084" name="Changes" comment="ok">
-      <change afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/.htaccess" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/SiteController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/middlewares/SiteMiddleWare.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/repository/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/services/SiteService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/services/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/services/singleton/CacheManager.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/.htaccess" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/site.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/route/.htaccess" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/route/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/route/site.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/.htaccess" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/layout/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/layout/partials/footer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/layout/partials/header.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/layout/partials/views_content.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/site/home.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="f6e08222-9fb7-42e7-bd76-c84638e5b084" name="Changes" comment="update project structure">
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -123,7 +99,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1720603490991</updated>
-      <workItem from="1720603492026" duration="22034000" />
+      <workItem from="1720603492026" duration="22366000" />
     </task>
     <task id="LOCAL-00001" summary="ok">
       <option name="closed" value="true" />
@@ -157,7 +133,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720606108895</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="update project structure">
+      <option name="closed" value="true" />
+      <created>1720626320087</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1720626320087</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,6 +187,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="ok" />
-    <option name="LAST_COMMIT_MESSAGE" value="ok" />
+    <MESSAGE value="update project structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="update project structure" />
   </component>
 </project>
