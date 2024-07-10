@@ -1,0 +1,23 @@
+RewriteEngine on
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteCond %{REQUEST_FILENAME}% !-l
+
+#RewriteEngine On
+#RewriteRule ^(.*)$ public/$4 [L]
+
+# home/student/123
+RewriteRule ^([^/]+)/([^/]+)/([^/]+)$ index.php?param_1=$1&param_2=$2&param_3=$3 [QSA]
+# /home/student
+RewriteRule ^([^/]+)/([^/]+)$ index.php?param_1=$1&param_2=$2 [QSA]
+# /home
+RewriteRule ^([^/]+)$ index.php?param_1=$1 [QSA]
+
+# RewriteRule cho URL có dạng /page/parameter1/parameter2
+# RewriteRule ^(.+)$ login_signup.php?url=$1 [L,QSA]
+# RewriteRule ^(.+)$ manager_main.php?page=$1
+
+
+#RewriteRule ^(.+)$ login_signup.php?page=$1 [L,QSA]
+

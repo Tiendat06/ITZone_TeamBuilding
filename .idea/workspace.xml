@@ -4,7 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f6e08222-9fb7-42e7-bd76-c84638e5b084" name="Changes" comment="ok" />
+    <list default="true" id="f6e08222-9fb7-42e7-bd76-c84638e5b084" name="Changes" comment="ok">
+      <change afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/.htaccess" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/SiteController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/middlewares/SiteMiddleWare.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/repository/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/services/SiteService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/services/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/services/singleton/CacheManager.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/.htaccess" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/site.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/route/.htaccess" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/route/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/route/site.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/.htaccess" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/layout/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/layout/partials/footer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/layout/partials/header.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/layout/partials/views_content.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/site/home.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,6 +39,13 @@
   <component name="ComposerSettings">
     <execution />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
@@ -20,6 +53,11 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PhpServers">
+    <servers>
+      <server host="localhost" id="c3152849-0d0c-4a13-8d65-0bd18c3ca11f" name="xampp" />
+    </servers>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
   <component name="ProjectColorInfo"><![CDATA[{
@@ -33,21 +71,42 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "PHP Script.index.php.executor": "Run",
+    "PHP Web Page.index.php.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/xampp/htdocs",
+    "last_opened_file_path": "C:/xampp/htdocs/index.php",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "project.propVCSSupport.Confirmation",
+    "settings.editor.selected.configurable": "build.tools",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
     "ChangesTree.GroupingKeys": []
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\app" />
+      <recent name="C:\xampp\htdocs\config" />
+      <recent name="C:\xampp\htdocs\route" />
+      <recent name="C:\xampp\htdocs\views" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\public" />
+      <recent name="C:\xampp\htdocs\views\layout" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="index.php" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="xampp">
+      <method v="2">
+        <option name="LaunchBrowser.Before.Run" url="/" />
+      </method>
+    </configuration>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -64,7 +123,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1720603490991</updated>
-      <workItem from="1720603492026" duration="2549000" />
+      <workItem from="1720603492026" duration="22034000" />
     </task>
     <task id="LOCAL-00001" summary="ok">
       <option name="closed" value="true" />
@@ -90,7 +149,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720605598655</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="ok">
+      <option name="closed" value="true" />
+      <created>1720606108895</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1720606108895</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
