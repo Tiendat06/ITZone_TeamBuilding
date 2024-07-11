@@ -15,14 +15,14 @@ class Site{
                     data: JSON.stringify({
                         name: 'Jake Johnson',
                     }),
-                    success: function (response) {
+                    success: function (response, status, xhr) {
                         console.log('success');
                         $('#para').html(response.message);
                     },
-                    error: function (error) {
+                    error: function (xhr, status, error) {
                         console.log(error);
                     },
-                    complete: function (){
+                    complete: function (xhr, status){
                         console.log('complete')
                     }
                 })
