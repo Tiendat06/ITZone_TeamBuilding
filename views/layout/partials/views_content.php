@@ -1,11 +1,9 @@
 <?php
-
-    function getViews($content){
-        switch ($content){
-            case 'home':
-                include "./views/site/home.php";
-                break;
-        }
-    }
+/**
+ * @var $content
+ */
+if($content == 'home'){
+    include "./views/site/home.php";
+}
 
 ?>

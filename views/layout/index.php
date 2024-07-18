@@ -2,7 +2,6 @@
     /**
      * @var $content
     */
-    include "./views/layout/partials/views_content.php";
 ?>
 <!doctype html>
 <html lang="en">
@@ -11,7 +10,7 @@
     ?>
 <body>
     <?php
-        getViews($content);
+        include "./views/layout/partials/views_content.php";
     ?>
     <?php
         include "./views/layout/partials/footer.php";

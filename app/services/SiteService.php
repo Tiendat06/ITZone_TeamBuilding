@@ -15,7 +15,7 @@ class SiteService{
         $data = json_decode(file_get_contents('php://input'), true);
         $name = $data['name'] ?? '';
         $response = array(
-            'message' => "Hello, {$name}!"
+            'message' => "<h1 class='text-danger'>Hello, {$name}!</h1>"
         );
 //        for form POST (form POST is easier to use than json)
 //        $name = $_POST['name'];
