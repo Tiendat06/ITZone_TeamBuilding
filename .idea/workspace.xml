@@ -4,88 +4,154 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f6e08222-9fb7-42e7-bd76-c84638e5b084" name="Changes" comment="update project structure (4th)">
+    <list default="true" id="2b71cd60-c34a-46a5-9aae-89ae0d101d67" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app/controllers/GuardController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/MentorController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/SupportController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/TeamController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/middlewares/GuardMiddleWare.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/middlewares/MentorMiddleWare.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/middlewares/SupportMiddleWare.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/middlewares/TeamMiddleWare.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/Account.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/Hint.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/Location.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/Member.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/Mentor.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/Person.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/Role.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/Team.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/TeamArrival.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/TeamPuzzle.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/Topic.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pattern/builder/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pattern/builder/location/ILocationBuilder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pattern/builder/location/LocationBuilder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pattern/builder/location/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pattern/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pattern/singleton/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/repository/AccountRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/repository/HintRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/repository/LocationRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/repository/PersonRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/repository/RoleRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/repository/TeamArrivalRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/repository/TeamPuzzleRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/repository/TopicRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/services/AccountService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/services/HintService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/services/LocationService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/services/PersonService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/services/TeamArrivalService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/services/TeamPuzzleService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/services/TopicService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/DatabaseManager.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/teambuilding.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/route/guard.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/route/mentor.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/route/support.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/route/team.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/SiteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/SiteController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/repository/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/repository/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/services/SiteService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/SiteService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/route/.htaccess" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/route/site.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/.htaccess" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/layout/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/layout/partials/views_content.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout/partials/views_content.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/site/home.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/services/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/services/singleton/CacheManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/pattern/singleton/CacheManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/route/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/route/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/layout/partials/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout/partials/header.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings">
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/test_mvc/composer.json</pharConfigPath>
     <execution />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
-        <option value="CSS File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="Dat" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpServers">
     <servers>
-      <server host="localhost" id="c3152849-0d0c-4a13-8d65-0bd18c3ca11f" name="xampp" />
+      <server host="localhost" id="a505fe6c-7455-4262-93c9-8606d7a17b48" name="xampp" />
     </servers>
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP">
+    <include_path>
+      <path value="$PROJECT_DIR$/test_mvc/vendor/composer" />
+      <path value="$PROJECT_DIR$/test_mvc/vendor/carbonphp/carbon-doctrine-types" />
+      <path value="$PROJECT_DIR$/test_mvc/vendor/voku/portable-ascii" />
+      <path value="$PROJECT_DIR$/test_mvc/vendor/nesbot/carbon" />
+      <path value="$PROJECT_DIR$/test_mvc/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/test_mvc/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/test_mvc/vendor/psr/clock" />
+      <path value="$PROJECT_DIR$/test_mvc/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/test_mvc/vendor/brick/math" />
+      <path value="$PROJECT_DIR$/test_mvc/vendor/illuminate/database" />
+      <path value="$PROJECT_DIR$/test_mvc/vendor/illuminate/collections" />
+      <path value="$PROJECT_DIR$/test_mvc/vendor/illuminate/macroable" />
+      <path value="$PROJECT_DIR$/test_mvc/vendor/illuminate/container" />
+      <path value="$PROJECT_DIR$/test_mvc/vendor/illuminate/support" />
+      <path value="$PROJECT_DIR$/test_mvc/vendor/illuminate/contracts" />
+      <path value="$PROJECT_DIR$/test_mvc/vendor/symfony/clock" />
+      <path value="$PROJECT_DIR$/test_mvc/vendor/illuminate/conditionable" />
+      <path value="$PROJECT_DIR$/test_mvc/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/test_mvc/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/test_mvc/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/test_mvc/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/test_mvc/vendor/symfony/polyfill-php83" />
+    </include_path>
+  </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 1
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 7
 }</component>
-  <component name="ProjectId" id="2j36cFQ9dm7r5f3LOdhodL2GSNW" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="2jSsMzxMySHdHmJBQsHFKpK6nmN" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;PHP Script.index.php.executor&quot;: &quot;Run&quot;,
-    &quot;PHP Web Page.index.php.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/xampp/htdocs/index.php&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;build.tools&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-  },
-  &quot;keyToStringList&quot;: {
-    &quot;ChangesTree.GroupingKeys&quot;: []
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "PHP Web Page.Unnamed.executor": "Debug",
+    "PHP Web Page.index.php.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/xampp/htdocs/MVC_Pattern",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "php.override.implement.member.chooser.php.doc": "NONE",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\app" />
-      <recent name="C:\xampp\htdocs\config" />
-      <recent name="C:\xampp\htdocs\route" />
-      <recent name="C:\xampp\htdocs\views" />
+      <recent name="C:\xampp\htdocs\MVC_Pattern" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\public\img" />
-      <recent name="C:\xampp\htdocs\public" />
-      <recent name="C:\xampp\htdocs\views\layout" />
+      <recent name="C:\xampp\htdocs\views\user" />
+      <recent name="C:\xampp\htdocs\app\models" />
+      <recent name="C:\xampp\htdocs" />
     </key>
   </component>
   <component name="RunManager">
@@ -106,133 +172,36 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="f6e08222-9fb7-42e7-bd76-c84638e5b084" name="Changes" comment="" />
-      <created>1720603490991</created>
+      <changelist id="2b71cd60-c34a-46a5-9aae-89ae0d101d67" name="Changes" comment="" />
+      <created>1721391770674</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1720603490991</updated>
-      <workItem from="1720603492026" duration="22960000" />
-      <workItem from="1720627484329" duration="1381000" />
-      <workItem from="1720679884216" duration="1298000" />
-      <workItem from="1720681393199" duration="711000" />
-      <workItem from="1720693024797" duration="96000" />
-      <workItem from="1720709412759" duration="3232000" />
-      <workItem from="1720717860703" duration="2632000" />
-      <workItem from="1720763156716" duration="889000" />
-      <workItem from="1720928237719" duration="801000" />
+      <updated>1721391770674</updated>
+      <workItem from="1721391771924" duration="4293000" />
+      <workItem from="1721487092364" duration="2000" />
+      <workItem from="1721740845148" duration="9379000" />
+      <workItem from="1721750348164" duration="1094000" />
+      <workItem from="1721789691003" duration="87000" />
+      <workItem from="1721790913538" duration="1194000" />
+      <workItem from="1721824233289" duration="7566000" />
+      <workItem from="1721832075847" duration="6427000" />
+      <workItem from="1721838768100" duration="2237000" />
+      <workItem from="1721842095633" duration="2288000" />
+      <workItem from="1722054971305" duration="1297000" />
+      <workItem from="1722059905117" duration="7004000" />
+      <workItem from="1722072414260" duration="3883000" />
+      <workItem from="1722089885118" duration="2154000" />
+      <workItem from="1722150835337" duration="3539000" />
+      <workItem from="1722157721780" duration="1083000" />
+      <workItem from="1722177644569" duration="4613000" />
+      <workItem from="1722232409545" duration="11975000" />
     </task>
-    <task id="LOCAL-00001" summary="ok">
-      <option name="closed" value="true" />
-      <created>1720603973797</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1720603973797</updated>
-    </task>
-    <task id="LOCAL-00002" summary="ok">
-      <option name="closed" value="true" />
-      <created>1720604712971</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1720604712971</updated>
-    </task>
-    <task id="LOCAL-00003" summary="ok">
-      <option name="closed" value="true" />
-      <created>1720605598655</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1720605598655</updated>
-    </task>
-    <task id="LOCAL-00004" summary="ok">
-      <option name="closed" value="true" />
-      <created>1720606108895</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1720606108895</updated>
-    </task>
-    <task id="LOCAL-00005" summary="update project structure">
-      <option name="closed" value="true" />
-      <created>1720626320087</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1720626320087</updated>
-    </task>
-    <task id="LOCAL-00006" summary="update project structure">
-      <option name="closed" value="true" />
-      <created>1720626603653</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1720626603653</updated>
-    </task>
-    <task id="LOCAL-00007" summary="update project structure">
-      <option name="closed" value="true" />
-      <created>1720627530040</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1720627530040</updated>
-    </task>
-    <task id="LOCAL-00008" summary="update project structure (4th)">
-      <option name="closed" value="true" />
-      <created>1720681493936</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1720681493936</updated>
-    </task>
-    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="RECENT_FILTERS">
-      <map>
-        <entry key="Branch">
-          <value>
-            <list>
-              <RecentGroup>
-                <option name="FILTER_VALUES">
-                  <option value="main" />
-                </option>
-              </RecentGroup>
-            </list>
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="origin/Dat" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ok" />
-    <MESSAGE value="update project structure" />
-    <MESSAGE value="update project structure (4th)" />
-    <option name="LAST_COMMIT_MESSAGE" value="update project structure (4th)" />
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

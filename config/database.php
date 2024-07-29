@@ -1,13 +1,14 @@
 <?php
 
-    define("host", "localhost");
+//  please use DatabaseManager
+    define("hostname", "localhost");
     define("username", "root");
     define("password", "");
-    define("database", "teambulding");
+    define("database", "teambuilding");
 
     function getConnection(): mysqli
     {
-        $conn = mysqli_connect(host, username, password, database);
+        $conn = mysqli_connect(hostname, username, password, database);
         if(!$conn)
             die("". mysqli_connect_error());
         return $conn;

@@ -22,6 +22,23 @@ class SiteService{
         echo json_encode($response);
     }
 
+    function getNextId($id) {
+        preg_match('/(\D+)(\d+)/', $id, $matches);
+
+        if (count($matches) == 3) {
+            $prefix = $matches[1];
+            $number = (int)$matches[2];
+
+            $newNumber = $number + 1;
+
+            $newId = $prefix . str_pad($newNumber, strlen($matches[2]), '0', STR_PAD_LEFT);
+
+            return $newId;
+        } else {
+            return $id;
+        }
+    }
+
 }
 
 ?>
