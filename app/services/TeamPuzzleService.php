@@ -7,8 +7,8 @@ class TeamPuzzleService{
         $this->teamPuzzleRepository = new TeamPuzzleRepository();
     }
 
-    public function getTeamPuzzles($team_id, $topic_id){
-        return $this->teamPuzzleRepository->getTeamPuzzles($team_id, $topic_id);
+    public function getTeamPuzzlesByTeamIdAndTopicId($team_id, $topic_id): array{
+        return $this->teamPuzzleRepository->getTeamPuzzlesByTeamIdAndTopicId($team_id, $topic_id);
     }
 }
 

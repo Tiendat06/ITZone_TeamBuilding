@@ -11,6 +11,7 @@ if($_SERVER['REQUEST_METHOD'] == 'GET'){
 
     } else if (isset($_GET['param_1'])){
         switch ($_GET['param_1']){
+//            test
             case 'index.php':
                 $siteMiddleWare->index();
                 break;
@@ -24,6 +25,7 @@ if($_SERVER['REQUEST_METHOD'] == 'GET'){
 
     } else if (isset($_GET['param_1'])){
         switch ($_GET['param_1']){
+//            test
             case 'student':
                 $siteController->index_POST();
                 break;

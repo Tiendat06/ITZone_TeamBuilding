@@ -4,4 +4,5 @@
     include "./route/guard.php";
     include "./route/support.php";
     include "./route/team.php";
+    include "./route/location.php";
 ?>

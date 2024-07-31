@@ -6,6 +6,10 @@ class PersonService{
     {
         $this->personRepository = new PersonRepository();
     }
+
+    public function getTeamMemberByTeamIdOrMentorId($team_id, $operation): array{
+        return $this->personRepository->getTeamMemberByTeamIdOrMentorId($team_id, $operation);
+    }
 }
 
 ?>

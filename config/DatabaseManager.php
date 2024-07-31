@@ -3,6 +3,7 @@
     define("username", "root");
     define("password", "");
     define("database", "teambuilding");
+
 class DatabaseManager{
     private static ?DatabaseManager $instance = null;
     private ?mysqli $conn = null;
@@ -19,6 +20,11 @@ class DatabaseManager{
         if(!$this->conn)
             die("".mysqli_connect_error());
         return $this->conn;
+    }
+
+    public function closeConnection(): void{
+        self::$instance = null;
+        mysqli_close($this->conn);
     }
 }
 

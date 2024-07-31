@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 29, 2024 at 11:06 AM
+-- Generation Time: Jul 31, 2024 at 06:34 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -31,6 +31,7 @@ USE `teambuilding`;
 
 CREATE TABLE `account` (
   `account_id` varchar(50) NOT NULL,
+  `account_username` varchar(50) NOT NULL,
   `account_password` varchar(50) NOT NULL,
   `person_id` varchar(50) NOT NULL,
   `role_id` varchar(50) NOT NULL
@@ -40,26 +41,26 @@ CREATE TABLE `account` (
 -- Dumping data for table `account`
 --
 
-INSERT INTO `account` (`account_id`, `account_password`, `person_id`, `role_id`) VALUES
-('ACC0000001', 'mentor01_ITZone', 'MEN0000001', 'ROL0000001'),
-('ACC0000002', 'mentor02_ITZone', 'MEN0000002', 'ROL0000001'),
-('ACC0000003', 'mentor03_ITZone', 'MEN0000003', 'ROL0000001'),
-('ACC0000004', 'mentor04_ITZone', 'MEN0000004', 'ROL0000001'),
-('ACC0000005', 'mentor05_ITZone', 'MEN0000005', 'ROL0000001'),
-('ACC0000006', 'mentor06_ITZone', 'MEN0000006', 'ROL0000001'),
-('ACC0000007', 'guard01_ITZone', 'GUA0000001', 'ROL0000002'),
-('ACC0000008', 'guard02_ITZone', 'GUA0000002', 'ROL0000002'),
-('ACC0000009', 'guard03_ITZone', 'GUA0000003', 'ROL0000002'),
-('ACC0000010', 'guard04_ITZone', 'GUA0000004', 'ROL0000002'),
-('ACC0000011', 'guard05_ITZone', 'GUA0000005', 'ROL0000002'),
-('ACC0000012', 'guard06_ITZone', 'GUA0000006', 'ROL0000002'),
-('ACC0000013', 'support01_ITZone', 'SUP0000001', 'ROL0000003'),
-('ACC0000014', 'team01_ITZone', 'TEA0000001', 'ROL0000004'),
-('ACC0000015', 'team02_ITZone', 'TEA0000002', 'ROL0000004'),
-('ACC0000016', 'team03_ITZone', 'TEA0000003', 'ROL0000004'),
-('ACC0000017', 'team04_ITZone', 'TEA0000004', 'ROL0000004'),
-('ACC0000018', 'team05_ITZone', 'TEA0000005', 'ROL0000004'),
-('ACC0000019', 'team06_ITZone', 'TEA0000006', 'ROL0000004');
+INSERT INTO `account` (`account_id`, `account_username`, `account_password`, `person_id`, `role_id`) VALUES
+('ACC0000001', '', 'mentor01_ITZone', 'MEN0000001', 'ROL0000001'),
+('ACC0000002', '', 'mentor02_ITZone', 'MEN0000002', 'ROL0000001'),
+('ACC0000003', '', 'mentor03_ITZone', 'MEN0000003', 'ROL0000001'),
+('ACC0000004', '', 'mentor04_ITZone', 'MEN0000004', 'ROL0000001'),
+('ACC0000005', '', 'mentor05_ITZone', 'MEN0000005', 'ROL0000001'),
+('ACC0000006', '', 'mentor06_ITZone', 'MEN0000006', 'ROL0000001'),
+('ACC0000007', '', 'guard01_ITZone', 'GUA0000001', 'ROL0000002'),
+('ACC0000008', '', 'guard02_ITZone', 'GUA0000002', 'ROL0000002'),
+('ACC0000009', '', 'guard03_ITZone', 'GUA0000003', 'ROL0000002'),
+('ACC0000010', '', 'guard04_ITZone', 'GUA0000004', 'ROL0000002'),
+('ACC0000011', '', 'guard05_ITZone', 'GUA0000005', 'ROL0000002'),
+('ACC0000012', '', 'guard06_ITZone', 'GUA0000006', 'ROL0000002'),
+('ACC0000013', '', 'support01_ITZone', 'SUP0000001', 'ROL0000003'),
+('ACC0000014', '', 'team01_ITZone', 'TEA0000001', 'ROL0000004'),
+('ACC0000015', '', 'team02_ITZone', 'TEA0000002', 'ROL0000004'),
+('ACC0000016', '', 'team03_ITZone', 'TEA0000003', 'ROL0000004'),
+('ACC0000017', '', 'team04_ITZone', 'TEA0000004', 'ROL0000004'),
+('ACC0000018', '', 'team05_ITZone', 'TEA0000005', 'ROL0000004'),
+('ACC0000019', '', 'team06_ITZone', 'TEA0000006', 'ROL0000004');
 
 -- --------------------------------------------------------
 
@@ -208,6 +209,7 @@ CREATE TABLE `team` (
   `team_name` varchar(50) NOT NULL,
   `team_phone` varchar(50) NOT NULL,
   `team_route` varchar(50) NOT NULL,
+  `team_member` varchar(500) NOT NULL,
   `mentor_id` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -215,13 +217,13 @@ CREATE TABLE `team` (
 -- Dumping data for table `team`
 --
 
-INSERT INTO `team` (`team_id`, `team_name`, `team_phone`, `team_route`, `mentor_id`) VALUES
-('TEA0000001', 'TEAM 1', '', '6, 1, 2, 4, 3, 5, 6', 'MEN0000001'),
-('TEA0000002', 'TEAM 2', '', '6, 1, 5, 3, 4, 2, 6', 'MEN0000002'),
-('TEA0000003', 'TEAM 3', '', '6, 1, 4, 5, 3, 2, 6', 'MEN0000003'),
-('TEA0000004', 'TEAM 4', '', '6, 1, 2, 5, 4, 3, 6', 'MEN0000004'),
-('TEA0000005', 'TEAM 5', '', '6, 1, 3, 4, 5, 2, 6', 'MEN0000005'),
-('TEA0000006', 'TEAM 6', '', '6, 1, 2, 3, 5, 4, 6', 'MEN0000006');
+INSERT INTO `team` (`team_id`, `team_name`, `team_phone`, `team_route`, `team_member`, `mentor_id`) VALUES
+('TEA0000001', 'TEAM 1', '', '6, 1, 2, 4, 3, 5, 6', '', 'MEN0000001'),
+('TEA0000002', 'TEAM 2', '', '6, 1, 5, 3, 4, 2, 6', '', 'MEN0000002'),
+('TEA0000003', 'TEAM 3', '', '6, 1, 4, 5, 3, 2, 6', '', 'MEN0000003'),
+('TEA0000004', 'TEAM 4', '', '6, 1, 2, 5, 4, 3, 6', '', 'MEN0000004'),
+('TEA0000005', 'TEAM 5', '', '6, 1, 3, 4, 5, 2, 6', '', 'MEN0000005'),
+('TEA0000006', 'TEAM 6', '', '6, 1, 2, 3, 5, 4, 6', '', 'MEN0000006');
 
 -- --------------------------------------------------------
 

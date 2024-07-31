@@ -4,65 +4,41 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b71cd60-c34a-46a5-9aae-89ae0d101d67" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/controllers/GuardController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/MentorController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/SupportController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/TeamController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/middlewares/GuardMiddleWare.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/middlewares/MentorMiddleWare.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/middlewares/SupportMiddleWare.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/middlewares/TeamMiddleWare.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/Account.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/Hint.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/Location.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/Member.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/Mentor.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/Person.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/Role.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/Team.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/TeamArrival.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/TeamPuzzle.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/Topic.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/pattern/builder/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/pattern/builder/location/ILocationBuilder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/pattern/builder/location/LocationBuilder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/pattern/builder/location/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/pattern/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/pattern/singleton/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/repository/AccountRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/repository/HintRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/repository/LocationRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/repository/PersonRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/repository/RoleRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/repository/TeamArrivalRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/repository/TeamPuzzleRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/repository/TopicRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/services/AccountService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/services/HintService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/services/LocationService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/services/PersonService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/services/TeamArrivalService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/services/TeamPuzzleService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/services/TopicService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/DatabaseManager.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/teambuilding.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/route/guard.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/route/mentor.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/route/support.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/route/team.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+    <list default="true" id="2b71cd60-c34a-46a5-9aae-89ae0d101d67" name="Changes" comment="merge main to Dat branch">
+      <change afterPath="$PROJECT_DIR$/app/controllers/LocationController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/middlewares/LocationMiddleWare.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/location.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/route/location.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/location/location.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/SiteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/SiteController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/Team.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/Team.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/repository/AccountRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/repository/AccountRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/repository/HintRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/repository/HintRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/repository/LocationRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/repository/LocationRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/repository/PersonRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/repository/PersonRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/repository/RoleRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/repository/TeamArrivalRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/repository/TeamArrivalRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/repository/TeamPuzzleRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/repository/TeamPuzzleRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/repository/TopicRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/repository/TopicRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/repository/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/repository/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/services/AccountService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/AccountService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/services/LocationService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/LocationService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/services/PersonService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/PersonService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/services/SiteService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/SiteService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/services/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/services/singleton/CacheManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/pattern/singleton/CacheManager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/services/TeamArrivalService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/TeamArrivalService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/services/TeamPuzzleService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/TeamPuzzleService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/services/TopicService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/TopicService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/DatabaseManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/DatabaseManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/teambuilding.sql" beforeDir="false" afterPath="$PROJECT_DIR$/config/teambuilding.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/site.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/site.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/route/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/route/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/route/site.php" beforeDir="false" afterPath="$PROJECT_DIR$/route/site.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/layout/partials/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout/partials/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/layout/partials/views_content.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout/partials/views_content.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/site/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/site/home.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,6 +57,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="Dat" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpServers">
@@ -119,31 +100,31 @@
   &quot;associatedIndex&quot;: 7
 }</component>
   <component name="ProjectId" id="2jSsMzxMySHdHmJBQsHFKpK6nmN" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "PHP Web Page.Unnamed.executor": "Debug",
-    "PHP Web Page.index.php.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/xampp/htdocs/MVC_Pattern",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "php.override.implement.member.chooser.php.doc": "NONE",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;PHP Web Page.Unnamed.executor&quot;: &quot;Debug&quot;,
+    &quot;PHP Web Page.index.php.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/xampp/htdocs/MVC_Pattern&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;php.override.implement.member.chooser.php.doc&quot;: &quot;NONE&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\MVC_Pattern" />
@@ -195,6 +176,13 @@
       <workItem from="1722157721780" duration="1083000" />
       <workItem from="1722177644569" duration="4613000" />
       <workItem from="1722232409545" duration="11975000" />
+      <workItem from="1722273634929" duration="1306000" />
+      <workItem from="1722275524111" duration="259000" />
+      <workItem from="1722318203097" duration="1163000" />
+      <workItem from="1722351557899" duration="3752000" />
+      <workItem from="1722403030199" duration="2636000" />
+      <workItem from="1722413119508" duration="8697000" />
+      <workItem from="1722429453747" duration="12489000" />
     </task>
     <servers />
   </component>
@@ -203,5 +191,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="update project structure (4th)" />
+    <option name="LAST_COMMIT_MESSAGE" value="update project structure (4th)" />
   </component>
 </project>

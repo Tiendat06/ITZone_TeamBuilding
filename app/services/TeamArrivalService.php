@@ -7,8 +7,8 @@ class TeamArrivalService{
         $this->teamArrivalRepository = new TeamArrivalRepository();
     }
 
-    public function getTeamArrivalsAndLocation($team_id): array{
-        return $this->teamArrivalRepository->getTeamArrivalsAndLocation($team_id);
+    public function getTeamArrivalsAndLocationByTeamId($team_id): array{
+        return $this->teamArrivalRepository->getTeamArrivalsAndLocationByTeamId($team_id);
     }
 }
 

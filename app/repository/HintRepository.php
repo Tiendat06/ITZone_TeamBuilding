@@ -1,15 +1,12 @@
 <?php
 
 class HintRepository{
-    private DatabaseManager $dbManager;
     private mysqli $conn;
     public function __construct(){
-        $this->dbManager = DatabaseManager::getInstance();
-        $this->conn = $this->dbManager->getConnection();
+        $this->conn = DatabaseManager::getInstance()->getConnection();
     }
 
     public function getHintsWithIsShow($topic_id): array{
-//        $conn = $this->dbManager->getConnection();
         $data = array();
         $is_show = 1;
         $sql = "SELECT * from `hint` 
@@ -23,7 +20,6 @@ class HintRepository{
         while($row = $result->fetch_assoc()){
             $data[] = $row;
         }
-        $this->conn->close();
         $stmt->close();
         return $data;
 
