@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b71cd60-c34a-46a5-9aae-89ae0d101d67" name="Changes" comment="push pseudo code for login">
-      <change beforePath="$PROJECT_DIR$/app/controllers/LogController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/LogController.php" afterDir="false" />
-    </list>
+    <list default="true" id="2b71cd60-c34a-46a5-9aae-89ae0d101d67" name="Changes" comment="commit test" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,7 +24,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="Dat" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -80,7 +78,7 @@
     "PHP Web Page.Unnamed.executor": "Debug",
     "PHP Web Page.index.php.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Dat",
+    "git-widget-placeholder": "main",
     "last_opened_file_path": "C:/xampp/htdocs/MVC_Pattern",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -159,7 +157,23 @@
       <option name="project" value="LOCAL" />
       <updated>1722536240896</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="commit test">
+      <option name="closed" value="true" />
+      <created>1722536399734</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1722536399734</updated>
+    </task>
+    <task id="LOCAL-00003" summary="commit test">
+      <option name="closed" value="true" />
+      <created>1722536527429</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1722536527429</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -169,6 +183,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="update project structure (4th)" />
     <MESSAGE value="push pseudo code for login" />
-    <option name="LAST_COMMIT_MESSAGE" value="push pseudo code for login" />
+    <MESSAGE value="commit test" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit test" />
   </component>
 </project>
