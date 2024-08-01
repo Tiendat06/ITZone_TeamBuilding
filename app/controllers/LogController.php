@@ -7,7 +7,7 @@ class LogController{
 
 //    [GET] /log/login
     public function index($username, $pwd){
-
+        echo 'hi world';
     }
 
 //    [POST]
