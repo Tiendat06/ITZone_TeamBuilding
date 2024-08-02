@@ -4,11 +4,13 @@ class LocationService{
     private LocationRepository $locationRepository;
     private TopicRepository $topicRepository;
     private TeamPuzzleRepository $teamPuzzleRepository;
+    private PersonRepository $personRepository;
     public function __construct()
     {
         $this->locationRepository = new LocationRepository();
         $this->topicRepository = new TopicRepository();
         $this->teamPuzzleRepository = new TeamPuzzleRepository();
+        $this->personRepository = new PersonRepository();
     }
 
     public function getLocations(): array {
@@ -58,11 +60,23 @@ class LocationService{
 
         return array(
             'is_correct' => $topic_answer_db === $new_topic_answer,
-            'location_address' => $location_address
+            'location_address' => $location_address,
         );
     }
 
+    public function getAnswerByLocationId($location_id): Location{
+        return $this->locationRepository->getLocationByLocationId($location_id);
+    }
 
+    public function checkMentorKey($topic_answer): array{
+        $team_id = 'TEA0000001';
+        $team_member = $this->personRepository->getTeamMemberByTeamIdOrMentorId($team_id);
+        print_r($team_member);
+        return array(
+            'is_correct' => $this->personRepository->checkMentorByTeamId($team_id, $topic_answer),
+            'team_member' => $team_member,
+        );
+    }
 
 }
 
