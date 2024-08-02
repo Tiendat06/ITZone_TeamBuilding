@@ -24,6 +24,19 @@ class TeamArrivalRepository{
         $stmt->close();
         return $data;
     }
+
+    public function updateIsShowNextLocation($team_arrival_id){
+        $is_show_next_location = 1;
+        $sql = "UPDATE `team_arrival`
+        SET `is_show_next_location` = ?
+        WHERE `team_arrival_id` = ?";
+
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bind_param('is', $is_show_next_location, $team_arrival_id);
+        $stmt->execute();
+
+        $stmt->close();
+    }
 }
 
 ?>

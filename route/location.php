@@ -28,6 +28,8 @@
                 case 'location':
                     if($_GET['param_2'] == 'send_answer'){
                         $locationMiddleWare->send_answer();
+                    } else if ($_GET['param_2'] == 'get_answer'){
+                        $locationMiddleWare->get_answer();
                     }
                     break;
             }

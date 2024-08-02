@@ -27,9 +27,22 @@ class PersonRepository{
         $result = $stmt->get_result();
 
         $row = $result->fetch_assoc();
-        $data[] = $row;
+        $data = $row;
         $stmt->close();
         return $data;
+    }
+
+    public function checkMentorByTeamId($team_id, $topic_answer): bool{
+        $sql = "SELECT * FROM `mentor`, `team` 
+            WHERE `team_id` = ? 
+              AND `mentor`.`mentor_id` = `team`.`mentor_id` 
+              AND `mentor`.`mentor_key` = ?";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bind_param('ss', $team_id, $topic_answer);
+        $stmt->execute();
+
+        $result = $stmt->get_result();
+        return $result->num_rows == 1;
     }
 }
 
