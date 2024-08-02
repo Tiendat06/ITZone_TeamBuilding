@@ -25,7 +25,7 @@ class Location{
             }
         }, 1000);
     }
-
+//
     getTopicAnswer = (location_id) => {
         fetch('/location/get_answer', {
             method: 'POST',
