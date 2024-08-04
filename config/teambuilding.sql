@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 31, 2024 at 06:34 PM
+-- Generation Time: Aug 04, 2024 at 05:37 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -125,7 +125,13 @@ INSERT INTO `location` (`location_id`, `location_name`, `location_img`, `locatio
 ('LOC0000003', 'ĐƯỜNG SÁCH', 'duong_sach.png', 'Đ. Nguyễn Văn Bình, Bến Nghé, Quận 1, Hồ Chí Minh', '*) Đi từ Lotte trên chuyến 72 tới trạm \"cầu Ông Lãnh\"</br>*) Sau đó lên chuyến 31 chạy tới trạm \"Lê Duẩn\"</br>*) Cuối cùng, đi bộ qua điểm đến mong muốn', '*) Tới trạm xe trường tiểu học Hòa Bình</br>Địa chỉ: 1 Công xã Paris, Bến Nghé, Quận 1, Thành phố Hồ Chí Minh, Vietnam</br>*) Đi chuyến 36 -> bến xe bus sài gòn -> xe 72 -> cổng 1 TDTU', 'GUA0000003'),
 ('LOC0000004', 'BƯU ĐIỆN', 'buu_dien.png', '125 Hai Bà Trưng, Bến Nghé, Quận 1, Hồ Chí Minh, Việt Nam', '*) Đi từ Lotte trên chuyến 72 tới trạm \"cầu Ông Lãnh\"</br>*) Sau đó lên chuyến 31 chạy tới trạm \"Lê Duẩn\"</br>*) Cuối cùng, đi bộ qua điểm đến mong muốn', '*) Tới trạm xe trường tiểu học Hòa Bình</br>Địa chỉ: 1 Công xã Paris, Bến Nghé, Quận 1, Thành phố Hồ Chí Minh, Vietnam</br>*) Đi chuyến 36 -> bến xe bus sài gòn -> xe 72 -> cổng 1 TDTU', 'GUA0000004'),
 ('LOC0000005', 'CÔNG VIÊN 30/4', 'cong_vien.png', '6 Đ. Lê Duẩn, Bến Nghé, Quận 1, Hồ Chí Minh, Việt Nam', '*) Đi từ Lotte trên chuyến 72 tới trạm \"cầu Ông Lãnh\"</br>*) Sau đó lên chuyến 31 chạy tới trạm \"Lê Duẩn\"</br>*) Cuối cùng, đi bộ qua điểm đến mong muốn', '*) Tới trạm xe trường tiểu học Hòa Bình</br>Địa chỉ: 1 Công xã Paris, Bến Nghé, Quận 1, Thành phố Hồ Chí Minh, Vietnam</br>*) Đi chuyến 36 -> bến xe bus sài gòn -> xe 72 -> cổng 1 TDTU', 'GUA0000005'),
-('LOC0000006', 'TDTU', 'tdtu.png', '19 Đ. Nguyễn Hữu Thọ, Tân Hưng, Quận 7, Hồ Chí Minh, Việt Nam', '', '', 'GUA0000006');
+('LOC0000006', 'TDTU', 'tdtu.png', '19 Đ. Nguyễn Hữu Thọ, Tân Hưng, Quận 7, Hồ Chí Minh, Việt Nam', '', '', 'GUA0000006'),
+('LOC0000007', '711', '711.png', '19 Đ. Nguyễn Hữu Thọ, Tân Hưng, Quận 7, Hồ Chí Minh', '', '', 'MEN0000001'),
+('LOC0000008', 'Căn tin quân sự (Tòa I)', 'toa_i.png', '19 Đ. Nguyễn Hữu Thọ, Tân Hưng, Quận 7, Hồ Chí Minh', '', '', 'MEN0000002'),
+('LOC0000009', 'Sân bóng đá', 'san_bong_da.png', '19 Đ. Nguyễn Hữu Thọ, Tân Hưng, Quận 7, Hồ Chí Minh', '', '', 'MEN0000003'),
+('LOC0000010', 'Căn tin tòa D', 'can_tin_D.png', '19 Đ. Nguyễn Hữu Thọ, Tân Hưng, Quận 7, Hồ Chí Minh', '', '', 'MEN0000004'),
+('LOC0000011', 'Thư viện', 'thu_vien.png', '19 Đ. Nguyễn Hữu Thọ, Tân Hưng, Quận 7, Hồ Chí Minh', '', '', 'MEN0000005'),
+('LOC0000012', 'Tòa F', 'toa_f.png', '19 Đ. Nguyễn Hữu Thọ, Tân Hưng, Quận 7, Hồ Chí Minh', '', '', 'MEN0000006');
 
 -- --------------------------------------------------------
 
@@ -235,50 +241,51 @@ CREATE TABLE `team_arrival` (
   `team_arrival_id` varchar(50) NOT NULL,
   `team_id` varchar(50) NOT NULL,
   `location_id` varchar(50) NOT NULL,
-  `is_show_next_location` int(1) NOT NULL
+  `is_show_next_location` int(1) NOT NULL,
+  `team_arrival_priority` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `team_arrival`
 --
 
-INSERT INTO `team_arrival` (`team_arrival_id`, `team_id`, `location_id`, `is_show_next_location`) VALUES
-('TAV0000001', 'TEA0000001', 'LOC0000006', 1),
-('TAV0000002', 'TEA0000001', 'LOC0000001', 0),
-('TAV0000003', 'TEA0000001', 'LOC0000002', 0),
-('TAV0000004', 'TEA0000001', 'LOC0000004', 0),
-('TAV0000005', 'TEA0000001', 'LOC0000003', 0),
-('TAV0000006', 'TEA0000001', 'LOC0000005', 0),
-('TAV0000007', 'TEA0000002', 'LOC0000006', 1),
-('TAV0000008', 'TEA0000002', 'LOC0000001', 0),
-('TAV0000009', 'TEA0000002', 'LOC0000005', 0),
-('TAV0000010', 'TEA0000002', 'LOC0000003', 0),
-('TAV0000011', 'TEA0000002', 'LOC0000004', 0),
-('TAV0000012', 'TEA0000002', 'LOC0000002', 0),
-('TAV0000013', 'TEA0000003', 'LOC0000006', 1),
-('TAV0000014', 'TEA0000003', 'LOC0000001', 0),
-('TAV0000015', 'TEA0000003', 'LOC0000004', 0),
-('TAV0000016', 'TEA0000003', 'LOC0000005', 0),
-('TAV0000017', 'TEA0000003', 'LOC0000003', 0),
-('TAV0000018', 'TEA0000003', 'LOC0000002', 0),
-('TAV0000019', 'TEA0000004', 'LOC0000006', 1),
-('TAV0000020', 'TEA0000004', 'LOC0000001', 0),
-('TAV0000021', 'TEA0000004', 'LOC0000002', 0),
-('TAV0000022', 'TEA0000004', 'LOC0000005', 0),
-('TAV0000023', 'TEA0000004', 'LOC0000004', 0),
-('TAV0000024', 'TEA0000004', 'LOC0000003', 0),
-('TAV0000025', 'TEA0000005', 'LOC0000006', 1),
-('TAV0000026', 'TEA0000005', 'LOC0000001', 0),
-('TAV0000027', 'TEA0000005', 'LOC0000003', 0),
-('TAV0000028', 'TEA0000005', 'LOC0000004', 0),
-('TAV0000029', 'TEA0000005', 'LOC0000005', 0),
-('TAV0000030', 'TEA0000005', 'LOC0000002', 0),
-('TAV0000031', 'TEA0000006', 'LOC0000006', 1),
-('TAV0000032', 'TEA0000006', 'LOC0000001', 0),
-('TAV0000033', 'TEA0000006', 'LOC0000002', 0),
-('TAV0000034', 'TEA0000006', 'LOC0000003', 0),
-('TAV0000035', 'TEA0000006', 'LOC0000005', 0),
-('TAV0000036', 'TEA0000006', 'LOC0000004', 0);
+INSERT INTO `team_arrival` (`team_arrival_id`, `team_id`, `location_id`, `is_show_next_location`, `team_arrival_priority`) VALUES
+('TAV0000001', 'TEA0000001', 'LOC0000007', 1, 1),
+('TAV0000002', 'TEA0000001', 'LOC0000001', 0, 2),
+('TAV0000003', 'TEA0000001', 'LOC0000002', 0, 3),
+('TAV0000004', 'TEA0000001', 'LOC0000003', 0, 4),
+('TAV0000005', 'TEA0000001', 'LOC0000005', 0, 5),
+('TAV0000006', 'TEA0000001', 'LOC0000006', 0, 6),
+('TAV0000007', 'TEA0000002', 'LOC0000008', 1, 1),
+('TAV0000008', 'TEA0000002', 'LOC0000001', 0, 2),
+('TAV0000009', 'TEA0000002', 'LOC0000005', 0, 3),
+('TAV0000010', 'TEA0000002', 'LOC0000003', 0, 4),
+('TAV0000011', 'TEA0000002', 'LOC0000002', 0, 5),
+('TAV0000012', 'TEA0000002', 'LOC0000006', 0, 6),
+('TAV0000013', 'TEA0000003', 'LOC0000009', 1, 1),
+('TAV0000014', 'TEA0000003', 'LOC0000001', 0, 2),
+('TAV0000015', 'TEA0000003', 'LOC0000003', 0, 3),
+('TAV0000016', 'TEA0000003', 'LOC0000005', 0, 4),
+('TAV0000017', 'TEA0000003', 'LOC0000002', 0, 5),
+('TAV0000018', 'TEA0000003', 'LOC0000006', 0, 6),
+('TAV0000019', 'TEA0000004', 'LOC0000010', 1, 1),
+('TAV0000020', 'TEA0000004', 'LOC0000001', 0, 2),
+('TAV0000021', 'TEA0000004', 'LOC0000002', 0, 3),
+('TAV0000022', 'TEA0000004', 'LOC0000005', 0, 4),
+('TAV0000023', 'TEA0000004', 'LOC0000003', 0, 5),
+('TAV0000024', 'TEA0000004', 'LOC0000006', 0, 6),
+('TAV0000025', 'TEA0000005', 'LOC0000011', 1, 1),
+('TAV0000026', 'TEA0000005', 'LOC0000001', 0, 2),
+('TAV0000027', 'TEA0000005', 'LOC0000003', 0, 3),
+('TAV0000028', 'TEA0000005', 'LOC0000002', 0, 4),
+('TAV0000029', 'TEA0000005', 'LOC0000005', 0, 5),
+('TAV0000030', 'TEA0000005', 'LOC0000006', 0, 6),
+('TAV0000031', 'TEA0000006', 'LOC0000012', 1, 1),
+('TAV0000032', 'TEA0000006', 'LOC0000001', 0, 2),
+('TAV0000033', 'TEA0000006', 'LOC0000005', 0, 3),
+('TAV0000034', 'TEA0000006', 'LOC0000002', 0, 4),
+('TAV0000035', 'TEA0000006', 'LOC0000003', 0, 5),
+('TAV0000036', 'TEA0000006', 'LOC0000006', 0, 6);
 
 -- --------------------------------------------------------
 
@@ -305,7 +312,7 @@ INSERT INTO `team_puzzle` (`team_puzzle_id`, `team_id`, `topic_id`, `time_end`, 
 ('TPZ0000003', 'TEA0000001', 'TOP0000003', NULL, NULL, 0),
 ('TPZ0000004', 'TEA0000001', 'TOP0000004', NULL, NULL, 0),
 ('TPZ0000005', 'TEA0000001', 'TOP0000005', NULL, NULL, 0),
-('TPZ0000006', 'TEA0000001', 'TOP0000006', NULL, NULL, 0),
+('TPZ0000006', 'TEA0000001', 'TOP0000006', '2024-08-04 00:55:26', NULL, 1),
 ('TPZ0000007', 'TEA0000002', 'TOP0000001', NULL, NULL, 0),
 ('TPZ0000008', 'TEA0000002', 'TOP0000002', NULL, NULL, 0),
 ('TPZ0000009', 'TEA0000002', 'TOP0000003', NULL, NULL, 0),

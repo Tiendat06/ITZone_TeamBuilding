@@ -71,7 +71,7 @@ class LocationService{
     public function checkMentorKey($topic_answer): array{
         $team_id = 'TEA0000001';
         $team_member = $this->personRepository->getTeamMemberByTeamIdOrMentorId($team_id);
-        print_r($team_member);
+
         return array(
             'is_correct' => $this->personRepository->checkMentorByTeamId($team_id, $topic_answer),
             'team_member' => $team_member,

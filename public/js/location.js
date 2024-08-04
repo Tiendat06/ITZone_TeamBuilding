@@ -65,7 +65,13 @@ class Location{
                 },
                 success: (response, status, xhr) => {
                     if(response === '<p>Wrong answer !!</p>' && location_id === 'LOC0000006'){
-                        $('#topic_name--input').attr('disable');
+                        $('#topic_name--input').prop('disabled', true);
+                        // localStorage.setItem('inputDisabled', 'true');
+                        //
+                        // setTimeout(function() {
+                        //     $('#topic_name--input').prop('disabled', false);
+                        //     localStorage.removeItem('inputDisabled');
+                        // }, 180000);
                     } else{
                         $('#topic_para--alert').html(response);
                     }
@@ -78,6 +84,12 @@ class Location{
                 }
             })
         })
+    }
+
+    checkDisableInput = () => {
+        // if (localStorage.getItem('inputDisabled') === 'true') {
+        //     $('#topic_name--input').prop('disabled', true);
+        // }
     }
 }
 

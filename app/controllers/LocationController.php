@@ -18,7 +18,6 @@ class LocationController{
 
 //    [POST, AJAX] /location/send_answer
     public function send_answer($topic_answer, $location_id){
-        $isTopicAnswerCorrect = $this->locationService->checkTopicAnswerIsCorrect($topic_answer, $location_id);
 
         if ($location_id === 'LOC0000006'){
             $isCheckMentorKey = $this->locationService->checkMentorKey($topic_answer);
@@ -32,6 +31,8 @@ class LocationController{
         } else if($location_id === 'LOC0000001'){
 
         } else{
+            $isTopicAnswerCorrect = $this->locationService->checkTopicAnswerIsCorrect($topic_answer, $location_id);
+
             if($isTopicAnswerCorrect['is_correct']){
                 echo '<p>Correct answer !!</p>
                     <p>Please go to: '. $isTopicAnswerCorrect['location_address'].'</p>';
@@ -45,7 +46,7 @@ class LocationController{
     public function get_answer($location_id){
         if ($location_id === 'LOC0000006'){
             $team_id = 'TEA0000001';
-            $team_member = $this->personService->getTeamMemberByTeamIdOrMentorId($team_id, 'team');
+            $team_member = $this->personService->getTeamMemberByTeamIdOrMentorId($team_id);
             echo json_encode(array(
                'mentor_name' => $team_member['mentor_name'],
                'mentor_phone' => $team_member['mentor_phone'],

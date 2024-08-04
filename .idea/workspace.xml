@@ -4,16 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b71cd60-c34a-46a5-9aae-89ae0d101d67" name="Changes" comment="commit test">
+    <list default="true" id="2b71cd60-c34a-46a5-9aae-89ae0d101d67" name="Changes" comment="change pseudo code to test auto show answer">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/LocationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/LocationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/middlewares/LocationMiddleWare.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/middlewares/LocationMiddleWare.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/middlewares/LogMiddleWare.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/middlewares/LogMiddleWare.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/TeamArrival.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/TeamArrival.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/repository/PersonRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/repository/PersonRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/repository/TeamArrivalRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/repository/TeamArrivalRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/services/LocationService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/LocationService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/services/TeamArrivalService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/TeamArrivalService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/services/PersonService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/PersonService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/teambuilding.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/location.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/location.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/route/location.php" beforeDir="false" afterPath="$PROJECT_DIR$/route/location.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/layout/partials/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout/partials/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/layout/partials/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout/partials/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/location/location.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/location/location.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/site/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/site/home.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -89,7 +93,7 @@
     &quot;PHP Web Page.Unnamed.executor&quot;: &quot;Debug&quot;,
     &quot;PHP Web Page.index.php.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Dat&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/xampp/htdocs/MVC_Pattern&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -159,6 +163,11 @@
       <workItem from="1722403030199" duration="2636000" />
       <workItem from="1722413119508" duration="8697000" />
       <workItem from="1722429453747" duration="12489000" />
+      <workItem from="1722652385369" duration="4412000" />
+      <workItem from="1722664673374" duration="3625000" />
+      <workItem from="1722703470808" duration="1712000" />
+      <workItem from="1722705672128" duration="448000" />
+      <workItem from="1722785352865" duration="460000" />
     </task>
     <task id="LOCAL-00001" summary="push pseudo code for login">
       <option name="closed" value="true" />
@@ -184,7 +193,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722536527429</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="change pseudo code to test auto show answer">
+      <option name="closed" value="true" />
+      <created>1722611710575</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1722611710575</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -195,6 +212,7 @@
     <MESSAGE value="update project structure (4th)" />
     <MESSAGE value="push pseudo code for login" />
     <MESSAGE value="commit test" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit test" />
+    <MESSAGE value="change pseudo code to test auto show answer" />
+    <option name="LAST_COMMIT_MESSAGE" value="change pseudo code to test auto show answer" />
   </component>
 </project>

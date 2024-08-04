@@ -7,7 +7,7 @@ class PersonService{
         $this->personRepository = new PersonRepository();
     }
 
-    public function getTeamMemberByTeamIdOrMentorId($team_id, $operation): array{
+    public function getTeamMemberByTeamIdOrMentorId($team_id, $operation='team'): array{
         return $this->personRepository->getTeamMemberByTeamIdOrMentorId($team_id, $operation);
     }
 }

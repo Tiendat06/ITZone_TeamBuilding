@@ -42,7 +42,7 @@ class PersonRepository{
         $stmt->execute();
 
         $result = $stmt->get_result();
-        return $result->num_rows == 1;
+        return $result->num_rows > 0;
     }
 }
 
