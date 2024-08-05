@@ -1,7 +1,7 @@
 <?php
 
 //  please use DatabaseManager
-    define("hostname", "localhost");
+    /*define("hostname", "localhost");
     define("username", "root");
     define("password", "");
     define("database", "teambuilding");
@@ -12,5 +12,5 @@
         if(!$conn)
             die("". mysqli_connect_error());
         return $conn;
-    }
+    }*/
 ?>

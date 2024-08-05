@@ -1,32 +1,32 @@
-* {
+:root{
+}
+
+*{
   box-sizing: inherit;
 }
 
-html {
+html{
   font-size: 62.5%;
   /* => 1rem = 10px */
   line-height: 1.6rem;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   box-sizing: border-box;
   /* overflow-x: auto; */
 }
 
-p {
+p{
   font-size: 1.6rem;
-  /* = 16px */
-}
-@media (max-width: 46.1875em) {
-  p {
+  @include respond-to('mobile'){
     font-size: 20px;
     color: red;
   }
-}
-p:hover {
-  color: purple;
+
+  &:hover{
+    color: purple;
+  }
+  /* = 16px */
 }
 
-a {
-  color: green;
+a{
+  color: $primary-color;
 }
-
-/*# sourceMappingURL=main.css.map */
