@@ -1,240 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b71cd60-c34a-46a5-9aae-89ae0d101d67" name="Changes" comment="update db, add new column for table 'Team Arrival' and some pseudo code for test">
-      <change afterPath="$PROJECT_DIR$/config/Data-Model-Report.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/TB_ClassDiagram.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/main.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/scss/layouts/grid.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/scss/layouts/header.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/scss/main.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/scss/pages/guard.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/scss/pages/mentor.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/scss/pages/site.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/scss/pages/support.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/scss/pages/team.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/scss/themes/themes.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/scss/utils/mixins.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/scss/utils/variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/teambuilding.sql" beforeDir="false" afterPath="$PROJECT_DIR$/config/teambuilding.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/scss/base/base.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/responsive.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/scss/layouts/footer.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/layout/partials/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout/partials/header.php" afterDir="false" />
-    </list>
+    <list default="true" id="789b6840-6abd-4d68-80c6-03a1ff77801a" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
-    <pharConfigPath>$PROJECT_DIR$/test_mvc/composer.json</pharConfigPath>
+  <component name="ComposerSettings">
     <execution />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="JavaScript File" />
-        <option value="CSS File" />
-      </list>
-    </option>
-  </component>
-  <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="main" />
-      </map>
-    </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="PhpServers">
-    <servers>
-      <server host="localhost" id="a505fe6c-7455-4262-93c9-8606d7a17b48" name="xampp" />
-    </servers>
-  </component>
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP">
-    <include_path>
-      <path value="$PROJECT_DIR$/test_mvc/vendor/composer" />
-      <path value="$PROJECT_DIR$/test_mvc/vendor/carbonphp/carbon-doctrine-types" />
-      <path value="$PROJECT_DIR$/test_mvc/vendor/voku/portable-ascii" />
-      <path value="$PROJECT_DIR$/test_mvc/vendor/nesbot/carbon" />
-      <path value="$PROJECT_DIR$/test_mvc/vendor/doctrine/inflector" />
-      <path value="$PROJECT_DIR$/test_mvc/vendor/psr/simple-cache" />
-      <path value="$PROJECT_DIR$/test_mvc/vendor/psr/clock" />
-      <path value="$PROJECT_DIR$/test_mvc/vendor/psr/container" />
-      <path value="$PROJECT_DIR$/test_mvc/vendor/brick/math" />
-      <path value="$PROJECT_DIR$/test_mvc/vendor/illuminate/database" />
-      <path value="$PROJECT_DIR$/test_mvc/vendor/illuminate/collections" />
-      <path value="$PROJECT_DIR$/test_mvc/vendor/illuminate/macroable" />
-      <path value="$PROJECT_DIR$/test_mvc/vendor/illuminate/container" />
-      <path value="$PROJECT_DIR$/test_mvc/vendor/illuminate/support" />
-      <path value="$PROJECT_DIR$/test_mvc/vendor/illuminate/contracts" />
-      <path value="$PROJECT_DIR$/test_mvc/vendor/symfony/clock" />
-      <path value="$PROJECT_DIR$/test_mvc/vendor/illuminate/conditionable" />
-      <path value="$PROJECT_DIR$/test_mvc/vendor/symfony/polyfill-mbstring" />
-      <path value="$PROJECT_DIR$/test_mvc/vendor/symfony/translation" />
-      <path value="$PROJECT_DIR$/test_mvc/vendor/symfony/translation-contracts" />
-      <path value="$PROJECT_DIR$/test_mvc/vendor/symfony/polyfill-php80" />
-      <path value="$PROJECT_DIR$/test_mvc/vendor/symfony/polyfill-php83" />
-    </include_path>
-  </component>
-  <component name="ProjectColorInfo">{
-  &quot;customColor&quot;: &quot;&quot;,
-  &quot;associatedIndex&quot;: 7
-}</component>
-  <component name="ProjectId" id="2jSsMzxMySHdHmJBQsHFKpK6nmN" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 7
+}]]></component>
+  <component name="ProjectId" id="2kEYGRDojtDxFObNCLgBrZDGhPW" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "PHP Web Page.Unnamed.executor": "Debug",
-    "PHP Web Page.index.php.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/xampp/htdocs/MVC_Pattern",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
+    "last_opened_file_path": "C:/xampp/htdocs",
     "nodejs_package_manager_path": "npm",
-    "php.override.implement.member.chooser.php.doc": "NONE",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\MVC_Pattern" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\config" />
-      <recent name="C:\xampp\htdocs\views\user" />
-      <recent name="C:\xampp\htdocs\app\models" />
-      <recent name="C:\xampp\htdocs" />
-    </key>
-  </component>
-  <component name="RunManager">
-    <configuration name="index.php" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="xampp">
-      <method v="2">
-        <option name="LaunchBrowser.Before.Run" url="/" />
-      </method>
-    </configuration>
-  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-PS-241.14494.237" />
-        <option value="bundled-php-predefined-ba97393d7c68-8f0632a2a215-com.jetbrains.php.sharedIndexes-PS-241.14494.237" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-PS-241.18034.69" />
+        <option value="bundled-php-predefined-ba97393d7c68-48a1a656d44e-com.jetbrains.php.sharedIndexes-PS-241.18034.69" />
       </set>
     </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="2b71cd60-c34a-46a5-9aae-89ae0d101d67" name="Changes" comment="" />
-      <created>1721391770674</created>
+      <changelist id="789b6840-6abd-4d68-80c6-03a1ff77801a" name="Changes" comment="" />
+      <created>1722850108162</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1721391770674</updated>
-      <workItem from="1721391771924" duration="4293000" />
-      <workItem from="1721487092364" duration="2000" />
-      <workItem from="1721740845148" duration="9379000" />
-      <workItem from="1721750348164" duration="1094000" />
-      <workItem from="1721789691003" duration="87000" />
-      <workItem from="1721790913538" duration="1194000" />
-      <workItem from="1721824233289" duration="7566000" />
-      <workItem from="1721832075847" duration="6427000" />
-      <workItem from="1721838768100" duration="2237000" />
-      <workItem from="1721842095633" duration="2288000" />
-      <workItem from="1722054971305" duration="1297000" />
-      <workItem from="1722059905117" duration="7004000" />
-      <workItem from="1722072414260" duration="3883000" />
-      <workItem from="1722089885118" duration="2154000" />
-      <workItem from="1722150835337" duration="3539000" />
-      <workItem from="1722157721780" duration="1083000" />
-      <workItem from="1722177644569" duration="4613000" />
-      <workItem from="1722232409545" duration="11975000" />
-      <workItem from="1722273634929" duration="1306000" />
-      <workItem from="1722275524111" duration="259000" />
-      <workItem from="1722318203097" duration="1163000" />
-      <workItem from="1722351557899" duration="3752000" />
-      <workItem from="1722403030199" duration="2636000" />
-      <workItem from="1722413119508" duration="8697000" />
-      <workItem from="1722429453747" duration="12489000" />
-      <workItem from="1722652385369" duration="4412000" />
-      <workItem from="1722664673374" duration="3625000" />
-      <workItem from="1722703470808" duration="1712000" />
-      <workItem from="1722705672128" duration="448000" />
-      <workItem from="1722785352865" duration="745000" />
-      <workItem from="1722786178471" duration="40000" />
-      <workItem from="1722839153091" duration="5743000" />
+      <updated>1722850108162</updated>
+      <workItem from="1722850109880" duration="138000" />
     </task>
-    <task id="LOCAL-00001" summary="push pseudo code for login">
-      <option name="closed" value="true" />
-      <created>1722536240896</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1722536240896</updated>
-    </task>
-    <task id="LOCAL-00002" summary="commit test">
-      <option name="closed" value="true" />
-      <created>1722536399734</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1722536399734</updated>
-    </task>
-    <task id="LOCAL-00003" summary="commit test">
-      <option name="closed" value="true" />
-      <created>1722536527429</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1722536527429</updated>
-    </task>
-    <task id="LOCAL-00004" summary="change pseudo code to test auto show answer">
-      <option name="closed" value="true" />
-      <created>1722611710575</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1722611710575</updated>
-    </task>
-    <task id="LOCAL-00005" summary="update db, add new column for table 'Team Arrival' and some pseudo code for test">
-      <option name="closed" value="true" />
-      <created>1722786094044</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1722786094044</updated>
-    </task>
-    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="update project structure (4th)" />
-    <MESSAGE value="push pseudo code for login" />
-    <MESSAGE value="commit test" />
-    <MESSAGE value="change pseudo code to test auto show answer" />
-    <MESSAGE value="update db, add new column for table 'Team Arrival' and some pseudo code for test" />
-    <option name="LAST_COMMIT_MESSAGE" value="update db, add new column for table 'Team Arrival' and some pseudo code for test" />
   </component>
 </project>
