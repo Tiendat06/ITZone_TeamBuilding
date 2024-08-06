@@ -17,7 +17,7 @@ html{
 p{
   font-size: 1.6rem;
   @include respond-to('mobile'){
-    font-size: 20px;
+    font-size: 1.6rem;
     color: red;
   }
 
