@@ -83,7 +83,7 @@ a {
 
 .itz-navbar {
   width: 300px;
-  height: 75px;
+  height: 60px;
   border-radius: 40px;
 }
 
@@ -279,7 +279,7 @@ a {
   }
 }
 .navbar {
-  height: 75px;
+  height: 60px;
 }
 .navbar .navbar-header .navbar-header__logo--img {
   width: 40px;
@@ -437,6 +437,45 @@ a {
 }
 .home-section-4 .home-section-4__btn {
   font-size: 11px;
+}
+
+.guard {
+  margin-top: 30px;
+  margin-bottom: 90px;
+  justify-content: center;
+}
+.guard .guard-sub-title {
+  width: 90%;
+}
+.guard .guard-sub-title .guard-sub-title__para {
+  color: #004080;
+  font-weight: bold;
+  font-size: 13px;
+  text-shadow: 1.5px 1.5px rgba(0, 0, 0, 0.25);
+}
+.guard .guard-sub-title .guard-sub-title__line {
+  background-color: #ED5959;
+  height: 1.5px;
+}
+.guard .guard-title__para {
+  font-weight: bolder;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+.guard .guard-location {
+  text-align: center;
+}
+.guard .guard-location .guard-location__ggmap {
+  border-radius: 10px;
+  border: 4px solid #ccc !important;
+  width: 90%;
+}
+.guard .guard-address {
+  margin-top: 10px;
+}
+.guard .guard-address .guard-address__para, .guard .guard-address .guard-address__icon {
+  color: #FF0000;
+  font-size: 13px;
 }
 
 .itz-bg-normal, .itz-bg-focus {

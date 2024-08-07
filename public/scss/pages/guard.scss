@@ -1,0 +1,45 @@
+.guard{
+  margin-top: 30px;
+  margin-bottom: $navbar-height + 30px;
+  justify-content: center;
+
+  .guard-sub-title{
+    width: 90%;
+    .guard-sub-title__para{
+      color: $normal-color;
+      font-weight: bold;
+      font-size: $sub-title-size;
+      text-shadow: 1.5px 1.5px rgba(0, 0, 0, 0.25);
+    }
+
+    .guard-sub-title__line{
+      background-color: $component-color;
+      height: 1.5px;
+    }
+  }
+
+  .guard-title__para{
+    font-weight: bolder;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  }
+
+  .guard-location{
+    text-align: center;
+    .guard-location__ggmap{
+      border-radius: 10px;
+      border: 4px solid #ccc !important;
+      width: 90%;
+    }
+  }
+
+  .guard-address{
+    margin-top: 10px;
+    .guard-address__para, .guard-address__icon{
+      color: $link;
+      font-size: $sub-title-size;
+    }
+  }
+
+
+}
