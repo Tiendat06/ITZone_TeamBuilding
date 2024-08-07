@@ -8,7 +8,7 @@
 |----- services: process the logical of the function    
 |----- .htaccess  
 -- config: handle system's configuration  
-|----- database.php: connect to database only  
+|----- DatabaseManager.php: connect to database only  
 |----- .htaccess  
 -- public: vendor for static informations  
 |----- css: (main, base, responsive, grid,...)  
