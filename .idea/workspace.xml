@@ -4,7 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="05c71e1d-483c-4e68-b91a-ba4025288c1a" name="Changes" comment="update base configuration for scss">
+    <list default="true" id="05c71e1d-483c-4e68-b91a-ba4025288c1a" name="Changes" comment="update img, please always read &quot;README.md&quot; file">
+      <change afterPath="$PROJECT_DIR$/public/img/intro/bg-home.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/intro/gtItZone1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/intro/gtItZone2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/intro/gtItZone3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/intro/teambuiding1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/intro/teambuiding2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/intro/teambuiding3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/leader/leader_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/login/lock.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/logo/logo-itzone.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/img/flexbox.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -77,20 +89,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;PHP Web Page.index.php.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/xampp/htdocs&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "PHP Web Page.index.php.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/xampp/htdocs",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="index.php" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="xampp">
       <method v="2">
@@ -118,7 +131,7 @@
       <workItem from="1722872081515" duration="1032000" />
       <workItem from="1722873125624" duration="686000" />
       <workItem from="1722873847082" duration="99000" />
-      <workItem from="1723012577900" duration="3947000" />
+      <workItem from="1723012577900" duration="4498000" />
     </task>
     <task id="LOCAL-00001" summary="test by TDat">
       <option name="closed" value="true" />
@@ -144,17 +157,27 @@
       <option name="project" value="LOCAL" />
       <updated>1723016273942</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="update img, please always read &quot;README.md&quot; file">
+      <option name="closed" value="true" />
+      <created>1723017122473</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1723017122473</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="commit test by Chau" />
     <MESSAGE value="commit test by Thuy" />
     <MESSAGE value="test by TDat" />
     <MESSAGE value="update base configuration for scss" />
-    <option name="LAST_COMMIT_MESSAGE" value="update base configuration for scss" />
+    <MESSAGE value="update img, please always read &quot;README.md&quot; file" />
+    <option name="LAST_COMMIT_MESSAGE" value="update img, please always read &quot;README.md&quot; file" />
   </component>
 </project>
