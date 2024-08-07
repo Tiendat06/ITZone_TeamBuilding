@@ -1,0 +1,19 @@
+.itz-btn-normal, .itz-btn-focus{
+  color: $normal-color;
+}
+
+.itz-btn-home{
+  background: linear-gradient(to right, $gradient-color-1, $gradient-color-2);
+}
+
+.itz-btn-hover{
+  background: linear-gradient(to right, $gradient-color-3, $gradient-color-4, $gradient-color-5);
+}
+
+.itz-btn-active{
+  color: $active-color;
+}
+
+.itz-btn-disable{
+  color: $disable-color;
+}

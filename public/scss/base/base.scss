@@ -5,28 +5,20 @@
   box-sizing: inherit;
 }
 
-html{
-  font-size: 62.5%;
+body{
+  font-size: $font-size;
   /* => 1rem = 10px */
   line-height: 1.6rem;
-  font-family: 'Roboto', sans-serif;
+  font-family: $text-font;
   box-sizing: border-box;
   /* overflow-x: auto; */
 }
 
 p{
-  font-size: 1.6rem;
+  font-size: 1.1rem;
   @include respond-to('mobile'){
-    font-size: 1.6rem;
-    color: red;
+    font-size: 1.1rem;
   }
-
-  &:hover{
-    color: purple;
-  }
-  /* = 16px */
+  /* = 11px */
 }
 
-a{
-  color: $primary-color;
-}

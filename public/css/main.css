@@ -2,31 +2,81 @@
   box-sizing: inherit;
 }
 
-html {
+body {
   font-size: 62.5%;
   /* => 1rem = 10px */
   line-height: 1.6rem;
-  font-family: "Roboto", sans-serif;
+  font-family: "Baloo Da 2", sans-serif;
   box-sizing: border-box;
   /* overflow-x: auto; */
 }
 
 p {
-  font-size: 1.6rem;
-  /* = 16px */
+  font-size: 1.1rem;
+  /* = 11px */
 }
 @media (max-width: 46.1875em) {
   p {
-    font-size: 20px;
-    color: red;
+    font-size: 1.1rem;
   }
 }
-p:hover {
-  color: purple;
+
+.itz-btn-normal, .itz-btn-focus {
+  color: #004080;
 }
 
-a {
-  color: green;
+.itz-btn-home {
+  background: linear-gradient(to right, #7BCDDF, #6163C8);
+}
+
+.itz-btn-hover {
+  background: linear-gradient(to right, #4A45F0, #4B27FF, #171432);
+}
+
+.itz-btn-active {
+  color: #4d79a6;
+}
+
+.itz-btn-disable {
+  color: #2c2c2c;
+}
+
+.itz-link-visited {
+  color: #0000FF;
+}
+
+.itz-link {
+  color: #FF0000;
+}
+
+.itz-link-hover {
+  color: #FF69B4;
+}
+
+.itz-link-active {
+  color: #00FFFF;
+}
+
+.itz-title {
+  font-size: 16px;
+}
+
+.itz-sub-title {
+  font-size: 13px;
+}
+
+.itz-card-color {
+  color: #ED5959;
+}
+
+.itz-text-card {
+  color: #FFEF9B;
+}
+
+.itz-navbar {
+  width: 300px;
+  height: 75px;
+  border-radius: 40px;
 }
 
 /*# sourceMappingURL=main.css.map */
