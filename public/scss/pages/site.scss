@@ -10,8 +10,9 @@
     margin: 8px;
 
     &::before {
+      $leader-img: '../img/leader/leader_1.png';
       content: "";
-      background: url("../img/leader/leader_1.png") no-repeat bottom;
+      background: url($leader-img) no-repeat bottom;
       background-size: cover;
       width: 60%;
       height: 100%;
@@ -22,8 +23,9 @@
     }
 
     &::after{
+      $bg-home: '../img/intro/bg-home.png';
       content: "";
-      background: url("../img/intro/bg-home.png") no-repeat center center;
+      background: url($bg-home) no-repeat center center;
       background-size: cover;
       width: 100%;
       height: 100%;
@@ -35,8 +37,9 @@
   }
 
   .home-section-1__logo{
+    $logo-itzone: '../img/logo/logo-itzone.png';
     content: "";
-    background: url("../img/logo/logo-itzone.png") no-repeat center center;
+    background: url($logo-itzone) no-repeat center center;
     background-size: cover;
     width: 55px;
     height: 70px;
