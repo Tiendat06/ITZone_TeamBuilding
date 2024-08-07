@@ -5,6 +5,10 @@
   box-sizing: inherit;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 body{
   font-size: $font-size;
   /* => 1rem = 10px */
