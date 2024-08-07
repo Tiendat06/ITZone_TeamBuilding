@@ -13,9 +13,17 @@
     include "./views/layout/partials/header.php";
 ?>
 <body>
-    <section>
-        <div class="section-1">
-<!--            <img src="./public/img/leader/leader_1.png" class="position-absolute" style="z-index: 99;" alt="">-->
+    <section class="home-section-1" id="home-section-1">
+        <div class="home-section-1__logo"></div>
+        <div class="home-section-1__bg"></div>
+        <div class="home-section-1__text">
+            <span class="home-section-1__text--sub-title">Teambuilding</span>
+            <h5 class="home-section-1__text--title">Chào mừng bạn đến với Team Buiding CLB IT-Zone!<img src="./public/img/icon/hand-icon.png"
+                                                                                                         alt=""></h5>
+            <span class="home-section-1__text--para">Hãy cùng tham gia và trải nghiệm TeamBuilding cùng IT-Zone để phát triển bản thân và khám phá những tiềm năng mới trong chính mình!</span>
+        </div>
+        <div class="home-section-1__btn itz-btn-home btn">
+            <span class="text-light">Tham gia ngay</span>
         </div>
     </section>
 

@@ -5,7 +5,7 @@
 body {
   font-size: 62.5%;
   /* => 1rem = 10px */
-  line-height: 1.6rem;
+  line-height: 1.3rem;
   font-family: "Baloo Da 2", sans-serif;
   box-sizing: border-box;
   /* overflow-x: auto; */
@@ -79,23 +79,29 @@ p {
   border-radius: 40px;
 }
 
-.section-1 {
-  height: 350px;
+.home-section-1 {
   position: relative;
+  height: auto;
 }
-.section-1::before {
+.home-section-1 .home-section-1__bg {
+  height: 330px;
+  position: relative;
+  border-radius: 92px;
+  overflow: hidden;
+  margin: 8px;
+}
+.home-section-1 .home-section-1__bg::before {
   content: "";
-  background: url("../img/leader/leader_1.png") no-repeat center center;
+  background: url("../img/leader/leader_1.png") no-repeat bottom;
   background-size: cover;
-  width: 100px;
-  height: 100px;
+  width: 60%;
+  height: 100%;
   position: absolute;
-  bottom: 10px;
-  right: 10px;
+  bottom: -18px;
+  right: 0px;
   z-index: 2;
 }
-.section-1::after {
-  display: inline;
+.home-section-1 .home-section-1__bg::after {
   content: "";
   background: url("../img/intro/bg-home.png") no-repeat center center;
   background-size: cover;
@@ -104,6 +110,43 @@ p {
   position: absolute;
   top: 0;
   left: 0;
+}
+.home-section-1 .home-section-1__logo {
+  content: "";
+  background: url("../img/logo/logo-itzone.png") no-repeat center center;
+  background-size: cover;
+  width: 55px;
+  height: 70px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 3;
+}
+.home-section-1 .home-section-1__text {
+  margin-left: 20px;
+  text-align: justify;
+  width: 50%;
+  height: auto;
+  position: absolute;
+  transform: translateY(50%);
+  bottom: 45%;
+  left: 0;
+  z-index: 3;
+}
+.home-section-1 .home-section-1__text .home-section-1__text--title {
+  font-weight: bold;
+  text-align: left;
+  font-size: 16px;
+}
+.home-section-1 .home-section-1__text .home-section-1__text--sub-title {
+  color: #004080;
+  font-size: 13px;
+}
+.home-section-1 .home-section-1__btn {
+  position: absolute;
+  bottom: 20px;
+  margin-left: 20px;
+  font-size: 11px;
 }
 
 /*# sourceMappingURL=main.css.map */
