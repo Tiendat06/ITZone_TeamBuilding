@@ -32,8 +32,8 @@ class SiteController{
 //        $role_name = $this->accountService->getRoleByUsernameAndPassword('', 'mentor01_ITZone');
 //        $team_member = $this->personService->getTeamMemberByTeamIdOrMentorId('MEN0000002', 'mentor');
 
-        $content = 'home';
-        include "./views/layout/index.php";
+//        $content = 'home';
+        include "./views/site/home.php";
     }
 
 //    [POST] /student
