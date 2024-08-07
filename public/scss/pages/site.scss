@@ -18,7 +18,7 @@
       height: 100%;
       position: absolute;
       bottom: -18px;
-      right: 0px;
+      right: 0;
       z-index: 2;
     }
 
@@ -41,8 +41,8 @@
     content: "";
     background: url($logo-itzone) no-repeat center center;
     background-size: cover;
-    width: 55px;
-    height: 70px;
+    width: $logo-width;
+    height: 50px;
     position: absolute;
     top: 10px;
     left: 10px;
@@ -162,3 +162,4 @@
     font-size: $text-size;
   }
 }
+

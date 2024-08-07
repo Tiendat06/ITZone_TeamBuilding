@@ -10,6 +10,9 @@
     ?>
 <body>
     <?php
+        include "./views/layout/partials/navbar.php";
+    ?>
+    <?php
         include "./views/layout/partials/views_content.php";
     ?>
     <?php

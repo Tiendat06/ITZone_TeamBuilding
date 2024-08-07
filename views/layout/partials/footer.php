@@ -1,9 +1,32 @@
 <?php
 ?>
 
-<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>-->
+<footer class="footer">
+    <div class="footer-control w-100">
+<!--    itz-bg-normal -->
+        <a href="#" class="footer-control__home footer-control__link itz-bg-normal">
+            <img src="/public/img/icon/majesticons_home-line.png" alt="">
+            <span>Home</span>
+        </a>
+<!--        for guard -->
+        <a href="#" class="footer-control__question footer-control__link">
+            <img src="/public/img/icon/mdi_question-box-outline.png" alt="">
+<!--            <span>Quests</span>-->
+        </a>
 
-<!-- Option 2: Separate Popper and Bootstrap JS -->
+<!--        <a href="#" class="footer-control__game footer-control__link">-->
+<!--            <img src="/public/img/icon/bx_game.png" alt="">-->
+<!--            <span>Game</span>-->
+<!--        </a>-->
 
-<!--<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>-->
-<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>-->
+        <a href="#" class="footer-control__rule footer-control__link">
+            <img src="/public/img/icon/ic_round-rule.png" alt="">
+<!--            <span>Rule</span>-->
+        </a>
+
+<!--        <a href="#" class="footer-control__team footer-control__link">-->
+<!--            <img src="/public/img/icon/ri_team-line.png" alt="">-->
+<!--            <span>Team</span>-->
+<!--        </a>-->
+    </div>
+</footer>
