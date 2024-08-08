@@ -20,7 +20,7 @@
 |------------- Run these code below to install and map sass to css
 ```
 npm i -g sass
-sass -w public/scss/main.scss public/css/main.css
+sass -w public/scss/main.scss public/css/main.css --style=compressed
 ```
   
 |----- video: divided by function  
