@@ -4,15 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="05c71e1d-483c-4e68-b91a-ba4025288c1a" name="Changes" comment="extra update for home page">
+    <list default="true" id="05c71e1d-483c-4e68-b91a-ba4025288c1a" name="Changes" comment="extra commit">
+      <change afterPath="$PROJECT_DIR$/public/img/icon/icon-play.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/team/intro.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/topic/dragon_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/topic/dragon_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/topic/dragon_3.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/TeamController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/TeamController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/middlewares/TeamMiddleWare.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/middlewares/TeamMiddleWare.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/main.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/scss/layouts/footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/scss/layouts/footer.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/scss/pages/guard.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/scss/pages/guard.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/scss/pages/team.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/scss/pages/team.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/scss/utils/variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/scss/utils/variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/guard/guard.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/guard/guard.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/layout/partials/navbar.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout/partials/navbar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/route/team.php" beforeDir="false" afterPath="$PROJECT_DIR$/route/team.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/layout/partials/views_content.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout/partials/views_content.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/team/team.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/team/team.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,6 +137,8 @@
       <workItem from="1722873847082" duration="99000" />
       <workItem from="1723012577900" duration="6070000" />
       <workItem from="1723038949667" duration="9453000" />
+      <workItem from="1723092613258" duration="7680000" />
+      <workItem from="1723102352456" duration="747000" />
     </task>
     <task id="LOCAL-00001" summary="test by TDat">
       <option name="closed" value="true" />
@@ -217,7 +228,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723052137536</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="extra commit">
+      <option name="closed" value="true" />
+      <created>1723055691547</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1723055691547</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -247,6 +266,7 @@
     <MESSAGE value="update FE for home page" />
     <MESSAGE value="extra update for home page" />
     <MESSAGE value="update navbar and footer" />
-    <option name="LAST_COMMIT_MESSAGE" value="update navbar and footer" />
+    <MESSAGE value="extra commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="extra commit" />
   </component>
 </project>
