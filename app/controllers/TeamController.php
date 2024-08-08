@@ -8,13 +8,13 @@ class TeamController{
 
     public function game_1(){
 
-        $content = 'team';
+        $content = 'team-game-1';
         include "./views/layout/index.php";
     }
 
     public function game_1_topic($location_id){
 
-        $content = 'team-game_1';
+        $content = 'team-game-1-topic';
         include "./views/layout/index.php";
     }
 }
