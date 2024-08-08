@@ -163,3 +163,126 @@
   }
 }
 
+.login-section {
+  position: relative;
+  height: auto;
+  width: auto;
+  background-color: $normal-color;
+
+  &-1 {
+    position: relative;
+    height: 50px;
+    top: 15px;
+    left: 0;
+    &__back-button {
+      text-decoration: none;
+      color: $background-color;
+      font-size: $sub-title-size;
+      font-weight: bold;
+      margin-left: 20px;
+    }
+  }
+
+  &-2 {
+    //position: relative;
+    //height: auto;
+    height: 100vh;
+    &__form {
+      display: flex;
+      height: 100vh;
+      flex-direction: column;
+      //align-items: center;
+      //justify-content: center;
+      background-color: $background-color;
+      padding: 30px 30px 30px 30px;
+      border-radius: 30px 30px 0 0;
+      line-height: 1.25;
+
+      &--greeting {
+        font-weight: 1000;
+        margin-right: auto;
+        font-family: $text-font;
+        @include make-text-gradient($gradient-color-6);
+      }
+
+      &--text {
+        margin-right: auto;
+        font-size: $text-size;
+      }
+
+      &--figure {
+        padding-top: 10%;
+        padding-bottom: 5%;
+        text-align: center;
+      }
+
+      &--image {
+        max-width: 75%;
+        max-height: 75%
+      }
+
+      &--input {
+        width: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      &--input-box {
+        position: relative;
+        width: 100%;
+        height: 40px;
+        background-color: transparent;
+        border-radius: $normal-radius;
+        border: 1px groove #CACACA;
+        margin-bottom: 15px;
+        padding: 0 6px;
+        color: $gradient-color-3;
+        &::placeholder {
+          position: absolute;
+          color: #CACACA;
+          left: 3%;
+          opacity: 1; /* Firefox */
+        }
+
+        &::-ms-input-placeholder { /* Edge 12 -18 */
+          position: absolute;
+          color: #CACACA;
+          left: 3%;
+        }
+
+        &:focus {
+          @include make-border-radius-gradient($gradient-color-6, 1px, solid);
+          &::placeholder {
+            @include make-text-gradient($gradient-color-6);
+          }
+        }
+      }
+
+      &--icon {
+        position: absolute;
+        right: 3%;
+        top: 20%;
+        z-index: 1;
+      }
+
+      &--button {
+        position: relative;
+        width: 100%;
+        height: 40px;
+        margin-top: 20px;
+        padding-bottom: 8px;
+        padding-top: 8px;
+        border-radius: $normal-radius;
+        border: 1px groove #CACACA ;
+        color: $background-color;
+        background: $normal-color;
+        font-size: $title-size;
+      }
+    }
+  }
+}
+
+
+

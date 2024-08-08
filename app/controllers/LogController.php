@@ -16,6 +16,11 @@ class LogController{
     public function checkLogin($username, $pwd){
 
     }
+
+    public function login(){
+
+        include "./views/log/login.php";
+    }
 }
 
 ?>

@@ -1,5 +1,6 @@
 import site from './site.js';
 import location from "./location.js";
+import log from "./log.js";
 
 site.index();
 site.ajaxTest();
@@ -12,3 +13,12 @@ window.topicCountDown = (time_end)=> {
 }
 
 location.ajaxSendTopicAnswer();
+
+// log
+window.enableButton = () => {
+    log.enableButton();
+}
+
+window.togglePassword = () => {
+    log.togglePassword();
+}

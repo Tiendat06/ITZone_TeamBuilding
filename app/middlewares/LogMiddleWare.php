@@ -6,6 +6,10 @@ class LogMiddleWare{
     {
         $this->logController = new LogController();
     }
+
+    public function login(){
+        $this->logController->login();
+    }
 }
 
 ?>
