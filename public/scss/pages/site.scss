@@ -1,8 +1,8 @@
-.home-section-1{
+.home-section-1 {
   position: relative;
   height: auto;
 
-  .home-section-1__bg{
+  .home-section-1__bg {
     height: 330px;
     position: relative;
     border-radius: 92px;
@@ -21,7 +21,7 @@
       z-index: 2;
     }
 
-    &::after{
+    &::after {
       content: "";
       background: url("../img/intro/bg-home.png") no-repeat center center;
       background-size: cover;
@@ -34,7 +34,7 @@
 
   }
 
-  .home-section-1__logo{
+  .home-section-1__logo {
     content: "";
     background: url("../img/logo/logo-itzone.png") no-repeat center center;
     background-size: cover;
@@ -46,7 +46,7 @@
     z-index: 3;
   }
 
-  .home-section-1__text{
+  .home-section-1__text {
     margin-left: 20px;
     text-align: justify;
     width: 50%;
@@ -57,19 +57,19 @@
     left: 0;
     z-index: 3;
 
-    .home-section-1__text--title{
+    .home-section-1__text--title {
       font-weight: bold;
       text-align: left;
       font-size: $title-size;
     }
 
-    .home-section-1__text--sub-title{
+    .home-section-1__text--sub-title {
       color: $normal-color;
       font-size: $sub-title-size;
     }
   }
 
-  .home-section-1__btn{
+  .home-section-1__btn {
     position: absolute;
     bottom: 20px;
     margin-left: 20px;
@@ -77,17 +77,134 @@
   }
 }
 
-.home-section-2{
+.home-section-2 {
   margin-top: 30px;
   text-align: center;
-  .home-section-2__sub-title{
+
+  .home-section-2__sub-title {
     color: $normal-color;
   }
 
-  .home-section-2__title{
+  .home-section-2__title {
     font-weight: bolder;
     margin-bottom: 50px;
   }
 }
+
+.login-section {
+  position: relative;
+  height: auto;
+  background-color: $normal-color;
+
+  &-1 {
+    position: relative;
+    height: 50px;
+    top: 15px;
+    left: 20px;
+    &__back-button {
+      text-decoration: none;
+      color: $background-color;
+      font-size: $sub-title-size;
+      font-weight: bold;
+    }
+  }
+
+  &-2 {
+    //position: relative;
+    //height: auto;
+    &__form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: $background-color;
+      padding: 30px 30px 30px 30px;
+      border-radius: 30px 30px 0 0;
+      line-height: 1.25;
+
+      &--greeting {
+        font-weight: 1000;
+        margin-right: auto;
+        font-family: $text-font;
+        @include make-text-gradient($gradient-color-6);
+      }
+
+      &--text {
+        margin-right: auto;
+        font-size: $text-size;
+      }
+
+      &--figure {
+        padding-top: 10%;
+        padding-bottom: 5%;
+        text-align: center;
+      }
+
+      &--image {
+        max-width: 75%;
+        max-height: 75%
+      }
+
+      &--input {
+        width: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      &--input-box {
+        position: relative;
+        width: 100%;
+        height: 40px;
+        background-color: transparent;
+        border-radius: $normal-radius;
+        border: 1px groove #CACACA;
+        margin-bottom: 15px;
+        padding: 0 6px;
+        color: $gradient-color-3;
+        &::placeholder {
+          position: absolute;
+          color: #CACACA;
+          left: 3%;
+          opacity: 1; /* Firefox */
+        }
+
+        &::-ms-input-placeholder { /* Edge 12 -18 */
+          position: absolute;
+          color: #CACACA;
+          left: 3%;
+        }
+
+        &:focus {
+          @include make-border-radius-gradient($gradient-color-6, 5px, solid);
+          &::placeholder {
+            @include make-text-gradient($gradient-color-6);
+          }
+        }
+      }
+
+      &--icon {
+        position: absolute;
+        right: 3%;
+        top: 20%;
+        z-index: 1;
+      }
+
+      &--button {
+        position: relative;
+        width: 100%;
+        height: 40px;
+        margin-top: 20%;
+        border-radius: $normal-radius;
+        border: 1px groove #CACACA ;
+        color: $background-color;
+        background: $gradient-color-6;
+        font-size: $title-size;
+      }
+    }
+  }
+}
+
 
 

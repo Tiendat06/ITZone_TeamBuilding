@@ -13,6 +13,8 @@ $gradient-color-3: #4A45F0;
 $gradient-color-4: #4B27FF;
 $gradient-color-5: #171432;
 
+$gradient-color-6: linear-gradient(to right, $gradient-color-3 0%, $gradient-color-4 30%, $gradient-color-5 100%);
+
 $link-visited: #0000FF;
 $link: #FF0000;
 $link-hover: #FF69B4;

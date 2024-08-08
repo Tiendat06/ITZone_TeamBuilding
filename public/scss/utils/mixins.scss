@@ -10,3 +10,16 @@
       @media (min-width: 64em) { @content; }
     }
 }
+
+@mixin make-text-gradient($gradient-color){
+  background: $gradient-color;
+  background-size: contain;
+  background-clip: text;
+  color: transparent;
+}
+
+@mixin make-border-radius-gradient($gradient-color, $border-width, $border-style){
+  border: $border-width $border-style transparent;
+  background: linear-gradient($background-color, $background-color) padding-box, $gradient-color border-box;
+  outline: 1px $border-style $background-color;
+}
