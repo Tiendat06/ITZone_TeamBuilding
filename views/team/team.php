@@ -25,7 +25,7 @@
                     </div>
                     <div class="team-content__item--header">
                         <h1 class="team-content__item--title mb-0">Trạm 1</h1>
-                        <span class="team-content__item--para">Thử thách 1</span>
+<!--                        <span class="team-content__item--para">Thử thách 1</span>-->
                     </div>
                     <div class="team-content__item--play">
                         <img src="/public/img/icon/icon-play.png" alt="">
@@ -34,7 +34,8 @@
             </div>
         </a>
 
-        <a href="#" class="team-content__item d-block col-sm-4 col-md-4">
+<!--        itz-disable-card -->
+        <a href="#" class="team-content__item itz-disable-card d-block col-sm-4 col-md-4">
             <div class="team-content__item--inner">
                 <div class="team-content__item--info text-center">
                     <div class="team-content__item--img">
@@ -42,7 +43,7 @@
                     </div>
                     <div class="team-content__item--header">
                         <h1 class="team-content__item--title mb-0">Trạm 2</h1>
-                        <span class="team-content__item--para">Thử thách 2</span>
+<!--                        <span class="team-content__item--para">Thử thách 2</span>-->
                     </div>
                     <div class="team-content__item--play">
                         <img src="/public/img/icon/icon-play.png" alt="">
@@ -51,7 +52,7 @@
             </div>
         </a>
 
-        <a href="#" class="team-content__item d-block col-sm-4 col-md-4">
+        <a href="#" class="team-content__item itz-disable-card d-block col-sm-4 col-md-4">
             <div class="team-content__item--inner">
                 <div class="team-content__item--info text-center">
                     <div class="team-content__item--img">
@@ -59,7 +60,7 @@
                     </div>
                     <div class="team-content__item--header">
                         <h1 class="team-content__item--title mb-0">Trạm 3</h1>
-                        <span class="team-content__item--para">Thử thách 3</span>
+<!--                        <span class="team-content__item--para">Thử thách 3</span>-->
                     </div>
                     <div class="team-content__item--play">
                         <img src="/public/img/icon/icon-play.png" alt="">

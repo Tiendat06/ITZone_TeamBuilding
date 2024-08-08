@@ -70,3 +70,73 @@
     }
   }
 }
+
+.team-game_1{
+  margin-bottom: $bottom-distance;
+  .team-game_1__box{
+    background-color: #f2f2f2;
+    margin: 20px;
+    padding: 30px 15px 30px 15px;
+    border-radius: 20px;
+    .team-game_1__header{
+      display: flex;
+      align-items: center;
+      justify-content: start;
+
+      .team-game_1__title{
+
+        .team-game_1__title--para{
+          margin-bottom: 0;
+          font-weight: bold;
+          text-transform: uppercase;
+        }
+      }
+    }
+
+    .team-game_1__content{
+
+      .team-game_1__content--para{
+        font-size: $text-size;
+      }
+
+      .team-game_1__content--info{
+        margin-top: 5px;
+        justify-content: center;
+        align-items: center;
+
+        .team-game_1__content--mail{
+          font-size: $sub-title-size;
+        }
+
+        .team-game_1__content--link{
+          margin-left: 10px;
+          font-size: $sub-title-size;
+          text-decoration: underline;
+          color: #000000;
+          font-weight: bold;
+        }
+
+        .team-game_1__content--para-countdown{
+          margin-top: 10px;
+          font-size: 25px;
+          font-weight: bold;
+        }
+      }
+    }
+
+    .team-game_1__answer{
+      margin-top: 20px;
+      justify-content: space-between;
+      .team-game_1__answer--inp{
+        background-color: #f2f2f2;
+        border: 1px solid #cccccc;
+        color: #000000;
+      }
+
+      .team-game_1__btn{
+
+        font-size: $title-size;
+      }
+    }
+  }
+}
