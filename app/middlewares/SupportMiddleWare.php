@@ -10,6 +10,10 @@ class SupportMiddleWare{
     public function index(){
         $this->supportController->index();
     }
+
+    public function question(){
+        $this->supportController->question();
+    }
 }
 
 ?>

@@ -19,6 +19,8 @@
     } // support
     else if($content == 'support'){
         include "./views/support/support.php";
+    } else if($content == 'support-question'){
+        include "./views/support/question.php";
     }
     // no route
     else if($content == 'rule'){
