@@ -4,22 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="05c71e1d-483c-4e68-b91a-ba4025288c1a" name="Changes" comment="extra commit">
-      <change afterPath="$PROJECT_DIR$/public/img/icon/close-eye.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/icon/open-eye.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/log.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/log/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/LogController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/LogController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/middlewares/LogMiddleWare.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/middlewares/LogMiddleWare.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/main.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/scss/components/button.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/scss/components/button.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/scss/pages/site.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/scss/pages/site.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/scss/utils/mixins.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/scss/utils/mixins.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/scss/utils/variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/scss/utils/variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/route/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/route/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/route/log.php" beforeDir="false" afterPath="$PROJECT_DIR$/route/log.php" afterDir="false" />
+    <list default="true" id="05c71e1d-483c-4e68-b91a-ba4025288c1a" name="Changes" comment="update team-game_1 page">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/TeamController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/TeamController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/middlewares/TeamMiddleWare.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/middlewares/TeamMiddleWare.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/route/team.php" beforeDir="false" afterPath="$PROJECT_DIR$/route/team.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +21,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="Dat" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -85,28 +74,27 @@
 }</component>
   <component name="ProjectId" id="2kFGKQ8sE3mWHJAPb6T8WE8K3u7" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <OptionsSetting value="false" id="Update" />
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "PHP Web Page.index.php.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Merging main",
-    "last_opened_file_path": "C:/xampp/htdocs",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;PHP Web Page.index.php.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/xampp/htdocs&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="index.php" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="xampp">
       <method v="2">
@@ -138,6 +126,8 @@
       <workItem from="1723038949667" duration="9453000" />
       <workItem from="1723092613258" duration="7680000" />
       <workItem from="1723102352456" duration="747000" />
+      <workItem from="1723117028802" duration="2539000" />
+      <workItem from="1723126381780" duration="1372000" />
     </task>
     <task id="LOCAL-00001" summary="test by TDat">
       <option name="closed" value="true" />
@@ -235,7 +225,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723055691547</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="update team-game_1 page">
+      <option name="closed" value="true" />
+      <created>1723111099486</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1723111099486</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -266,6 +264,7 @@
     <MESSAGE value="extra update for home page" />
     <MESSAGE value="update navbar and footer" />
     <MESSAGE value="extra commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="extra commit" />
+    <MESSAGE value="update team-game_1 page" />
+    <option name="LAST_COMMIT_MESSAGE" value="update team-game_1 page" />
   </component>
 </project>

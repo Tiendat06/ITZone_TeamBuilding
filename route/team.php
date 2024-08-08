@@ -6,21 +6,27 @@
 
     if($_SERVER['REQUEST_METHOD'] == 'GET'){
         if(isset($_GET['param_1']) && isset($_GET['param_2']) && isset($_GET['param_3'])){
+            switch ($_GET['param_1']){
+                case 'team':
+                    if($_GET['param_2'] == 'game-1-topic'){
 
+                        $location_id = $_GET['param_3'];
+                        if(strpos($location_id, "LOC") === 0){
+                            $teamMiddleWare->game_1_topic($location_id);
+                        }
+                    }
+                    break;
+            }
         } else if (isset($_GET['param_1']) && isset($_GET['param_2'])){
             switch ($_GET['param_1']){
                 case 'team':
-                    if($_GET['param_2'] == 'game_1'){
+                    if($_GET['param_2'] == 'game-1'){
                         $teamMiddleWare->game_1();
                     }
                     break;
             }
         } else if (isset($_GET['param_1'])){
-            switch ($_GET['param_1']){
-                case 'team':
-                    $teamMiddleWare->index();
-                    break;
-            }
+
         }
 
     } else if($_SERVER['REQUEST_METHOD'] == 'POST'){

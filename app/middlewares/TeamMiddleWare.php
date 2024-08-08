@@ -8,12 +8,12 @@ class TeamMiddleWare{
         $this->teamController = new TeamController();
     }
 
-    public function index(){
-        $this->teamController->index();
-    }
-
     public function game_1(){
         $this->teamController->game_1();
+    }
+
+    public function game_1_topic($location_id){
+        $this->teamController->game_1_topic($location_id);
     }
 }
 
