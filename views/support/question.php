@@ -19,8 +19,8 @@
                         <img src="/public/img/icon/carbon_map.png" alt="">
                     </div>
                     <div class="support-question__location--item-mid">
-                        <img src="/public/img/icon/carbon_map.png" alt="">
-                        <p class="mb-0 text-light support-question__item--para">Trạm 1</p>
+                        <img src="/public/img/icon/carbon_map.png" class="mt-2" alt="">
+                        <p class="mb-0 text-light support-question__item--para mt-2">Trạm 1</p>
                     </div>
                     <div class="support-question__location--item-side">
                         <img src="/public/img/icon/carbon_map.png" alt="">

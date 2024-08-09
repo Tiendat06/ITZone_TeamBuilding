@@ -1,6 +1,7 @@
 import site from './site.js';
 import location from "./location.js";
 import log from "./log.js";
+import support from './support.js';
 
 site.index();
 site.ajaxTest();
@@ -22,3 +23,6 @@ window.enableButton = () => {
 window.togglePassword = () => {
     log.togglePassword();
 }
+// support
+support.getLocationFetch();
+support.fetchLocation();

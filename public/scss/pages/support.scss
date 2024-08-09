@@ -161,10 +161,18 @@
 
       .support-question__location--item-mid{
         background: $gradient-color-6;
+        //display: flex;
+        //align-items: center;
         text-align: center;
-        padding: 30px;
+        padding: 10px;
         border-radius: 50%;
         box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.25);
+        height: 100px;
+
+        .support-question__item--para{
+          font-size: $sub-title-size;
+          width: 80px;
+        }
       }
 
       .support-question__location--icon-left{
