@@ -21,6 +21,8 @@
         include "./views/support/support.php";
     } else if($content == 'support-question'){
         include "./views/support/question.php";
+    } else if($content == 'support-team'){
+        include "./views/support/team-control.php";
     }
     // no route
     else if($content == 'rule'){

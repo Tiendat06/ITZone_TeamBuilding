@@ -14,6 +14,10 @@ class SupportMiddleWare{
     public function question(){
         $this->supportController->question();
     }
+
+    public function team_control(){
+        $this->supportController->team_control();
+    }
 }
 
 ?>

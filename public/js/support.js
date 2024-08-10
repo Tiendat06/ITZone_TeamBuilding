@@ -41,6 +41,7 @@ class Support{
         }
 
     }
+
 }
 
 export default new Support;

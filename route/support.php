@@ -12,6 +12,8 @@
                 case 'support':
                     if($_GET['param_2'] == 'question'){
                         $supportMiddleWare->question();
+                    } else if ($_GET['param_2'] == 'team'){
+                        $supportMiddleWare->team_control();
                     }
                     break;
             }

@@ -213,3 +213,184 @@
     }
   }
 }
+
+.support-team{
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 120px;
+  height: 100%;
+  .support-team__header{
+    width: 90%;
+    justify-content: space-between;
+    align-items: center;
+    .support-team__line{
+      height: 1px;
+      background-color: $component-color;
+    }
+
+    .support-team__title{
+      background-color: #ffffff;
+      border-radius: 10px;
+      .support-team__dropdown{
+        border: 4px solid $gradient-color-3;
+        border-radius: 10px;
+        position: relative;
+        padding: 5px 0 5px 0;
+        .support-team__dropdown--para{
+          font-size: $sub-title-size;
+          font-weight: bold;
+        }
+        .support-team__dropdown-box{
+          border-top: none;
+          height: 12px;
+          padding: 0 10px 0 10px;
+          border-bottom-left-radius: 10px;
+          border-bottom-right-radius: 10px;
+          position: absolute;
+          bottom: -14px;
+          right: 50%;
+          transform: translateX(50%);
+          background: $gradient-color-6;
+          color: #ffffff;
+        }
+      }
+
+      .support-team__dropdown-list{
+        text-align: center;
+        width: 100%;
+        position: absolute;
+        border: 4px solid $gradient-color-3;
+        border-top: 0;
+        z-index:-1;
+        bottom: 0;
+        padding-top: 30px;
+        transform: translateY(90%);
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+
+        .support-team__dropdown-item{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+
+          .support-team__dropdown-span{
+            font-size: $sub-title-size;
+            font-weight: bold;
+            display: block;
+            padding: 5px;
+            width: 90%;
+            border-top: 1px solid $gradient-color-3;
+
+          }
+        }
+      }
+
+    }
+  }
+
+  .support-team-content{
+    margin-top: 50px;
+    width: 80%;
+    .support-team-content__heading{
+      background-color: $support-color;
+      border-top-right-radius: 20px;
+      border-top-left-radius: 20px;
+      height: 50px;
+
+      .support-team-content__radius{
+        width: 10px;
+        height: 10px;
+        background-color: red;
+        right: 50%;
+        top: -5px;
+        position: absolute;
+        transform: translateX(calc(50% + 25px));
+        border-top-right-radius: 50px;
+        box-shadow: inset 0 0 0 50px $support-color;
+      }
+
+      .support-team-content__radius--left{
+        left: 50%;
+        border-top-left-radius: 50px;
+        border-top-right-radius: 0;
+        transform: translateX(calc(50% - 36px));
+        box-shadow: inset 0 0 0 50px $support-color;
+      }
+
+      .support-team-content__heading-img{
+        transform: translateY(-25px);
+        border-radius: 50%;
+        width: 50px;
+        background-color: $support-color;
+      }
+
+      .support-team-content__heading-para{
+        transform: translateY(-28px);
+        font-size: $sub-title-size;
+        .support-team-content__heading-text{
+          width: auto;
+          background-color: #9db2ce;
+          border-radius: 20px;
+          padding: 0 5px 0 5px;
+        }
+
+      }
+
+      .support-team-content__info{
+        transform: translateY(-24px);
+        border: 3px solid $support-color;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+
+        .support-team-content__process{
+          padding: 10px;
+          justify-content: center;
+          align-items: center;
+
+          .support-team-content__process-icon{
+            color: #cccccc;
+            font-size: $sub-title-size;
+          }
+
+          .support-team-content__process-line{
+            width: 20px;
+            height: 2px;
+            margin: 0 5px 0 5px;
+            background-color: #cccccc;
+          }
+        }
+
+        .support-team-content__list{
+          overflow: scroll;
+          padding: 20px 0 20px 0;
+          width: 100%;
+          height: 250px;
+
+          .support-team-content__item{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 3px solid #ffd233;
+            border-radius: 20px;
+            padding: 0 5px 0 5px;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.25);
+            margin: 0 15px 0 15px;
+
+            .support-team-content__para{
+              font-size: $sub-title-size;
+              font-weight: bold;
+            }
+          }
+
+          .support-team-content__item--member{
+            margin-top: 20px;
+            border: 3px solid #86de8a;
+
+          }
+        }
+      }
+
+    }
+  }
+}

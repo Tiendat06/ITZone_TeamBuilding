@@ -5,7 +5,6 @@ class LogController{
     {
     }
 
-//    [GET] /log/login
     public function index($username, $pwd){
         echo 'hi world';
         echo 'Hi WORLD 1234';
@@ -17,6 +16,7 @@ class LogController{
 
     }
 
+//    [GET] /log/login
     public function login(){
 
         include "./views/log/login.php";
