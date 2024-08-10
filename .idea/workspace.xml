@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="05c71e1d-483c-4e68-b91a-ba4025288c1a" name="Changes" comment="extra update for home page">
-      <change afterPath="$PROJECT_DIR$/public/img/icon/icon_lock.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+    <list default="true" id="05c71e1d-483c-4e68-b91a-ba4025288c1a" name="Changes" comment="update support question html css only (no js)">
+      <change afterPath="$PROJECT_DIR$/public/js/support.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_8_2_2024_1_10_AM_[Changes]/shelved.patch" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_8_2_2024_1_10_AM__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_8_2_2024_1_12_AM_[Changes]/shelved.patch" beforeDir="false" />
@@ -14,11 +13,11 @@
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_8_2_2024_1_19_AM_[Changes]/shelved.patch" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_8_2_2024_1_19_AM__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/main.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/scss/pages/guard.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/scss/pages/guard.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/guard/question.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/guard/question.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/scss/pages/support.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/scss/pages/support.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/support/question.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/support/question.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +26,13 @@
   </component>
   <component name="ComposerSettings">
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -45,7 +51,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/Tiendat06/ITZone_TeamBuilding.git&quot;,
-    &quot;accountId&quot;: &quot;20edf84c-f6f0-4655-9577-cdb7391f800c&quot;
+    &quot;accountId&quot;: &quot;bf406820-1e37-47e8-865b-4ee2e42bfb00&quot;
   }
 }</component>
   <component name="PhpServers">
@@ -53,7 +59,7 @@
       <server host="localhost" id="6f103af5-a3b4-4034-bc83-f131117d1234" name="xampp" />
     </servers>
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="C:\php\php-8.3.4\php.exe">
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP">
     <include_path>
       <path value="$PROJECT_DIR$/test_mvc/vendor/composer" />
       <path value="$PROJECT_DIR$/test_mvc/vendor/carbonphp/carbon-doctrine-types" />
@@ -95,7 +101,7 @@
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;PHP Web Page.index.php.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;ThanhLong&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Dat&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/xampp/htdocs&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -105,11 +111,6 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\views\guard" />
-    </key>
-  </component>
   <component name="RunManager">
     <configuration name="index.php" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="xampp">
       <method v="2">
@@ -120,8 +121,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-PS-241.18968.24" />
-        <option value="bundled-php-predefined-ba97393d7c68-48a1a656d44e-com.jetbrains.php.sharedIndexes-PS-241.18968.24" />
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-PS-241.14494.237" />
+        <option value="bundled-php-predefined-ba97393d7c68-8f0632a2a215-com.jetbrains.php.sharedIndexes-PS-241.14494.237" />
       </set>
     </attachedChunks>
   </component>
@@ -139,11 +140,11 @@
       <workItem from="1722873847082" duration="99000" />
       <workItem from="1723012577900" duration="6070000" />
       <workItem from="1723038949667" duration="9453000" />
-      <workItem from="1723087224513" duration="660000" />
-      <workItem from="1723087989579" duration="18152000" />
-      <workItem from="1723204132792" duration="1954000" />
-      <workItem from="1723206306715" duration="7459000" />
-      <workItem from="1723295484689" duration="5901000" />
+      <workItem from="1723092613258" duration="7680000" />
+      <workItem from="1723102352456" duration="747000" />
+      <workItem from="1723117028802" duration="2539000" />
+      <workItem from="1723126381780" duration="9115000" />
+      <workItem from="1723194381460" duration="3967000" />
     </task>
     <task id="LOCAL-00001" summary="test by TDat">
       <option name="closed" value="true" />
@@ -233,7 +234,39 @@
       <option name="project" value="LOCAL" />
       <updated>1723052137536</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="extra commit">
+      <option name="closed" value="true" />
+      <created>1723055691547</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1723055691547</updated>
+    </task>
+    <task id="LOCAL-00013" summary="update team-game_1 page">
+      <option name="closed" value="true" />
+      <created>1723111099486</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1723111099486</updated>
+    </task>
+    <task id="LOCAL-00014" summary="update route for team">
+      <option name="closed" value="true" />
+      <created>1723128123040</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1723128123040</updated>
+    </task>
+    <task id="LOCAL-00015" summary="update support question html css only (no js)">
+      <option name="closed" value="true" />
+      <created>1723144705403</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1723144705403</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -263,6 +296,10 @@
     <MESSAGE value="update FE for home page" />
     <MESSAGE value="extra update for home page" />
     <MESSAGE value="update navbar and footer" />
-    <option name="LAST_COMMIT_MESSAGE" value="update navbar and footer" />
+    <MESSAGE value="extra commit" />
+    <MESSAGE value="update team-game_1 page" />
+    <MESSAGE value="update route for team" />
+    <MESSAGE value="update support question html css only (no js)" />
+    <option name="LAST_COMMIT_MESSAGE" value="update support question html css only (no js)" />
   </component>
 </project>
