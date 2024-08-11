@@ -9,7 +9,7 @@
       <change beforePath="$PROJECT_DIR$/public/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/main.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/scss/pages/team.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/scss/pages/team.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/team/game_mentor.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/team/game_mentor.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/team/mentor_topic.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/team/mentor_topic.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -309,6 +309,7 @@
     <MESSAGE value="update support question html css only (no js)" />
     <MESSAGE value="update support check team page" />
     <MESSAGE value="update commit full css" />
-    <option name="LAST_COMMIT_MESSAGE" value="update commit full css" />
+    <MESSAGE value="update game_mentor page" />
+    <option name="LAST_COMMIT_MESSAGE" value="update game_mentor page" />
   </component>
 </project>
