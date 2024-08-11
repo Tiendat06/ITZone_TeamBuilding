@@ -4,7 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="05c71e1d-483c-4e68-b91a-ba4025288c1a" name="Changes" comment="update support question page" />
+    <list default="true" id="05c71e1d-483c-4e68-b91a-ba4025288c1a" name="Changes" comment="update commit full css">
+      <change afterPath="$PROJECT_DIR$/views/mentor/mentor_member.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/mentor/mentor_topic.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/team/game_mentor.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/MentorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/MentorController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/TeamController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/TeamController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/middlewares/MentorMiddleWare.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/middlewares/MentorMiddleWare.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/middlewares/TeamMiddleWare.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/middlewares/TeamMiddleWare.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/route/mentor.php" beforeDir="false" afterPath="$PROJECT_DIR$/route/mentor.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/route/team.php" beforeDir="false" afterPath="$PROJECT_DIR$/route/team.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/layout/partials/views_content.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout/partials/views_content.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/support/team-control.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/support/team_control.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/team/member.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/team/team_member.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -82,21 +96,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "PHP Web Page.index.php.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/xampp/htdocs",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;PHP Web Page.index.php.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/xampp/htdocs&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="index.php" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="xampp">
       <method v="2">
@@ -136,6 +150,7 @@
       <workItem from="1723270414861" duration="2103000" />
       <workItem from="1723289951421" duration="1320000" />
       <workItem from="1723298866257" duration="9821000" />
+      <workItem from="1723358900248" duration="2852000" />
     </task>
     <task id="LOCAL-00001" summary="test by TDat">
       <option name="closed" value="true" />
@@ -257,7 +272,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723144705403</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="update commit full css">
+      <option name="closed" value="true" />
+      <created>1723309411775</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1723309411775</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -292,6 +315,7 @@
     <MESSAGE value="update route for team" />
     <MESSAGE value="update support question html css only (no js)" />
     <MESSAGE value="update support check team page" />
-    <option name="LAST_COMMIT_MESSAGE" value="update support check team page" />
+    <MESSAGE value="update commit full css" />
+    <option name="LAST_COMMIT_MESSAGE" value="update commit full css" />
   </component>
 </project>

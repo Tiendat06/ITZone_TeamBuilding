@@ -14,6 +14,11 @@
                         if(strpos($location_id, "LOC") === 0){
                             $teamMiddleWare->game_1_topic($location_id);
                         }
+                    } else if ($_GET['param_2'] == 'mentor-topic'){
+                        $location_id = $_GET['param_3'];
+                        if(strpos($location_id, "LOC") === 0){
+                            $teamMiddleWare->mentor_topic($location_id);
+                        }
                     }
                     break;
             }
@@ -22,6 +27,11 @@
                 case 'team':
                     if($_GET['param_2'] == 'game-1'){
                         $teamMiddleWare->game_1();
+                    } else if ($_GET['param_2'] == 'game-mentor'){
+                        $teamMiddleWare->game_mentor();
+                    }
+                    else if($_GET['param_2'] == 'member'){
+                        $teamMiddleWare->team_member();
                     }
                     break;
             }
