@@ -18,5 +18,8 @@
     <?php
         include "./views/layout/partials/footer.php";
     ?>
+    <?php
+        include "./views/layout/partials/toast.php";
+    ?>
 </body>
 </html>

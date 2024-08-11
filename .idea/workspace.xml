@@ -5,11 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="05c71e1d-483c-4e68-b91a-ba4025288c1a" name="Changes" comment="update full route">
+      <change afterPath="$PROJECT_DIR$/public/img/icon/user-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/intro/mentor-intro.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/scss/components/toast.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/layout/partials/toast.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/main.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/scss/pages/team.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/scss/pages/team.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/team/mentor_topic.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/team/mentor_topic.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/scss/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/scss/main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/scss/pages/mentor.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/scss/pages/mentor.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/layout/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/mentor/mentor.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/mentor/mentor.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/team/team_member.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/team/team_member.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -273,7 +280,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723309411775</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="update mentor topic page">
+      <option name="closed" value="true" />
+      <created>1723403534216</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1723403534216</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
