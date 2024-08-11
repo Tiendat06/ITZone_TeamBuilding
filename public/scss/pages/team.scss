@@ -140,3 +140,32 @@
     }
   }
 }
+
+.team-game_mentor{
+  margin-bottom: 120px;
+  .team-game_mentor__title{
+    background: $gradient-color-6;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+  }
+
+  .team-game_mentor__content{
+
+    .team-game_mentor__para{
+      font-size: $sub-title-size;
+      font-weight: bold;
+      text-align: justify;
+    }
+
+    .team-game_mentor__btn-go{
+      margin: auto;
+      border-radius: 20px;
+      padding: 7px 12px 6px 12px;
+      font-size: $sub-title-size;
+      border: 3px solid #D7D03A;
+    }
+
+
+  }
+}
