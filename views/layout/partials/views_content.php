@@ -18,9 +18,8 @@
         include "./views/team/game_1_topic.php";
     } else if($content == 'team-game-mentor'){
         include "./views/team/game_mentor.php";
-    }
-    else if($content == 'team-mentor-topic'){
-        include "./views/mentor/mentor_topic.php";
+    } else if($content == 'team-mentor-topic'){
+        include "./views/team/mentor_topic.php";
     } else if($content == 'team-member'){
         include "./views/team/team_member.php";
     }
