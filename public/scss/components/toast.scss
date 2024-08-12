@@ -7,8 +7,13 @@
   height: 45px;
   color: #ffffff;
   font-size: $sub-title-size;
-
+  animation: fadeIn 0.8s linear, fadeOut 0.8s linear 5s forwards;
   .toast-icon--inner{
     font-size: $title-size;
   }
+
+}
+
+.itz-toast-success{
+  background-color: rgba(113, 221, 55, 0.85) !important;
 }
