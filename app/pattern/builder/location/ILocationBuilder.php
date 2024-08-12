@@ -7,6 +7,7 @@ interface ILocationBuilder{
     public function setLocationAddress($location_address): ILocationBuilder;
     public function setBusGo($bus_go): ILocationBuilder;
     public function setBusBack($bus_back): ILocationBuilder;
+    public function setLocationMap($location_map): ILocationBuilder;
     public function setMemberId($member_id): ILocationBuilder;
     public function build(): Location;
 }

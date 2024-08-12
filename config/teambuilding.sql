@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 05, 2024 at 08:26 AM
+-- Generation Time: Aug 12, 2024 at 09:48 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -112,6 +112,7 @@ CREATE TABLE `location` (
   `location_address` varchar(500) NOT NULL,
   `bus_go` varchar(500) NOT NULL,
   `bus_back` varchar(500) NOT NULL,
+  `location_map` varchar(1000) NOT NULL,
   `member_id` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -119,19 +120,19 @@ CREATE TABLE `location` (
 -- Dumping data for table `location`
 --
 
-INSERT INTO `location` (`location_id`, `location_name`, `location_img`, `location_address`, `bus_go`, `bus_back`, `member_id`) VALUES
-('LOC0000001', 'LOTTE MART', 'lotte_mart.png', '469 Đ. Nguyễn Hữu Thọ, Tân Hưng, Quận 7, Hồ Chí Minh', '*) Bắt chuyến 72 ở trạm xe BUS trước cổng 3 TDTU và tới Lotte Mart', '', 'GUA0000001'),
-('LOC0000002', 'PHỐ ĐI BỘ', 'pho_di_bo.png', 'Đường Nguyễn Huệ, Bến Nghé, Quận 1, Thành phố Hồ Chí Minh', '*) Đi từ Lotte trên chuyến 72 tới cuối trạm (Bến xe bus Sài Gòn)</br>*) Sau đó lên chuyến 88 chạy tới trạm \"Hồ Tùng Mậu\" hoặc \"Trạm Trung chuyển Hàm Nghi\"</br>*) Cuối cùng, đi bộ qua Phố đi bộ', '*) Tới trạm Trung chuyển Hàm Nghi bắt xe số 31 và về thẳng TDTU', 'GUA0000002'),
-('LOC0000003', 'ĐƯỜNG SÁCH', 'duong_sach.png', 'Đ. Nguyễn Văn Bình, Bến Nghé, Quận 1, Hồ Chí Minh', '*) Đi từ Lotte trên chuyến 72 tới trạm \"cầu Ông Lãnh\"</br>*) Sau đó lên chuyến 31 chạy tới trạm \"Lê Duẩn\"</br>*) Cuối cùng, đi bộ qua điểm đến mong muốn', '*) Tới trạm xe trường tiểu học Hòa Bình</br>Địa chỉ: 1 Công xã Paris, Bến Nghé, Quận 1, Thành phố Hồ Chí Minh, Vietnam</br>*) Đi chuyến 36 -> bến xe bus sài gòn -> xe 72 -> cổng 1 TDTU', 'GUA0000003'),
-('LOC0000004', 'BƯU ĐIỆN', 'buu_dien.png', '125 Hai Bà Trưng, Bến Nghé, Quận 1, Hồ Chí Minh, Việt Nam', '*) Đi từ Lotte trên chuyến 72 tới trạm \"cầu Ông Lãnh\"</br>*) Sau đó lên chuyến 31 chạy tới trạm \"Lê Duẩn\"</br>*) Cuối cùng, đi bộ qua điểm đến mong muốn', '*) Tới trạm xe trường tiểu học Hòa Bình</br>Địa chỉ: 1 Công xã Paris, Bến Nghé, Quận 1, Thành phố Hồ Chí Minh, Vietnam</br>*) Đi chuyến 36 -> bến xe bus sài gòn -> xe 72 -> cổng 1 TDTU', 'GUA0000004'),
-('LOC0000005', 'CÔNG VIÊN 30/4', 'cong_vien.png', '6 Đ. Lê Duẩn, Bến Nghé, Quận 1, Hồ Chí Minh, Việt Nam', '*) Đi từ Lotte trên chuyến 72 tới trạm \"cầu Ông Lãnh\"</br>*) Sau đó lên chuyến 31 chạy tới trạm \"Lê Duẩn\"</br>*) Cuối cùng, đi bộ qua điểm đến mong muốn', '*) Tới trạm xe trường tiểu học Hòa Bình</br>Địa chỉ: 1 Công xã Paris, Bến Nghé, Quận 1, Thành phố Hồ Chí Minh, Vietnam</br>*) Đi chuyến 36 -> bến xe bus sài gòn -> xe 72 -> cổng 1 TDTU', 'GUA0000005'),
-('LOC0000006', 'TDTU', 'tdtu.png', '19 Đ. Nguyễn Hữu Thọ, Tân Hưng, Quận 7, Hồ Chí Minh, Việt Nam', '', '', 'GUA0000006'),
-('LOC0000007', '711', '711.png', '19 Đ. Nguyễn Hữu Thọ, Tân Hưng, Quận 7, Hồ Chí Minh', '', '', 'MEN0000001'),
-('LOC0000008', 'Căn tin quân sự (Tòa I)', 'toa_i.png', '19 Đ. Nguyễn Hữu Thọ, Tân Hưng, Quận 7, Hồ Chí Minh', '', '', 'MEN0000002'),
-('LOC0000009', 'Sân bóng đá', 'san_bong_da.png', '19 Đ. Nguyễn Hữu Thọ, Tân Hưng, Quận 7, Hồ Chí Minh', '', '', 'MEN0000003'),
-('LOC0000010', 'Căn tin tòa D', 'can_tin_D.png', '19 Đ. Nguyễn Hữu Thọ, Tân Hưng, Quận 7, Hồ Chí Minh', '', '', 'MEN0000004'),
-('LOC0000011', 'Thư viện', 'thu_vien.png', '19 Đ. Nguyễn Hữu Thọ, Tân Hưng, Quận 7, Hồ Chí Minh', '', '', 'MEN0000005'),
-('LOC0000012', 'Tòa F', 'toa_f.png', '19 Đ. Nguyễn Hữu Thọ, Tân Hưng, Quận 7, Hồ Chí Minh', '', '', 'MEN0000006');
+INSERT INTO `location` (`location_id`, `location_name`, `location_img`, `location_address`, `bus_go`, `bus_back`, `location_map`, `member_id`) VALUES
+('LOC0000001', 'LOTTE MART', 'lotte_mart.png', '469 Đ. Nguyễn Hữu Thọ, Tân Hưng, Quận 7, Hồ Chí Minh', '*) Bắt chuyến 72 ở trạm xe BUS trước cổng 3 TDTU và tới Lotte Mart', '', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.9161607287847!2d106.69923367472397!3d10.740944889405657!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f9f2353ffb9%3A0x6ab49da47594ce7b!2sLOTTE%20Mart%20Qu%E1%BA%ADn%207!5e0!3m2!1svi!2s!4v1723445379234!5m2!1svi!2s\" width=\"400\" height=\"300\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>', 'GUA0000001'),
+('LOC0000002', 'PHỐ ĐI BỘ', 'pho_di_bo.png', 'Đường Nguyễn Huệ, Bến Nghé, Quận 1, Thành phố Hồ Chí Minh', '*) Đi từ Lotte trên chuyến 72 tới cuối trạm (Bến xe bus Sài Gòn)</br>*) Sau đó lên chuyến 88 chạy tới trạm \"Hồ Tùng Mậu\" hoặc \"Trạm Trung chuyển Hàm Nghi\"</br>*) Cuối cùng, đi bộ qua Phố đi bộ', '*) Tới trạm Trung chuyển Hàm Nghi bắt xe số 31 và về thẳng TDTU', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.4866692149244!2d106.7010858247246!3d10.773988789374666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f46fd67ea19%3A0x57881ba4c546af7a!2zUGjDtMyBIMSRaSBiw7TMoyBOZ3V5w6rMg24gSHXDqsyjLCDEkC4gTmd1ecOqzINuIEh1w6rMoywgQuG6v24gTmdow6ksIFF14bqtbiAxLCBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1723445477253!5m2!1svi!2s\" width=\"400\" height=\"300\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>', 'GUA0000002'),
+('LOC0000003', 'ĐƯỜNG SÁCH', 'duong_sach.png', 'Đ. Nguyễn Văn Bình, Bến Nghé, Quận 1, Hồ Chí Minh', '*) Đi từ Lotte trên chuyến 72 tới trạm \"cầu Ông Lãnh\"</br>*) Sau đó lên chuyến 31 chạy tới trạm \"Lê Duẩn\"</br>*) Cuối cùng, đi bộ qua điểm đến mong muốn', '*) Tới trạm xe trường tiểu học Hòa Bình</br>Địa chỉ: 1 Công xã Paris, Bến Nghé, Quận 1, Thành phố Hồ Chí Minh, Vietnam</br>*) Đi chuyến 36 -> bến xe bus sài gòn -> xe 72 -> cổng 1 TDTU', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.4015780701766!2d106.69710987472472!3d10.78052358936851!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752fad2860457b%3A0xcf5f1507c8bd0e33!2zxJDGsOG7nW5nIHPDoWNoIFRQLiBI4buTIENow60gTWluaA!5e0!3m2!1svi!2s!4v1723445557661!5m2!1svi!2s\" width=\"400\" height=\"300\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>', 'GUA0000003'),
+('LOC0000004', 'BƯU ĐIỆN', 'buu_dien.png', '125 Hai Bà Trưng, Bến Nghé, Quận 1, Hồ Chí Minh, Việt Nam', '*) Đi từ Lotte trên chuyến 72 tới trạm \"cầu Ông Lãnh\"</br>*) Sau đó lên chuyến 31 chạy tới trạm \"Lê Duẩn\"</br>*) Cuối cùng, đi bộ qua điểm đến mong muốn', '*) Tới trạm xe trường tiểu học Hòa Bình</br>Địa chỉ: 1 Công xã Paris, Bến Nghé, Quận 1, Thành phố Hồ Chí Minh, Vietnam</br>*) Đi chuyến 36 -> bến xe bus sài gòn -> xe 72 -> cổng 1 TDTU', '', 'GUA0000004'),
+('LOC0000005', 'CÔNG VIÊN 30/4', 'cong_vien.png', '6 Đ. Lê Duẩn, Bến Nghé, Quận 1, Hồ Chí Minh, Việt Nam', '*) Đi từ Lotte trên chuyến 72 tới trạm \"cầu Ông Lãnh\"</br>*) Sau đó lên chuyến 31 chạy tới trạm \"Lê Duẩn\"</br>*) Cuối cùng, đi bộ qua điểm đến mong muốn', '*) Tới trạm xe trường tiểu học Hòa Bình</br>Địa chỉ: 1 Công xã Paris, Bến Nghé, Quận 1, Thành phố Hồ Chí Minh, Vietnam</br>*) Đi chuyến 36 -> bến xe bus sài gòn -> xe 72 -> cổng 1 TDTU', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.419964460345!2d106.69478977472471!3d10.779111889369815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f6570c90b25%3A0x788f1a06c37e1848!2zQ8O0bmcgdmnDqm4gMzAvNA!5e0!3m2!1svi!2s!4v1723445589756!5m2!1svi!2s\" width=\"400\" height=\"300\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>', 'GUA0000005'),
+('LOC0000006', 'TDTU', 'tdtu.png', '19 Đ. Nguyễn Hữu Thọ, Tân Hưng, Quận 7, Hồ Chí Minh, Việt Nam', '', '', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3920.0330883073716!2d106.69676687472392!3d10.731931389414159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528b2747a81a3%3A0x33c1813055acb613!2zxJDhuqFpIGjhu41jIFTDtG4gxJDhu6ljIFRo4bqvbmc!5e0!3m2!1svi!2s!4v1723445614903!5m2!1svi!2s\" width=\"400\" height=\"300\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>', 'GUA0000006'),
+('LOC0000007', '711', '711.png', '19 Đ. Nguyễn Hữu Thọ, Tân Hưng, Quận 7, Hồ Chí Minh', '', '', '', 'MEN0000001'),
+('LOC0000008', 'Căn tin quân sự (Tòa I)', 'toa_i.png', '19 Đ. Nguyễn Hữu Thọ, Tân Hưng, Quận 7, Hồ Chí Minh', '', '', '', 'MEN0000002'),
+('LOC0000009', 'Sân bóng đá', 'san_bong_da.png', '19 Đ. Nguyễn Hữu Thọ, Tân Hưng, Quận 7, Hồ Chí Minh', '', '', '', 'MEN0000003'),
+('LOC0000010', 'Căn tin tòa D', 'can_tin_D.png', '19 Đ. Nguyễn Hữu Thọ, Tân Hưng, Quận 7, Hồ Chí Minh', '', '', '', 'MEN0000004'),
+('LOC0000011', 'Thư viện', 'thu_vien.png', '19 Đ. Nguyễn Hữu Thọ, Tân Hưng, Quận 7, Hồ Chí Minh', '', '', '', 'MEN0000005'),
+('LOC0000012', 'Tòa F', 'toa_f.png', '19 Đ. Nguyễn Hữu Thọ, Tân Hưng, Quận 7, Hồ Chí Minh', '', '', '', 'MEN0000006');
 
 -- --------------------------------------------------------
 
@@ -290,6 +291,32 @@ INSERT INTO `team_arrival` (`team_arrival_id`, `team_id`, `location_id`, `is_sho
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `team_member`
+--
+
+CREATE TABLE `team_member` (
+  `team_member_id` varchar(50) NOT NULL,
+  `team_member_name` varchar(500) NOT NULL,
+  `team_member_gender` varchar(10) NOT NULL,
+  `team_member_phone` varchar(50) NOT NULL,
+  `team_id` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `team_member`
+--
+
+INSERT INTO `team_member` (`team_member_id`, `team_member_name`, `team_member_gender`, `team_member_phone`, `team_id`) VALUES
+('TMB0000001', 'Jake Johnson', 'Male', '0123456789', 'TEA0000001'),
+('TMB0000002', 'Marry Samson', 'Female', '0963852741', 'TEA0000002'),
+('TMB0000003', 'Bob Lexi', 'Male', '0741852963', 'TEA0000003'),
+('TMB0000004', 'Courtney Kane', 'Female', '0852963741', 'TEA0000004'),
+('TMB0000005', 'Max Curl', 'Male', '0741852963', 'TEA0000005'),
+('TMB0000006', 'Willie Manny', 'Male', '0147369258', 'TEA0000006');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `team_puzzle`
 --
 
@@ -421,6 +448,12 @@ ALTER TABLE `team`
 --
 ALTER TABLE `team_arrival`
   ADD PRIMARY KEY (`team_arrival_id`,`team_id`,`location_id`);
+
+--
+-- Indexes for table `team_member`
+--
+ALTER TABLE `team_member`
+  ADD PRIMARY KEY (`team_member_id`);
 
 --
 -- Indexes for table `team_puzzle`

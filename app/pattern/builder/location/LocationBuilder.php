@@ -7,6 +7,7 @@ class LocationBuilder implements ILocationBuilder {
     private string $location_address;
     private string $bus_go;
     private string $bus_back;
+    private string $location_map;
     private string $member_id;
 
     public function __construct(){}
@@ -53,6 +54,13 @@ class LocationBuilder implements ILocationBuilder {
         return $this;
     }
 
+    public function setLocationMap($location_map): ILocationBuilder
+    {
+        // TODO: Implement setLocationMap() method.
+        $this->location_map = $location_map;
+        return $this;
+    }
+
     public function setMemberId($member_id): ILocationBuilder
     {
         // TODO: Implement setMemberId() method.
@@ -64,7 +72,7 @@ class LocationBuilder implements ILocationBuilder {
     {
         // TODO: Implement build() method.
         return new Location($this->location_id, $this->location_name, $this->location_img,
-            $this->location_address, $this->bus_go, $this->bus_back, $this->member_id);
+            $this->location_address, $this->bus_go, $this->bus_back, $this->location_map, $this->member_id);
     }
 }
 

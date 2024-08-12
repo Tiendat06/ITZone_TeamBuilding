@@ -11,7 +11,11 @@
   .toast-icon--inner{
     font-size: $title-size;
   }
-
+  .toast-body__cloud{
+    position: absolute;
+    right: 0;
+    top: -2px;
+  }
 }
 
 .itz-toast-success{

@@ -19,6 +19,7 @@ class LocationRepository{
                 ->setLocationAddress($row["location_address"])
                 ->setBusGo($row["bus_go"])
                 ->setBusBack($row["bus_back"])
+                ->setLocationMap($row['location_map'])
                 ->setMemberId($row["member_id"])
                 ->build();
 
@@ -41,6 +42,7 @@ class LocationRepository{
             ->setLocationAddress($row["location_address"])
             ->setBusGo($row["bus_go"])
             ->setBusBack($row["bus_back"])
+            ->setLocationMap($row['location_map'])
             ->setMemberId($row["member_id"])
             ->build();
         return $location;
