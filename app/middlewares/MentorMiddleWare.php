@@ -8,12 +8,20 @@ class MentorMiddleWare{
     }
 
     public function index(){
-        $this->mentorController->index();
+        if (!isset($_SESSION['person_id']) && !isset($_SESSION['role_name'])) {
+            header('location: /');
+        } else{
+            $this->mentorController->index();
+        }
     }
 
     public function mentor_member()
     {
-        $this->mentorController->mentor_member();
+        if (!isset($_SESSION['person_id']) && !isset($_SESSION['role_name'])) {
+            header('location: /');
+        } else {
+            $this->mentorController->mentor_member();
+        }
     }
 
 }

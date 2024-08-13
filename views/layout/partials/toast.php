@@ -1,8 +1,8 @@
 <?php
 ?>
-
-<div
-    class="bs-toast d-none toast fade show bg-success"
+<!-- bg-success-->
+<div id="toast"
+    class="bs-toast d-none toast fade show"
     role="alert"
     aria-live="assertive"
     aria-atomic="true"
@@ -12,8 +12,9 @@
 <!--        <div class="me-auto fw-semibold">Thông báo</div>-->
 <!--    </div>-->
     <div class="toast-body position-relative w-100 d-flex flex-wrap justify-content-between align-items-center">
-        <span>Chúc mừng bạn đã tìm ra đáp án</span>
-        <div class="toast-icon" data-bs-dismiss="toast">
+        <span id="toast-message">Chúc mừng bạn đã tìm ra đáp án</span>
+<!--        data-bs-dismiss="toast"-->
+        <div class="toast-icon" id="toast-close">
             <i class="toast-icon--inner fa-regular fa-rectangle-xmark"></i>
         </div>
         <img style="width: 30px" class="toast-body__cloud" src="/public/img/icon/icon-cloud.png" alt="">

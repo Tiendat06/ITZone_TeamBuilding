@@ -5,6 +5,7 @@ import support from './support.js';
 
 site.index();
 site.ajaxTest();
+site.closeToast();
 
 
 // location & topic (team arrival and team puzzle)
@@ -24,6 +25,8 @@ window.enableButton = () => {
 window.togglePassword = () => {
     log.togglePassword();
 }
+log.checkLogin()
+
 // support
 support.getLocationFetch();
 support.fetchLocation();

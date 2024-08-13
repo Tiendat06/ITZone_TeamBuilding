@@ -34,9 +34,10 @@
     // mentor
     else if($content == 'mentor'){
         include "./views/mentor/mentor.php";
-    } else if($content == 'mentor-member'){
-        include "./views/mentor/mentor_member.php";
     }
+//    else if($content == 'mentor-member'){
+//        include "./views/mentor/mentor_member.php";
+//    }
     // no route
     else if($content == 'rule'){
         include "./views/site/rule.php";

@@ -44,6 +44,36 @@ class PersonRepository{
         $result = $stmt->get_result();
         return $result->num_rows > 0;
     }
+
+    public function getPersonNameByPersonId($person_id, $role_name): string{
+        if ($role_name == 'mentor') {
+            $sql = 'SELECT * FROM `mentor` WHERE `mentor_id` = ?';
+            $stmt = $this->conn->prepare($sql);
+            $stmt->bind_param('s', $person_id);
+            $stmt->execute();
+            $result = $stmt->get_result();
+            $row = $result->fetch_assoc();
+            return $row['mentor_name'];
+        } else if ($role_name == 'guard' || $role_name == 'support') {
+            $sql = 'SELECT * FROM `member` WHERE `member_id` = ?';
+            $stmt = $this->conn->prepare($sql);
+            $stmt->bind_param('s', $person_id);
+            $stmt->execute();
+            $result = $stmt->get_result();
+            $row = $result->fetch_assoc();
+            return $row['member_name'];
+        } else if ($role_name == 'team') {
+            $sql = 'SELECT * FROM `team` WHERE `team_id` = ?';
+            $stmt = $this->conn->prepare($sql);
+            $stmt->bind_param('s', $person_id);
+            $stmt->execute();
+            $result = $stmt->get_result();
+            $row = $result->fetch_assoc();
+            return $row['team_name'];
+        }
+
+        return "Guest";
+    }
 }
 
 ?>

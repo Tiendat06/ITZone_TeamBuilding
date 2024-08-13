@@ -8,13 +8,13 @@
         if(isset($_GET['param_1']) && isset($_GET['param_2']) && isset($_GET['param_3'])){
 
         } else if (isset($_GET['param_1']) && isset($_GET['param_2'])){
-            switch ($_GET['param_1']){
-                case 'mentor':
-                    if(isset($_GET['param_2']) == 'member'){
-                        $mentorMiddleWare->mentor_member();
-                    }
-                    break;
-            }
+//            switch ($_GET['param_1']){
+//                case 'mentor':
+//                    if(isset($_GET['param_2']) == 'member'){
+//                        $mentorMiddleWare->mentor_member();
+//                    }
+//                    break;
+//            }
         } else if (isset($_GET['param_1'])){
             switch ($_GET['param_1']){
                 case 'mentor':

@@ -8,15 +8,27 @@ class SupportMiddleWare{
     }
 
     public function index(){
-        $this->supportController->index();
+        if (!isset($_SESSION['person_id']) && !isset($_SESSION['role_name'])) {
+            header('location: /');
+        } else {
+            $this->supportController->index();
+        }
     }
 
     public function question(){
-        $this->supportController->question();
+        if (!isset($_SESSION['person_id']) && !isset($_SESSION['role_name'])) {
+            header('location: /');
+        } else {
+            $this->supportController->question();
+        }
     }
 
     public function team_control(){
-        $this->supportController->team_control();
+        if (!isset($_SESSION['person_id']) && !isset($_SESSION['role_name'])) {
+            header('location: /');
+        } else {
+            $this->supportController->team_control();
+        }
     }
 }
 

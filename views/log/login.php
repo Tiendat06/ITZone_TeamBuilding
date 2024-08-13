@@ -15,7 +15,7 @@ include "./views/layout/partials/header.php";
 </section>
 
 <section class="login-section-2" id="login-section-2">
-    <form action="#" class="login-section-2__form">
+    <form action="#" onsubmit="return false" class="login-section-2__form">
         <h1 class="login-section-2__form--greeting gradient-color-text-1">Aloha!</h1>
         <div class="login-section-2__form--text">Chào mừng bạn đến với Teambuilding Clb IT-Zone! Vui lòng đăng nhập để tiếp tục.</div>
         <figure class="login-section-2__form--figure">
@@ -32,6 +32,10 @@ include "./views/layout/partials/header.php";
     </form>
 </section>
 </section>
+
+<?php
+    include './views/layout/partials/toast.php';
+?>
 
 </body>
 </html>

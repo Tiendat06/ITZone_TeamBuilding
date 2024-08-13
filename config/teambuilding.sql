@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 13, 2024 at 02:47 PM
+-- Generation Time: Aug 13, 2024 at 08:29 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -42,25 +42,25 @@ CREATE TABLE `account` (
 --
 
 INSERT INTO `account` (`account_id`, `account_username`, `account_password`, `person_id`, `role_id`) VALUES
-('ACC0000001', '', 'mentor01_ITZone', 'MEN0000001', 'ROL0000001'),
-('ACC0000002', '', 'mentor02_ITZone', 'MEN0000002', 'ROL0000001'),
-('ACC0000003', '', 'mentor03_ITZone', 'MEN0000003', 'ROL0000001'),
-('ACC0000004', '', 'mentor04_ITZone', 'MEN0000004', 'ROL0000001'),
-('ACC0000005', '', 'mentor05_ITZone', 'MEN0000005', 'ROL0000001'),
-('ACC0000006', '', 'mentor06_ITZone', 'MEN0000006', 'ROL0000001'),
-('ACC0000007', '', 'guard01_ITZone', 'GUA0000001', 'ROL0000002'),
-('ACC0000008', '', 'guard02_ITZone', 'GUA0000002', 'ROL0000002'),
-('ACC0000009', '', 'guard03_ITZone', 'GUA0000003', 'ROL0000002'),
-('ACC0000010', '', 'guard04_ITZone', 'GUA0000004', 'ROL0000002'),
-('ACC0000011', '', 'guard05_ITZone', 'GUA0000005', 'ROL0000002'),
-('ACC0000012', '', 'guard06_ITZone', 'GUA0000006', 'ROL0000002'),
-('ACC0000013', '', 'support01_ITZone', 'SUP0000001', 'ROL0000003'),
-('ACC0000014', '', 'team01_ITZone', 'TEA0000001', 'ROL0000004'),
-('ACC0000015', '', 'team02_ITZone', 'TEA0000002', 'ROL0000004'),
-('ACC0000016', '', 'team03_ITZone', 'TEA0000003', 'ROL0000004'),
-('ACC0000017', '', 'team04_ITZone', 'TEA0000004', 'ROL0000004'),
-('ACC0000018', '', 'team05_ITZone', 'TEA0000005', 'ROL0000004'),
-('ACC0000019', '', 'team06_ITZone', 'TEA0000006', 'ROL0000004');
+('ACC0000001', 'mentor01', 'mentor01_ITZone', 'MEN0000001', 'ROL0000001'),
+('ACC0000002', 'mentor02', 'mentor02_ITZone', 'MEN0000002', 'ROL0000001'),
+('ACC0000003', 'mentor03', 'mentor03_ITZone', 'MEN0000003', 'ROL0000001'),
+('ACC0000004', 'mentor04', 'mentor04_ITZone', 'MEN0000004', 'ROL0000001'),
+('ACC0000005', 'mentor05', 'mentor05_ITZone', 'MEN0000005', 'ROL0000001'),
+('ACC0000006', 'mentor06', 'mentor06_ITZone', 'MEN0000006', 'ROL0000001'),
+('ACC0000007', 'guard07', 'guard01_ITZone', 'GUA0000001', 'ROL0000002'),
+('ACC0000008', 'guard08', 'guard02_ITZone', 'GUA0000002', 'ROL0000002'),
+('ACC0000009', 'guard09', 'guard03_ITZone', 'GUA0000003', 'ROL0000002'),
+('ACC0000010', 'guard10', 'guard04_ITZone', 'GUA0000004', 'ROL0000002'),
+('ACC0000011', 'guard11', 'guard05_ITZone', 'GUA0000005', 'ROL0000002'),
+('ACC0000012', 'guard12', 'guard06_ITZone', 'GUA0000006', 'ROL0000002'),
+('ACC0000013', 'support13', 'support01_ITZone', 'SUP0000001', 'ROL0000003'),
+('ACC0000014', 'team01', 'team01_ITZone', 'TEA0000001', 'ROL0000004'),
+('ACC0000015', 'team02', 'team02_ITZone', 'TEA0000002', 'ROL0000004'),
+('ACC0000016', 'team03', 'team03_ITZone', 'TEA0000003', 'ROL0000004'),
+('ACC0000017', 'team04', 'team04_ITZone', 'TEA0000004', 'ROL0000004'),
+('ACC0000018', 'team05', 'team05_ITZone', 'TEA0000005', 'ROL0000004'),
+('ACC0000019', 'team06', 'team06_ITZone', 'TEA0000006', 'ROL0000004');
 
 -- --------------------------------------------------------
 
@@ -153,13 +153,13 @@ CREATE TABLE `member` (
 --
 
 INSERT INTO `member` (`member_id`, `member_name`, `member_phone`) VALUES
-('GUA0000001', '', ''),
-('GUA0000002', '', ''),
-('GUA0000003', '', ''),
-('GUA0000004', '', ''),
-('GUA0000005', '', ''),
-('GUA0000006', '', ''),
-('SUP0000001', '', '');
+('GUA0000001', 'AAron', ''),
+('GUA0000002', 'Mixin Cajon', ''),
+('GUA0000003', 'Carol Well', ''),
+('GUA0000004', 'Danny Drinkwater', ''),
+('GUA0000005', 'Kyle Walker', ''),
+('GUA0000006', 'Macus Rojo', ''),
+('SUP0000001', 'Gordon Ramsay', '');
 
 -- --------------------------------------------------------
 
@@ -179,12 +179,12 @@ CREATE TABLE `mentor` (
 --
 
 INSERT INTO `mentor` (`mentor_id`, `mentor_name`, `mentor_phone`, `mentor_key`) VALUES
-('MEN0000001', '', '', '77BC2E284C8DFF77'),
-('MEN0000002', '', '', 'A200C8868DB8AA2C'),
-('MEN0000003', '', '', 'C59276DBD4EB8701'),
-('MEN0000004', '', '', '3DE6FCB65242FA96'),
-('MEN0000005', '', '', '9428DB9B9AEECEAB'),
-('MEN0000006', '', '', '18AE81C81F983260');
+('MEN0000001', 'Masino Wax', '0356779197', '77BC2E284C8DFF77'),
+('MEN0000002', 'Fabrian Romano', '0356779198', 'A200C8868DB8AA2C'),
+('MEN0000003', 'Victor Kowa', '0356779199', 'C59276DBD4EB8701'),
+('MEN0000004', 'Nancy Willie', '0356779100', '3DE6FCB65242FA96'),
+('MEN0000005', 'Harry John', '0356779101', '9428DB9B9AEECEAB'),
+('MEN0000006', 'Jacky Style', '0356779102', '18AE81C81F983260');
 
 -- --------------------------------------------------------
 
@@ -227,12 +227,12 @@ CREATE TABLE `team` (
 --
 
 INSERT INTO `team` (`team_id`, `team_name`, `team_phone`, `team_route`, `team_member`, `mentor_id`) VALUES
-('TEA0000001', 'TEAM 1', '', '', '', 'MEN0000001'),
-('TEA0000002', 'TEAM 2', '', '', '', 'MEN0000002'),
-('TEA0000003', 'TEAM 3', '', '', '', 'MEN0000003'),
-('TEA0000004', 'TEAM 4', '', '', '', 'MEN0000004'),
-('TEA0000005', 'TEAM 5', '', '', '', 'MEN0000005'),
-('TEA0000006', 'TEAM 6', '', '', '', 'MEN0000006');
+('TEA0000001', 'TEAM 1', '0123456789', '', '', 'MEN0000001'),
+('TEA0000002', 'TEAM 2', '0741852963', '', '', 'MEN0000002'),
+('TEA0000003', 'TEAM 3', '0741852969', '', '', 'MEN0000003'),
+('TEA0000004', 'TEAM 4', '0246798135', '', '', 'MEN0000004'),
+('TEA0000005', 'TEAM 5', '0321789654', '', '', 'MEN0000005'),
+('TEA0000006', 'TEAM 6', '0213546897', '', '', 'MEN0000006');
 
 -- --------------------------------------------------------
 
@@ -311,11 +311,17 @@ CREATE TABLE `team_member` (
 
 INSERT INTO `team_member` (`team_member_id`, `team_member_name`, `team_member_gender`, `team_member_phone`, `is_team_leader`, `team_id`) VALUES
 ('TMB0000001', 'Jake Johnson', 'Male', '0123456789', 1, 'TEA0000001'),
-('TMB0000002', 'Marry Samson', 'Female', '0963852741', 1, 'TEA0000002'),
-('TMB0000003', 'Bob Lexi', 'Male', '0741852963', 1, 'TEA0000003'),
-('TMB0000004', 'Courtney Kane', 'Female', '0852963741', 1, 'TEA0000004'),
-('TMB0000005', 'Max Curl', 'Male', '0741852963', 1, 'TEA0000005'),
-('TMB0000006', 'Willie Manny', 'Male', '0147369258', 1, 'TEA0000006');
+('TMB0000002', 'Marry Samson', 'Female', '0963852741', 0, 'TEA0000001'),
+('TMB0000003', 'Bob Lexi', 'Male', '0741852963', 1, 'TEA0000002'),
+('TMB0000004', 'Courtney Kane', 'Female', '0852963741', 0, 'TEA0000002'),
+('TMB0000005', 'Max Curl', 'Male', '0741852969', 1, 'TEA0000003'),
+('TMB0000006', 'Willie Manny', 'Male', '0147369258', 0, 'TEA0000003'),
+('TMB0000007', 'Whitney Colwill', 'Female', '0246798135', 1, 'TEA0000004'),
+('TMB0000008', 'Harley Cole', 'Male', '0258794613', 0, 'TEA0000004'),
+('TMB0000009', 'Shaun Hawking', 'Male', '0321789654', 1, 'TEA0000005'),
+('TMB0000010', 'Christina Tosi', 'Female', '0963147582', 0, 'TEA0000005'),
+('TMB0000011', 'Bobby Johnson', 'Male', '0213546897', 1, 'TEA0000006'),
+('TMB0000012', 'Joe Bastisha', 'Male', '0913746825', 0, 'TEA0000006');
 
 -- --------------------------------------------------------
 

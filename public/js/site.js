@@ -5,6 +5,12 @@ class Site{
         console.log('hello world !!');
     }
 
+    closeToast = () => {
+        $('#toast-close').click(() => {
+            $('#toast').addClass('d-none')
+        })
+    }
+
     ajaxTest = () => {
         $(document).ready(() => {
             $('#button').click(function (){

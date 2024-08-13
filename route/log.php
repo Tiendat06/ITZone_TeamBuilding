@@ -13,6 +13,8 @@
                 case 'log':
                     if($_GET['param_2'] == 'login'){
                         $logMiddleWare->login();
+                    } else if($_GET['param_2'] == 'logout'){
+                        $logMiddleWare->logout();
                     }
                     break;
             }
@@ -24,7 +26,13 @@
         if(isset($_GET['param_1']) && isset($_GET['param_2']) && isset($_GET['param_3'])){
 
         } else if (isset($_GET['param_1']) && isset($_GET['param_2'])){
-
+            switch ($_GET['param_1']){
+                case 'log':
+                    if($_GET['param_2'] == 'login'){
+                        $logMiddleWare->login_POST();
+                    }
+                    break;
+            }
         } else if (isset($_GET['param_1'])){
 
         }
