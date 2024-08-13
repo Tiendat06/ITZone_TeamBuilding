@@ -104,6 +104,30 @@
         justify-content: center;
         align-items: center;
 
+        .team-game_1__hint{
+          border-radius: 10px !important;
+          overflow: hidden;
+
+          .team-game_1__hint-btn{
+            background-color: #f2f2f2 !important;
+            border-radius: 10px !important;
+            border: 1px solid #cccccc;
+            font-size: $title-size;
+            margin: auto;
+          }
+
+          .team-game_1__hint-body{
+            background-color: #f2f2f2;
+
+            .team-game_1__hint-btn{
+              padding: 5px 10px 5px 10px;
+              background-color: $normal-color !important;
+              font-size: $text-size;
+              border-radius: 5px !important;
+            }
+          }
+        }
+
         .team-game_1__content--mail{
           font-size: $sub-title-size;
         }
@@ -218,6 +242,30 @@
     border-radius: 10px;
     padding: 15px;
     box-shadow: inset 2px 3px 5px rgba(0, 0, 0, 0.25);
+
+    .team-game_1__hint{
+      border-radius: 10px !important;
+      overflow: hidden;
+
+      .team-game_1__hint-btn{
+        background-color: #ffffff !important;
+        border-radius: 10px !important;
+        border: 1px solid #cccccc;
+        font-size: $sub-title-size;
+        margin: auto;
+      }
+
+      .team-game_1__hint-body{
+        background-color: #ffffff;
+
+        .team-game_1__hint-btn{
+          padding: 5px 10px 5px 10px;
+          background-color: $normal-color !important;
+          font-size: $text-size;
+          border-radius: 5px !important;
+        }
+      }
+    }
 
     .team-mentor_topic__link{
       font-size: $text-size;

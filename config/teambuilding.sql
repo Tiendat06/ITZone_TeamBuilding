@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 12, 2024 at 09:48 AM
+-- Generation Time: Aug 13, 2024 at 02:47 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -71,7 +71,9 @@ INSERT INTO `account` (`account_id`, `account_username`, `account_password`, `pe
 CREATE TABLE `hint` (
   `hint_id` varchar(50) NOT NULL,
   `hint_description` varchar(500) NOT NULL,
+  `hint_end` datetime DEFAULT NULL,
   `is_show` int(1) NOT NULL,
+  `hint_priority` int(1) NOT NULL,
   `topic_id` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -79,25 +81,25 @@ CREATE TABLE `hint` (
 -- Dumping data for table `hint`
 --
 
-INSERT INTO `hint` (`hint_id`, `hint_description`, `is_show`, `topic_id`) VALUES
-('HIN0000001', '', 0, 'TOP0000001'),
-('HIN0000002', '', 0, 'TOP0000001'),
-('HIN0000003', '', 0, 'TOP0000001'),
-('HIN0000004', '', 0, 'TOP0000002'),
-('HIN0000005', '', 0, 'TOP0000002'),
-('HIN0000006', '', 0, 'TOP0000002'),
-('HIN0000007', '', 0, 'TOP0000003'),
-('HIN0000008', '', 0, 'TOP0000003'),
-('HIN0000009', '', 0, 'TOP0000003'),
-('HIN0000010', '', 0, 'TOP0000004'),
-('HIN0000011', '', 0, 'TOP0000004'),
-('HIN0000012', '', 0, 'TOP0000004'),
-('HIN0000013', '', 0, 'TOP0000005'),
-('HIN0000014', '', 0, 'TOP0000005'),
-('HIN0000015', '', 0, 'TOP0000005'),
-('HIN0000016', '', 0, 'TOP0000006'),
-('HIN0000017', '', 0, 'TOP0000006'),
-('HIN0000018', '', 0, 'TOP0000006');
+INSERT INTO `hint` (`hint_id`, `hint_description`, `hint_end`, `is_show`, `hint_priority`, `topic_id`) VALUES
+('HIN0000001', '', NULL, 0, 1, 'TOP0000001'),
+('HIN0000002', '', NULL, 0, 2, 'TOP0000001'),
+('HIN0000003', '', NULL, 0, 3, 'TOP0000001'),
+('HIN0000004', '', NULL, 0, 1, 'TOP0000002'),
+('HIN0000005', '', NULL, 0, 2, 'TOP0000002'),
+('HIN0000006', '', NULL, 0, 3, 'TOP0000002'),
+('HIN0000007', '', NULL, 0, 1, 'TOP0000003'),
+('HIN0000008', '', NULL, 0, 2, 'TOP0000003'),
+('HIN0000009', '', NULL, 0, 3, 'TOP0000003'),
+('HIN0000010', '', NULL, 0, 1, 'TOP0000004'),
+('HIN0000011', '', NULL, 0, 2, 'TOP0000004'),
+('HIN0000012', '', NULL, 0, 3, 'TOP0000004'),
+('HIN0000013', '', NULL, 0, 1, 'TOP0000005'),
+('HIN0000014', '', NULL, 0, 2, 'TOP0000005'),
+('HIN0000015', '', NULL, 0, 3, 'TOP0000005'),
+('HIN0000016', '', NULL, 0, 1, 'TOP0000006'),
+('HIN0000017', '', NULL, 0, 2, 'TOP0000006'),
+('HIN0000018', '', NULL, 0, 3, 'TOP0000006');
 
 -- --------------------------------------------------------
 
@@ -203,7 +205,7 @@ INSERT INTO `role` (`role_id`, `role_name`) VALUES
 ('ROL0000001', 'mentor'),
 ('ROL0000002', 'guard'),
 ('ROL0000003', 'support'),
-('ROL0000004', 'gen8');
+('ROL0000004', 'team');
 
 -- --------------------------------------------------------
 
@@ -299,6 +301,7 @@ CREATE TABLE `team_member` (
   `team_member_name` varchar(500) NOT NULL,
   `team_member_gender` varchar(10) NOT NULL,
   `team_member_phone` varchar(50) NOT NULL,
+  `is_team_leader` int(1) DEFAULT NULL,
   `team_id` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -306,13 +309,13 @@ CREATE TABLE `team_member` (
 -- Dumping data for table `team_member`
 --
 
-INSERT INTO `team_member` (`team_member_id`, `team_member_name`, `team_member_gender`, `team_member_phone`, `team_id`) VALUES
-('TMB0000001', 'Jake Johnson', 'Male', '0123456789', 'TEA0000001'),
-('TMB0000002', 'Marry Samson', 'Female', '0963852741', 'TEA0000002'),
-('TMB0000003', 'Bob Lexi', 'Male', '0741852963', 'TEA0000003'),
-('TMB0000004', 'Courtney Kane', 'Female', '0852963741', 'TEA0000004'),
-('TMB0000005', 'Max Curl', 'Male', '0741852963', 'TEA0000005'),
-('TMB0000006', 'Willie Manny', 'Male', '0147369258', 'TEA0000006');
+INSERT INTO `team_member` (`team_member_id`, `team_member_name`, `team_member_gender`, `team_member_phone`, `is_team_leader`, `team_id`) VALUES
+('TMB0000001', 'Jake Johnson', 'Male', '0123456789', 1, 'TEA0000001'),
+('TMB0000002', 'Marry Samson', 'Female', '0963852741', 1, 'TEA0000002'),
+('TMB0000003', 'Bob Lexi', 'Male', '0741852963', 1, 'TEA0000003'),
+('TMB0000004', 'Courtney Kane', 'Female', '0852963741', 1, 'TEA0000004'),
+('TMB0000005', 'Max Curl', 'Male', '0741852963', 1, 'TEA0000005'),
+('TMB0000006', 'Willie Manny', 'Male', '0147369258', 1, 'TEA0000006');
 
 -- --------------------------------------------------------
 

@@ -93,7 +93,7 @@
     <div class="modal-dialog modal-sm">
         <form class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="backDropModalTitle">Choose team</h5>
+                <h5 class="modal-title" id="backDropModalTitle">Chọn đội</h5>
                 <button
                     type="button"
                     class="btn-close"
@@ -115,9 +115,9 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
-                    Close
+                    Đóng
                 </button>
-                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Save</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Chọn</button>
             </div>
         </form>
     </div>

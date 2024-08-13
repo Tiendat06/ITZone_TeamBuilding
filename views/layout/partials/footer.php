@@ -4,7 +4,7 @@
 <footer class="footer">
     <div class="footer-control w-100">
 <!--    itz-bg-normal -->
-        <a href="#" class="footer-control__home footer-control__link itz-bg-normal">
+        <a href="/" class="footer-control__home footer-control__link itz-bg-normal">
             <img src="/public/img/icon/majesticons_home-line.png" alt="">
             <span>Home</span>
         </a>
