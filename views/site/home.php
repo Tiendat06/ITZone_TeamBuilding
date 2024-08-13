@@ -22,7 +22,7 @@
                                                                                                          alt=""></h5>
             <span class="home-section-1__text--para">Hãy cùng tham gia và trải nghiệm TeamBuilding cùng IT-Zone để phát triển bản thân và khám phá những tiềm năng mới trong chính mình!</span>
         </div>
-        <a href="#" class="home-section-1__btn itz-btn-home btn">
+        <a href="/log/login" class="home-section-1__btn itz-btn-home btn">
             <span class="text-light">Tham gia ngay</span>
         </a>
     </section>
@@ -76,7 +76,7 @@
 
     <section class="home-section-4" id="home-section-4">
         <h3 class="home-section-4__title">Bạn đã sẵn sàng chưa?</h3>
-        <a href="#" class="btn itz-btn-home home-section-4__btn text-light">
+        <a href="/log/login" class="btn itz-btn-home home-section-4__btn text-light">
             <span class="text-light">Tham gia ngay</span>
         </a>
     </section>

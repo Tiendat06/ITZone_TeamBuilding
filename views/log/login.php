@@ -22,10 +22,10 @@ include "./views/layout/partials/header.php";
             <img src="/public/img/login/lock.png" alt="login img" class="login-section-2__form--image">
         </figure>
         <div class="login-section-2__form--input">
-            <input id="id-input" class="login-section-2__form--input-box" onclick="enableButton()" placeholder="Tên người dùng" type="text">
+            <input id="id-input" class="login-section-2__form--input-box" oninput="enableButton()" onclick="enableButton()" placeholder="Tên người dùng" type="text">
         </div>
         <div class="login-section-2__form--input">
-            <input id="password-input" class="login-section-2__form--input-box" onclick="enableButton()" placeholder="Mật khẩu" type="password">
+            <input id="password-input" class="login-section-2__form--input-box" oninput="enableButton()" onclick="enableButton()" placeholder="Mật khẩu" type="password">
             <img id="toggle-password" class="login-section-2__form--icon" onclick="togglePassword()" src="/public/img/icon/close-eye.png" alt="close eye">
         </div>
         <button id="login-button" class="login-section-2__form--button">Đăng nhập</button>
