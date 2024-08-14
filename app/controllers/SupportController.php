@@ -10,6 +10,7 @@ class SupportController{
     public function index(){
 
         $content = 'support';
+        $footer = 'home';
         include "./views/layout/index.php";
     }
 
@@ -17,6 +18,7 @@ class SupportController{
     public function question(){
 
         $content = 'support-question';
+        $footer = 'question';
         include "./views/layout/index.php";
     }
 
@@ -25,6 +27,7 @@ class SupportController{
     {
 
         $content = 'support-team';
+        $footer = 'team';
         include "./views/layout/index.php";
     }
 }

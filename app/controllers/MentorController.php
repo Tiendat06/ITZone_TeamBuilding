@@ -9,6 +9,7 @@ class MentorController{
     public function index(){
 
         $content = 'mentor';
+        $footer = 'home';
         include "./views/layout/index.php";
     }
 

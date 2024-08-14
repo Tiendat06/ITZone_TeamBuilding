@@ -6,9 +6,10 @@ class TeamPuzzle{
     private string $topic_id;
     private DateTime $time_end;
     private DateTime $time_fine;
+    private bool $is_done;
     private bool $is_clicked;
 
-    public function __construct($team_puzzle_id, $team_id, $topic_id, $time_end, $time_fine, $is_clicked){
+    public function __construct($team_puzzle_id, $team_id, $topic_id, $time_end, $time_fine, $is_done, $is_clicked){
         $this->team_puzzle_id = $team_puzzle_id;
         $this->team_id = $team_id;
         $this->topic_id = $topic_id;
@@ -16,6 +17,7 @@ class TeamPuzzle{
 //        $this->time_fine = $time_fine;
         $this->setTimeEnd($time_end);
         $this->setTimeFine($time_fine);
+        $this->is_done = $is_done;
         $this->is_clicked = $is_clicked;
     }
 
@@ -37,6 +39,10 @@ class TeamPuzzle{
 
     public function getTimeFine(){
         return $this->time_fine;
+    }
+
+    public function isDone(): int{
+        return $this->is_done? 1: 0;
     }
 
     public function getIsClicked(): int{
@@ -67,6 +73,10 @@ class TeamPuzzle{
             $time_fine = new DateTime($time_fine);
         }
         $this->time_fine = $time_fine;
+    }
+
+    public function setIsDone($is_done){
+        $this->is_done = $is_done;
     }
 
     public function setIsClicked($is_clicked){

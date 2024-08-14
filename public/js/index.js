@@ -17,7 +17,6 @@ window.topicCountDown = (time_end)=> {
 location.ajaxSendTopicAnswer();
 
 // log
-log.enableButton();
 window.enableButton = () => {
     log.enableButton();
 }

@@ -29,8 +29,7 @@
                         $teamMiddleWare->game_1();
                     } else if ($_GET['param_2'] == 'game-mentor'){
                         $teamMiddleWare->game_mentor();
-                    }
-                    else if($_GET['param_2'] == 'member'){
+                    } else if($_GET['param_2'] == 'member'){
                         $teamMiddleWare->team_member();
                     }
                     break;

@@ -190,25 +190,50 @@
 
   }
 
-  .support-question__report{
-    margin-top: 30px;
+  .support-question__report--outer{
     justify-content: space-evenly;
+    .support-question__report{
+      margin-top: 30px;
+      justify-content: space-evenly;
 
-    .support-question__report--item{
-      padding: 10px;
-      color: #ffffff;
-      width: 120px;
-      background-color: $support-color;
-      border-radius: 20px;
-      text-align: center;
-      p{
-        font-weight: bold;
-        font-size: $sub-title-size;
-        letter-spacing: 1px;
+      .support-question__report--collapse{
+        background-color: #cbcbcb;
+        padding-top: 10px;
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        transform: translateY(-20px);
+
+        .support-question__report-team{
+          border-radius: 20px;
+          background-color: #86de8a;
+          text-align: center;
+          font-weight: bold;
+
+          span{
+            font-size: $sub-title-size;
+          }
+        }
       }
 
-      span{
-        font-size: $sub-title-size;
+      .support-question__report--item{
+        padding: 10px;
+        overflow: hidden;
+        z-index: 99;
+        position: relative;
+        color: #ffffff;
+        width: 120px;
+        background-color: $support-color;
+        border-radius: 20px;
+        text-align: center;
+        p{
+          font-weight: bold;
+          font-size: $sub-title-size;
+          letter-spacing: 1px;
+        }
+
+        span{
+          font-size: $sub-title-size;
+        }
       }
     }
   }

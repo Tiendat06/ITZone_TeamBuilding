@@ -39,3 +39,7 @@ include "./views/layout/partials/header.php";
 
 </body>
 </html>
+
+<script>
+    enableButton();
+</script>

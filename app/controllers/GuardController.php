@@ -10,6 +10,7 @@ class GuardController{
     public function index()
     {
         $content = 'guard';
+        $footer = 'home';
         include "./views/layout/index.php";
     }
 
@@ -17,6 +18,7 @@ class GuardController{
     public function question()
     {
         $content = 'guard-question';
+        $footer = 'question';
         include "./views/layout/index.php";
     }
 }

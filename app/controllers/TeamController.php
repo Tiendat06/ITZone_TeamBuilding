@@ -10,6 +10,7 @@ class TeamController{
     public function game_1(){
 
         $content = 'team-game-1';
+        $footer = 'game';
         include "./views/layout/index.php";
     }
 
@@ -17,6 +18,7 @@ class TeamController{
     public function game_1_topic($location_id){
 
         $content = 'team-game-1-topic';
+        $footer = 'game';
         include "./views/layout/index.php";
     }
 
@@ -24,6 +26,7 @@ class TeamController{
     public function game_mentor()
     {
         $content = 'team-game-mentor';
+        $footer = 'home';
         include "./views/layout/index.php";
     }
 
@@ -32,6 +35,7 @@ class TeamController{
     {
 
         $content = 'team-mentor-topic';
+        $footer = 'home';
         include "./views/layout/index.php";
     }
 
@@ -40,6 +44,7 @@ class TeamController{
     {
 
         $content = 'team-member';
+        $footer = 'team';
         include "./views/layout/index.php";
     }
 }
