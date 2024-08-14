@@ -9,7 +9,7 @@ class TeamMiddleWare{
     }
 
     public function game_1(){
-        if (!isset($_SESSION['person_id']) && !isset($_SESSION['role_name'])) {
+        if ((!isset($_SESSION['person_id']) && !isset($_SESSION['role_name'])) || $_SESSION['role_name'] != 'team') {
             header('location: /');
         } else {
             $this->teamController->game_1();
@@ -17,7 +17,7 @@ class TeamMiddleWare{
     }
 
     public function game_1_topic($location_id){
-        if (!isset($_SESSION['person_id']) && !isset($_SESSION['role_name'])) {
+        if ((!isset($_SESSION['person_id']) && !isset($_SESSION['role_name'])) || $_SESSION['role_name'] != 'team') {
             header('location: /');
         } else {
             $this->teamController->game_1_topic($location_id);
@@ -26,7 +26,7 @@ class TeamMiddleWare{
 
     public function game_mentor()
     {
-        if (!isset($_SESSION['person_id']) && !isset($_SESSION['role_name'])) {
+        if ((!isset($_SESSION['person_id']) && !isset($_SESSION['role_name'])) || $_SESSION['role_name'] != 'team') {
             header('location: /');
         } else {
             $this->teamController->game_mentor();
@@ -35,7 +35,7 @@ class TeamMiddleWare{
 
     public function mentor_topic($location_id)
     {
-        if (!isset($_SESSION['person_id']) && !isset($_SESSION['role_name'])) {
+        if ((!isset($_SESSION['person_id']) && !isset($_SESSION['role_name'])) || $_SESSION['role_name'] != 'team') {
             header('location: /');
         } else {
             $this->teamController->mentor_topic($location_id);
@@ -44,7 +44,7 @@ class TeamMiddleWare{
 
     public function team_member()
     {
-        if (!isset($_SESSION['person_id']) && !isset($_SESSION['role_name'])) {
+        if ((!isset($_SESSION['person_id']) && !isset($_SESSION['role_name'])) || $_SESSION['role_name'] != 'team') {
             header('location: /');
         } else {
             $this->teamController->team_member();

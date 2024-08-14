@@ -8,7 +8,7 @@ class MentorMiddleWare{
     }
 
     public function index(){
-        if (!isset($_SESSION['person_id']) && !isset($_SESSION['role_name'])) {
+        if ((!isset($_SESSION['person_id']) && !isset($_SESSION['role_name'])) || $_SESSION['role_name'] != 'mentor') {
             header('location: /');
         } else{
             $this->mentorController->index();
@@ -17,7 +17,7 @@ class MentorMiddleWare{
 
     public function mentor_member()
     {
-        if (!isset($_SESSION['person_id']) && !isset($_SESSION['role_name'])) {
+        if ((!isset($_SESSION['person_id']) && !isset($_SESSION['role_name'])) || $_SESSION['role_name'] != 'mentor') {
             header('location: /');
         } else {
             $this->mentorController->mentor_member();

@@ -8,7 +8,7 @@ class SupportMiddleWare{
     }
 
     public function index(){
-        if (!isset($_SESSION['person_id']) && !isset($_SESSION['role_name'])) {
+        if ((!isset($_SESSION['person_id']) && !isset($_SESSION['role_name'])) || $_SESSION['role_name'] != 'support') {
             header('location: /');
         } else {
             $this->supportController->index();
@@ -16,7 +16,7 @@ class SupportMiddleWare{
     }
 
     public function question(){
-        if (!isset($_SESSION['person_id']) && !isset($_SESSION['role_name'])) {
+        if ((!isset($_SESSION['person_id']) && !isset($_SESSION['role_name'])) || $_SESSION['role_name'] != 'support') {
             header('location: /');
         } else {
             $this->supportController->question();
@@ -24,7 +24,7 @@ class SupportMiddleWare{
     }
 
     public function team_control(){
-        if (!isset($_SESSION['person_id']) && !isset($_SESSION['role_name'])) {
+        if ((!isset($_SESSION['person_id']) && !isset($_SESSION['role_name'])) || $_SESSION['role_name'] != 'support') {
             header('location: /');
         } else {
             $this->supportController->team_control();

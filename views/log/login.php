@@ -41,5 +41,9 @@ include "./views/layout/partials/header.php";
 </html>
 
 <script>
-    enableButton();
+    document.addEventListener('DOMContentLoaded', () => {
+        if (window.enableButton){
+            enableButton();
+        }
+    })
 </script>
