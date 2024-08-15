@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="05c71e1d-483c-4e68-b91a-ba4025288c1a" name="Changes" comment="update new DB, page effect function and support question FE, please check carefully and import .sql file to mysql">
+    <list default="true" id="05c71e1d-483c-4e68-b91a-ba4025288c1a" name="Changes" comment="update repair login function">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/middlewares/GuardMiddleWare.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/middlewares/GuardMiddleWare.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/middlewares/MentorMiddleWare.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/middlewares/MentorMiddleWare.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/middlewares/SupportMiddleWare.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/middlewares/SupportMiddleWare.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/middlewares/TeamMiddleWare.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/middlewares/TeamMiddleWare.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/log/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/log/login.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,7 +149,8 @@
       <workItem from="1723618726313" duration="165000" />
       <workItem from="1723620390319" duration="8638000" />
       <workItem from="1723630447113" duration="3972000" />
-      <workItem from="1723641903100" duration="2728000" />
+      <workItem from="1723641903100" duration="4161000" />
+      <workItem from="1723715743965" duration="657000" />
     </task>
     <task id="LOCAL-00001" summary="test by TDat">
       <option name="closed" value="true" />
@@ -332,7 +328,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723634230239</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="update repair login function">
+      <option name="closed" value="true" />
+      <created>1723645201154</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1723645201154</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -375,6 +379,7 @@
     <MESSAGE value="update new DB and hint, please check carefully" />
     <MESSAGE value="update new DB and login function, please check carefully and import it to mysql" />
     <MESSAGE value="update new DB, page effect function and support question FE, please check carefully and import .sql file to mysql" />
-    <option name="LAST_COMMIT_MESSAGE" value="update new DB, page effect function and support question FE, please check carefully and import .sql file to mysql" />
+    <MESSAGE value="update repair login function" />
+    <option name="LAST_COMMIT_MESSAGE" value="update repair login function" />
   </component>
 </project>
