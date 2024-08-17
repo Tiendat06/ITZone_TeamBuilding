@@ -9,6 +9,8 @@
     } // guard
     else if($content == 'guard'){
         include "./views/guard/guard.php";
+    } else if($content == 'guard-location') {
+        include "./views/guard/guard.php";
     } else if($content == 'guard-question'){
         include "./views/guard/question.php";
     } // team
