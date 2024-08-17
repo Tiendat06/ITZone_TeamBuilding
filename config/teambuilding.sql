@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 15, 2024 at 03:10 PM
+-- Generation Time: Aug 17, 2024 at 05:06 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -88,18 +88,36 @@ INSERT INTO `hint` (`hint_id`, `hint_description`, `hint_end`, `is_show`, `hint_
 ('HIN0000004', '', NULL, 0, 1, 'TOP0000002'),
 ('HIN0000005', '', NULL, 0, 2, 'TOP0000002'),
 ('HIN0000006', '', NULL, 0, 3, 'TOP0000002'),
-('HIN0000007', '', NULL, 0, 1, 'TOP0000003'),
-('HIN0000008', '', NULL, 0, 2, 'TOP0000003'),
-('HIN0000009', '', NULL, 0, 3, 'TOP0000003'),
+('HIN0000007', '', NULL, 1, 1, 'TOP0000003'),
+('HIN0000008', '', NULL, 1, 2, 'TOP0000003'),
+('HIN0000009', '', NULL, 1, 3, 'TOP0000003'),
 ('HIN0000010', '', NULL, 0, 1, 'TOP0000004'),
 ('HIN0000011', '', NULL, 0, 2, 'TOP0000004'),
 ('HIN0000012', '', NULL, 0, 3, 'TOP0000004'),
-('HIN0000013', '', NULL, 0, 1, 'TOP0000005'),
-('HIN0000014', '', NULL, 0, 2, 'TOP0000005'),
-('HIN0000015', '', NULL, 0, 3, 'TOP0000005'),
+('HIN0000013', '', NULL, 1, 1, 'TOP0000005'),
+('HIN0000014', '', NULL, 1, 2, 'TOP0000005'),
+('HIN0000015', '', NULL, 1, 3, 'TOP0000005'),
 ('HIN0000016', '', NULL, 0, 1, 'TOP0000006'),
 ('HIN0000017', '', NULL, 0, 2, 'TOP0000006'),
-('HIN0000018', '', NULL, 0, 3, 'TOP0000006');
+('HIN0000018', '', NULL, 0, 3, 'TOP0000006'),
+('HIN0000019', '', NULL, 0, 1, 'TOP0000007'),
+('HIN0000020', '', NULL, 0, 2, 'TOP0000007'),
+('HIN0000021', '', NULL, 0, 3, 'TOP0000007'),
+('HIN0000022', 'a', NULL, 1, 1, 'TOP0000008'),
+('HIN0000023', 'b', NULL, 1, 2, 'TOP0000008'),
+('HIN0000024', 'c', NULL, 1, 3, 'TOP0000008'),
+('HIN0000025', '', NULL, 0, 1, 'TOP0000009'),
+('HIN0000026', '', NULL, 0, 2, 'TOP0000009'),
+('HIN0000027', '', NULL, 0, 3, 'TOP0000009'),
+('HIN0000028', '', NULL, 0, 1, 'TOP0000010'),
+('HIN0000029', '', NULL, 0, 2, 'TOP0000010'),
+('HIN0000030', '', NULL, 0, 3, 'TOP0000010'),
+('HIN0000031', '', NULL, 0, 1, 'TOP0000011'),
+('HIN0000032', '', NULL, 0, 2, 'TOP0000011'),
+('HIN0000033', '', NULL, 0, 3, 'TOP0000011'),
+('HIN0000034', '', NULL, 0, 1, 'TOP0000012'),
+('HIN0000035', '', NULL, 0, 2, 'TOP0000012'),
+('HIN0000036', '', NULL, 0, 3, 'TOP0000012');
 
 -- --------------------------------------------------------
 
@@ -123,12 +141,12 @@ CREATE TABLE `location` (
 --
 
 INSERT INTO `location` (`location_id`, `location_name`, `location_img`, `location_address`, `bus_go`, `bus_back`, `location_map`, `member_id`) VALUES
-('LOC0000001', 'LOTTE MART', 'lotte_mart.png', '469 Đ. Nguyễn Hữu Thọ, Tân Hưng, Quận 7, Hồ Chí Minh', '*) Bắt chuyến 72 ở trạm xe BUS trước cổng 3 TDTU và tới Lotte Mart', '', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.9161607287847!2d106.69923367472397!3d10.740944889405657!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f9f2353ffb9%3A0x6ab49da47594ce7b!2sLOTTE%20Mart%20Qu%E1%BA%ADn%207!5e0!3m2!1svi!2s!4v1723445379234!5m2!1svi!2s\" width=\"400\" height=\"300\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>', 'GUA0000001'),
-('LOC0000002', 'PHỐ ĐI BỘ', 'pho_di_bo.png', 'Đường Nguyễn Huệ, Bến Nghé, Quận 1, Thành phố Hồ Chí Minh', '*) Đi từ Lotte trên chuyến 72 tới cuối trạm (Bến xe bus Sài Gòn)</br>*) Sau đó lên chuyến 88 chạy tới trạm \"Hồ Tùng Mậu\" hoặc \"Trạm Trung chuyển Hàm Nghi\"</br>*) Cuối cùng, đi bộ qua Phố đi bộ', '*) Tới trạm Trung chuyển Hàm Nghi bắt xe số 31 và về thẳng TDTU', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.4866692149244!2d106.7010858247246!3d10.773988789374666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f46fd67ea19%3A0x57881ba4c546af7a!2zUGjDtMyBIMSRaSBiw7TMoyBOZ3V5w6rMg24gSHXDqsyjLCDEkC4gTmd1ecOqzINuIEh1w6rMoywgQuG6v24gTmdow6ksIFF14bqtbiAxLCBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1723445477253!5m2!1svi!2s\" width=\"400\" height=\"300\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>', 'GUA0000002'),
-('LOC0000003', 'ĐƯỜNG SÁCH', 'duong_sach.png', 'Đ. Nguyễn Văn Bình, Bến Nghé, Quận 1, Hồ Chí Minh', '*) Đi từ Lotte trên chuyến 72 tới trạm \"cầu Ông Lãnh\"</br>*) Sau đó lên chuyến 31 chạy tới trạm \"Lê Duẩn\"</br>*) Cuối cùng, đi bộ qua điểm đến mong muốn', '*) Tới trạm xe trường tiểu học Hòa Bình</br>Địa chỉ: 1 Công xã Paris, Bến Nghé, Quận 1, Thành phố Hồ Chí Minh, Vietnam</br>*) Đi chuyến 36 -> bến xe bus sài gòn -> xe 72 -> cổng 1 TDTU', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.4015780701766!2d106.69710987472472!3d10.78052358936851!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752fad2860457b%3A0xcf5f1507c8bd0e33!2zxJDGsOG7nW5nIHPDoWNoIFRQLiBI4buTIENow60gTWluaA!5e0!3m2!1svi!2s!4v1723445557661!5m2!1svi!2s\" width=\"400\" height=\"300\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>', 'GUA0000003'),
+('LOC0000001', 'LOTTE MART', 'lotte_mart.png', '469 Đ. Nguyễn Hữu Thọ, Tân Hưng, Quận 7, Hồ Chí Minh', '*) Bắt chuyến 72 ở trạm xe BUS trước cổng 3 TDTU và tới Lotte Mart', '', '<iframe class=\"guard-location__ggmap\" src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.9161607287847!2d106.69923367472397!3d10.740944889405657!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f9f2353ffb9%3A0x6ab49da47594ce7b!2sLOTTE%20Mart%20Qu%E1%BA%ADn%207!5e0!3m2!1svi!2s!4v1723445379234!5m2!1svi!2s\" width=\"400\" height=\"300\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>', 'GUA0000001'),
+('LOC0000002', 'PHỐ ĐI BỘ', 'pho_di_bo.png', 'Đường Nguyễn Huệ, Bến Nghé, Quận 1, Thành phố Hồ Chí Minh', '*) Đi từ Lotte trên chuyến 72 tới cuối trạm (Bến xe bus Sài Gòn)</br>*) Sau đó lên chuyến 88 chạy tới trạm \"Hồ Tùng Mậu\" hoặc \"Trạm Trung chuyển Hàm Nghi\"</br>*) Cuối cùng, đi bộ qua Phố đi bộ', '*) Tới trạm Trung chuyển Hàm Nghi bắt xe số 31 và về thẳng TDTU', '<iframe class=\"guard-location__ggmap\" src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.4866692149244!2d106.7010858247246!3d10.773988789374666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f46fd67ea19%3A0x57881ba4c546af7a!2zUGjDtMyBIMSRaSBiw7TMoyBOZ3V5w6rMg24gSHXDqsyjLCDEkC4gTmd1ecOqzINuIEh1w6rMoywgQuG6v24gTmdow6ksIFF14bqtbiAxLCBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1723445477253!5m2!1svi!2s\" width=\"400\" height=\"300\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>', 'GUA0000002'),
+('LOC0000003', 'ĐƯỜNG SÁCH', 'duong_sach.png', 'Đ. Nguyễn Văn Bình, Bến Nghé, Quận 1, Hồ Chí Minh', '*) Đi từ Lotte trên chuyến 72 tới trạm \"cầu Ông Lãnh\"</br>*) Sau đó lên chuyến 31 chạy tới trạm \"Lê Duẩn\"</br>*) Cuối cùng, đi bộ qua điểm đến mong muốn', '*) Tới trạm xe trường tiểu học Hòa Bình</br>Địa chỉ: 1 Công xã Paris, Bến Nghé, Quận 1, Thành phố Hồ Chí Minh, Vietnam</br>*) Đi chuyến 36 -> bến xe bus sài gòn -> xe 72 -> cổng 1 TDTU', '<iframe class=\"guard-location__ggmap\" src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.4015780701766!2d106.69710987472472!3d10.78052358936851!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752fad2860457b%3A0xcf5f1507c8bd0e33!2zxJDGsOG7nW5nIHPDoWNoIFRQLiBI4buTIENow60gTWluaA!5e0!3m2!1svi!2s!4v1723445557661!5m2!1svi!2s\" width=\"400\" height=\"300\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>', 'GUA0000003'),
 ('LOC0000004', 'BƯU ĐIỆN', 'buu_dien.png', '125 Hai Bà Trưng, Bến Nghé, Quận 1, Hồ Chí Minh, Việt Nam', '*) Đi từ Lotte trên chuyến 72 tới trạm \"cầu Ông Lãnh\"</br>*) Sau đó lên chuyến 31 chạy tới trạm \"Lê Duẩn\"</br>*) Cuối cùng, đi bộ qua điểm đến mong muốn', '*) Tới trạm xe trường tiểu học Hòa Bình</br>Địa chỉ: 1 Công xã Paris, Bến Nghé, Quận 1, Thành phố Hồ Chí Minh, Vietnam</br>*) Đi chuyến 36 -> bến xe bus sài gòn -> xe 72 -> cổng 1 TDTU', '', 'GUA0000004'),
-('LOC0000005', 'CÔNG VIÊN 30/4', 'cong_vien.png', '6 Đ. Lê Duẩn, Bến Nghé, Quận 1, Hồ Chí Minh, Việt Nam', '*) Đi từ Lotte trên chuyến 72 tới trạm \"cầu Ông Lãnh\"</br>*) Sau đó lên chuyến 31 chạy tới trạm \"Lê Duẩn\"</br>*) Cuối cùng, đi bộ qua điểm đến mong muốn', '*) Tới trạm xe trường tiểu học Hòa Bình</br>Địa chỉ: 1 Công xã Paris, Bến Nghé, Quận 1, Thành phố Hồ Chí Minh, Vietnam</br>*) Đi chuyến 36 -> bến xe bus sài gòn -> xe 72 -> cổng 1 TDTU', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.419964460345!2d106.69478977472471!3d10.779111889369815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f6570c90b25%3A0x788f1a06c37e1848!2zQ8O0bmcgdmnDqm4gMzAvNA!5e0!3m2!1svi!2s!4v1723445589756!5m2!1svi!2s\" width=\"400\" height=\"300\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>', 'GUA0000005'),
-('LOC0000006', 'TDTU', 'tdtu.png', '19 Đ. Nguyễn Hữu Thọ, Tân Hưng, Quận 7, Hồ Chí Minh, Việt Nam', '', '', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3920.0330883073716!2d106.69676687472392!3d10.731931389414159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528b2747a81a3%3A0x33c1813055acb613!2zxJDhuqFpIGjhu41jIFTDtG4gxJDhu6ljIFRo4bqvbmc!5e0!3m2!1svi!2s!4v1723445614903!5m2!1svi!2s\" width=\"400\" height=\"300\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>', 'GUA0000006'),
+('LOC0000005', 'CÔNG VIÊN 30/4', 'cong_vien.png', '6 Đ. Lê Duẩn, Bến Nghé, Quận 1, Hồ Chí Minh, Việt Nam', '*) Đi từ Lotte trên chuyến 72 tới trạm \"cầu Ông Lãnh\"</br>*) Sau đó lên chuyến 31 chạy tới trạm \"Lê Duẩn\"</br>*) Cuối cùng, đi bộ qua điểm đến mong muốn', '*) Tới trạm xe trường tiểu học Hòa Bình</br>Địa chỉ: 1 Công xã Paris, Bến Nghé, Quận 1, Thành phố Hồ Chí Minh, Vietnam</br>*) Đi chuyến 36 -> bến xe bus sài gòn -> xe 72 -> cổng 1 TDTU', '<iframe class=\"guard-location__ggmap\" src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.419964460345!2d106.69478977472471!3d10.779111889369815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f6570c90b25%3A0x788f1a06c37e1848!2zQ8O0bmcgdmnDqm4gMzAvNA!5e0!3m2!1svi!2s!4v1723445589756!5m2!1svi!2s\" width=\"400\" height=\"300\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>', 'GUA0000005'),
+('LOC0000006', 'TDTU', 'tdtu.png', '19 Đ. Nguyễn Hữu Thọ, Tân Hưng, Quận 7, Hồ Chí Minh, Việt Nam', '', '', '<iframe class=\"guard-location__ggmap\" src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3920.0330883073716!2d106.69676687472392!3d10.731931389414159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528b2747a81a3%3A0x33c1813055acb613!2zxJDhuqFpIGjhu41jIFTDtG4gxJDhu6ljIFRo4bqvbmc!5e0!3m2!1svi!2s!4v1723445614903!5m2!1svi!2s\" width=\"400\" height=\"300\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>', 'GUA0000006'),
 ('LOC0000007', '711', '711.png', '19 Đ. Nguyễn Hữu Thọ, Tân Hưng, Quận 7, Hồ Chí Minh', '', '', '', 'MEN0000001'),
 ('LOC0000008', 'Căn tin quân sự (Tòa I)', 'toa_i.png', '19 Đ. Nguyễn Hữu Thọ, Tân Hưng, Quận 7, Hồ Chí Minh', '', '', '', 'MEN0000002'),
 ('LOC0000009', 'Sân bóng đá', 'san_bong_da.png', '19 Đ. Nguyễn Hữu Thọ, Tân Hưng, Quận 7, Hồ Chí Minh', '', '', '', 'MEN0000003'),
@@ -260,8 +278,8 @@ INSERT INTO `team_arrival` (`team_arrival_id`, `team_id`, `location_id`, `is_sho
 ('TAV0000005', 'TEA0000001', 'LOC0000005', 0, 5),
 ('TAV0000006', 'TEA0000001', 'LOC0000006', 0, 6),
 ('TAV0000007', 'TEA0000002', 'LOC0000008', 1, 1),
-('TAV0000008', 'TEA0000002', 'LOC0000001', 0, 2),
-('TAV0000009', 'TEA0000002', 'LOC0000005', 0, 3),
+('TAV0000008', 'TEA0000002', 'LOC0000001', 1, 2),
+('TAV0000009', 'TEA0000002', 'LOC0000005', 1, 3),
 ('TAV0000010', 'TEA0000002', 'LOC0000003', 0, 4),
 ('TAV0000011', 'TEA0000002', 'LOC0000002', 0, 5),
 ('TAV0000012', 'TEA0000002', 'LOC0000006', 0, 6),
@@ -349,11 +367,11 @@ INSERT INTO `team_puzzle` (`team_puzzle_id`, `team_id`, `topic_id`, `time_end`, 
 ('TPZ0000003', 'TEA0000001', 'TOP0000003', NULL, NULL, NULL, 0),
 ('TPZ0000004', 'TEA0000001', 'TOP0000005', NULL, NULL, NULL, 0),
 ('TPZ0000005', 'TEA0000001', 'TOP0000007', NULL, NULL, NULL, 0),
-('TPZ0000006', 'TEA0000002', 'TOP0000001', NULL, NULL, NULL, 0),
+('TPZ0000006', 'TEA0000002', 'TOP0000001', '2024-08-17 22:00:39', NULL, NULL, 1),
 ('TPZ0000007', 'TEA0000002', 'TOP0000002', NULL, NULL, NULL, 0),
 ('TPZ0000008', 'TEA0000002', 'TOP0000003', NULL, NULL, NULL, 0),
-('TPZ0000009', 'TEA0000002', 'TOP0000005', NULL, NULL, NULL, 0),
-('TPZ0000010', 'TEA0000002', 'TOP0000008', NULL, NULL, NULL, 0),
+('TPZ0000009', 'TEA0000002', 'TOP0000005', '2024-08-17 22:35:53', NULL, NULL, 1),
+('TPZ0000010', 'TEA0000002', 'TOP0000008', '2024-08-17 18:59:37', '2024-08-17 18:44:24', 0, 1),
 ('TPZ0000011', 'TEA0000003', 'TOP0000001', NULL, NULL, NULL, 0),
 ('TPZ0000012', 'TEA0000003', 'TOP0000002', NULL, NULL, NULL, 0),
 ('TPZ0000013', 'TEA0000003', 'TOP0000003', NULL, NULL, NULL, 0),
@@ -395,17 +413,17 @@ CREATE TABLE `topic` (
 
 INSERT INTO `topic` (`topic_id`, `topic_link`, `topic_answer`, `topic_img`, `location_id`) VALUES
 ('TOP0000001', '', '', 'topic_1.png', 'LOC0000001'),
-('TOP0000002', '', 'PHODIBO', 'topic_2.png', 'LOC0000002'),
-('TOP0000003', '', 'DUONGSACH', 'topic_3.png', 'LOC0000003'),
+('TOP0000002', 'https://docs.google.com/document/d/1ooEG8RmpPtmt4K01fi7-m1_qiGITaXqy/edit', 'PHODIBO', 'topic_2.png', 'LOC0000002'),
+('TOP0000003', 'https://docs.google.com/document/d/1j8TlT5uggKbtF61Ax08qYkAUn1NG085V/edit', 'DUONGSACH', 'topic_3.png', 'LOC0000003'),
 ('TOP0000004', '', 'BUUDIEN', 'topic_4.png', 'LOC0000004'),
-('TOP0000005', '', 'CONGVIEN30/4', 'topic_5.png', 'LOC0000005'),
+('TOP0000005', 'https://docs.google.com/document/d/1lqlqAuYZpCWCvGPMac2OgtwSENVWuSVr/edit', 'CONGVIEN30/4', 'topic_5.png', 'LOC0000005'),
 ('TOP0000006', '', '', 'topic_6.png', 'LOC0000006'),
-('TOP0000007', '', '', 'topic_7.png', 'LOC0000007'),
-('TOP0000008', '', '', 'topic_8.png', 'LOC0000008'),
-('TOP0000009', '', '', 'topic_9.png', 'LOC0000009'),
-('TOP0000010', '', '', 'topic_10.png', 'LOC0000010'),
-('TOP0000011', '', '', 'topic_11.png', 'LOC0000011'),
-('TOP0000012', '', '', 'topic_12.png', 'LOC0000012');
+('TOP0000007', 'https://docs.google.com/document/d/19NmT495CQcpb1PZfTwgHCeNvlx3GRiHh/edit', '', 'topic_7.png', 'LOC0000007'),
+('TOP0000008', 'https://docs.google.com/document/d/1R2CzVtanZ0kKFNf5LBSXBlHnLdmQLZac/edit', '', 'topic_8.png', 'LOC0000008'),
+('TOP0000009', 'https://docs.google.com/document/d/1pzSaSrIPQm-B6KXb-DGdIEiJV47L3_aR/edit', '', 'topic_9.png', 'LOC0000009'),
+('TOP0000010', 'https://docs.google.com/document/d/1llkisBSJKLUITZ7HoU-3lxDMtKfSTj_u/edit', '', 'topic_10.png', 'LOC0000010'),
+('TOP0000011', 'https://docs.google.com/document/d/1cfI-Ep-sHwi6C_o3S6KJrYb6TOAuAljZ/edit', '', 'topic_11.png', 'LOC0000011'),
+('TOP0000012', 'https://docs.google.com/document/d/1I9N3TE2u4jTRdPsJz6UE9lvEttgn7LWh/edit', '', 'topic_12.png', 'LOC0000012');
 
 --
 -- Indexes for dumped tables

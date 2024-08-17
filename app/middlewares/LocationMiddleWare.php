@@ -17,14 +17,18 @@ class LocationMiddleWare{
     }
 
     public function send_answer(){
-        $topic_answer = $_POST['topic_answer'];
-//        $topic_id = $_POST['topic_id'];
-        $location_id = $_POST['location_id'];
+        $content = trim(file_get_contents("php://input"));
+        $data = json_decode($content, true);
 
-        if(!empty($topic_answer) && !empty($location_id)){
+        if(!empty($data['topic_answer']) && !empty($data['location_id'])){
+            $topic_answer = $data['topic_answer'];
+            $location_id = $data['location_id'];
             $this->locationController->send_answer(strtoupper($topic_answer), $location_id);
         } else{
-            echo "<p>Please fill in your answer !!</p>";
+            echo json_encode(array(
+                'status' => false,
+                'message' => 'Rất tiếc câu trả lời của bạn đã sai'
+            ));
         }
     }
 

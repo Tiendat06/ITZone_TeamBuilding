@@ -4,8 +4,40 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="05c71e1d-483c-4e68-b91a-ba4025288c1a" name="Changes" comment="update repair login function">
+    <list default="true" id="05c71e1d-483c-4e68-b91a-ba4025288c1a" name="Changes" comment="update file .sql (for sure)">
+      <change afterPath="$PROJECT_DIR$/public/img/topic/cong_vien.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/topic/duong_sach.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/topic/lotte_mart.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/topic/pho_di_bo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/topic/tdtu.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/LocationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/LocationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/TeamController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/TeamController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/middlewares/LocationMiddleWare.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/middlewares/LocationMiddleWare.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/middlewares/TeamMiddleWare.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/middlewares/TeamMiddleWare.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/repository/HintRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/repository/HintRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/repository/TeamArrivalRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/repository/TeamArrivalRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/repository/TeamPuzzleRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/repository/TeamPuzzleRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/services/HintService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/HintService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/services/LocationService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/LocationService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/services/TeamArrivalService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/TeamArrivalService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/services/TeamPuzzleService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/TeamPuzzleService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/teambuilding.sql" beforeDir="false" afterPath="$PROJECT_DIR$/config/teambuilding.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/topic/dragon_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/topic/dragon_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/topic/dragon_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/location.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/location.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/route/team.php" beforeDir="false" afterPath="$PROJECT_DIR$/route/team.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/layout/partials/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout/partials/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/layout/partials/toast.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout/partials/toast.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/log/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/log/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/support/question.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/support/question.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/support/support.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/support/support.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/team/game_1_topic.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/team/game_1_topic.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/team/game_mentor.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/team/game_mentor.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/team/mentor_topic.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/team/mentor_topic.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/team/team_game_1.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/team/team_game_1.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +57,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Dat" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -89,7 +121,7 @@
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;PHP Web Page.index.php.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Dat&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/xampp/htdocs&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -151,6 +183,15 @@
       <workItem from="1723630447113" duration="3972000" />
       <workItem from="1723641903100" duration="4161000" />
       <workItem from="1723715743965" duration="657000" />
+      <workItem from="1723727330126" duration="15748000" />
+      <workItem from="1723792298890" duration="13356000" />
+      <workItem from="1723818669807" duration="53000" />
+      <workItem from="1723819043871" duration="2607000" />
+      <workItem from="1723856923513" duration="14078000" />
+      <workItem from="1723874026861" duration="7654000" />
+      <workItem from="1723893013445" duration="3450000" />
+      <workItem from="1723897545663" duration="3997000" />
+      <workItem from="1723902992534" duration="3860000" />
     </task>
     <task id="LOCAL-00001" summary="test by TDat">
       <option name="closed" value="true" />
@@ -336,7 +377,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723645201154</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="update file .sql (for sure)">
+      <option name="closed" value="true" />
+      <created>1723727499015</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1723727499015</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -355,7 +404,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="commit test by Chau" />
     <MESSAGE value="commit test by Thuy" />
     <MESSAGE value="test by TDat" />
     <MESSAGE value="update base configuration for scss" />
@@ -380,6 +428,7 @@
     <MESSAGE value="update new DB and login function, please check carefully and import it to mysql" />
     <MESSAGE value="update new DB, page effect function and support question FE, please check carefully and import .sql file to mysql" />
     <MESSAGE value="update repair login function" />
-    <option name="LAST_COMMIT_MESSAGE" value="update repair login function" />
+    <MESSAGE value="update file .sql (for sure)" />
+    <option name="LAST_COMMIT_MESSAGE" value="update file .sql (for sure)" />
   </component>
 </project>

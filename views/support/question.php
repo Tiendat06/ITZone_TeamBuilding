@@ -78,3 +78,12 @@
         </div>
     </div>
 </div>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        if(window.fetchLocation){
+            fetchLocation()
+        }
+    })
+</script>

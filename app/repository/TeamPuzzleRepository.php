@@ -49,6 +49,43 @@ class TeamPuzzleRepository{
         $stmt->close();
 //        return $stmt->affected_rows > 0;
     }
+
+    public function updateTeamIsDoneByTopicIdAndTeamId($topic_id, $team_id, $is_done): bool{
+        $sql = "UPDATE `team_puzzle` 
+        SET `is_done` = ? 
+        WHERE `team_id` = ? AND `topic_id` = ? AND `is_done` is null";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bind_param('iss', $is_done, $team_id, $topic_id);
+        $stmt->execute();
+        $affected_row = $stmt->affected_rows > 0;
+        $stmt->close();
+        return $affected_row;
+    }
+
+    public function updateTimeFineByTopicIdAndTeamId($topic_id, $team_id, $time_fine): bool{
+        $sql = "UPDATE `team_puzzle` 
+            SET `time_fine` = ? 
+            WHERE `team_id` = ? AND `topic_id` = ?";
+
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bind_param('sss', $time_fine, $team_id, $topic_id);
+        $stmt->execute();
+        $affected_row = $stmt->affected_rows > 0;
+        $stmt->close();
+        return $affected_row;
+    }
+
+    public function checkTeamIsDoneByTopicIdAndTeamId($topic_id, $team_id): bool{
+        $sql = "SELECT * FROM `team_puzzle` WHERE `team_id` = ? AND `topic_id` = ? AND `is_done` = 1";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bind_param('ss', $team_id, $topic_id);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $stmt->close();
+        return $result->num_rows == 1;
+    }
+
+
 }
 
 ?>

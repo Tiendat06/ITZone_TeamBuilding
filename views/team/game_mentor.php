@@ -1,4 +1,7 @@
 <?php
+    /**
+     * @var $location_id
+     */
 ?>
 
 <div class="container">
@@ -19,7 +22,7 @@
 
                 </p>
                 <div class="team-game_mentor__btn col-sm-12 col-md-12 text-center">
-                    <a href="#" class="itz-bg-normal team-game_mentor__btn-go">
+                    <a href="/team/mentor-topic/<?=$location_id?>" class="itz-bg-normal team-game_mentor__btn-go">
                         <span>
                             Bắt đầu ngay thôi !!
                         </span>

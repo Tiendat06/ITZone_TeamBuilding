@@ -7,13 +7,12 @@ class TeamArrivalRepository{
     }
 
     public function getTeamArrivalsAndLocationByTeamId($team_id): array{
-        $is_show_next_location = 1;
         $sql = "SELECT * FROM `team_arrival` as TA, `location` as LO
                 WHERE `TA`.`team_id` = ?
                   and `LO`.`location_id` = `TA`.`location_id` 
-                  and `TA`.is_show_next_location = ? ";
+                  and `TA`.`team_arrival_priority` >= 2 ";
         $stmt = $this->conn->prepare($sql);
-        $stmt->bind_param('si', $team_id, $is_show_next_location);
+        $stmt->bind_param('s', $team_id);
         $stmt->execute();
 
         $result = $stmt->get_result();
@@ -22,6 +21,21 @@ class TeamArrivalRepository{
             $data[] = $row;
         }
         $stmt->close();
+        return $data;
+    }
+
+    public function getTeamArrivalsInD1ByTeamId($team_id): array{
+        $sql = "SELECT * FROM `team_arrival` 
+         WHERE `team_id` = ? `team_arrival_priority` >= 2";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bind_param('s', $team_id);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $data = array();
+        while($row = $result->fetch_assoc()){
+            $data[] = new TeamArrival($row['team_arrival_id'], $row['team_id'],
+                $row['location_id'], $row['is_show_next_location'], $row['team_arrival_priority']);
+        }
         return $data;
     }
 
@@ -36,6 +50,31 @@ class TeamArrivalRepository{
         $stmt->execute();
 
         $stmt->close();
+    }
+
+    public function getMentorLocationByTeamId($team_id): string{
+        $sql = 'SELECT * FROM `team_arrival` as TA 
+         WHERE `team_id` = ? AND `team_arrival_priority` = 1';
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bind_param('s', $team_id);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $row = $result->fetch_assoc();
+        $stmt->close();
+        return $row['location_id'];
+
+    }
+
+    public function updateIsShowNextLocationByLocationIdAndTeamId($location_id, $team_id): bool{
+        $sql = "UPDATE `team_arrival` 
+            SET `is_show_next_location` = 1 
+            WHERE `location_id` = ? AND `team_id` = ?";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bind_param('ss', $location_id, $team_id);
+        $stmt->execute();
+        $affected_row = $stmt->affected_rows;
+        $stmt->close();
+        return $affected_row > 0;
     }
 }
 

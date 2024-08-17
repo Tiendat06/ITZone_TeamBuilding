@@ -17,7 +17,6 @@
 
 <footer class="footer">
     <div class="footer-control w-100">
-<!--    itz-bg-normal -->
         <?php
             if($_SESSION['role_name'] == 'mentor'){
         ?>

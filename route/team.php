@@ -42,7 +42,25 @@
         if(isset($_GET['param_1']) && isset($_GET['param_2']) && isset($_GET['param_3'])){
 
         } else if (isset($_GET['param_1']) && isset($_GET['param_2'])){
-
+            switch ($_GET['param_1']){
+                case 'team':
+                    if($_GET['param_2'] == 'get_topic_hint'){
+                        $teamMiddleWare->get_topic_hint();
+                    } else if($_GET['param_2'] == 'update_topic_is_done'){
+                        $teamMiddleWare->update_topic_is_done();
+                    } else if ($_GET['param_2'] == 'update_time_fine'){
+                        $teamMiddleWare->update_time_fine();
+                    } else if($_GET['param_2'] == 'check_time_fine'){
+                        $teamMiddleWare->check_time_fine();
+                    } else if($_GET['param_2'] == 'check_is_done_topic'){
+                        $teamMiddleWare->check_is_done_topic();
+                    } else if($_GET['param_2'] == 'update_lotte_location'){
+                        $teamMiddleWare->update_lotte_location();
+                    } else if($_GET['param_2'] == 'view_topic_hint'){
+                        $teamMiddleWare->view_topic_hint();
+                    }
+                    break;
+            }
         } else if (isset($_GET['param_1'])){
 
         }

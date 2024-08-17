@@ -45,5 +45,8 @@ include "./views/layout/partials/header.php";
         if (window.enableButton){
             enableButton();
         }
+        if(window.checkLogin){
+            checkLogin();
+        }
     })
 </script>

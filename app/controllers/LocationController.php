@@ -16,17 +16,23 @@ class LocationController{
         include "./views/layout/index.php";
     }
 
-//    [POST, AJAX] /location/send_answer
+//    [POST, FETCH] /location/send_answer
     public function send_answer($topic_answer, $location_id){
 
-        if ($location_id === 'LOC0000006'){
+        if ($location_id !== 'LOC0000002' && $location_id !== 'LOC0000003' && $location_id !== 'LOC0000005'){
             $isCheckMentorKey = $this->locationService->checkMentorKey($topic_answer);
             $team_member = $isCheckMentorKey['team_member'];
             if($isCheckMentorKey['is_correct']){
-                echo '<p>Correct answer !!</p>
-                    <p>Please contact to: '. $team_member['mentor_name'] .', '. $team_member["mentor_phone"].'</p>';
+                echo json_encode(array(
+                    'status' => true,
+                    'message' => 'Chúc mừng bạn đã tìm ra đáp án',
+                    'answer' => 'Hãy liên hệ: '. $team_member['mentor_name'] .', '. $team_member["mentor_phone"]
+                ));
             } else{
-                echo '<p>Wrong answer !!</p>';
+                echo json_encode(array(
+                    'status' => false,
+                    'message' => 'Rất tiếc câu trả lời của bạn đã sai'
+                ));
             }
         } else if($location_id === 'LOC0000001'){
 
@@ -34,18 +40,24 @@ class LocationController{
             $isTopicAnswerCorrect = $this->locationService->checkTopicAnswerIsCorrect($topic_answer, $location_id);
 
             if($isTopicAnswerCorrect['is_correct']){
-                echo '<p>Correct answer !!</p>
-                    <p>Please go to: '. $isTopicAnswerCorrect['location_address'].'</p>';
+                echo json_encode(array(
+                    'status' => true,
+                    'message' => 'Chúc mừng bạn đã tìm ra đáp án',
+                    'answer' => 'Hãy đi tới: '.$isTopicAnswerCorrect['location_name'].', '.$isTopicAnswerCorrect['location_address']
+                ));
             } else {
-                echo '<p>Wrong answer !!</p>';
+                echo json_encode(array(
+                    'status' => false,
+                    'message' => 'Rất tiếc câu trả lời của bạn đã sai'
+                ));
             }
         }
     }
 
 //    [POST, FETCH] /location/get_answer
     public function get_answer($location_id){
-        if ($location_id === 'LOC0000006'){
-            $team_id = 'TEA0000001';
+        if ($location_id !== 'LOC0000002' && $location_id !== 'LOC0000003' && $location_id !== 'LOC0000005'){
+            $team_id = $_SESSION['person_id'];
             $team_member = $this->personService->getTeamMemberByTeamIdOrMentorId($team_id);
             echo json_encode(array(
                'mentor_name' => $team_member['mentor_name'],
