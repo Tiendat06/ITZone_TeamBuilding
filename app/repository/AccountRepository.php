@@ -46,6 +46,7 @@ class AccountRepository{
         $stmt->close();
         return $role_name;
     }
+
 }
 
 ?>

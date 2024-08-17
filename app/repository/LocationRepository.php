@@ -47,6 +47,27 @@ class LocationRepository{
             ->build();
         return $location;
     }
+
+    public function getLocationDataByPersonId($person_id): Location {
+        $sql = "SELECT * FROM `location` 
+         WHERE `member_id` = ?";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bind_param("s", $person_id);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $row = $result->fetch_assoc();
+        $location = (new LocationBuilder())
+            ->setLocationId($row["location_id"])
+            ->setLocationName($row["location_name"])
+            ->setLocationImg($row["location_img"])
+            ->setLocationAddress($row["location_address"])
+            ->setBusGo($row["bus_go"])
+            ->setBusBack($row["bus_back"])
+            ->setLocationMap($row['location_map'])
+            ->setMemberId($row["member_id"])
+            ->build();
+        return $location;
+    }
 }
 
 ?>
