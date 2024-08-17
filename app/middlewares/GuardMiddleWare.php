@@ -12,8 +12,7 @@ class  GuardMiddleWare{
         if ((!isset($_SESSION['person_id']) && !isset($_SESSION['role_name'])) || $_SESSION['role_name'] != 'guard') {
             header('location: /');
         } else {
-//            $this->guardController->index();
-              $this->guardController->guardLocation();
+            $this->guardController->index();
         }
     }
 

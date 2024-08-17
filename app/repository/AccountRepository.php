@@ -47,54 +47,6 @@ class AccountRepository{
         return $role_name;
     }
 
-    public function getLocationNameByPersonId($person_id): ?string {
-        $sql = "SELECT `location_name`
-            FROM `location`
-            WHERE `member_id` = ?";
-        $stmt = $this->conn->prepare($sql);
-        $stmt->bind_param("s", $person_id);
-        $stmt->execute();
-        $result = $stmt->get_result();
-        $row = $result->fetch_assoc();
-
-        $location_name = $row["location_name"];
-        $stmt->close();
-
-        return $location_name;
-    }
-
-    public function getLocationMapByPersonId($person_id): ?string {
-        $sql = "SELECT `location_map`
-            FROM `location`
-            WHERE `member_id` = ?";
-        $stmt = $this->conn->prepare($sql);
-        $stmt->bind_param("s", $person_id);
-        $stmt->execute();
-        $result = $stmt->get_result();
-        $row = $result->fetch_assoc();
-
-        $location_map = $row["location_map"];
-        $stmt->close();
-
-        return $location_map;
-    }
-
-    public function getLocationAddressByPersonId($person_id): ?string {
-        $sql = "SELECT `location_address`
-            FROM `location`
-            WHERE `member_id` = ?";
-        $stmt = $this->conn->prepare($sql);
-        $stmt->bind_param("s", $person_id);
-        $stmt->execute();
-        $result = $stmt->get_result();
-        $row = $result->fetch_assoc();
-
-        $location_address = $row["location_address"];
-        $stmt->close();
-
-        return $location_address;
-    }
-
 }
 
 ?>

@@ -9,8 +9,9 @@
       <change beforePath="$PROJECT_DIR$/app/controllers/GuardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/GuardController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/middlewares/GuardMiddleWare.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/middlewares/GuardMiddleWare.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/repository/AccountRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/repository/AccountRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/repository/LocationRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/repository/LocationRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/services/AccountService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/AccountService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/guard/guard.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/guard/guard.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/services/LocationService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/LocationService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/layout/partials/views_content.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout/partials/views_content.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

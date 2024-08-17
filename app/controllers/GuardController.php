@@ -2,27 +2,21 @@
 
 class GuardController{
     private AccountService $accountService;
+    private LocationService $locationService;
     public function __construct()
     {
         $this->accountService = new AccountService();
+        $this->locationService = new LocationService();
     }
 
 //    [GET] /guard
     public function index()
     {
+        $location = $this->locationService->getLocationDataByPersonId();
+        $location_name = $location->getLocationName();
+        $location_map = $location->getLocationMap();
+        $location_address = $location->getLocationAddress();
         $content = 'guard';
-        $footer = 'home';
-        include "./views/layout/index.php";
-    }
-
-//    [GET] /guard
-    public function guardLocation()
-    {
-        $person_id = $_SESSION['person_id'];
-        $location_name = $this->accountService->getLocationNameByPersonId($person_id);
-        $location_map = $this->accountService->getLocationMapByPersonId($person_id);
-        $location_address = $this->accountService->getLocationMAddressByPersonId($person_id);
-        $content = 'guard-location';
         $footer = 'home';
         include "./views/layout/index.php";
     }

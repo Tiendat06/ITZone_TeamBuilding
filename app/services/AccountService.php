@@ -23,18 +23,6 @@ class AccountService{
     public function getRoleByUsernameAndPassword($account_username, $account_password): string{
         return $this->accountRepository->getRoleByUsernameAndPassword($account_username, $account_password);
     }
-
-    public function getLocationNameByPersonId($person_id): string {
-        return $this->accountRepository->getLocationNameByPersonId($person_id);
-    }
-
-    public function getLocationMapByPersonId($person_id): string {
-        return $this->accountRepository->getLocationMapByPersonId($person_id);
-    }
-
-    public function getLocationMAddressByPersonId($person_id): string {
-        return $this->accountRepository->getLocationAddressByPersonId($person_id);
-    }
 }
 
 ?>
