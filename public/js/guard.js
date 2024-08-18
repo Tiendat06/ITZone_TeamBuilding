@@ -34,6 +34,7 @@ class Guard{
             })
                 .then(response => response.json())
                 .then(data => {
+                    $('#modal__input-key').val('')
                     $('#toast-message').html(data['message'])
                     if(data['status'] === true){
                         $('#toast').removeClass('d-none').addClass('bg-success');
