@@ -27,7 +27,13 @@
         if(isset($_GET['param_1']) && isset($_GET['param_2']) && isset($_GET['param_3'])){
 
         } else if (isset($_GET['param_1']) && isset($_GET['param_2'])){
-
+            switch ($_GET['param_1']){
+                case 'guard':
+                    if ($_GET['param_2'] == 'update_next_location'){
+                        $guardMiddleWare->update_next_location();
+                    }
+                    break;
+            }
         } else if (isset($_GET['param_1'])){
 
         }

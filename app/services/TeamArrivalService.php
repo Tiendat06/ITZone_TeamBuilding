@@ -28,6 +28,14 @@ class TeamArrivalService{
         $team_id = $_SESSION['person_id'];
         return $this->teamArrivalRepository->getTeamArrivalsInD1ByTeamId($team_id);
     }
+
+    public function getTeamArrivalsByLocationIdAndIsOpenNextLocation($location_id): int{
+        return $this->teamArrivalRepository->countTeamArrivalsByLocationIdAndIsOpenNextLocation($location_id);
+    }
+
+    public function getTeamArrivalAndTeamByLocationId($location_id): array{
+        return $this->teamArrivalRepository->getTeamArrivalAndTeamByLocationId($location_id);
+    }
 }
 
 ?>

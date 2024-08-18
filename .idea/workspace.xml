@@ -4,15 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="05c71e1d-483c-4e68-b91a-ba4025288c1a" name="Changes" comment="update repair login function">
+    <list default="true" id="05c71e1d-483c-4e68-b91a-ba4025288c1a" name="Changes" comment="update team puzzle functionand update new DB">
+      <change afterPath="$PROJECT_DIR$/public/img/icon/icon-key.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/icon/icon-unlock.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/topic/congrats.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/guard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/GuardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/GuardController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/middlewares/GuardMiddleWare.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/middlewares/GuardMiddleWare.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/repository/AccountRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/repository/AccountRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/repository/LocationRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/repository/LocationRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/services/AccountService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/AccountService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/services/LocationService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/LocationService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/layout/partials/views_content.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout/partials/views_content.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/TeamArrival.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/TeamArrival.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/repository/PersonRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/repository/PersonRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/repository/TeamArrivalRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/repository/TeamArrivalRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/services/PersonService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/PersonService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/services/TeamArrivalService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/TeamArrivalService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/Data-Model-Report.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/config/Data-Model-Report.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/teambuilding.sql" beforeDir="false" afterPath="$PROJECT_DIR$/config/teambuilding.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/route/guard.php" beforeDir="false" afterPath="$PROJECT_DIR$/route/guard.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/guard/question.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/guard/question.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/team/team_game_1.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/team/team_game_1.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +42,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Dat" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -46,7 +56,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/Tiendat06/ITZone_TeamBuilding.git&quot;,
-    &quot;accountId&quot;: &quot;20edf84c-f6f0-4655-9577-cdb7391f800c&quot;
+    &quot;accountId&quot;: &quot;bf406820-1e37-47e8-865b-4ee2e42bfb00&quot;
   }
 }</component>
   <component name="PhpServers">
@@ -54,7 +64,7 @@
       <server host="localhost" id="6f103af5-a3b4-4034-bc83-f131117d1234" name="xampp" />
     </servers>
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="C:\php\php-8.3.4\php.exe">
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP">
     <include_path>
       <path value="$PROJECT_DIR$/test_mvc/vendor/composer" />
       <path value="$PROJECT_DIR$/test_mvc/vendor/carbonphp/carbon-doctrine-types" />
@@ -96,14 +106,13 @@
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;PHP Web Page.index.php.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;ThanhLong&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/xampp/htdocs&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -117,8 +126,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-PS-241.18968.24" />
-        <option value="bundled-php-predefined-ba97393d7c68-48a1a656d44e-com.jetbrains.php.sharedIndexes-PS-241.18968.24" />
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-PS-241.14494.237" />
+        <option value="bundled-php-predefined-ba97393d7c68-8f0632a2a215-com.jetbrains.php.sharedIndexes-PS-241.14494.237" />
       </set>
     </attachedChunks>
   </component>
@@ -159,9 +168,16 @@
       <workItem from="1723630447113" duration="3972000" />
       <workItem from="1723641903100" duration="4161000" />
       <workItem from="1723715743965" duration="657000" />
-      <workItem from="1723789590984" duration="856000" />
-      <workItem from="1723793305014" duration="6520000" />
-      <workItem from="1723876782211" duration="16374000" />
+      <workItem from="1723727330126" duration="15748000" />
+      <workItem from="1723792298890" duration="13356000" />
+      <workItem from="1723818669807" duration="53000" />
+      <workItem from="1723819043871" duration="2607000" />
+      <workItem from="1723856923513" duration="14078000" />
+      <workItem from="1723874026861" duration="7654000" />
+      <workItem from="1723893013445" duration="3450000" />
+      <workItem from="1723897545663" duration="3997000" />
+      <workItem from="1723902992534" duration="3860000" />
+      <workItem from="1723958707335" duration="4256000" />
     </task>
     <task id="LOCAL-00001" summary="test by TDat">
       <option name="closed" value="true" />
@@ -347,7 +363,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723645201154</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="update file .sql (for sure)">
+      <option name="closed" value="true" />
+      <created>1723727499015</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1723727499015</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -366,7 +390,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="commit test by Chau" />
     <MESSAGE value="commit test by Thuy" />
     <MESSAGE value="test by TDat" />
     <MESSAGE value="update base configuration for scss" />
@@ -391,6 +414,7 @@
     <MESSAGE value="update new DB and login function, please check carefully and import it to mysql" />
     <MESSAGE value="update new DB, page effect function and support question FE, please check carefully and import .sql file to mysql" />
     <MESSAGE value="update repair login function" />
-    <option name="LAST_COMMIT_MESSAGE" value="update repair login function" />
+    <MESSAGE value="update file .sql (for sure)" />
+    <option name="LAST_COMMIT_MESSAGE" value="update file .sql (for sure)" />
   </component>
 </project>

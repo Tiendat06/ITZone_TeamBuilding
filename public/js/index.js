@@ -2,6 +2,7 @@ import site from './site.js';
 import location from "./location.js";
 import log from "./log.js";
 import support from './support.js';
+import guard from './guard.js'
 
 // site.index();
 // site.ajaxTest();
@@ -40,6 +41,15 @@ window.togglePassword = () => {
 }
 window.checkLogin = () => {
     log.checkLogin()
+}
+
+// guard
+window.onClickBtnLock = () => {
+    guard.onClickBtnLock();
+}
+
+window.fetchUpdateNextPriority = () => {
+    guard.fetchUpdateNextPriority();
 }
 
 // support

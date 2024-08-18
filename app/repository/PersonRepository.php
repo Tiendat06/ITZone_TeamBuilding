@@ -7,6 +7,19 @@ class PersonRepository{
         $this->conn = DatabaseManager::getInstance()->getConnection();
     }
 
+    public function getTeam(): array{
+        $sql = "SELECT * FROM `team`";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $data = array();
+        while ($row = $result->fetch_assoc()) {
+            $data[] = new Team($row['team_id'], $row['team_name'], $row['team_phone'],
+                $row['team_route'], $row['team_member'], $row['mentor_id']);
+        }
+        return $data;
+    }
+
     public function getTeamMemberByTeamIdOrMentorId($person_id, $operation='team'): array{
         $data = array();
 
@@ -73,6 +86,17 @@ class PersonRepository{
         }
 
         return "Guest";
+    }
+
+    public function getMentorByMentorId($mentor_id): Mentor{
+        $sql = "SELECT * FROM `mentor` WHERE `mentor_id` = ?";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bind_param('s', $mentor_id);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $row = $result->fetch_assoc();
+        return new Mentor($row['mentor_id'], $row['mentor_name'],
+            $row['mentor_phone'], $row['mentor_key']);
     }
 }
 

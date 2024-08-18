@@ -31,8 +31,10 @@
                     $disable_card = 'itz-disable-card';
                     $url_link = '#';
                 }
+                if($location_id === 'LOC0000006') $url_link = '#';
         ?>
-        <a href="<?=$url_link?>" class="team-content__item d-block <?=$disable_card?> col-sm-4 col-md-4">
+        <a <?= $location_id == 'LOC0000006'? 'data-bs-target="#team-complete" data-bs-toggle="modal"': '' ?>
+                href="<?=$url_link?>" class="team-content__item d-block <?=$disable_card?> col-sm-4 col-md-4">
             <div class="team-content__item--inner">
                 <div class="team-content__item--info text-center">
                     <div class="team-content__item--img">
@@ -52,38 +54,26 @@
             }
         ?>
 
-<!--        itz-disable-card -->
-<!--        <a href="#" class="team-content__item itz-disable-card d-block col-sm-4 col-md-4">-->
-<!--            <div class="team-content__item--inner">-->
-<!--                <div class="team-content__item--info text-center">-->
-<!--                    <div class="team-content__item--img">-->
-<!--                        <img style="width: 95px; height: 100px" src="/public/img/topic/dragon_2.png" alt="">-->
-<!--                    </div>-->
-<!--                    <div class="team-content__item--header">-->
-<!--                        <h1 class="team-content__item--title mb-0">Trạm 2</h1>-->
-<!--                    </div>-->
-<!--                    <div class="team-content__item--play">-->
-<!--                        <img src="/public/img/icon/icon-play.png" alt="">-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </a>-->
-<!---->
-<!--        <a href="#" class="team-content__item itz-disable-card d-block col-sm-4 col-md-4">-->
-<!--            <div class="team-content__item--inner">-->
-<!--                <div class="team-content__item--info text-center">-->
-<!--                    <div class="team-content__item--img">-->
-<!--                        <img style="width: 95px; height: 100px" src="/public/img/topic/dragon_3.png" alt="">-->
-<!--                    </div>-->
-<!--                    <div class="team-content__item--header">-->
-<!--                        <h1 class="team-content__item--title mb-0">Trạm 3</h1>-->
-<!--                    </div>-->
-<!--                    <div class="team-content__item--play">-->
-<!--                        <img src="/public/img/icon/icon-play.png" alt="">-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </a>-->
+    </div>
+</div>
 
+<div class="modal fade" id="team-complete" aria-labelledby="modalToggleLabel" tabindex="-1" style="display: none" aria-hidden="true">
+    <div class="modal-dialog modal-sm modal-dialog-centered">
+        <div class="modal-content" style="border-radius: 20px">
+            <div class="modal-body p-0">
+                <div class="team-game__logo">
+                    <img style="width: 100%" src="/public/img/topic/congrats.png" alt="">
+                </div>
+                <div class="team-game__para p-3">
+                    <span style="font-size: 16px; font-weight: bold;-webkit-text-fill-color: transparent;-webkit-background-clip: text;"
+                          class="itz-btn-home">
+                        Chúc mừng bạn đã hoàn thành tất cả thử thách của chuỗi hoạt động TeamBuilding. Hãy nhanh chóng trở về sảnh 5AB để thực hiện những hoạt động cuối cùng nhé!
+                    </span>
+                </div>
+                <div class="team-game__btn d-flex justify-content-center">
+                    <button style="width: 120px; border-radius: 20px" data-bs-dismiss="modal" class="itz-btn-home btn text-light mb-3">Quay lại</button>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

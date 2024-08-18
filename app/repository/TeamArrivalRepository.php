@@ -34,7 +34,7 @@ class TeamArrivalRepository{
         $data = array();
         while($row = $result->fetch_assoc()){
             $data[] = new TeamArrival($row['team_arrival_id'], $row['team_id'],
-                $row['location_id'], $row['is_show_next_location'], $row['team_arrival_priority']);
+                $row['location_id'], $row['is_show_next_location'], $row['team_arrival_priority'], $row['is_open_next_location']);
         }
         return $data;
     }
@@ -76,6 +76,71 @@ class TeamArrivalRepository{
         $stmt->close();
         return $affected_row > 0;
     }
+
+    public function countTeamArrivalsByLocationIdAndIsOpenNextLocation($location_id): int{
+        $sql = "SELECT count(*) as total FROM `team_arrival` where `location_id` = ? AND `is_open_next_location` = 1";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bind_param('s', $location_id);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $row = $result->fetch_assoc();
+        $stmt->close();
+        return $row['total'];
+    }
+
+    public function getTeamArrivalAndTeamByLocationId($location_id): array{
+        $sql = "SELECT * FROM `team_arrival` `TA`, `team` `TE` 
+         where location_id = ? and `TA`.`team_id` = `TE`.`team_id`";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bind_param('s', $location_id);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $data = array();
+        while($row = $result->fetch_assoc()){
+            $data[] = $row;
+        }
+        return $data;
+    }
+
+    public function checkPreviousPriorityIsShowNextLocationByTeamId($team_id, $previous_priority): int{
+        $sql = "SELECT count(*) as total FROM `team_arrival` 
+                         WHERE `team_id` = ? AND `team_arrival_priority` = ? 
+                           AND `is_show_next_location` = 1";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bind_param('si', $team_id, $previous_priority);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $row = $result->fetch_assoc();
+        $stmt->close();
+        return $row['total'];
+    }
+
+    public function updateIsShowNextLocationByTeamId($team_id, $next_priority): bool{
+        $sql = "UPDATE `team_arrival`
+        SET `is_show_next_location` = 1
+        WHERE `team_id` = ? AND `team_arrival_priority` = ?";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bind_param('si', $team_id, $next_priority);
+        $stmt->execute();
+        $affected_row = $stmt->affected_rows;
+        $stmt->close();
+        return $affected_row;
+    }
+
+    public function updateIsOpenNextLocationByTeamIdAndLocationId($team_id, $location_id): bool{
+        $sql = "UPDATE `team_arrival`
+         SET `is_open_next_location` = 1
+         WHERE `team_id` = ? AND `location_id` = ?";
+
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bind_param('ss', $team_id, $location_id);
+        $stmt->execute();
+        $affected_row = $stmt->affected_rows;
+        $stmt->close();
+        return $affected_row;
+    }
+
+
 }
 
 ?>
