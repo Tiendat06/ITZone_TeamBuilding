@@ -75,7 +75,7 @@
                     <span class="<?= $span_game ?>">Game</span>
                 </a>
 
-                <a href="/rule" class="footer-control__rule footer-control__link <?= $link_rule ?>">
+                <a href="/team/rule" class="footer-control__rule footer-control__link <?= $link_rule ?>">
                     <img src="/public/img/icon/ic_round-rule.png" alt="">
                     <span class="<?= $span_rule ?>">Rule</span>
                 </a>

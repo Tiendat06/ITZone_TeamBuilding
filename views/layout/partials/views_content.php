@@ -22,6 +22,8 @@
         include "./views/team/mentor_topic.php";
     } else if($content == 'team-member'){
         include "./views/team/team_member.php";
+    } else if($content == 'team-rule'){
+        include "./views/team/team_rule.php";
     }
     // support
     else if($content == 'support'){
@@ -39,8 +41,6 @@
 //        include "./views/mentor/mentor_member.php";
 //    }
     // no route
-    else if($content == 'rule'){
-        include "./views/site/rule.php";
-    }
+
 
 ?>

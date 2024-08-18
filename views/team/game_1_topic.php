@@ -11,7 +11,7 @@
 <div class="team-game_1">
     <div class="team-game_1__box">
         <div class="team-game_1__header justify-content-between">
-            <a href="/" class="team-game_1__back col-sm-3 col-md-3">
+            <a href="/team/game-1" class="team-game_1__back col-sm-3 col-md-3">
                 <img src="/public/img/icon/icon-return.png" alt="">
             </a>
 

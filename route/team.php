@@ -31,6 +31,8 @@
                         $teamMiddleWare->game_mentor();
                     } else if($_GET['param_2'] == 'member'){
                         $teamMiddleWare->team_member();
+                    } else if($_GET['param_2'] == 'rule'){
+                        $teamMiddleWare->team_rule();
                     }
                     break;
             }

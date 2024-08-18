@@ -152,6 +152,14 @@ class TeamMiddleWare{
             $this->teamController->team_member();
         }
     }
+
+    public function team_rule(){
+        if ((!isset($_SESSION['person_id']) && !isset($_SESSION['role_name'])) || $_SESSION['role_name'] != 'team') {
+            header('location: /');
+        } else {
+            $this->teamController->team_rule();
+        }
+    }
 }
 
 ?>

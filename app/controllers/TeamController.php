@@ -171,6 +171,13 @@ class TeamController{
         $footer = 'team';
         include "./views/layout/index.php";
     }
+
+//    [GET] /team/rule
+    public function team_rule(){
+        $content = 'team-rule';
+        $footer = 'rule';
+        include "./views/layout/index.php";
+    }
 }
 
 ?>

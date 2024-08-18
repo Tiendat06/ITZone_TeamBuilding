@@ -8,6 +8,7 @@
   color: #ffffff;
   font-size: $sub-title-size;
   animation: fadeIn 0.8s linear, fadeOut 0.8s linear 5s forwards;
+  z-index: 99;
   .toast-icon--inner{
     font-size: $title-size;
   }
