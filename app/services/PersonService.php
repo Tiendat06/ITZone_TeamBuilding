@@ -3,10 +3,16 @@
 class PersonService{
     private PersonRepository $personRepository;
     private TeamArrivalRepository $teamArrivalRepository;
+    private LocationRepository $locationRepository;
+    private TopicRepository $topicRepository;
+    private TeamMemberRepository $teamMemberRepository;
     public function __construct()
     {
         $this->personRepository = new PersonRepository();
         $this->teamArrivalRepository = new TeamArrivalRepository();
+        $this->locationRepository = new LocationRepository();
+        $this->topicRepository = new TopicRepository();
+        $this->teamMemberRepository = new TeamMemberRepository();
     }
 
     public function getTeam(): array{
@@ -47,6 +53,31 @@ class PersonService{
             'status' => true,
             'message' => 'Mở khóa thành công, chờ 3s để cập nhật'
         );
+    }
+
+    public function getMentorWhileTeamIsDoneMentorGameByTeamId(): Mentor{
+        $team_id = $_SESSION['person_id'];
+        return $this->personRepository->getMentorWhileTeamIsDoneMentorGameByTeamId($team_id);
+    }
+
+    public function getTeamMemberByTeamId(): array{
+        $team_id = $_SESSION['person_id'];
+        return $this->personRepository->getTeamMemberByTeamId($team_id);
+    }
+
+    public function getMentorByMentorId(): Mentor{
+        $mentor_id = $_SESSION['person_id'];
+        return $this->personRepository->getMentorByMentorId($mentor_id);
+    }
+
+    public function getTeamMemberWhileDoneMentorGame(): array{
+        $mentor_id = $_SESSION['person_id'];
+        $team = $this->personRepository->getTeamMemberByTeamIdOrMentorId($mentor_id, 'mentor');
+        $team_id = $team['team_id'];
+        $location = $this->locationRepository->getLocationDataByPersonId($mentor_id);
+        $topic = $this->topicRepository->getTopicByLocationId($location->getLocationId());
+
+        return $this->teamMemberRepository->getTeamMemberAndTeamPuzzleByTeamIdAndTopicId($team_id, $topic->getTopicId());
     }
 }
 

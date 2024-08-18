@@ -1,4 +1,10 @@
 <?php
+    /**
+     * @var $mentor_key
+     * @var $mentor_name
+     * @var $mentor_phone
+     * @var $team_member
+     */
 ?>
 
 <?php
@@ -31,51 +37,45 @@
                         </div>
                     </div>
                     <div class="mentor-info__personal">
-                        <p class="mentor-info__para mb-0">Tạ Tiến Đạt</p>
-                        <p class="mentor-info__para mb-0">0356779197</p>
-                        <p class="mentor-info__para mb-0">HJPYSRESISK</p>
+                        <?php
+                            if($mentor_key){
+                        ?>
+                            <p class="mentor-info__para mb-0"><?=$mentor_name?></p>
+                            <p class="mentor-info__para mb-0"><?=$mentor_phone?></p>
+    <!--                        <p class="mentor-info__para mb-0">HJPYSRESISK</p>-->
+                        <?php
+                            } else {
+
+                        ?>
+                                <p class="mentor-info__para mb-0">Chưa có thông tin</p>
+                        <?php
+                            }
+                        ?>
                     </div>
                 </div>
 
+                <?php
+                    foreach ($team_member as $row) {
+                        $team_member_name = $row->getTeamMemberName();
+                        $team_member_phone = $row->getTeamMemberPhone();
+                        $team_member_gender = $row->getTeamMemberGender();
+                        $icon = 'user-icon.png';
+//                        if($team_member_gender == 'Female'){
+//                            $icon = 'female-icon.png';
+//                        }
+                ?>
                 <div class="mentor-member d-flex flex-wrap">
                     <div class="mentor-member__logo">
-                        <img style="width: 40px" src="/public/img/icon/user-icon.png" alt="" class="mentor-member__img">
+                        <img style="width: 40px" src="/public/img/icon/<?=$icon?>" alt="" class="mentor-member__img">
                     </div>
                     <div class="mentor-member__personal">
-                        <p class="mentor-member__para mb-0">Tạ Tiến Đạt</p>
-                        <p class="mentor-member__para mb-0">0356779197</p>
+                        <p class="mentor-member__para mb-0"><?=$team_member_name?></p>
+                        <p class="mentor-member__para mb-0"><?=$team_member_phone?></p>
                     </div>
                 </div>
-
-                <div class="mentor-member d-flex flex-wrap">
-                    <div class="mentor-member__logo">
-                        <img style="width: 40px" src="/public/img/icon/user-icon.png" alt="" class="mentor-member__img">
-                    </div>
-                    <div class="mentor-member__personal">
-                        <p class="mentor-member__para mb-0">Tạ Tiến Đạt</p>
-                        <p class="mentor-member__para mb-0">0356779197</p>
-                    </div>
-                </div>
-
-                <div class="mentor-member d-flex flex-wrap">
-                    <div class="mentor-member__logo">
-                        <img style="width: 40px" src="/public/img/icon/user-icon.png" alt="" class="mentor-member__img">
-                    </div>
-                    <div class="mentor-member__personal">
-                        <p class="mentor-member__para mb-0">Tạ Tiến Đạt</p>
-                        <p class="mentor-member__para mb-0">0356779197</p>
-                    </div>
-                </div>
-
-                <div class="mentor-member d-flex flex-wrap">
-                    <div class="mentor-member__logo">
-                        <img style="width: 40px" src="/public/img/icon/user-icon.png" alt="" class="mentor-member__img">
-                    </div>
-                    <div class="mentor-member__personal">
-                        <p class="mentor-member__para mb-0">Tạ Tiến Đạt</p>
-                        <p class="mentor-member__para mb-0">0356779197</p>
-                    </div>
-                </div>
+                <?php
+                    }
+                ?>
             </div>
         </div>
     </div>

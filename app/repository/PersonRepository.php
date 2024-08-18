@@ -98,6 +98,42 @@ class PersonRepository{
         return new Mentor($row['mentor_id'], $row['mentor_name'],
             $row['mentor_phone'], $row['mentor_key']);
     }
+
+    public function getMentorWhileTeamIsDoneMentorGameByTeamId($team_id){
+        $sql = "SELECT * FROM `team` `TE`, `mentor` `ME`, `team_puzzle` `TP`, `location` `LO`, `topic` `TO`
+                WHERE `TE`.`team_id` = `TP`.`team_id` 
+                AND `TO`.`location_id` = `LO`.`location_id`
+                AND `TO`.`topic_id` = `TP`.`topic_id`
+                AND `LO`.`member_id` = `ME`.`mentor_id`
+                  AND `TE`.`mentor_id` = `ME`.`mentor_id` 
+                  AND `TE`.`team_id` = ? AND `TP`.`is_done` is not null;";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bind_param('s', $team_id);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $row = $result->fetch_assoc();
+        if($result->num_rows > 0){
+            return new Mentor($row['mentor_id'], $row['mentor_name'],
+                $row['mentor_phone'], $row['mentor_key']);
+        }
+        return new Mentor('', '',
+            '', '');
+    }
+
+    public function getTeamMemberByTeamId($team_id): array{
+        $sql = "SELECT * FROM `team_member` WHERE `team_id` = ?";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bind_param('s', $team_id);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $data = array();
+        while($row = $result->fetch_assoc()){
+            $data[] = new TeamMember($row['team_member_id'], $row['team_member_name'],
+                $row['team_member_gender'], $row['team_member_phone'],
+                $row['is_team_leader'], $row['team_id']);
+        }
+        return $data;
+    }
 }
 
 ?>

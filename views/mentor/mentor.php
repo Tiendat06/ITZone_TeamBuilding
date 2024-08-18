@@ -1,4 +1,10 @@
 <?php
+    /**
+     * @var $mentor_name
+     * @var $mentor_phone
+     * @var $mentor_key
+     * @var $team_member
+     */
 ?>
 
 <div class="container">
@@ -28,51 +34,45 @@
                         </div>
                     </div>
                     <div class="mentor-info__personal">
-                        <p class="mentor-info__para mb-0">Tạ Tiến Đạt</p>
-                        <p class="mentor-info__para mb-0">0356779197</p>
-                        <p class="mentor-info__para mb-0">HJPYSRESISK</p>
+                        <p class="mentor-info__para mb-0"><?=$mentor_name?></p>
+                        <p class="mentor-info__para mb-0"><?=$mentor_phone?></p>
+                        <p class="mentor-info__para mb-0"><?=$mentor_key?></p>
                     </div>
                 </div>
 
-                <div class="mentor-member d-flex flex-wrap">
-                    <div class="mentor-member__logo">
-                        <img style="width: 40px" src="/public/img/icon/user-icon.png" alt="" class="mentor-member__img">
-                    </div>
-                    <div class="mentor-member__personal">
-                        <p class="mentor-member__para mb-0">Tạ Tiến Đạt</p>
-                        <p class="mentor-member__para mb-0">0356779197</p>
-                    </div>
-                </div>
+                <?php
+                    foreach ($team_member as $row){
+                        $team_member_name = $row['team_member_name'];
+                        $team_member_phone = $row['team_member_phone'];
+                        $is_done = $row['is_done'];
+                        if($is_done != null){
+                ?>
+                        <div class="mentor-member d-flex flex-wrap">
+                            <div class="mentor-member__logo">
+                                <img style="width: 40px" src="/public/img/icon/user-icon.png" alt="" class="mentor-member__img">
+                            </div>
+                            <div class="mentor-member__personal">
+                                <p class="mentor-member__para mb-0"><?=$team_member_name?></p>
+                                <p class="mentor-member__para mb-0"><?=$team_member_phone?></p>
+                            </div>
+                        </div>
+                <?php
+                        } else {
+                            ?>
+                            <div class="mentor-member d-flex flex-wrap">
+                                <div class="mentor-member__logo">
+                                    <img style="width: 40px" src="/public/img/icon/user-icon.png" alt="" class="mentor-member__img">
+                                </div>
+                                <div class="mentor-member__personal">
+                                    <p class="mentor-member__para mb-0">Chưa có thông tin</p>
+                                </div>
+                            </div>
+                            <?php
+                        }
 
-                <div class="mentor-member d-flex flex-wrap">
-                    <div class="mentor-member__logo">
-                        <img style="width: 40px" src="/public/img/icon/user-icon.png" alt="" class="mentor-member__img">
-                    </div>
-                    <div class="mentor-member__personal">
-                        <p class="mentor-member__para mb-0">Tạ Tiến Đạt</p>
-                        <p class="mentor-member__para mb-0">0356779197</p>
-                    </div>
-                </div>
+                    }
+                ?>
 
-                <div class="mentor-member d-flex flex-wrap">
-                    <div class="mentor-member__logo">
-                        <img style="width: 40px" src="/public/img/icon/user-icon.png" alt="" class="mentor-member__img">
-                    </div>
-                    <div class="mentor-member__personal">
-                        <p class="mentor-member__para mb-0">Tạ Tiến Đạt</p>
-                        <p class="mentor-member__para mb-0">0356779197</p>
-                    </div>
-                </div>
-
-                <div class="mentor-member d-flex flex-wrap">
-                    <div class="mentor-member__logo">
-                        <img style="width: 40px" src="/public/img/icon/user-icon.png" alt="" class="mentor-member__img">
-                    </div>
-                    <div class="mentor-member__personal">
-                        <p class="mentor-member__para mb-0">Tạ Tiến Đạt</p>
-                        <p class="mentor-member__para mb-0">0356779197</p>
-                    </div>
-                </div>
             </div>
         </div>
     </div>

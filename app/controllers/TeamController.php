@@ -5,6 +5,7 @@ class TeamController{
     private TeamPuzzleService $teamPuzzleService;
     private LocationService $locationService;
     private HintService $hintService;
+    private PersonService $personService;
 
     public function __construct()
     {
@@ -12,6 +13,7 @@ class TeamController{
         $this->teamPuzzleService = new TeamPuzzleService();
         $this->locationService = new LocationService();
         $this->hintService = new HintService();
+        $this->personService = new PersonService();
     }
 
 //    [POST, FETCH] /team/get_topic_hint
@@ -159,7 +161,12 @@ class TeamController{
 //    [GET] /team/member
     public function team_member()
     {
+        $mentor = $this->personService->getMentorWhileTeamIsDoneMentorGameByTeamId();
+        $mentor_name = $mentor->getPersonName();
+        $mentor_phone = $mentor->getPersonPhone();
+        $mentor_key = $mentor->getMentorKey();
 
+        $team_member = $this->personService->getTeamMemberByTeamId();
         $content = 'team-member';
         $footer = 'team';
         include "./views/layout/index.php";

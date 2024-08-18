@@ -68,6 +68,7 @@ class LocationRepository{
             ->build();
         return $location;
     }
+
 }
 
 ?>
