@@ -33,7 +33,7 @@
                 }
                 if($location_id === 'LOC0000006') $url_link = '#';
         ?>
-        <a <?= $location_id == 'LOC0000006'? 'data-bs-target="#team-complete" data-bs-toggle="modal"': '' ?>
+        <a <?= $location_id == 'LOC0000006' && $is_show_next_location == 1? 'data-bs-target="#team-complete" data-bs-toggle="modal"': '' ?>
                 href="<?=$url_link?>" class="team-content__item d-block <?=$disable_card?> col-sm-4 col-md-4">
             <div class="team-content__item--inner">
                 <div class="team-content__item--info text-center">

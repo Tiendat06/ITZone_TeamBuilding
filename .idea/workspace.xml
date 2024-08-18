@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="05c71e1d-483c-4e68-b91a-ba4025288c1a" name="Changes" comment="update new DB, guard can open next location for team">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/guard.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/guard.js" afterDir="false" />
+    <list default="true" id="05c71e1d-483c-4e68-b91a-ba4025288c1a" name="Changes" comment="repair guard js a little bit with after check delete all info in input text">
+      <change beforePath="$PROJECT_DIR$/views/team/team_game_1.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/team/team_game_1.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +25,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Dat" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -92,7 +91,7 @@
     "PHP Web Page.index.php.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "Dat",
     "last_opened_file_path": "C:/xampp/htdocs",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -365,7 +364,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723963224598</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="repair guard js a little bit with after check delete all info in input text">
+      <option name="closed" value="true" />
+      <created>1723968307470</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1723968307470</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -384,7 +391,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="test by TDat" />
     <MESSAGE value="update base configuration for scss" />
     <MESSAGE value="update img, please always read &quot;README.md&quot; file" />
     <MESSAGE value="update site, please read SiteController to do login" />
@@ -409,6 +415,7 @@
     <MESSAGE value="update repair login function" />
     <MESSAGE value="update file .sql (for sure)" />
     <MESSAGE value="update new DB, guard can open next location for team" />
-    <option name="LAST_COMMIT_MESSAGE" value="update new DB, guard can open next location for team" />
+    <MESSAGE value="repair guard js a little bit with after check delete all info in input text" />
+    <option name="LAST_COMMIT_MESSAGE" value="repair guard js a little bit with after check delete all info in input text" />
   </component>
 </project>
