@@ -9,6 +9,15 @@ class TeamArrivalService{
         $this->siteService = new SiteService();
     }
 
+    public function getTeamArrivalByLocationIdAndTeamId($location_id): TeamArrival{
+        $team_id = $_SESSION['person_id'];
+        return $this->teamArrivalRepository->getTeamArrivalByLocationIdAndTeamId($location_id, $team_id);
+    }
+
+    public function getTeamArrivalByTeamArrivalId($team_arrival_id): TeamArrival{
+        return $this->teamArrivalRepository->getTeamArrivalByTeamArrivalId($team_arrival_id);
+    }
+
     public function getTeamArrivalsAndLocationByTeamId(): array{
         $team_id = $_SESSION['person_id'];
         return $this->teamArrivalRepository->getTeamArrivalsAndLocationByTeamId($team_id);

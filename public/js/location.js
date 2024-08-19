@@ -117,9 +117,13 @@ class Location{
                     $('#team__topic-alert').html(`Hãy liên hệ: ${data['mentor_name']}, ${data['mentor_phone']}</br>Hãy chuyển sang trang Game để tiếp tục cuộc hành trình`);
                     this.fetchUpdateNextLocationWhileMentor()
                 } else{
-                    console.log(data)
+                    // console.log(data)
+                    let bus_go = '';
+                    if(data['team_arrival_priority'] === 3){
+                        bus_go = data['bus_go']
+                    }
                     $('#team__topic-alert--outer').removeClass('d-none').removeClass('alert-danger').addClass('alert-success');
-                    $('#team__topic-alert').html(`Hãy đi tới: ${data['location_name']} </br>${data['location_address']}`);
+                    $('#team__topic-alert').html(`Hãy đi tới: ${data['location_name']} </br>${data['location_address']}</br>${bus_go}`);
                 }
                 // console.log(data);
             })
@@ -382,7 +386,16 @@ class Location{
 
     }
 
-
+    getBusBack = () => {
+        $('.team-content__item').click(function ()  {
+            let location_id = $(this).data('location');
+            if(location_id === 'LOC0000006'){
+                let bus_back = $(this).data('back');
+                $('#itz-modal-text-end')
+                    .html(`Chúc mừng bạn đã hoàn thành tất cả thử thách của chuỗi hoạt động TeamBuilding. Hãy nhanh chóng trở về sảnh 5AB để thực hiện những hoạt động cuối cùng nhé!<br>${bus_back}`);
+            }
+        })
+    }
 }
 
 export default new Location;

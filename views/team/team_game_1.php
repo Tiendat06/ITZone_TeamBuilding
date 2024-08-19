@@ -20,6 +20,8 @@
 
     <div class="team-content d-flex">
         <?php
+            $index = 0;
+            $bus_back = '';
             foreach ($team_arrival_location as $row){
                 $location_id = $row['location_id'];
                 $is_show_next_location = $row['is_show_next_location'];
@@ -27,13 +29,17 @@
                 $team_arrival_priority = $row['team_arrival_priority'];
                 $url_link = '/team/game-1-topic/'.$location_id;
                 $disable_card = '';
+                $previous_location = '';
                 if($is_show_next_location == 0){
                     $disable_card = 'itz-disable-card';
                     $url_link = '#';
                 }
+                if($index == 3) $bus_back = $row['bus_back'];
                 if($location_id === 'LOC0000006') $url_link = '#';
         ?>
-        <a <?= $location_id == 'LOC0000006' && $is_show_next_location == 1? 'data-bs-target="#team-complete" data-bs-toggle="modal"': '' ?>
+        <a <?= $location_id == 'LOC0000006' && $is_show_next_location == 1?
+            'data-bs-target="#team-complete" data-bs-toggle="modal" data-back="'.$bus_back.'" data-location="'.$location_id.'"'
+            : '' ?>
                 href="<?=$url_link?>" class="team-content__item d-block <?=$disable_card?> col-sm-4 col-md-4">
             <div class="team-content__item--inner">
                 <div class="team-content__item--info text-center">
@@ -51,6 +57,7 @@
         </a>
 
         <?php
+                $index++;
             }
         ?>
 
@@ -65,9 +72,9 @@
                     <img style="width: 100%" src="/public/img/topic/congrats.png" alt="">
                 </div>
                 <div class="team-game__para p-3">
-                    <span style="font-size: 16px; font-weight: bold;-webkit-text-fill-color: transparent;-webkit-background-clip: text;"
+                    <span id="itz-modal-text-end" style="font-size: 16px; font-weight: bold;-webkit-text-fill-color: transparent;-webkit-background-clip: text;"
                           class="itz-btn-home">
-                        Chúc mừng bạn đã hoàn thành tất cả thử thách của chuỗi hoạt động TeamBuilding. Hãy nhanh chóng trở về sảnh 5AB để thực hiện những hoạt động cuối cùng nhé!
+                        Vui lòng chờ gợi ý vài giây
                     </span>
                 </div>
                 <div class="team-game__btn d-flex justify-content-center">
@@ -77,3 +84,11 @@
         </div>
     </div>
 </div>
+
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        if(window.getBusBack){
+            getBusBack();
+        }
+    })
+</script>

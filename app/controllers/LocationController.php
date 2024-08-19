@@ -3,10 +3,14 @@
 class LocationController{
     private LocationService $locationService;
     private PersonService $personService;
+    private TeamArrivalService $teamArrivalService;
+    private SiteService $siteService;
     public function __construct()
     {
         $this->locationService = new LocationService();
         $this->personService = new PersonService();
+        $this->teamArrivalService = new TeamArrivalService();
+        $this->siteService = new SiteService();
     }
 
 //    [GET] /location/{param}
@@ -65,11 +69,13 @@ class LocationController{
             ));
         } else{
             $location = $this->locationService->getAnswerByLocationId($location_id);
+            $team_arrival_data = $this->teamArrivalService->getTeamArrivalByLocationIdAndTeamId($location_id);
             echo json_encode(array(
                 'location_address' => $location->getLocationAddress(),
                 'location_name' => $location->getLocationName(),
                 'bus_go' => $location->getBusGo(),
                 'bus_back' => $location->getBusBack(),
+                'team_arrival_priority' => $team_arrival_data->getTeamArrivalPriority()
             ));
         }
 

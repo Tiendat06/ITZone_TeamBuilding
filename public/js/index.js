@@ -41,6 +41,9 @@ window.checkGetHintExtra = (time_end) => {
 window.fetchSendTopicAnswer = () => {
     location.fetchSendTopicAnswer();
 }
+window.getBusBack = () => {
+    location.getBusBack();
+}
 
 // log
 window.enableButton = () => {

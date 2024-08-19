@@ -6,6 +6,7 @@ class TeamController{
     private LocationService $locationService;
     private HintService $hintService;
     private PersonService $personService;
+    private SiteService $siteService;
 
     public function __construct()
     {
@@ -14,6 +15,7 @@ class TeamController{
         $this->locationService = new LocationService();
         $this->hintService = new HintService();
         $this->personService = new PersonService();
+        $this->siteService = new SiteService();
     }
 
 //    [POST, FETCH] /team/get_topic_hint
@@ -135,6 +137,11 @@ class TeamController{
         $topic_data = $this->locationService->index($location_id);
         $location_data = $this->locationService->getLocationByLocationId($location_id);
 
+//        $team_arrival_data = $this->teamArrivalService->getTeamArrivalByLocationIdAndTeamId($location_id);
+//        $next_team_arrival_id = $this->siteService->getNextOrPreviousId($team_arrival_data->getTeamArrivalId());
+//        $next_team_arrival_data = $this->teamArrivalService->getTeamArrivalByTeamArrivalId($next_team_arrival_id);
+//        $next_location_id = $next_team_arrival_data->getLocationId();
+//        $next_location_data = $this->locationService->getLocationByLocationId($next_location_id);
         $content = 'team-game-1-topic';
         $footer = 'game';
         include "./views/layout/index.php";
