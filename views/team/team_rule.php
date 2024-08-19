@@ -14,7 +14,7 @@
 
         <div class="team-rule__header">
             <div class="team-rule__img col-sm-12 col-md-12">
-                <img class="team-rule__img--logo" src="/public/img/general/it-zone.jpg" alt="" srcset="">
+                <img class="team-rule__img--logo" src="/public/img/logo/it-zone-logo-original.jpg" alt="" srcset="">
             </div>
         </div>
 
