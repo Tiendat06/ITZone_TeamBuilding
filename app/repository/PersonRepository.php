@@ -113,7 +113,7 @@ class PersonRepository{
 
     public function getAllGuard(): array
     {
-        $sql = "SELECT * FROM `member` WHERE SUBSTRING( member_id, 1, 3 ) = 'GUA'";
+        $sql = "SELECT * FROM `member` WHERE SUBSTRING( member_id, 1, 3 ) = 'GUA' AND `member_id` != 'GUA0000006'";
         $stmt = $this->conn->prepare($sql);
         $stmt->execute();
         $result = $stmt->get_result();
