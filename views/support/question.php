@@ -12,20 +12,37 @@
 
             <div class="support-question__location w-100">
                 <div class="support-question__location--scroll position-relative d-flex flex-wrap">
-                    <button type="button" class="btn support-question__location--icon-left position-absolute">
+                    <button id="support-question__location--icon-left" type="button" class="btn support-question__location--icon-left position-absolute">
                         <img src="/public/img/icon/icon-left-arrow.png" alt="">
                     </button>
-                    <div class="w-100 d-flex flex-wrap align-items-center justify-content-around">
-                        <div class="support-question__location--item-side">
-                            <img src="/public/img/icon/carbon_map.png" alt="">
+
+                    <div class="w-100 d-flex overflow-hidden align-items-center justify-content-around">
+<!--                        <div class="support-question__location--item-side">-->
+<!--                            <img src="/public/img/icon/carbon_map.png" alt="">-->
+<!--                        </div>-->
+                        <div class="support-question__location--item-outer d-flex">
+                            <div class="support-question__location--item-inner col-sm-12 d-flex justify-content-center">
+                                <div class="support-question__location--item-mid d-flex flex-wrap justify-content-center">
+                                    <img src="/public/img/icon/carbon_map.png" class="mt-2" alt="">
+                                    <p class="mb-0 text-light support-question__item--para mt-2">Phố đi bộ</p>
+                                </div>
+                            </div>
+                            <div class="support-question__location--item-inner col-sm-12 d-flex justify-content-center">
+                                <div class="support-question__location--item-mid d-flex flex-wrap justify-content-center">
+                                    <img src="/public/img/icon/carbon_map.png" class="mt-2" alt="">
+                                    <p class="mb-0 text-light support-question__item--para mt-2">Đường sách</p>
+                                </div>
+                            </div>
+                            <div class="support-question__location--item-inner col-sm-12 d-flex justify-content-center">
+                                <div class="support-question__location--item-mid d-flex flex-wrap justify-content-center">
+                                    <img src="/public/img/icon/carbon_map.png" class="mt-2" alt="">
+                                    <p class="mb-0 text-light support-question__item--para mt-2">Công viên</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="support-question__location--item-mid">
-                            <img src="/public/img/icon/carbon_map.png" class="mt-2" alt="">
-                            <p class="mb-0 text-light support-question__item--para mt-2">Trạm 1</p>
-                        </div>
-                        <div class="support-question__location--item-side">
-                            <img src="/public/img/icon/carbon_map.png" alt="">
-                        </div>
+<!--                        <div class="support-question__location--item-side">-->
+<!--                            <img src="/public/img/icon/carbon_map.png" alt="">-->
+<!--                        </div>-->
                     </div>
                     <button type="button" class="btn support-question__location--icon-right position-absolute">
                         <img src="/public/img/icon/icon-right-arrow.png" alt="">

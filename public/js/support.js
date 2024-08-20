@@ -1,4 +1,5 @@
 class Support{
+    #location_id = '';
     constructor() {}
 
     fetchLocation(){
@@ -7,25 +8,48 @@ class Support{
             location = 1;
             localStorage.setItem('location', location.toString());
         }
+        this.transformPage(location);
         $('.support-question__location--icon-right').click(() => {
             location = location + 1;
             if (location > 3){
                 location = 1
             }
             localStorage.setItem('location', location.toString());
-            this.getLocationFetch()
+            this.transformPage(location);
         })
 
-        $('.support-question__location--icon-left').click(() => {
+        $('#support-question__location--icon-left').click(() => {
             location = location - 1;
             if (location < 1){
                 location = 3
             }
             localStorage.setItem('location', location.toString());
-            this.getLocationFetch()
+            this.transformPage(location);
         })
     }
 
+    transformPage = (location) => {
+        if(location === 1){
+            this.#location_id = 'LOC0000002';
+            $('.support-question__location--item-outer').css('transform', 'translateX(-10px)');
+            this.fetchApiSupportLocation(this.#location_id);
+        } else if(location === 2){
+            this.#location_id = 'LOC0000003';
+            $('.support-question__location--item-outer').css('transform', 'translateX(calc(-100% - 10px))');
+            this.fetchApiSupportLocation(this.#location_id);
+        } else if(location === 3){
+            this.#location_id = 'LOC0000005';
+            $('.support-question__location--item-outer').css('transform', 'translateX(calc(-200% - 10px))');
+            this.fetchApiSupportLocation(this.#location_id);
+        }
+        console.log(this.#location_id);
+    }
+
+    fetchApiSupportLocation = (location_id) => {
+        // fetch API here
+    }
+
+    // do not use
     getLocationFetch(){
         let location = parseInt(localStorage.getItem('location'));
         let location_id = '';
@@ -39,7 +63,6 @@ class Support{
             localStorage.setItem('location', '1');
             this.getLocationFetch();
         }
-
     }
 
     searchUser(){
