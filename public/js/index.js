@@ -59,3 +59,6 @@ window.getLocationFetch = () => {
 window.fetchLocation = () => {
     support.fetchLocation();
 }
+window.searchUser = () => {
+    support.searchUser();
+}

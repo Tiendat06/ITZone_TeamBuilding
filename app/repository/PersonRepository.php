@@ -99,6 +99,31 @@ class PersonRepository{
             $row['mentor_phone'], $row['mentor_key']);
     }
 
+    public function getAllMentor(): array{
+        $sql = "SELECT * FROM `mentor`";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $data = array();
+        while ($row = $result->fetch_assoc()) {
+            $data[] = $row;
+        }
+        return $data;
+    }
+
+    public function getAllGuard(): array
+    {
+        $sql = "SELECT * FROM `member` WHERE SUBSTRING( member_id, 1, 3 ) = 'GUA'";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $data = array();
+        while ($row = $result->fetch_assoc()) {
+            $data[] = $row;
+        }
+        return $data;
+    }
+
     public function getMentorWhileTeamIsDoneMentorGameByTeamId($team_id){
         $sql = "SELECT * FROM `team` `TE`, `mentor` `ME`, `team_puzzle` `TP`, `location` `LO`, `topic` `TO`
                 WHERE `TE`.`team_id` = `TP`.`team_id` 
