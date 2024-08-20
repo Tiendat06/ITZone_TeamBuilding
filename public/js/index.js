@@ -3,11 +3,22 @@ import location from "./location.js";
 import log from "./log.js";
 import support from './support.js';
 import guard from './guard.js'
+import team from "./team.js";
 
 // site.index();
 // site.ajaxTest();
 site.closeToast();
 
+// team
+window.translateNextRule = () => {
+    team.translateNextRule();
+}
+window.translatePreviousRule = () => {
+    team.translatePreviousRule();
+}
+window.translateReturn = () => {
+    team.translateReturn();
+}
 
 // location & topic (team arrival and team puzzle)
 // location.checkDisableInput();
@@ -29,6 +40,9 @@ window.checkGetHintExtra = (time_end) => {
 // location.ajaxSendTopicAnswer();
 window.fetchSendTopicAnswer = () => {
     location.fetchSendTopicAnswer();
+}
+window.getBusBack = () => {
+    location.getBusBack();
 }
 
 // log

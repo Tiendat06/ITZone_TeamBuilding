@@ -6,6 +6,17 @@ class TeamArrivalRepository{
         $this->conn = DatabaseManager::getInstance()->getConnection();
     }
 
+    public function getTeamArrivalByTeamArrivalId($team_arrival_id): TeamArrival{
+        $sql = "SELECT * FROM team_arrival WHERE team_arrival_id = ?";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bind_param('s', $team_arrival_id);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $row = $result->fetch_assoc();
+        return new TeamArrival($row['team_arrival_id'], $row['team_id'], $row['location_id'],
+            $row['is_show_next_location'], $row['team_arrival_priority'], $row['is_open_next_location']);
+    }
+
     public function getTeamArrivalsAndLocationByTeamId($team_id): array{
         $sql = "SELECT * FROM `team_arrival` as TA, `location` as LO
                 WHERE `TA`.`team_id` = ?
@@ -140,7 +151,17 @@ class TeamArrivalRepository{
         return $affected_row;
     }
 
-
+    public function getTeamArrivalByLocationIdAndTeamId($location_id, $team_id): TeamArrival{
+        $sql = "SELECT * FROM `team_arrival` where `location_id` = ? AND `team_id` = ?";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bind_param('ss', $location_id, $team_id);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $row = $result->fetch_assoc();
+        $stmt->close();
+        return new TeamArrival($row['team_arrival_id'], $row['team_id'], $row['location_id'],
+            $row['is_show_next_location'], $row['team_arrival_priority'], $row['is_open_next_location']);
+    }
 }
 
 ?>

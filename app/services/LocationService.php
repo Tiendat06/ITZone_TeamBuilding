@@ -24,7 +24,8 @@ class LocationService{
             'location_name' => $location_data->getLocationName(),
             'location_map' => $location_data->getLocationMap(),
             'location_img' => $location_data->getLocationImg(),
-            'location_address' => $location_data->getLocationAddress()
+            'location_address' => $location_data->getLocationAddress(),
+            'bus_go' => $location_data->getBusGo()
         );
     }
 
