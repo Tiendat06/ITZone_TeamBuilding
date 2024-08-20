@@ -42,6 +42,24 @@ class Support{
 
     }
 
+    searchUser(){
+        let searchInput = document.querySelector('.support-search__inp--item')
+        let contactItems = document.querySelectorAll('.support-content__contact--item');
+        searchInput.addEventListener('input', e=> {
+            const value = e.target.value.toLowerCase().trim()
+            contactItems.forEach(item => {
+                let nameElement = item.querySelector('.support-content__contact--para');
+                let name = nameElement.textContent.toLowerCase().trim()
+
+                if (name.includes(value)) {
+                    item.style.display = '';
+                } else {
+                    item.style.setProperty('display', 'none', 'important');
+                }
+            });
+        })
+    }
+
 }
 
 export default new Support;

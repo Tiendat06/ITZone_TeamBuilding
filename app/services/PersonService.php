@@ -45,8 +45,8 @@ class PersonService{
             }
         } else{
             return array(
-              'status' => false,
-              'message' => 'Sai mã định danh mentor'
+                'status' => false,
+                'message' => 'Sai mã định danh mentor'
             );
         }
         return array(
@@ -68,6 +68,16 @@ class PersonService{
     public function getMentorByMentorId(): Mentor{
         $mentor_id = $_SESSION['person_id'];
         return $this->personRepository->getMentorByMentorId($mentor_id);
+    }
+
+    public function getAllMentor(): array
+    {
+        return $this->personRepository->getAllMentor();
+    }
+
+    public function getAllGuard(): array
+    {
+        return $this->personRepository->getAllGuard();
     }
 
     public function getTeamMemberWhileDoneMentorGame(): array{
