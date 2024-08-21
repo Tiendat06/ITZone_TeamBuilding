@@ -45,6 +45,11 @@ class TeamArrivalService{
     public function getTeamArrivalAndTeamByLocationId($location_id): array{
         return $this->teamArrivalRepository->getTeamArrivalAndTeamByLocationId($location_id);
     }
+
+    public function checkPreviousPriorityIsShowNextLocationByTeamId($previous_priority): bool{
+        $team_id = $_SESSION['person_id'];
+        return $this->teamArrivalRepository->checkPreviousPriorityIsShowNextLocationByTeamId($team_id, $previous_priority);
+    }
 }
 
 ?>

@@ -159,8 +159,12 @@ class TeamArrivalRepository{
         $result = $stmt->get_result();
         $row = $result->fetch_assoc();
         $stmt->close();
-        return new TeamArrival($row['team_arrival_id'], $row['team_id'], $row['location_id'],
-            $row['is_show_next_location'], $row['team_arrival_priority'], $row['is_open_next_location']);
+        if($result->num_rows > 0){
+            return new TeamArrival($row['team_arrival_id'], $row['team_id'], $row['location_id'],
+                $row['is_show_next_location'], $row['team_arrival_priority'], $row['is_open_next_location']);
+        }
+        return new TeamArrival('', '', '',
+            0, 0, 0);
     }
 }
 

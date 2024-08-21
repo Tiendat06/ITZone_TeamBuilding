@@ -275,7 +275,7 @@ class Location{
 
     fetchViewTopicHint = () => {
         $('.team-game_1__hint-btn-view').click(function ()  {
-            $('#hint-modal__para').html('')
+            $('#hint-modal__para').html('Vui lòng chờ chút...')
             let hint_priority = $(this).data('value');
             let topic_id = $('#team-topic__id').val();
 

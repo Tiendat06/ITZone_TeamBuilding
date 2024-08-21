@@ -3,7 +3,6 @@
     Header set Pragma "no-cache"
     Header set Expires 0
 </FilesMatch>
-Header set X-Cache-Status "Test"
 RewriteEngine on
 
 RewriteCond %{REQUEST_FILENAME} !-f

@@ -2,10 +2,12 @@
 
 class TeamMiddleWare{
     private TeamController $teamController;
+    private TeamArrivalService $teamArrivalService;
 
     public function __construct()
     {
         $this->teamController = new TeamController();
+        $this->teamArrivalService = new TeamArrivalService();
     }
 
     public function get_topic_hint(){
@@ -119,10 +121,30 @@ class TeamMiddleWare{
     }
 
     public function game_1_topic($location_id){
-        if ((!isset($_SESSION['person_id']) && !isset($_SESSION['role_name'])) || $_SESSION['role_name'] != 'team') {
+        $split_location_id = str_split($location_id, 8);
+        $no_Location_id = $split_location_id[1];
+//       location id out of range
+        if($no_Location_id > 12 || $no_Location_id < 1){
             header('location: /');
-        } else {
-            $this->teamController->game_1_topic($location_id);
+        }
+//        check session
+        else if ((!isset($_SESSION['person_id']) && !isset($_SESSION['role_name'])) || $_SESSION['role_name'] != 'team') {
+            header('location: /');
+        }
+//        check is done previous location
+        else {
+            $team_arrival_data = $this->teamArrivalService->getTeamArrivalByLocationIdAndTeamId($location_id);
+            $team_arrival_priority = $team_arrival_data->getTeamArrivalPriority();
+            if($team_arrival_priority === 0){
+                header('location: /');
+            }
+            $previous_priority = $team_arrival_priority - 1;
+            $totalIsShowPreviousPriority = $this->teamArrivalService->checkPreviousPriorityIsShowNextLocationByTeamId($previous_priority);
+            if($totalIsShowPreviousPriority > 0) {
+                $this->teamController->game_1_topic($location_id);
+            } else{
+                header('location: /');
+            }
         }
     }
 
@@ -137,10 +159,29 @@ class TeamMiddleWare{
 
     public function mentor_topic($location_id)
     {
-        if ((!isset($_SESSION['person_id']) && !isset($_SESSION['role_name'])) || $_SESSION['role_name'] != 'team') {
+        $split_location_id = str_split($location_id, 8);
+        $no_Location_id = $split_location_id[1];
+//       location id out of range
+        if($no_Location_id > 12 || $no_Location_id < 1){
             header('location: /');
-        } else {
-            $this->teamController->mentor_topic($location_id);
+        }
+//        check session
+        else if ((!isset($_SESSION['person_id']) && !isset($_SESSION['role_name'])) || $_SESSION['role_name'] != 'team') {
+            header('location: /');
+        }
+//        check location is shown
+        else {
+            $team_arrival_data = $this->teamArrivalService->getTeamArrivalByLocationIdAndTeamId($location_id);
+            $team_arrival_priority = $team_arrival_data->getTeamArrivalPriority();
+            if($team_arrival_priority === 0){
+                header('location: /');
+            }
+            $totalIsShowPreviousPriority = $this->teamArrivalService->checkPreviousPriorityIsShowNextLocationByTeamId($team_arrival_priority);
+            if($totalIsShowPreviousPriority > 0) {
+                $this->teamController->mentor_topic($location_id);
+            } else{
+                header('location: /');
+            }
         }
     }
 
