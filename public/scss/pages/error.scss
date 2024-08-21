@@ -1,0 +1,8 @@
+.error{
+  height: 100vh;
+  .error-title{
+    background: $gradient-color-6;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
