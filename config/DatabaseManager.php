@@ -15,17 +15,35 @@ class DatabaseManager{
         return self::$instance;
     }
 
-    public function getConnection(): mysqli{
-        $this->conn = mysqli_connect(hostname, username, password, database);
-        if(!$this->conn)
-            die("".mysqli_connect_error());
+    public function getConnection(): mysqli {
+        if ($this->conn === null) {
+            $this->conn = mysqli_connect(hostname, username, password, database);
+            if (!$this->conn) {
+                die("Connection failed: " . mysqli_connect_error());
+            }
+        }
         return $this->conn;
     }
 
-    public function closeConnection(): void{
+    public function closeConnection(): void {
+        if ($this->conn !== null) {
+            mysqli_close($this->conn);
+            $this->conn = null;
+        }
         self::$instance = null;
-        mysqli_close($this->conn);
     }
+
+//    public function getConnection(): mysqli{
+//        $this->conn = mysqli_connect(hostname, username, password, database);
+//        if(!$this->conn)
+//            die("".mysqli_connect_error());
+//        return $this->conn;
+//    }
+//
+//    public function closeConnection(): void{
+//        self::$instance = null;
+//        mysqli_close($this->conn);
+//    }
 }
 
 ?>

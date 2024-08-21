@@ -1,7 +1,7 @@
 <?php
 
     include "./app/controllers/LogController.php";
-    include "./app/middlewares/LogMiddleware.php";
+    include "./app/middlewares/LogMiddleWare.php";
     $logController = new LogController();
     $logMiddleWare = new LogMiddleware();
 
