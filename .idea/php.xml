@@ -10,35 +10,7 @@
     <option name="highlightLevel" value="WARNING" />
     <option name="transferred" value="true" />
   </component>
-  <component name="PhpIncludePathManager">
-    <include_path>
-      <path value="$PROJECT_DIR$/test_mvc/vendor/composer" />
-      <path value="$PROJECT_DIR$/test_mvc/vendor/carbonphp/carbon-doctrine-types" />
-      <path value="$PROJECT_DIR$/test_mvc/vendor/voku/portable-ascii" />
-      <path value="$PROJECT_DIR$/test_mvc/vendor/nesbot/carbon" />
-      <path value="$PROJECT_DIR$/test_mvc/vendor/doctrine/inflector" />
-      <path value="$PROJECT_DIR$/test_mvc/vendor/psr/simple-cache" />
-      <path value="$PROJECT_DIR$/test_mvc/vendor/psr/clock" />
-      <path value="$PROJECT_DIR$/test_mvc/vendor/psr/container" />
-      <path value="$PROJECT_DIR$/test_mvc/vendor/brick/math" />
-      <path value="$PROJECT_DIR$/test_mvc/vendor/illuminate/database" />
-      <path value="$PROJECT_DIR$/test_mvc/vendor/illuminate/collections" />
-      <path value="$PROJECT_DIR$/test_mvc/vendor/illuminate/macroable" />
-      <path value="$PROJECT_DIR$/test_mvc/vendor/illuminate/container" />
-      <path value="$PROJECT_DIR$/test_mvc/vendor/illuminate/support" />
-      <path value="$PROJECT_DIR$/test_mvc/vendor/illuminate/contracts" />
-      <path value="$PROJECT_DIR$/test_mvc/vendor/symfony/clock" />
-      <path value="$PROJECT_DIR$/test_mvc/vendor/illuminate/conditionable" />
-      <path value="$PROJECT_DIR$/test_mvc/vendor/symfony/polyfill-mbstring" />
-      <path value="$PROJECT_DIR$/test_mvc/vendor/symfony/translation" />
-      <path value="$PROJECT_DIR$/test_mvc/vendor/symfony/translation-contracts" />
-      <path value="$PROJECT_DIR$/test_mvc/vendor/symfony/polyfill-php80" />
-      <path value="$PROJECT_DIR$/test_mvc/vendor/symfony/polyfill-php83" />
-    </include_path>
-  </component>
-  <component name="PhpProjectSharedConfiguration" php_language_level="8.3">
-    <option name="suggestChangeDefaultLanguageLevel" value="false" />
-  </component>
+  <component name="PhpProjectSharedConfiguration" php_language_level="7.4" />
   <component name="PhpStanOptionsConfiguration">
     <option name="transferred" value="true" />
   </component>

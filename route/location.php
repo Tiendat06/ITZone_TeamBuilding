@@ -10,11 +10,11 @@
 
         } else if (isset($_GET['param_1']) && isset($_GET['param_2'])) {
     //        test
-            switch ($_GET['param_1']){
-                case 'location':
-                    $locationMiddleWare->index($_GET['param_2']);
-                    break;
-            }
+//            switch ($_GET['param_1']){
+//                case 'location':
+//                    $locationMiddleWare->index($_GET['param_2']);
+//                    break;
+//            }
         } else if (isset($_GET['param_1'])) {
 
         }
