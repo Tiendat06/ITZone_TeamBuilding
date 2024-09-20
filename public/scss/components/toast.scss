@@ -1,0 +1,24 @@
+.toast{
+  position: fixed;
+  bottom: 120px;
+  right: 50%;
+  transform: translateX(50%);
+  width: 85%;
+  height: 45px;
+  color: #ffffff;
+  font-size: $sub-title-size;
+  animation: fadeIn 0.8s linear, fadeOut 0.8s linear 5s forwards;
+  z-index: 99;
+  .toast-icon--inner{
+    font-size: $title-size;
+  }
+  .toast-body__cloud{
+    position: absolute;
+    right: 0;
+    top: -2px;
+  }
+}
+
+.itz-toast-success{
+  background-color: rgba(113, 221, 55, 0.85) !important;
+}

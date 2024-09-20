@@ -1,0 +1,25 @@
+// Shared function
+
+// media queries
+@mixin respond-to($breakpoint) {
+    @if $breakpoint == 'mobile' {
+      @media (max-width: 46.1875em) { @content; }
+    } @else if $breakpoint == 'tablet' {
+      @media (min-width: 46.25em) and (max-width: 63.9375em) { @content; }
+    } @else if $breakpoint == 'desktop' {
+      @media (min-width: 64em) { @content; }
+    }
+}
+
+@mixin make-text-gradient($gradient-color){
+  background: $gradient-color;
+  background-size: contain;
+  background-clip: text;
+  color: transparent;
+}
+
+@mixin make-border-radius-gradient($gradient-color, $border-width, $border-style){
+  border: $border-width $border-style transparent;
+  background: linear-gradient($background-color, $background-color) padding-box, $gradient-color border-box;
+  outline: 1px $border-style $background-color;
+}

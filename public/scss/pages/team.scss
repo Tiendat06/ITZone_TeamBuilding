@@ -1,0 +1,409 @@
+.team{
+  margin-top: 30px;
+  .team-intro{
+    text-align: center;
+    margin: auto;
+    justify-content: center;
+
+    .team-intro__header{
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    .team-intro__sub-title{
+      width: 90%;
+      justify-content: center;
+      align-items: center;
+      .team-intro__line{
+        height: 1px;
+        background-color: $component-color;
+      }
+
+      .team-intro__sub-title--para{
+        font-size: $sub-title-size;
+        color: $normal-color;
+        font-weight: bold;
+      }
+    }
+
+  }
+
+  .team-content{
+    margin-top: 30px;
+    margin-bottom: 120px;
+    overflow-x: scroll;
+    padding: 15px 0 15px 0;
+
+    &::-webkit-scrollbar{
+      display: none;
+    }
+
+    .team-content__item{
+      padding: 10px;
+      margin: 0 20px 0 20px;
+      border-radius: 50px;
+      //background-color: red;
+      box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.25);
+
+      .team-content__item--inner{
+
+        .team-content__item--info{
+
+          .team-content__item--header{
+            transform: translateY(10px);
+            .team-content__item--title{
+              color: #000000;
+              font-weight: bolder;
+            }
+
+            .team-content__item--para{
+              color: #cccccc;
+              font-size: $sub-title-size;
+            }
+          }
+
+          .team-content__item--play{
+            transform: translateY(25px);
+          }
+        }
+      }
+    }
+  }
+}
+
+.team-game_1{
+  margin-bottom: $bottom-distance;
+  .team-game_1__box{
+    background-color: #f2f2f2;
+    margin: 20px;
+    padding: 30px 15px 30px 15px;
+    border-radius: 20px;
+    .team-game_1__header{
+      display: flex;
+      align-items: center;
+      justify-content: start;
+
+      .team-game_1__title{
+
+        .team-game_1__title--para{
+          margin-bottom: 0;
+          font-weight: bold;
+          text-transform: uppercase;
+        }
+      }
+    }
+
+    .team-game_1__content{
+
+      .team-game_1__content--para{
+        font-size: $text-size;
+      }
+
+      .team-game_1__content--info{
+        margin-top: 5px;
+        justify-content: center;
+        align-items: center;
+
+        .team-game_1__hint{
+          border-radius: 10px !important;
+          overflow: hidden;
+
+          .team-game_1__hint-btn{
+            background-color: #f2f2f2 !important;
+            border-radius: 10px !important;
+            border: 1px solid #cccccc;
+            font-size: $title-size;
+            margin: auto;
+          }
+
+          .team-game_1__hint-body{
+            background-color: #f2f2f2;
+
+            .team-game_1__hint-btn{
+              padding: 5px 10px 5px 10px;
+              background-color: $normal-color !important;
+              font-size: $text-size;
+              border-radius: 5px !important;
+            }
+          }
+        }
+
+        .team-game_1__content--mail{
+          font-size: $sub-title-size;
+        }
+
+        .team-game_1__content--link{
+          margin-left: 10px;
+          font-size: $sub-title-size;
+          text-decoration: underline;
+          color: #000000;
+          font-weight: bold;
+        }
+
+        .team-game_1__content--para-countdown{
+          margin-top: 10px;
+          font-size: 25px;
+          font-weight: bold;
+        }
+      }
+    }
+
+    .team-game_1__answer{
+      margin-top: 20px;
+      justify-content: space-between;
+      .team-game_1__answer--inp{
+        background-color: #f2f2f2;
+        border: 1px solid #cccccc;
+        color: #000000;
+      }
+
+      .team-game_1__btn{
+
+        font-size: $title-size;
+      }
+    }
+  }
+}
+
+.team-game_mentor{
+  margin-bottom: 120px;
+  .team-game_mentor__title{
+    background: $gradient-color-6;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+  }
+
+  .team-game_mentor__content{
+
+    .team-game_mentor__para{
+      font-size: $sub-title-size;
+      font-weight: bold;
+      text-align: justify;
+    }
+
+    .team-game_mentor__btn-go{
+      margin: auto;
+      border-radius: 20px;
+      padding: 7px 12px 6px 12px;
+      font-size: $sub-title-size;
+      border: 3px solid #D7D03A;
+    }
+
+
+  }
+}
+
+.team-mentor_topic{
+  margin-top: 30px;
+  margin-bottom: 120px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  .team-mentor_topic__header{
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    .team-mentor_topic__line{
+      height: 1px;
+      background-color: $component-color;
+    }
+
+    .team-mentor_topic__header-title{
+      font-size: $text-size;
+      color: $normal-color;
+      font-weight: bold;
+      text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+    }
+  }
+
+  .team-mentor_topic__sub-header{
+    text-align: center;
+    margin-top: 10px;
+    .team-mentor-topic__sub-header-title{
+      text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+      background: $gradient-color-6;
+      margin-bottom: 0;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: bold;
+    }
+
+    .team-mentor_topic__sb-header-sub-title{
+      color: #8a8a8a;
+    }
+  }
+
+  .team-mentor_topic__content{
+    margin-top: 10px;
+    justify-content: center;
+    width: 90%;
+    border: 2px solid #cccccc;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: inset 2px 3px 5px rgba(0, 0, 0, 0.25);
+
+    .team-game_1__hint{
+      border-radius: 10px !important;
+      overflow: hidden;
+
+      .team-game_1__hint-btn{
+        background-color: #ffffff !important;
+        border-radius: 10px !important;
+        border: 1px solid #cccccc;
+        font-size: $sub-title-size;
+        margin: auto;
+      }
+
+      .team-game_1__hint-body{
+        background-color: #ffffff;
+
+        .team-game_1__hint-btn{
+          padding: 5px 10px 5px 10px;
+          background-color: $normal-color !important;
+          font-size: $text-size;
+          border-radius: 5px !important;
+        }
+      }
+    }
+
+    .team-mentor_topic__link{
+      font-size: $text-size;
+      margin: 10px 0 10px 0;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+
+    .team-mentor_topic__time{
+      font-weight: bold;
+      margin: 10px 0 10px 0;
+    }
+
+    .team-mentor_topic__inp{
+      font-size: $text-size;
+    }
+
+    .team-mentor_topic__btn{
+      border-radius: 10px;
+      font-size: $text-size;
+    }
+  }
+}
+
+.team-rule{
+  height: 100vh;
+  .team-rule__header{
+    .team-rule__title{
+      background: $gradient-color-6;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: bold;
+      text-align: center;
+    }
+  }
+
+  .team-rule__content{
+    height: calc(100% + 30px);
+    //padding-bottom: 200px;
+    background-color: $normal-color;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+    margin-top: 20px;
+    overflow: hidden;
+    .team-rule__back{
+      padding: 20px;
+      color: #9DB2CE;
+      font-size: $title-size;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+    .team-rule__header{
+      display: flex;
+      padding: 20px;
+      flex-wrap: wrap;
+      text-align: center;
+      justify-content: center;
+      color: #ffffff;
+
+      .team-rule__img{
+        .team-rule__img--logo{
+          width: 100px;
+          border-radius: 10px;
+          border: 3px solid #cccccc;
+        }
+      }
+
+    }
+    .team-rule__progress{
+      margin-top: 10px;
+      display: flex;
+      justify-content: end;
+      flex-wrap: wrap;
+      //transform: translateX(-100%);
+      transition: transform 0.3s ease-in-out;
+      .team-rule-progress__heading{
+        display: flex;
+        .team-rule__progress-title{
+          margin: 20px 0 20px 0;
+          padding: 0 20px 0 20px;
+          text-align: center;
+          color: #ffffff;
+        }
+      }
+
+      .team-rule__stt{
+        display: flex;
+        //transform: translateX(calc(50% - 20px)); // calculate 20px for padding of content
+        .team-rule__stt--item{
+          display: flex;
+          align-items: center;
+          .team-rule__stt-text{
+            padding: 10px 18px 10px 18px;
+            background-color: #9DB2CE;
+            border-radius: 50%;
+            font-size: 20px;
+            font-weight: bold;
+            color: #ffffff;
+          }
+          .team-rule__stt-line-left{
+            margin-right: 10px;
+          }
+          .team-rule__stt-line-right{
+            margin-left: 10px;
+          }
+
+          .team-rule__stt-line{
+            height: 1px;
+            width: calc(50%) !important;
+            background-color: #9DB2CE;
+          }
+        }
+
+      }
+
+      .team-rule__progress-text{
+        margin-top: 25px;
+        color: #ffffff;
+        display: flex;
+
+        .team-rule__progress-para{
+          text-align: center;
+          line-height: 2rem;
+          font-size: $title-size;
+          padding: 0 20px 0 20px;
+        }
+      }
+
+      .team-rule__control{
+        display: flex;
+
+        .team-rule__control-text{
+          display: flex;
+          justify-content: space-between;
+          padding: 0 20px 0 20px;
+          color: #9DB2CE;
+        }
+      }
+    }
+  }
+}

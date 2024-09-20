@@ -1,0 +1,33 @@
+// Global variables
+@import "utils/variables";
+// reusable code css
+@import "utils/mixins";
+
+// General Configuration
+@import "base/base";
+
+// Components (buttons, cards, ...)
+@import "components/button";
+@import "components/link";
+@import "components/title";
+@import "components/card";
+@import "components/navbar";
+@import "components/toast";
+
+//Layouts components
+@import "layouts/header";
+@import "layouts/footer";
+@import "layouts/grid";
+@import "layouts/navbar";
+@import "layouts/overlay_loading";
+
+// Css for each pages
+@import "pages/site";
+@import "pages/mentor";
+@import "pages/guard";
+@import "pages/support";
+@import "pages/team";
+@import "pages/error";
+
+// Themes
+@import "themes/themes";

@@ -1,0 +1,26 @@
+.navbar{
+  height: $navbar-height;
+  .navbar-header{
+
+    .navbar-header__logo--img{
+      width: $logo-width;
+      margin-left: 10px;
+    }
+
+    .navbar-header__info{
+      margin-right: 10px;
+      .navbar-header__greet{
+        margin-right: 8px;
+        text-align: right;
+        .navbar-header__greet--para{
+          font-size: $text-size;
+          -webkit-text-fill-color: transparent;
+          -webkit-background-clip: text;
+          font-weight: bold;
+        }
+      }
+    }
+
+  }
+}
+

@@ -1,0 +1,51 @@
+:root{
+}
+
+*{
+  box-sizing: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  font-size: $font-size;
+  /* => 1rem = 10px */
+  line-height: 1.3rem;
+  font-family: $text-font;
+  box-sizing: border-box;
+  /* overflow-x: auto; */
+}
+
+p{
+  font-size: 1.1rem;
+  @include respond-to('mobile'){
+    font-size: 1.1rem;
+  }
+  /* = 11px */
+}
+
+a{
+  text-decoration: none;
+}
+
+@keyframes fadeIn {
+  from{
+    opacity: 0;
+  }
+
+  to{
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from{
+    opacity: 1;
+  }
+  to{
+    opacity: 0;
+  }
+}

@@ -1,0 +1,43 @@
+// Global Configuration
+
+$navbar-height: 70px;
+$normal-color: #004080;
+$text-color: #000000;
+$background-color: #ffffff;
+
+$active-color: #4d79a6;
+$disable-color: #2c2c2c;
+$support-color: #171432;
+
+$gradient-color-1: #7BCDDF;
+$gradient-color-2: #6163C8;
+$gradient-color-3: #4A45F0;
+$gradient-color-4: #4B27FF;
+$gradient-color-5: #171432;
+
+$gradient-color-6: linear-gradient(to right, $gradient-color-3 0%, $gradient-color-4 30%, $gradient-color-5 100%);
+
+$link-visited: #0000FF;
+$link: #FF0000;
+$link-hover: #FF69B4;
+$link-active: #00FFFF;
+
+$component-color: #ED5959;
+$team-bg-color: #C83A54;
+$text-component: #FFEF9B;
+
+$text-font: 'Baloo Da 2', sans-serif;
+$sub-text-font: 'Open Sans', sans-serif;
+$font-size: 62.5%;
+$text-size: 11px;
+$title-size: 16px;
+$sub-title-size: 13px;
+
+$navbar-height: 90px;
+$navbar-width: 300px;
+$navbar-radius: 40px;
+$bottom-distance: $navbar-height + 30px;
+
+$normal-radius: 10px;
+$logo-width: 40px;
+$logo-height: 50px;
