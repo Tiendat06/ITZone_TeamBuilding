@@ -1,10 +1,14 @@
 <?php
-    define("hostname", "localhost");
-    define("username", "root");
-    define("password", "");
-    define("database", "teambuilding");
+//    define("hostname", "db");
+//    define("username", "root");
+//    define("password", "root");
+//    define("database", "teambuilding");
 
 class DatabaseManager{
+    private string $hostname = "db";
+    private string $username = "user";
+    private string $password = "pass";
+    private string $database = "teambuilding";
     private static ?DatabaseManager $instance = null;
     private ?mysqli $conn = null;
     private function __construct(){}
@@ -17,7 +21,7 @@ class DatabaseManager{
 
     public function getConnection(): mysqli {
         if ($this->conn === null) {
-            $this->conn = mysqli_connect(hostname, username, password, database);
+            $this->conn = mysqli_connect($this->hostname, $this->username, $this->password, $this->database);
             if (!$this->conn) {
                 die("Connection failed: " . mysqli_connect_error());
             }
