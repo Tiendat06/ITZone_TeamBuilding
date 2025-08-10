@@ -7,7 +7,7 @@
 class DatabaseManager{
     private string $hostname = "db";
     private string $username = "user";
-    private string $password = "pass";
+    private string $password = "MyPassword123.";
     private string $database = "teambuilding";
     private static ?DatabaseManager $instance = null;
     private ?mysqli $conn = null;
