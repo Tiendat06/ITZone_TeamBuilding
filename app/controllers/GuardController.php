@@ -13,6 +13,7 @@ class GuardController{
         $this->teamArrivalService = new TeamArrivalService();
     }
 //comment
+//comment
 //    [POST, FETCH] /guard/update_next_location
     public function update_next_location($team_id, $mentor_id, $next_priority, $inputKey){
         $location = $this->locationService->getLocationDataByPersonId();
