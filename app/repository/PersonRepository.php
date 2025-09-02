@@ -15,11 +15,29 @@ class PersonRepository{
         $data = array();
         while ($row = $result->fetch_assoc()) {
             $data[] = new Team($row['team_id'], $row['team_name'], $row['team_phone'],
-                $row['team_route'], $row['team_member'], $row['mentor_id']);
+                $row['team_route'], $row['team_member'], $row['mentor_id'], $row['completed_stations']);
         }
         return $data;
     }
+    public function incrementCompletedStations(string $team_id): bool {
+        $sql = "UPDATE `team` SET completed_stations = completed_stations + 1 WHERE team_id = ?";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bind_param("s", $team_id);
+        return $stmt->execute(); 
+    }
 
+    public function getCompletedStations(int $team_id): int {
+        $sql = "SELECT completed_stations FROM `team` WHERE team_id = ?";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bind_param("i", $team_id);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        if ($row = $result->fetch_assoc()) {
+            return (int)$row['completed_stations'];
+        }
+        return 0; // trả về 0 nếu không tìm thấy
+    }
     public function getTeamMemberByTeamIdOrMentorId($person_id, $operation='team'): array{
         $data = array();
 

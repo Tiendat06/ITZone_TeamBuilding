@@ -12,15 +12,12 @@ class GuardController{
         $this->personService = new PersonService();
         $this->teamArrivalService = new TeamArrivalService();
     }
-//comment
-//comment
 //    [POST, FETCH] /guard/update_next_location
-    public function update_next_location($team_id, $mentor_id, $next_priority, $inputKey){
+    public function update_next_location($team_id, $mentor_id, $next_priority, $inputKey, $check){
         $location = $this->locationService->getLocationDataByPersonId();
         $location_id = $location->getLocationId();
-        echo json_encode($this->personService->unlockNextLocation($team_id, $mentor_id, $next_priority, $inputKey, $location_id));
+        echo json_encode($this->personService->unlockNextLocation($team_id, $mentor_id, $next_priority, $inputKey, $location_id, $check));
     }
-
 //    [GET] /guard
     public function index()
     {

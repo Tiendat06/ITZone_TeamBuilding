@@ -75,7 +75,8 @@ class LocationController{
                 'location_name' => $location->getLocationName(),
                 'bus_go' => $location->getBusGo(),
                 'bus_back' => $location->getBusBack(),
-                'team_arrival_priority' => $team_arrival_data->getTeamArrivalPriority()
+                'team_arrival_priority' => $team_arrival_data->getTeamArrivalPriority(),
+                'location_map' => $location->getLocationMap()
             ));
         }
 

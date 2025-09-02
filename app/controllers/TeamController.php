@@ -189,6 +189,22 @@ class TeamController{
         $footer = 'rule';
         include "./views/layout/index.php";
     }
+//    [GET] /team/get_completed_stations/{param}
+    public function get_completed_stations($team_id){
+            $completed_stations = $this->personService->getCompletedStations($team_id);
+
+        if ($completed_stations) {
+            echo json_encode(array(
+                'status' => true,
+                'completed_stations' => $completed_stations,
+            ));
+        } else {
+            echo json_encode(array(
+                'status' => false,
+                'completed_stations' => 0,
+            ));
+        }
+    }
 }
 
 ?>

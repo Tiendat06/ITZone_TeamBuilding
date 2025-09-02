@@ -20,7 +20,7 @@ class PersonService{
     public function getTeam(): array{
         return $this->personRepository->getTeam();
     }
-
+    
     public function getTeamMemberByTeamIdOrMentorId($team_id, $operation='team'): array{
         return $this->personRepository->getTeamMemberByTeamIdOrMentorId($team_id, $operation);
     }
@@ -29,7 +29,7 @@ class PersonService{
         return $this->personRepository->getPersonNameByPersonId($person_id, $role_name);
     }
 
-    public function unlockNextLocation($team_id, $mentor_id, $next_priority, $inputKey, $location_id): array{
+    public function unlockNextLocation($team_id, $mentor_id, $next_priority, $inputKey, $location_id, $check): array{
         $mentor = $this->personRepository->getMentorByMentorId($mentor_id);
         $mentor_key = $mentor->getMentorKey();
         $previous_priority = $next_priority - 1;
@@ -63,6 +63,9 @@ class PersonService{
                 'status' => false,
                 'message' => 'Sai mã định danh mentor'
             );
+        }
+        if ($check) {
+        $this->incrementCompletedStations($team_id);
         }
         return array(
             'status' => true,
@@ -104,6 +107,14 @@ class PersonService{
 
         return $this->teamMemberRepository->getTeamMemberAndTeamPuzzleByTeamIdAndTopicId($team_id, $topic->getTopicId());
     }
+    public function getCompletedStations(string $team_id): int {
+        return $this->personRepository->getCompletedStations($team_id);
+    }
+
+    public function incrementCompletedStations(string $team_id): bool {
+        return $this->personRepository->incrementCompletedStations($team_id);
+    }
+
 }
 
 ?>

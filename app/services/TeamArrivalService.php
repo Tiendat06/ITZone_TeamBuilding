@@ -50,6 +50,7 @@ class TeamArrivalService{
         $team_id = $_SESSION['person_id'];
         return $this->teamArrivalRepository->checkPreviousPriorityIsShowNextLocationByTeamId($team_id, $previous_priority);
     }
+    
 }
 
 ?>

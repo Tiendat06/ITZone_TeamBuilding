@@ -122,8 +122,28 @@ class Location{
                     if(data['team_arrival_priority'] === 3){
                         bus_go = data['bus_go']
                     }
+                    let location_map = data['location_map']
                     $('#team__topic-alert--outer').removeClass('d-none').removeClass('alert-danger').addClass('alert-success');
-                    $('#team__topic-alert').html(`Hãy đi tới: ${data['location_name']} </br>${data['location_address']}</br>${bus_go}`);
+                    $('#team__topic-alert').html(`Hãy đi tới: ${data['location_name']} </br>${data['location_address']}</br>${bus_go}  <div class="container" bis_skin_checked="1">
+                    <div class="row guard" bis_skin_checked="1">
+                        <div class="guard-sub-title d-flex flex-wrap align-items-center text-center" bis_skin_checked="1">
+                            <div class="guard-sub-title__line col-sm-3" bis_skin_checked="1"></div>
+                            <span class="guard-sub-title__para col-sm-6">Trạm kế tiếp</span>
+                            <div class="guard-sub-title__line col-sm-3" bis_skin_checked="1"></div>
+                        </div>
+
+                        <div class="guard-title col-sm-12 text-center mt-2" bis_skin_checked="1">
+                            <h1 class="guard-title__para itz-btn-hover">${data['location_name']}</h1>
+                        </div>
+
+                        <div class="guard-location" bis_skin_checked="1">
+                        ${location_map}
+                        <a href="#" class="guard-address text-center">
+                            <i class="fa-solid fa-location-dot guard-address__icon"></i>
+                            <span class="guard-address__para">${data['location_address']}</span>
+                        </a>
+                    </div>
+             </div>`);
                 }
                 // console.log(data);
             })

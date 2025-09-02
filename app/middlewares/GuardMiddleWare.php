@@ -15,7 +15,8 @@ class  GuardMiddleWare{
             $mentor_id = $data['mentor_id'];
             $next_priority = $data['next_priority'];
             $inputKey = $data['input'];
-            $this->guardController->update_next_location($team_id, $mentor_id, $next_priority, $inputKey);
+            $check = isset($data['check']) ? (bool)$data['check'] : false;
+            $completedSuccess =  $this->guardController->update_next_location($team_id, $mentor_id, $next_priority, $inputKey, $check);
         } else {
             echo json_encode(array(
                 'status' => false,

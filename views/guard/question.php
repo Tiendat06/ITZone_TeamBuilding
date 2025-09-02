@@ -80,11 +80,23 @@
                 <input type="hidden" name="" id="modal__team_id">
                 <input type="hidden" name="" id="modal__next_priority">
                 <div class="input-group">
-                    <input type="text" id="modal__input-key" class="form-control" placeholder="Nhập mã định danh mentor" aria-describedby="btn__check-key"/>
-                    <button class="btn btn-secondary" type="button" id="btn__check-key">
-                        <img src="/public/img/icon/icon-key.png" alt="">
-                    </button>
-                </div>
+            <input 
+                type="text" 
+                id="modal__input-key" 
+                class="form-control" 
+                placeholder="Nhập mã định danh mentor" 
+                aria-describedby="btn__check-key btnfalse__check-key"
+            />
+
+            <button class="btn btn-success" type="button" id="btn__check-key" title="Xác nhận">
+                <img src="/public/img/icon/icon-key.png" alt="Xác nhận">
+            </button>
+
+            <button class="btn btn-danger" type="button" id="btnfalse__check-key" title="Không xác nhận">
+                <img src="/public/img/icon/icon-key.png" alt="Không xác nhận">
+            </button>
+        </div>
+
             </div>
             <div class="modal-footer">
                 <button class="btn btn-outline-secondary" data-bs-dismiss="modal">
