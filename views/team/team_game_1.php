@@ -18,32 +18,34 @@
             <div class="team-intro__line col-sm-4 col-md-4"></div>
         </div>
     </div>
-
     <div class="team-letter">
         <!-- Button trigger modal -->
-        <button type="button" class="team-letter__button" data-bs-toggle="modal" data-bs-target="#exampleModal" style="right:10px; top:-10px">
-            <img src="../../public/img/topic/icon-special-letter.jpg" class="team-letter__img" alt="" >
+        <button type="button" class="btn btn-primary team-letter__button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Launch demo modal
         </button>
 
         <!-- Modal -->
-        <div class="modal fade team-letter__content" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        ...
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
-                </div>
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+        <div class=" modal-dialog modal-dialog-centered">
+        <div class="team-letter__background modal-content ">
+        <div class="modal-header flex-column" style="border:none;">
+        <img style="" class="team-letter__icon" src="/public/img/topic/icon-special-letter.png" alt="">
+        <h1 class="modal-title fs-5 team-letter__header" id="exampleModalLabel">MẬT THƯ ĐẶC BIỆT</h1>
+        
+      </div>
+      <div class="modal-body team-letter__content" >
+        Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...
+      </div>
+      <div class="modal-footer" style="border:none;">
+        <div class="form-group col-sm-12 col-md-12 d-flex flex-wrap justify-content-between">
+                <input id="team__topic-input" placeholder="Nhập đáp án" type="text" class="rounded col-sm-8 col-md-8 form-control team-letter__inp">
+                <button id="team__topic-btn" type="submit" class="col-sm-3 col-md-3 itz-bg-normal team-letter__btn">Gửi</button>
             </div>
-        </div>
-    </div>  
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
 
     <div class="team-content d-flex">
         <?php
