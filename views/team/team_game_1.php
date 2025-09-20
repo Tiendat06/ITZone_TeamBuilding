@@ -20,31 +20,31 @@
     </div>
     <div class="team-letter">
         <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary team-letter__button" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        Launch demo modal
-        </button>
-
+        <!-- <div class="team-letter__button">
+    
+        </div> -->
+        <button type="button" class="btn team-letter__button" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
         <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
-        <div class=" modal-dialog modal-dialog-centered">
-        <div class="team-letter__background modal-content ">
-        <div class="modal-header flex-column" style="border:none;">
-        <img style="" class="team-letter__icon" src="/public/img/topic/icon-special-letter.png" alt="">
-        <h1 class="modal-title fs-5 team-letter__header" id="exampleModalLabel">MẬT THƯ ĐẶC BIỆT</h1>
-        
-      </div>
-      <div class="modal-body team-letter__content" >
-        Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...
-      </div>
-      <div class="modal-footer" style="border:none;">
-        <div class="form-group col-sm-12 col-md-12 d-flex flex-wrap justify-content-between">
-                <input id="team__topic-input" placeholder="Nhập đáp án" type="text" class="rounded col-sm-8 col-md-8 form-control team-letter__inp">
-                <button id="team__topic-btn" type="submit" class="col-sm-3 col-md-3 itz-bg-normal team-letter__btn">Gửi</button>
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class=" modal-dialog modal-dialog-centered">
+                <div class="team-letter__background modal-content ">
+                    <div class="modal-header flex-column" style="border:none;">
+                        <img style="" class="team-letter__icon" src="/public/img/topic/icon-special-letter.png" alt="">
+                        <h1 class="modal-title fs-5 team-letter__header" id="exampleModalLabel">MẬT THƯ ĐẶC BIỆT</h1>
+
+                    </div>
+                    <div class="modal-body team-letter__content">
+                        Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...
+                    </div>
+                    <div class="modal-footer" style="border:none;">
+                        <div class="form-group col-sm-12 col-md-12 d-flex flex-wrap justify-content-between">
+                            <input id="team__topic-input" placeholder="Nhập đáp án" type="text" class="rounded col-sm-8 col-md-8 form-control team-letter__inp">
+                            <button id="team__topic-btn" type="submit" class="col-sm-3 col-md-3 itz-bg-normal team-letter__btn">Gửi</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-      </div>
-    </div>
-  </div>
-</div>
+        </div>
     </div>
 
     <div class="team-content d-flex">
