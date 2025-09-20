@@ -30,16 +30,64 @@
     }
 
   }
-
-  .team-letter{
+  .team-letter {
     &__button{
       width: 10%;
       background-color: transparent;
-      background-image: url('../../img/topic/icon-special-letter.jpg');
+      background-image: url('/public/img/topic/icon-special-letter.png');
       background-size: cover;
       background-position: center;
     }
+    .team-letter__content {
+      font-family: Patrick Hand;
+      font-weight: 400;
+      font-style: Regular;
+      font-size: 18px;
+      line-height: 24px;
+      letter-spacing: 1%;
+      text-align: center;
+      color: #E5AD15;
+}
+    .modal {
+    backdrop-filter: blur(3px); 
+}
+    .team-letter__inp {
+      margin-left: 5px;
+      font-size: 11px;
+      background: transparent;
+
+    &::placeholder {
+      color: #6a6c8e;
+}
+    &:focus {
+      box-shadow: none;
+      border: #8a8a8a;
+    }
+    }
+    .team-letter__background {
+      border-radius: 5%;
+      background: linear-gradient(141deg, rgba(30, 34, 71, 1) 0%, rgba(55, 55, 109, 1) 50%);
+    }
+  .team-letter__header {
+    color: white;
+    font-family: Baloo Da 2;
+  font-weight: 800;
+  font-style: ExtraBold;
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: 0px;
+
   }
+  .team-letter__icon {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 116px;
+  height: 116px;
+  }
+}
+
+ 
 
   .team-content {
     margin-top: 30px;
@@ -332,8 +380,8 @@
     border-top-left-radius: 25px;
     margin-top: 20px;
     overflow: hidden;
-
-    .team-rule__back {
+    .team-rule__back{
+      width: fit-content;
       padding: 20px;
       color: #9DB2CE;
       font-size: $title-size;
@@ -438,3 +486,4 @@
     }
   }
 }
+
