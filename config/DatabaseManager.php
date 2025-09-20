@@ -5,9 +5,9 @@
 //    define("database", "teambuilding");
 
 class DatabaseManager{
-    private string $hostname = "db";
-    private string $username = "user";
-    private string $password = "MyPassword123.";
+    private string $hostname = "localhost";
+    private string $username = "root";
+    private string $password = "";
     private string $database = "teambuilding";
     private static ?DatabaseManager $instance = null;
     private ?mysqli $conn = null;
