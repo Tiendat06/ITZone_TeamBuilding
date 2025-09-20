@@ -20,8 +20,8 @@
     </div>
     <div class="team-letter">
         <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary team-letter__button" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        Launch demo modal
+        <button type="button" class="team-letter__button" data-bs-toggle="modal" data-bs-target="#exampleModal" style="right:10px; top:-10px">
+            <img src="public/img/topic/icon-special-letter.png" class="team-letter__img" alt="" >
         </button>
 
         <!-- Modal -->
