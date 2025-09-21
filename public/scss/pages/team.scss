@@ -37,10 +37,6 @@
       right: 10px;
       width: 20vw;
       height: 20vw;
-      background-color: transparent;
-      background-image: url('/public/img/topic/icon-special-letter.png');
-      background-size: cover;
-      background-position: center;
     }
     .team-letter__content {
       font-family: Patrick Hand;
@@ -67,6 +63,11 @@
       box-shadow: none;
       border: #8a8a8a;
     }
+    }
+    .team-letter__btn {
+      width: 20%;
+      font-size: $text-size;
+      color: $normal-color;
     }
     .team-letter__background {
       border-radius: 5%;
