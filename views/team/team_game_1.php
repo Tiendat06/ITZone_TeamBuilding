@@ -20,9 +20,6 @@
     </div>
     <div class="team-letter">
         <!-- Button trigger modal -->
-        <!-- <div class="team-letter__button">
-    
-        </div> -->
         <button type="button" class="btn team-letter__button" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
