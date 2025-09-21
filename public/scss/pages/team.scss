@@ -30,20 +30,26 @@
     }
 
   }
-  .team-letter {
 
+  .team-letter {
+    &__btn {
+      width: 20%;
+      font-size: $text-size;
+      color: $normal-color;
+    }
     &__footer{
+      // border: 1px solid black;
       padding: 20px;
     }
     &__trigger {
-
       position: absolute;
-      top: -10px;
-      right: 10px;
+      top: -5%;
+      right: 5%;
       width: 20vw;
       height: 20vw;
     }
-    .team-letter__content {
+
+    &__content {
       font-family: Patrick Hand;
       font-weight: 400;
       font-style: Regular;
@@ -52,51 +58,50 @@
       letter-spacing: 1%;
       text-align: center;
       color: #E5AD15;
-}
-    .modal {
-    backdrop-filter: blur(3px); 
-}
-    .team-letter__inp {
-      margin-left: 5px;
-      font-size: 11px;
+    }
 
+    .modal {
+      backdrop-filter: blur(3px);
+    }
+
+    &__inp {
+      margin-left: 5px;
+      border: 1px solid white;
+      font-size: 11px;
       background-color: transparent;
       padding: 4px;
       &:focus-visible{
         outline: none;
       }
+    }
 
-    }
-    }
-    .team-letter__btn {
-      width: 20%;
-      font-size: $text-size;
-      color: $normal-color;
-    }
-    .team-letter__background {
+    &__background {
       border-radius: 5%;
       background: linear-gradient(141deg, rgba(30, 34, 71, 1) 0%, rgba(55, 55, 109, 1) 50%);
     }
-  .team-letter__header {
-    color: white;
-    font-family: $text-font;
-  font-weight: 800;
-  font-style: ExtraBold;
-  font-size: 62.5%;;
-  line-height: 20px;
-  letter-spacing: 0px;
 
-  }
-  .team-letter__icon {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 116px;
-  height: 116px;
-  }
-}
+    &__header {
+      color: white;
+      font-family: $text-font;
+      font-weight: 800;
+      font-style: ExtraBold;
+      font-size: 62.5%;
+      ;
+      line-height: 20px;
+      letter-spacing: 0px;
 
- 
+    }
+
+    &__icon {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 116px;
+      height: 116px;
+    }
+  }
+
+
 
   .team-content {
     margin-top: 30px;
@@ -389,7 +394,8 @@
     border-top-left-radius: 25px;
     margin-top: 20px;
     overflow: hidden;
-    .team-rule__back{
+
+    .team-rule__back {
       width: fit-content;
       padding: 20px;
       color: #9DB2CE;
@@ -495,4 +501,3 @@
     }
   }
 }
-
