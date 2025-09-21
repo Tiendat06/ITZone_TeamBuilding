@@ -20,7 +20,7 @@
     </div>
     <div class="team-letter">
         <!-- Button trigger modal -->
-        <button type="button" class="btn team-letter__button" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
+        <button type="button" class="itz-btn-trigger team-letter__trigger" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class=" modal-dialog modal-dialog-centered">
@@ -33,10 +33,10 @@
                     <div class="modal-body team-letter__content">
                         Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...
                     </div>
-                    <div class="modal-footer" style="border:none;">
-                        <div class="form-group col-sm-12 col-md-12 d-flex flex-wrap justify-content-between">
+                    <div class="team-letter__footer">
+                        <div class="form-group d-flex justify-content-between">
                             <!-- Make your own button -->
-                            <input id="team--letter-input" placeholder="Nhập đáp án" type="text" class="rounded col-sm-8 col-md-8 form-control team-letter__inp">
+                            <input id="team--letter-input" placeholder="Nhập đáp án" type="text" class="rounded col-sm-8 col-md-8  team-letter__inp">
                             <button id="team--letter-btn" type="submit" class="col-sm-3 col-md-3 team-letter__btn">Gửi</button>
                         </div>
                     </div>
