@@ -37,7 +37,7 @@
                         <div class="form-group d-flex justify-content-between">
                             <!-- Make your own button -->
                             <input id="team--letter-input" placeholder="Nhập đáp án" type="text" class="rounded col-sm-8 col-md-8  team-letter__inp">
-                            <button id="team--letter-btn" type="submit" class="col-sm-3 col-md-3 team-letter__btn">Gửi</button>
+                            <button id="team--letter-btn" type="submit" class="rounded col-sm-3 col-md-3 team-letter__btn">Gửi</button>
                         </div>
                     </div>
                 </div>
