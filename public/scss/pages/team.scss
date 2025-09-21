@@ -33,7 +33,6 @@
 
   .team-letter {
     &__footer{
-      // border: 1px solid black;
       padding: 20px;
     }
     &__trigger {
@@ -68,10 +67,6 @@
       &:focus-visible{
         outline: none;
       }
-
-      // &::placeholder {
-      //   color: #6a6c8e;
-      // }
     }
 
     &__background {
