@@ -1,26 +1,30 @@
-.itz-btn-normal, .itz-btn-focus{
+.itz-btn-normal,
+.itz-btn-focus {
   color: $normal-color;
 }
 
-.itz-btn-home{
+.itz-btn-home {
   background: linear-gradient(to right, $gradient-color-1, $gradient-color-2);
 }
 
-.itz-btn-hover{
+.itz-btn-hover {
   background: linear-gradient(to right, $gradient-color-3, $gradient-color-4, $gradient-color-5);
 }
 
-.itz-btn-active{
+.itz-btn-active {
   color: $active-color;
 }
 
-.itz-btn-disable{
+.itz-btn-disable {
   color: $disable-color;
 }
 
-.itz-btn-popup {
+
+.itz-btn-trigger {
   background-color: transparent;
-    background-image: url('/public/img/topic/icon-special-letter.png');
-    background-size: cover;
-    background-position: center;
+  background-image: url('/public/img/topic/icon-special-letter.png');
+  background-size: cover;
+  background-position: center;
+  border: none;
+
 }
