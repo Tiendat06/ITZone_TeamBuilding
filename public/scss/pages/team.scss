@@ -31,12 +31,11 @@
 
   }
   .team-letter {
-
     &__footer{
+      // border: 1px solid black;
       padding: 20px;
     }
     &__trigger {
-
       position: absolute;
       top: -10px;
       right: 10px;
@@ -59,21 +58,20 @@
     .team-letter__inp {
       margin-left: 5px;
       font-size: 11px;
-
       background-color: transparent;
       padding: 4px;
       &:focus-visible{
         outline: none;
       }
 
+      // &::placeholder {
+      //   color: #6a6c8e;
+      // }
     }
-    }
-    .team-letter__btn {
-      width: 20%;
-      font-size: $text-size;
-      color: $normal-color;
-    }
-    .team-letter__background {
+
+
+    &__background {
+
       border-radius: 5%;
       background: linear-gradient(141deg, rgba(30, 34, 71, 1) 0%, rgba(55, 55, 109, 1) 50%);
     }
