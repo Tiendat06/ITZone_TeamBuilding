@@ -38,8 +38,9 @@
                     </div>
                     <div class="modal-footer" style="border:none;">
                         <div class="form-group col-sm-12 col-md-12 d-flex flex-wrap justify-content-between">
-                            <input id="team__topic-input" placeholder="Nhập đáp án" type="text" class="rounded col-sm-8 col-md-8 form-control team-letter__inp">
-                            <button id="team__topic-btn" type="submit" class="col-sm-3 col-md-3 itz-bg-normal team-letter__btn">Gửi</button>
+                            <!-- Make your own button -->
+                            <input id="team--letter-input" placeholder="Nhập đáp án" type="text" class="rounded col-sm-8 col-md-8 form-control team-letter__inp">
+                            <button id="team--letter-btn" type="submit" class="col-sm-3 col-md-3 team-letter__btn">Gửi</button>
                         </div>
                     </div>
                 </div>
