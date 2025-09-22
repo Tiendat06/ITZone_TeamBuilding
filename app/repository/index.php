@@ -8,5 +8,5 @@
     include "./app/repository/TeamArrivalRepository.php";
     include "./app/repository/TeamPuzzleRepository.php";
     include "./app/repository/TopicRepository.php";
-
+    include "./app/repository/TeamStationRepository.php";
 ?>

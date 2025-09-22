@@ -142,7 +142,62 @@ class TeamPuzzleRepository{
         $stmt->close();
         return $row['total'];
     }
+    //Giải mật thư đặt biệt 
+    public function updateSpecialPuzzleIsDoneByTeamId($team_id): bool{
+        $sql = "UPDATE `team_puzzle` 
+        SET `is_done` = 1 
+        WHERE `team_id` = ? AND `topic_id` = 'TOP0000013' AND `is_done` is null";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bind_param('is', $is_done, $team_id);
+        $stmt->execute();
+        $affected_row = $stmt->affected_rows > 0;
+        $stmt->close();
+        return $affected_row;
+    }
+    public function incrementSpecialPuzzleClick($team_id): ?int {
+    $sql = "UPDATE `team_puzzle`
+            SET `is_clicked` = CASE
+                                  WHEN `is_clicked` IS NULL THEN 1
+                                  WHEN `is_clicked` < 3 THEN `is_clicked` + 1
+                                  WHEN `is_clicked` = 3 THEN 4
+                                  ELSE `is_clicked`
+                               END
+            WHERE `team_id` = ? 
+              AND `topic_id` = 'TOP0000013'
+              AND (`is_done` IS NULL OR `is_done` = 0)";
+    
+    $stmt = $this->conn->prepare($sql);
+    $stmt->bind_param('s', $team_id);
+    $stmt->execute();
+    $stmt->close();
 
+    return $this->getSpecialPuzzleClick($team_id);
 }
-
+public function getSpecialPuzzleClick($team_id): ?int {
+    $sql = "SELECT `is_clicked` 
+            FROM `team_puzzle`
+            WHERE `team_id` = ? AND `topic_id` = 'TOP0000013'
+            LIMIT 1";
+    $stmt = $this->conn->prepare($sql);
+    $stmt->bind_param('s', $team_id);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $row = $result->fetch_assoc();
+    $stmt->close();
+    return $row ? (int)$row['is_clicked'] : null;
+}
+public function solveSpecialPuzzleSuccess($team_id): bool {
+    $sql = "UPDATE `team_puzzle`
+            SET `is_done` = 1,
+                `is_clicked` = -1
+            WHERE `team_id` = ? 
+              AND `topic_id` = 'TOP0000013'";
+    $stmt = $this->conn->prepare($sql);
+    $stmt->bind_param('s', $team_id);
+    $stmt->execute();
+    $success = $stmt->affected_rows > 0;
+    $stmt->close();
+    return $success;
+}
+}
 ?>
