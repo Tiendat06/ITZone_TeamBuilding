@@ -8,26 +8,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalFooter = document.querySelector('.team-letter__footer');
     const modalStatus = document.querySelector('.team-letter__status');
     const modalContinue = document.querySelector('.team-letter__continue');
-    const toast = document.getElementById('toast');
-    const toastMessage = document.getElementById('toast-message');
+    const toast = document.getElementById('toast-modal');
+    const toastMessage = document.getElementById('toast-message-modal');
+    const modal = document.getElementById('exampleModal');
 
-    let count = 0;
-
-    // Hàm hiển thị toast
     const showToast = (message, isSuccess) => {
         toastMessage.innerHTML = message;
         toast.classList.remove('d-none', isSuccess ? 'bg-danger' : 'bg-success');
         toast.classList.add(isSuccess ? 'bg-success' : 'bg-danger');
 
-        // Ẩn toast sau 5 giây
         setTimeout(() => {
             toast.classList.add('d-none');
             toast.classList.remove('bg-success', 'bg-danger');
         }, 5000);
     };
 
-    // Hàm cập nhật modal
-    const updateModal = (status, title, body, iconSrc) => {
+    const updateModal = (status, body, iconSrc) => {
         modalHeader.style.display = 'none';
         modalStatus.classList.remove('d-none');
         modalStatus.textContent = status;
@@ -38,17 +34,14 @@ document.addEventListener('DOMContentLoaded', () => {
         modalFooter.style.display = 'none';
     };
 
-    // Event listener cho nút gửi
     submitButton.addEventListener('click', () => {
-        count++;
         const answer = inputField.value.trim();
 
         if (!answer) {
-            alert('Vui lòng nhập đáp án!');
+            showToast("Vui lòng nhập đán án!", false);
             return;
         }
 
-        // Gửi yêu cầu POST để kiểm tra đáp án
         fetch('http://localhost:3000/check-answer', {
             method: 'POST',
             headers: {
@@ -58,31 +51,41 @@ document.addEventListener('DOMContentLoaded', () => {
         })
             .then(response => response.json())
             .then(data => {
-                console.log(data);
-
-                if (data.status === 'success') {
+                const { status, message } = data;
+                let numberArr = message.match(/\d+/);
+                let count;
+                if (numberArr) {
+                    count = numberArr[0];
+                }
+                if (status === true) {
                     updateModal(
                         "Thành công",
-                        "Chúc mừng bạn đã trả lời đúng",
                         `<span style="color: white"> Chúc mừng bạn đã trả lời đúng </span> <br> Cảm ơn bạn đã tham gia trò chơi`,
                         '/public/img/topic/icon-success.png'
                     );
-                    showToast(data.message, true);
+                    showToast(message, true);
                 } else if (count === 3) {
                     updateModal(
                         "Thất bại",
-                        "Rất tiếc, bạn đã trả lời sai",
                         `<span style="color: white"> Rất tiếc, bạn đã trả lời sai </span> <br> Cảm ơn bạn đã tham gia trò chơi`,
                         '/public/img/topic/icon-cry.png'
                     );
-                    showToast('Bạn đã hết lượt trả lời. Rất tiếc!', false);
+                    showToast(message, false);
+                } else {
+                    inputField.value = '';
+                    inputField.style.border = "1px solid red";
+                    showToast(message, false);
                 }
-
-                inputField.value = '';
             })
             .catch(error => {
                 console.error('Error checking answer:', error);
-                alert('Đã xảy ra lỗi, vui lòng thử lại sau.');
             });
+    });
+
+    modalContinue.addEventListener('click', () => {
+        const bootstrapModal = bootstrap.Modal.getInstance(modal);
+        if (bootstrapModal) {
+            bootstrapModal.hide();
+        }
     });
 });

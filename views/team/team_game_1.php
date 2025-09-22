@@ -19,15 +19,13 @@
         </div>
     </div>
     <div class="team-letter">
-        <!-- Button trigger modal -->
         <button type="button" class="itz-btn-trigger team-letter__trigger" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
-        <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class=" modal-dialog modal-dialog-centered">
-                <div class="team-letter__background modal-content ">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="team-letter__background modal-content">
                     <div class="modal-header flex-column" style="border:none;">
                         <h1 class="team-letter__status d-none"></h1>
-                        <img style="" class="team-letter__icon" src="/public/img/topic/icon-special-letter.png" alt="">
+                        <img class="team-letter__icon" src="/public/img/topic/icon-special-letter.png" alt="">
                         <h1 class="modal-title fs-5 team-letter__header" id="exampleModalLabel">MẬT THƯ ĐẶC BIỆT</h1>
 
                     </div>
@@ -37,20 +35,27 @@
 
                     <div class="team-letter__footer">
                         <div class="form-group d-flex justify-content-between">
-                            <!-- Make your own button -->
-                            <input id="team--letter-input" placeholder="Nhập đáp án" type="text" class=" team-letter__inp">
-                            <button id="team--letter-btn" type="submit" class=" itz-btn-modal team-letter__btn">Gửi</button>
+                            <input id="team--letter-input" placeholder="Nhập đáp án" type="text" class="team-letter__inp">
+                            <button id="team--letter-btn" type="submit" class="itz-btn-modal team-letter__btn">Gửi</button>
                         </div>
                     </div>
-                    <button class=" itz-btn-normal itz-btn-modal team-letter__continue d-none">Tiếp tục</button>
+                    <button class="itz-btn-normal itz-btn-modal team-letter__continue d-none">Tiếp tục</button>
 
+                    <div id="toast-modal" class="bs-toast d-none toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
+                        <div class="toast-body position-relative w-100 d-flex flex-wrap justify-content-between align-items-center">
+                            <span id="toast-message-modal">Chúc mừng bạn đã tìm ra đáp án</span>
+                            <div class="toast-icon" id="toast-close-modal">
+                                <i class="toast-icon--inner fa-regular fa-rectangle-xmark"></i>
+                            </div>
+                            <img style="width: 30px" class="toast-body__cloud" src="/public/img/icon/icon-cloud.png" alt="">
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
         </div>
 
-        <?php
-        include './views/layout/partials/toast.php';
-        ?>
+        
     </div>
 
     <div class="team-content d-flex">

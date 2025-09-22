@@ -42,7 +42,7 @@
       width: 60%;
       margin: 5px auto;
       padding: 2%;
-      margin-bottom: 5%;
+      margin-bottom: 10%;
     }
 
     &__btn {
@@ -97,7 +97,7 @@
 
     &__background {
       padding-top: 5%;
-      padding-bottom: 1%;
+      padding-bottom: 8%;
       border-radius: 5%;
       background: linear-gradient(141deg, rgba(30, 34, 71, 1) 0%, rgba(55, 55, 109, 1) 50%);
     }
@@ -119,6 +119,19 @@
       margin-left: auto;
       margin-right: auto;
       width: 116px;
+    }
+
+    #toast-modal {
+      position: absolute;
+      bottom: 1%;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1050;
+      width: 90%;
+      max-width: 400px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
   }
 
@@ -521,4 +534,21 @@
       }
     }
   }
+}
+
+#toast-modal {
+  position: absolute;
+  /* Toast nằm trong modal */
+  bottom: 20px;
+  /* Cách đáy modal 20px */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1050;
+  /* Đảm bảo toast nằm trên các thành phần khác */
+  width: 90%;
+  /* Chiều rộng toast */
+  max-width: 400px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
