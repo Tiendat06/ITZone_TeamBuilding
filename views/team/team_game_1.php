@@ -26,23 +26,31 @@
             <div class=" modal-dialog modal-dialog-centered">
                 <div class="team-letter__background modal-content ">
                     <div class="modal-header flex-column" style="border:none;">
+                        <h1 class="team-letter__status d-none"></h1>
                         <img style="" class="team-letter__icon" src="/public/img/topic/icon-special-letter.png" alt="">
                         <h1 class="modal-title fs-5 team-letter__header" id="exampleModalLabel">MẬT THƯ ĐẶC BIỆT</h1>
 
                     </div>
                     <div class="modal-body team-letter__content">
-                        Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...
+                        <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
                     </div>
+
                     <div class="team-letter__footer">
                         <div class="form-group d-flex justify-content-between">
                             <!-- Make your own button -->
-                            <input id="team--letter-input" placeholder="Nhập đáp án" type="text" class="rounded col-sm-8 col-md-8  team-letter__inp">
-                            <button id="team--letter-btn" type="submit" class="rounded col-sm-3 col-md-3 team-letter__btn">Gửi</button>
+                            <input id="team--letter-input" placeholder="Nhập đáp án" type="text" class=" team-letter__inp">
+                            <button id="team--letter-btn" type="submit" class=" itz-btn-modal team-letter__btn">Gửi</button>
                         </div>
                     </div>
+                    <button class=" itz-btn-normal itz-btn-modal team-letter__continue d-none">Tiếp tục</button>
+
                 </div>
             </div>
         </div>
+
+        <?php
+        include './views/layout/partials/toast.php';
+        ?>
     </div>
 
     <div class="team-content d-flex">
@@ -84,7 +92,7 @@
             </a>
 
         <?php
-            $index++;
+            // $index++;
         }
         ?>
 
@@ -112,6 +120,7 @@
     </div>
 </div>
 
+<script src="/public/js/teamLetter.js"></script>
 <script>
     window.addEventListener('DOMContentLoaded', () => {
         if (window.getBusBack) {
