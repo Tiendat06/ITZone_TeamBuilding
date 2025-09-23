@@ -26,3 +26,12 @@
   background-position: center;
   border: none;
 }
+
+.itz-btn-modal {
+  font-size: $sub-title-size;
+  font-style: $text-font;
+  border: 5px solid #3F3D70;
+  border-radius: 20px;
+  display: inline-block;
+  text-shadow: 0px 4px 4px gray;
+}
