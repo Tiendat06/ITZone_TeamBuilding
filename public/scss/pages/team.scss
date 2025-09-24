@@ -46,11 +46,10 @@
     }
 
     &__btn {
-      width: 20%;
       color: $normal-color;
       border: 5px solid #3F3D70;
-      padding: 0 10%;
-      width: 30%;
+      padding: 10px;
+      width: 25%;
     }
 
     &__footer {
@@ -84,11 +83,11 @@
       width: 65%;
       color: white;
       margin-left: 5px;
-      border: 1px solid white;
+      border: 1.5px solid white;
       font-size: $sub-title-size;
       background-color: transparent;
-      padding: 8px;
-      border-radius: 15px;
+      padding: 10px 12px;
+      border-radius: 12px;
 
       &:focus-visible {
         outline: none;

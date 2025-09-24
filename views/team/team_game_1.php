@@ -50,12 +50,12 @@
                             <img style="width: 30px" class="toast-body__cloud" src="/public/img/icon/icon-cloud.png" alt="">
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
         </div>
 
-        
+
     </div>
 
     <div class="team-content d-flex">
@@ -125,11 +125,15 @@
     </div>
 </div>
 
-<script src="/public/js/teamLetter.js"></script>
 <script>
     window.addEventListener('DOMContentLoaded', () => {
         if (window.getBusBack) {
             getBusBack();
         }
     })
+    window.addEventListener('DOMContentLoaded', () => {
+        if (window.checkLetterAnswer) {
+            checkLetterAnswer();
+        }
+    });
 </script>
