@@ -218,13 +218,14 @@ public function solveSpecialPuzzle($team_id, $answer): array {
         if ($newClick === 4) {
             return [
                 'status'  => false,
-                'message' => 'Sai lần thứ 3. Ô nhập đã bị khóa.'
+                'message' => 'Sai lần thứ 3. Ô nhập đã bị khóa.',
+                'attempts_left' => 0
             ];
         }
-
         return [
             'status'  => false,
-            'message' => "Sai rồi! Bạn còn " . (3 - $newClick) . " lần thử."
+            'message' => "Sai rồi! Bạn còn " . (3 - $newClick) . " lần thử.",
+            'attempts_left' => 3 - $newClick
         ];
     }
 }
@@ -239,6 +240,7 @@ public function getSpecialPuzzle(): array {
         ];
     }
     $special_topic = $this->topicRepository->getTopicByLocationId('LOC0000013');
+    
     if (!$special_topic) {
         return [
             'status'  => false,
@@ -246,7 +248,11 @@ public function getSpecialPuzzle(): array {
         ];
     }
     $is_input_open = (int)$specialArrival[0]['is_open_next_location'] === 1;
-   return [
+    //check đội này đã hoàn thành mật thư đặt biệt chưa
+    $puzzle = $this->teamPuzzleRepository
+                   ->getTeamPuzzlesByTeamIdAndTopicId($team_id, $special_topic->getTopicId());
+    $is_done = (int) $puzzle['is_done'];
+    return [
     'status' => true,
     'data'   => [
         'topic_id'     => $special_topic->getTopicId(),
@@ -255,7 +261,8 @@ public function getSpecialPuzzle(): array {
         'topic_img'    => $special_topic->getTopicImg(),
         'location_id'  => $special_topic->getLocationId(),
     ],
-    'is_input_open' => $is_input_open
+    'is_input_open' => $is_input_open,
+    'is_done' => $is_done
 ];
 
 }
