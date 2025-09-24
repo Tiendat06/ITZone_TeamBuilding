@@ -17,7 +17,10 @@ class TeamArrivalService{
     public function getTeamArrivalByTeamArrivalId($team_arrival_id): TeamArrival{
         return $this->teamArrivalRepository->getTeamArrivalByTeamArrivalId($team_arrival_id);
     }
-
+    public function getSpecialStationByTeamId(): array {
+        $team_id = $_SESSION['person_id'];
+        return $this->teamArrivalRepository->getSpecialStationByTeamId($team_id);
+    }
     public function getTeamArrivalsAndLocationByTeamId(): array{
         $team_id = $_SESSION['person_id'];
         return $this->teamArrivalRepository->getTeamArrivalsAndLocationByTeamId($team_id);

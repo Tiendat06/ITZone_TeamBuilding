@@ -35,6 +35,41 @@ class TeamArrivalRepository{
         return $data;
     }
 
+    public function getSpecialStationByTeamId($team_id): array {
+        $sql = "SELECT * FROM `team_arrival`
+                WHERE `team_id` = ? 
+                AND `team_arrival_priority` = -1 
+                AND `is_show_next_location` = 1";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bind_param('s', $team_id);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        $data = [];
+        while($row = $result->fetch_assoc()){
+            $data[] = $row;
+        }
+        $stmt->close();
+        return $data;
+    }
+    public function openAllSpecialStations(): bool {
+    $sql = "UPDATE `team_arrival`
+            SET `is_open_next_location` = 1
+            WHERE `is_show_next_location` = 1
+              AND `team_arrival_priority` = -1"; 
+              
+    $stmt = $this->conn->prepare($sql);
+    if (!$stmt) {
+        return false;
+    }
+
+    $stmt->execute();
+    $affected_row = $stmt->affected_rows;
+    $stmt->close();
+
+    return $affected_row > 0; 
+    }
+
     public function getTeamArrivalsInD1ByTeamId($team_id): array{
         $sql = "SELECT * FROM `team_arrival` 
          WHERE `team_id` = ? `team_arrival_priority` >= 2";

@@ -34,6 +34,15 @@
                     if ($_GET['param_2'] == 'update_next_location'){
                         $guardMiddleWare->update_next_location();
                     }
+                    else if ($_GET['param_2'] == 'update_special_station_result') {
+                    $guardMiddleWare->update_special_station_result();
+                    }
+                    else if ($_GET['param_2'] == 'activate_special_puzzle') {
+                        $guardMiddleWare->activate_special_puzzle();
+                    }
+                    else if ($_GET['param_2'] == 'activate_special_puzzle_input') {
+                        $guardMiddleWare->activate_special_puzzle_input();
+                    }
                     break;
             }
         } else if (isset($_GET['param_1'])){

@@ -15,10 +15,24 @@ class GuardController{
 //comment
 //comment
 //    [POST, FETCH] /guard/update_next_location
-    public function update_next_location($team_id, $mentor_id, $next_priority, $inputKey){
+    public function update_next_location($team_id, $mentor_id, $next_priority, $inputKey, $is_success){
         $location = $this->locationService->getLocationDataByPersonId();
         $location_id = $location->getLocationId();
-        echo json_encode($this->personService->unlockNextLocation($team_id, $mentor_id, $next_priority, $inputKey, $location_id));
+        echo json_encode($this->personService->unlockNextLocation($team_id, $mentor_id, $next_priority, $inputKey, $location_id, $is_success));
+    }
+// [POST] /guard/update_special_station_result
+    public function update_special_station_result($team_id, $is_success) {
+        $location_id = 'LOC0000013'; 
+        $result = $this->personService->updateSpecialStationResult($team_id, $location_id, $is_success);
+        echo json_encode($result);
+    }
+    public function activate_special_puzzle($team_id) {
+        $result = $this->personService->activateSpecialPuzzle($team_id);
+        echo json_encode($result);
+    }
+    public function activate_special_puzzle_input(){
+        $result =$this->personService->activateSpecialPuzzleInput();
+        echo json_encode($result);
     }
 
 //    [GET] /guard
