@@ -6,7 +6,6 @@ class TopicService{
     {
         $this->topicRepository = new TopicRepository();
     }
-
 }
 
 ?>

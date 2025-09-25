@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.2
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Aug 25, 2024 at 07:04 PM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 8.2.0
+-- Host: db
+-- Generation Time: Sep 22, 2025 at 11:51 AM
+-- Server version: 8.0.43
+-- PHP Version: 8.2.27
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -28,11 +28,11 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `account` (
-  `account_id` varchar(50) NOT NULL,
-  `account_username` varchar(50) NOT NULL,
-  `account_password` varchar(50) NOT NULL,
-  `person_id` varchar(50) NOT NULL,
-  `role_id` varchar(50) NOT NULL
+  `account_id` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `account_username` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `account_password` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `person_id` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `role_id` varchar(50) COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -67,12 +67,12 @@ INSERT INTO `account` (`account_id`, `account_username`, `account_password`, `pe
 --
 
 CREATE TABLE `hint` (
-  `hint_id` varchar(50) NOT NULL,
+  `hint_id` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
   `hint_description` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `hint_end` datetime DEFAULT NULL,
-  `is_show` int(1) NOT NULL,
-  `hint_priority` int(1) NOT NULL,
-  `topic_id` varchar(50) NOT NULL
+  `is_show` int NOT NULL,
+  `hint_priority` int NOT NULL,
+  `topic_id` varchar(50) COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -124,14 +124,14 @@ INSERT INTO `hint` (`hint_id`, `hint_description`, `hint_end`, `is_show`, `hint_
 --
 
 CREATE TABLE `location` (
-  `location_id` varchar(50) NOT NULL,
-  `location_name` varchar(50) NOT NULL,
-  `location_img` varchar(50) NOT NULL,
-  `location_address` varchar(500) NOT NULL,
-  `bus_go` varchar(500) NOT NULL,
-  `bus_back` varchar(500) NOT NULL,
-  `location_map` varchar(1000) NOT NULL,
-  `member_id` varchar(50) NOT NULL
+  `location_id` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `location_name` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `location_img` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `location_address` varchar(500) COLLATE utf8mb4_general_ci NOT NULL,
+  `bus_go` varchar(500) COLLATE utf8mb4_general_ci NOT NULL,
+  `bus_back` varchar(500) COLLATE utf8mb4_general_ci NOT NULL,
+  `location_map` varchar(1000) COLLATE utf8mb4_general_ci NOT NULL,
+  `member_id` varchar(50) COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -150,7 +150,8 @@ INSERT INTO `location` (`location_id`, `location_name`, `location_img`, `locatio
 ('LOC0000009', 'Sân bóng đá', 'san_bong_da.png', '19 Đ. Nguyễn Hữu Thọ, Tân Hưng, Quận 7, Hồ Chí Minh', '', '', '', 'MEN0000003'),
 ('LOC0000010', 'Căn tin tòa D', 'can_tin_D.png', '19 Đ. Nguyễn Hữu Thọ, Tân Hưng, Quận 7, Hồ Chí Minh', '', '', '', 'MEN0000004'),
 ('LOC0000011', 'Thư viện', 'thu_vien.png', '19 Đ. Nguyễn Hữu Thọ, Tân Hưng, Quận 7, Hồ Chí Minh', '', '', '', 'MEN0000005'),
-('LOC0000012', 'Tòa F', 'toa_f.png', '19 Đ. Nguyễn Hữu Thọ, Tân Hưng, Quận 7, Hồ Chí Minh', '', '', '', 'MEN0000006');
+('LOC0000012', 'Tòa F', 'toa_f.png', '19 Đ. Nguyễn Hữu Thọ, Tân Hưng, Quận 7, Hồ Chí Minh', '', '', '', 'MEN0000006'),
+('LOC0000013', 'Trạm đặt biệt', 'tram_db.png', '', '', '', '', 'GUA0000007');
 
 -- --------------------------------------------------------
 
@@ -159,9 +160,9 @@ INSERT INTO `location` (`location_id`, `location_name`, `location_img`, `locatio
 --
 
 CREATE TABLE `member` (
-  `member_id` varchar(50) NOT NULL,
-  `member_name` varchar(50) NOT NULL,
-  `member_phone` varchar(50) NOT NULL
+  `member_id` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `member_name` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `member_phone` varchar(50) COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -175,6 +176,7 @@ INSERT INTO `member` (`member_id`, `member_name`, `member_phone`) VALUES
 ('GUA0000004', 'Danny Drinkwater', '0112233445'),
 ('GUA0000005', 'Kyle Walker', '0258964713'),
 ('GUA0000006', 'Macus Rojo', '0258963004'),
+('GUA0000007', 'John Smith', '0912345678'),
 ('SUP0000001', 'Gordon Ramsay', '0136997785');
 
 -- --------------------------------------------------------
@@ -184,10 +186,10 @@ INSERT INTO `member` (`member_id`, `member_name`, `member_phone`) VALUES
 --
 
 CREATE TABLE `mentor` (
-  `mentor_id` varchar(50) NOT NULL,
-  `mentor_name` varchar(50) NOT NULL,
-  `mentor_phone` varchar(50) NOT NULL,
-  `mentor_key` varchar(50) NOT NULL
+  `mentor_id` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `mentor_name` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `mentor_phone` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `mentor_key` varchar(50) COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -209,8 +211,8 @@ INSERT INTO `mentor` (`mentor_id`, `mentor_name`, `mentor_phone`, `mentor_key`) 
 --
 
 CREATE TABLE `role` (
-  `role_id` varchar(50) NOT NULL,
-  `role_name` varchar(50) NOT NULL
+  `role_id` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `role_name` varchar(50) COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -230,12 +232,12 @@ INSERT INTO `role` (`role_id`, `role_name`) VALUES
 --
 
 CREATE TABLE `team` (
-  `team_id` varchar(50) NOT NULL,
-  `team_name` varchar(50) NOT NULL,
-  `team_phone` varchar(50) NOT NULL,
-  `team_route` varchar(50) NOT NULL,
-  `team_member` varchar(500) NOT NULL,
-  `mentor_id` varchar(50) NOT NULL
+  `team_id` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `team_name` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `team_phone` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `team_route` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `team_member` varchar(500) COLLATE utf8mb4_general_ci NOT NULL,
+  `mentor_id` varchar(50) COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -257,12 +259,12 @@ INSERT INTO `team` (`team_id`, `team_name`, `team_phone`, `team_route`, `team_me
 --
 
 CREATE TABLE `team_arrival` (
-  `team_arrival_id` varchar(50) NOT NULL,
-  `team_id` varchar(50) NOT NULL,
-  `location_id` varchar(50) NOT NULL,
-  `is_show_next_location` int(1) NOT NULL,
-  `team_arrival_priority` int(1) NOT NULL,
-  `is_open_next_location` int(1) NOT NULL
+  `team_arrival_id` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `team_id` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `location_id` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `is_show_next_location` int NOT NULL,
+  `team_arrival_priority` int NOT NULL,
+  `is_open_next_location` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -271,29 +273,29 @@ CREATE TABLE `team_arrival` (
 
 INSERT INTO `team_arrival` (`team_arrival_id`, `team_id`, `location_id`, `is_show_next_location`, `team_arrival_priority`, `is_open_next_location`) VALUES
 ('TAV0000001', 'TEA0000001', 'LOC0000007', 1, 1, 0),
-('TAV0000002', 'TEA0000001', 'LOC0000001', 0, 2, 0),
-('TAV0000003', 'TEA0000001', 'LOC0000002', 0, 3, 0),
+('TAV0000002', 'TEA0000001', 'LOC0000001', 1, 2, 0),
+('TAV0000003', 'TEA0000001', 'LOC0000002', 1, 3, 0),
 ('TAV0000004', 'TEA0000001', 'LOC0000003', 0, 4, 0),
 ('TAV0000005', 'TEA0000001', 'LOC0000005', 0, 5, 0),
 ('TAV0000006', 'TEA0000001', 'LOC0000006', 0, 6, 0),
 ('TAV0000007', 'TEA0000002', 'LOC0000008', 1, 1, 0),
-('TAV0000008', 'TEA0000002', 'LOC0000001', 0, 2, 0),
-('TAV0000009', 'TEA0000002', 'LOC0000005', 0, 3, 0),
+('TAV0000008', 'TEA0000002', 'LOC0000001', 1, 2, 1),
+('TAV0000009', 'TEA0000002', 'LOC0000005', 1, 3, 0),
 ('TAV0000010', 'TEA0000002', 'LOC0000003', 0, 4, 0),
 ('TAV0000011', 'TEA0000002', 'LOC0000002', 0, 5, 0),
 ('TAV0000012', 'TEA0000002', 'LOC0000006', 0, 6, 0),
 ('TAV0000013', 'TEA0000003', 'LOC0000009', 1, 1, 0),
-('TAV0000014', 'TEA0000003', 'LOC0000001', 0, 2, 0),
-('TAV0000015', 'TEA0000003', 'LOC0000003', 0, 3, 0),
-('TAV0000016', 'TEA0000003', 'LOC0000005', 0, 4, 0),
-('TAV0000017', 'TEA0000003', 'LOC0000002', 0, 5, 0),
-('TAV0000018', 'TEA0000003', 'LOC0000006', 0, 6, 0),
+('TAV0000014', 'TEA0000003', 'LOC0000001', 1, 2, 1),
+('TAV0000015', 'TEA0000003', 'LOC0000003', 1, 3, 1),
+('TAV0000016', 'TEA0000003', 'LOC0000005', 1, 4, 1),
+('TAV0000017', 'TEA0000003', 'LOC0000002', 1, 5, 1),
+('TAV0000018', 'TEA0000003', 'LOC0000006', 1, 6, 0),
 ('TAV0000019', 'TEA0000004', 'LOC0000010', 1, 1, 0),
-('TAV0000020', 'TEA0000004', 'LOC0000001', 0, 2, 0),
-('TAV0000021', 'TEA0000004', 'LOC0000002', 0, 3, 0),
-('TAV0000022', 'TEA0000004', 'LOC0000005', 0, 4, 0),
-('TAV0000023', 'TEA0000004', 'LOC0000003', 0, 5, 0),
-('TAV0000024', 'TEA0000004', 'LOC0000006', 0, 6, 0),
+('TAV0000020', 'TEA0000004', 'LOC0000001', 1, 2, 1),
+('TAV0000021', 'TEA0000004', 'LOC0000002', 1, 3, 1),
+('TAV0000022', 'TEA0000004', 'LOC0000005', 1, 4, 1),
+('TAV0000023', 'TEA0000004', 'LOC0000003', 1, 5, 1),
+('TAV0000024', 'TEA0000004', 'LOC0000006', 1, 6, 0),
 ('TAV0000025', 'TEA0000005', 'LOC0000011', 1, 1, 0),
 ('TAV0000026', 'TEA0000005', 'LOC0000001', 0, 2, 0),
 ('TAV0000027', 'TEA0000005', 'LOC0000003', 0, 3, 0),
@@ -305,7 +307,12 @@ INSERT INTO `team_arrival` (`team_arrival_id`, `team_id`, `location_id`, `is_sho
 ('TAV0000033', 'TEA0000006', 'LOC0000005', 0, 3, 0),
 ('TAV0000034', 'TEA0000006', 'LOC0000002', 0, 4, 0),
 ('TAV0000035', 'TEA0000006', 'LOC0000003', 0, 5, 0),
-('TAV0000036', 'TEA0000006', 'LOC0000006', 0, 6, 0);
+('TAV0000036', 'TEA0000001', 'LOC0000013', 1, -1, 1),
+('TAV0000037', 'TEA0000002', 'LOC0000013', 0, -1, 0),
+('TAV0000038', 'TEA0000003', 'LOC0000013', 1, -1, 1),
+('TAV0000039', 'TEA0000004', 'LOC0000013', 1, -1, 1),
+('TAV0000040', 'TEA0000005', 'LOC0000013', 0, -1, 0),
+('TAV0000041', 'TEA0000006', 'LOC0000013', 0, -1, 0);
 
 -- --------------------------------------------------------
 
@@ -314,12 +321,12 @@ INSERT INTO `team_arrival` (`team_arrival_id`, `team_id`, `location_id`, `is_sho
 --
 
 CREATE TABLE `team_member` (
-  `team_member_id` varchar(50) NOT NULL,
-  `team_member_name` varchar(500) NOT NULL,
-  `team_member_gender` varchar(10) NOT NULL,
-  `team_member_phone` varchar(50) NOT NULL,
-  `is_team_leader` int(1) DEFAULT NULL,
-  `team_id` varchar(50) NOT NULL
+  `team_member_id` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `team_member_name` varchar(500) COLLATE utf8mb4_general_ci NOT NULL,
+  `team_member_gender` varchar(10) COLLATE utf8mb4_general_ci NOT NULL,
+  `team_member_phone` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `is_team_leader` int DEFAULT NULL,
+  `team_id` varchar(50) COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -347,13 +354,13 @@ INSERT INTO `team_member` (`team_member_id`, `team_member_name`, `team_member_ge
 --
 
 CREATE TABLE `team_puzzle` (
-  `team_puzzle_id` varchar(50) NOT NULL,
-  `team_id` varchar(50) NOT NULL,
-  `topic_id` varchar(50) NOT NULL,
+  `team_puzzle_id` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `team_id` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `topic_id` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
   `time_end` datetime DEFAULT NULL,
   `time_fine` datetime DEFAULT NULL,
-  `is_done` int(1) DEFAULT NULL,
-  `is_clicked` int(1) NOT NULL
+  `is_done` int DEFAULT NULL,
+  `is_clicked` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -361,26 +368,26 @@ CREATE TABLE `team_puzzle` (
 --
 
 INSERT INTO `team_puzzle` (`team_puzzle_id`, `team_id`, `topic_id`, `time_end`, `time_fine`, `is_done`, `is_clicked`) VALUES
-('TPZ0000001', 'TEA0000001', 'TOP0000001', NULL, NULL, NULL, 0),
-('TPZ0000002', 'TEA0000001', 'TOP0000002', NULL, NULL, NULL, 0),
+('TPZ0000001', 'TEA0000001', 'TOP0000001', '2025-09-20 16:18:06', NULL, NULL, 1),
+('TPZ0000002', 'TEA0000001', 'TOP0000002', '2025-09-20 16:18:11', '2025-09-20 15:52:41', NULL, 1),
 ('TPZ0000003', 'TEA0000001', 'TOP0000003', NULL, NULL, NULL, 0),
 ('TPZ0000004', 'TEA0000001', 'TOP0000005', NULL, NULL, NULL, 0),
-('TPZ0000005', 'TEA0000001', 'TOP0000007', NULL, NULL, NULL, 0),
+('TPZ0000005', 'TEA0000001', 'TOP0000007', '2025-09-20 16:17:38', NULL, NULL, 1),
 ('TPZ0000006', 'TEA0000002', 'TOP0000001', NULL, NULL, NULL, 0),
 ('TPZ0000007', 'TEA0000002', 'TOP0000002', NULL, NULL, NULL, 0),
 ('TPZ0000008', 'TEA0000002', 'TOP0000003', NULL, NULL, NULL, 0),
 ('TPZ0000009', 'TEA0000002', 'TOP0000005', NULL, NULL, NULL, 0),
-('TPZ0000010', 'TEA0000002', 'TOP0000008', NULL, NULL, NULL, 0),
-('TPZ0000011', 'TEA0000003', 'TOP0000001', NULL, NULL, NULL, 0),
-('TPZ0000012', 'TEA0000003', 'TOP0000002', NULL, NULL, NULL, 0),
-('TPZ0000013', 'TEA0000003', 'TOP0000003', NULL, NULL, NULL, 0),
-('TPZ0000014', 'TEA0000003', 'TOP0000005', NULL, NULL, NULL, 0),
-('TPZ0000015', 'TEA0000003', 'TOP0000009', NULL, NULL, NULL, 0),
-('TPZ0000016', 'TEA0000004', 'TOP0000001', NULL, NULL, NULL, 0),
-('TPZ0000017', 'TEA0000004', 'TOP0000002', NULL, NULL, NULL, 0),
-('TPZ0000018', 'TEA0000004', 'TOP0000003', NULL, NULL, NULL, 0),
-('TPZ0000019', 'TEA0000004', 'TOP0000005', NULL, NULL, NULL, 0),
-('TPZ0000020', 'TEA0000004', 'TOP0000010', NULL, NULL, NULL, 0),
+('TPZ0000010', 'TEA0000002', 'TOP0000008', '2025-08-30 22:53:17', '2025-08-30 22:26:25', 0, 1),
+('TPZ0000011', 'TEA0000003', 'TOP0000001', '2025-09-20 16:22:51', NULL, 1, 1),
+('TPZ0000012', 'TEA0000003', 'TOP0000002', '2025-09-20 18:20:19', NULL, 1, 1),
+('TPZ0000013', 'TEA0000003', 'TOP0000003', '2025-09-20 16:26:34', '2025-09-20 16:03:39', 1, 1),
+('TPZ0000014', 'TEA0000003', 'TOP0000005', '2025-09-20 16:36:56', NULL, 1, 1),
+('TPZ0000015', 'TEA0000003', 'TOP0000009', '2025-09-20 16:21:25', NULL, 1, 1),
+('TPZ0000016', 'TEA0000004', 'TOP0000001', '2025-08-31 13:27:27', NULL, 1, 1),
+('TPZ0000017', 'TEA0000004', 'TOP0000002', '2025-08-31 13:29:32', NULL, 1, 1),
+('TPZ0000018', 'TEA0000004', 'TOP0000003', '2025-09-01 15:33:28', NULL, 1, 1),
+('TPZ0000019', 'TEA0000004', 'TOP0000005', '2025-08-31 14:05:28', NULL, 0, 1),
+('TPZ0000020', 'TEA0000004', 'TOP0000010', '2025-08-31 13:26:07', NULL, 1, 1),
 ('TPZ0000021', 'TEA0000005', 'TOP0000001', NULL, NULL, NULL, 0),
 ('TPZ0000022', 'TEA0000005', 'TOP0000002', NULL, NULL, NULL, 0),
 ('TPZ0000023', 'TEA0000005', 'TOP0000003', NULL, NULL, NULL, 0),
@@ -390,7 +397,111 @@ INSERT INTO `team_puzzle` (`team_puzzle_id`, `team_id`, `topic_id`, `time_end`, 
 ('TPZ0000027', 'TEA0000006', 'TOP0000002', NULL, NULL, NULL, 0),
 ('TPZ0000028', 'TEA0000006', 'TOP0000003', NULL, NULL, NULL, 0),
 ('TPZ0000029', 'TEA0000006', 'TOP0000005', NULL, NULL, NULL, 0),
-('TPZ0000030', 'TEA0000006', 'TOP0000012', NULL, NULL, NULL, 0);
+('TPZ0000030', 'TEA0000006', 'TOP0000012', NULL, NULL, NULL, 0),
+('TPZ0000031', 'TEA0000001', 'TOP0000013', NULL, NULL, NULL, 0),
+('TPZ0000032', 'TEA0000002', 'TOP0000013', NULL, NULL, NULL, 0),
+('TPZ0000033', 'TEA0000003', 'TOP0000013', NULL, NULL, NULL, 0),
+('TPZ0000034', 'TEA0000004', 'TOP0000013', NULL, NULL, NULL, 0),
+('TPZ0000035', 'TEA0000005', 'TOP0000013', NULL, NULL, NULL, 0),
+('TPZ0000036', 'TEA0000006', 'TOP0000013', NULL, NULL, NULL, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `team_station`
+--
+
+CREATE TABLE `team_station` (
+  `team_station_id` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `team_id` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `location_id` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `is_done` tinyint(1) DEFAULT '0',
+  `is_success` tinyint(1) DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `team_station`
+--
+
+INSERT INTO `team_station` (`team_station_id`, `team_id`, `location_id`, `is_done`, `is_success`) VALUES
+('TSZ0000001', 'TEA0000001', 'LOC0000001', 0, 0),
+('TSZ0000002', 'TEA0000001', 'LOC0000002', 0, 0),
+('TSZ0000003', 'TEA0000001', 'LOC0000003', 0, 0),
+('TSZ0000004', 'TEA0000001', 'LOC0000004', 0, 0),
+('TSZ0000005', 'TEA0000001', 'LOC0000005', 0, 0),
+('TSZ0000006', 'TEA0000001', 'LOC0000006', 0, 0),
+('TSZ0000007', 'TEA0000001', 'LOC0000007', 0, 0),
+('TSZ0000008', 'TEA0000001', 'LOC0000008', 0, 0),
+('TSZ0000009', 'TEA0000001', 'LOC0000009', 0, 0),
+('TSZ0000010', 'TEA0000001', 'LOC0000010', 0, 0),
+('TSZ0000011', 'TEA0000001', 'LOC0000011', 0, 0),
+('TSZ0000012', 'TEA0000001', 'LOC0000012', 0, 0),
+('TSZ0000013', 'TEA0000002', 'LOC0000001', 0, 0),
+('TSZ0000014', 'TEA0000002', 'LOC0000002', 0, 0),
+('TSZ0000015', 'TEA0000002', 'LOC0000003', 0, 0),
+('TSZ0000016', 'TEA0000002', 'LOC0000004', 0, 0),
+('TSZ0000017', 'TEA0000002', 'LOC0000005', 0, 0),
+('TSZ0000018', 'TEA0000002', 'LOC0000006', 0, 0),
+('TSZ0000019', 'TEA0000002', 'LOC0000007', 0, 0),
+('TSZ0000020', 'TEA0000002', 'LOC0000008', 0, 0),
+('TSZ0000021', 'TEA0000002', 'LOC0000009', 0, 0),
+('TSZ0000022', 'TEA0000002', 'LOC0000010', 0, 0),
+('TSZ0000023', 'TEA0000002', 'LOC0000011', 0, 0),
+('TSZ0000024', 'TEA0000002', 'LOC0000012', 0, 0),
+('TSZ0000025', 'TEA0000003', 'LOC0000001', 0, 0),
+('TSZ0000026', 'TEA0000003', 'LOC0000002', 0, 0),
+('TSZ0000027', 'TEA0000003', 'LOC0000003', 0, 0),
+('TSZ0000028', 'TEA0000003', 'LOC0000004', 0, 0),
+('TSZ0000029', 'TEA0000003', 'LOC0000005', 0, 0),
+('TSZ0000030', 'TEA0000003', 'LOC0000006', 0, 0),
+('TSZ0000031', 'TEA0000003', 'LOC0000007', 0, 0),
+('TSZ0000032', 'TEA0000003', 'LOC0000008', 0, 0),
+('TSZ0000033', 'TEA0000003', 'LOC0000009', 0, 0),
+('TSZ0000034', 'TEA0000003', 'LOC0000010', 0, 0),
+('TSZ0000035', 'TEA0000003', 'LOC0000011', 0, 0),
+('TSZ0000036', 'TEA0000003', 'LOC0000012', 0, 0),
+('TSZ0000037', 'TEA0000004', 'LOC0000001', 0, 0),
+('TSZ0000038', 'TEA0000004', 'LOC0000002', 0, 0),
+('TSZ0000039', 'TEA0000004', 'LOC0000003', 0, 0),
+('TSZ0000040', 'TEA0000004', 'LOC0000004', 0, 0),
+('TSZ0000041', 'TEA0000004', 'LOC0000005', 0, 0),
+('TSZ0000042', 'TEA0000004', 'LOC0000006', 0, 0),
+('TSZ0000043', 'TEA0000004', 'LOC0000007', 0, 0),
+('TSZ0000044', 'TEA0000004', 'LOC0000008', 0, 0),
+('TSZ0000045', 'TEA0000004', 'LOC0000009', 0, 0),
+('TSZ0000046', 'TEA0000004', 'LOC0000010', 0, 0),
+('TSZ0000047', 'TEA0000004', 'LOC0000011', 0, 0),
+('TSZ0000048', 'TEA0000004', 'LOC0000012', 0, 0),
+('TSZ0000049', 'TEA0000005', 'LOC0000001', 0, 0),
+('TSZ0000050', 'TEA0000005', 'LOC0000002', 0, 0),
+('TSZ0000051', 'TEA0000005', 'LOC0000003', 0, 0),
+('TSZ0000052', 'TEA0000005', 'LOC0000004', 0, 0),
+('TSZ0000053', 'TEA0000005', 'LOC0000005', 0, 0),
+('TSZ0000054', 'TEA0000005', 'LOC0000006', 0, 0),
+('TSZ0000055', 'TEA0000005', 'LOC0000007', 0, 0),
+('TSZ0000056', 'TEA0000005', 'LOC0000008', 0, 0),
+('TSZ0000057', 'TEA0000005', 'LOC0000009', 0, 0),
+('TSZ0000058', 'TEA0000005', 'LOC0000010', 0, 0),
+('TSZ0000059', 'TEA0000005', 'LOC0000011', 0, 0),
+('TSZ0000060', 'TEA0000005', 'LOC0000012', 0, 0),
+('TSZ0000061', 'TEA0000006', 'LOC0000001', 0, 0),
+('TSZ0000062', 'TEA0000006', 'LOC0000002', 0, 0),
+('TSZ0000063', 'TEA0000006', 'LOC0000003', 0, 0),
+('TSZ0000064', 'TEA0000006', 'LOC0000004', 0, 0),
+('TSZ0000065', 'TEA0000006', 'LOC0000005', 0, 0),
+('TSZ0000066', 'TEA0000006', 'LOC0000006', 0, 0),
+('TSZ0000067', 'TEA0000006', 'LOC0000007', 0, 0),
+('TSZ0000068', 'TEA0000006', 'LOC0000008', 0, 0),
+('TSZ0000069', 'TEA0000006', 'LOC0000009', 0, 0),
+('TSZ0000070', 'TEA0000006', 'LOC0000010', 0, 0),
+('TSZ0000071', 'TEA0000006', 'LOC0000011', 0, 0),
+('TSZ0000072', 'TEA0000006', 'LOC0000012', 0, 0),
+('TSZ0000073', 'TEA0000001', 'LOC0000013', 0, 0),
+('TSZ0000074', 'TEA0000002', 'LOC0000013', 0, 0),
+('TSZ0000075', 'TEA0000003', 'LOC0000013', 0, 0),
+('TSZ0000076', 'TEA0000004', 'LOC0000013', 0, 0),
+('TSZ0000077', 'TEA0000005', 'LOC0000013', 0, 0),
+('TSZ0000078', 'TEA0000006', 'LOC0000013', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -399,11 +510,11 @@ INSERT INTO `team_puzzle` (`team_puzzle_id`, `team_id`, `topic_id`, `time_end`, 
 --
 
 CREATE TABLE `topic` (
-  `topic_id` varchar(50) NOT NULL,
-  `topic_link` varchar(500) NOT NULL,
-  `topic_answer` varchar(50) NOT NULL,
-  `topic_img` varchar(50) NOT NULL,
-  `location_id` varchar(50) NOT NULL
+  `topic_id` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `topic_link` varchar(500) COLLATE utf8mb4_general_ci NOT NULL,
+  `topic_answer` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `topic_img` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `location_id` varchar(50) COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -422,7 +533,8 @@ INSERT INTO `topic` (`topic_id`, `topic_link`, `topic_answer`, `topic_img`, `loc
 ('TOP0000009', 'https://docs.google.com/document/d/1pzSaSrIPQm-B6KXb-DGdIEiJV47L3_aR/edit', '', 'topic_9.png', 'LOC0000009'),
 ('TOP0000010', 'https://docs.google.com/document/d/1llkisBSJKLUITZ7HoU-3lxDMtKfSTj_u/edit', '', 'topic_10.png', 'LOC0000010'),
 ('TOP0000011', 'https://docs.google.com/document/d/1cfI-Ep-sHwi6C_o3S6KJrYb6TOAuAljZ/edit', '', 'topic_11.png', 'LOC0000011'),
-('TOP0000012', 'https://docs.google.com/document/d/1I9N3TE2u4jTRdPsJz6UE9lvEttgn7LWh/edit', '', 'topic_12.png', 'LOC0000012');
+('TOP0000012', 'https://docs.google.com/document/d/1I9N3TE2u4jTRdPsJz6UE9lvEttgn7LWh/edit', '', 'topic_12.png', 'LOC0000012'),
+('TOP0000013', 'đây là topic đặt biệt hehe', 'DAPANDB', 'topic_13.png', 'LOC0000013');
 
 --
 -- Indexes for dumped tables
@@ -489,10 +601,29 @@ ALTER TABLE `team_puzzle`
   ADD PRIMARY KEY (`team_puzzle_id`,`team_id`,`topic_id`);
 
 --
+-- Indexes for table `team_station`
+--
+ALTER TABLE `team_station`
+  ADD PRIMARY KEY (`team_station_id`),
+  ADD KEY `fk_team` (`team_id`),
+  ADD KEY `fk_location` (`location_id`);
+
+--
 -- Indexes for table `topic`
 --
 ALTER TABLE `topic`
   ADD PRIMARY KEY (`topic_id`);
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `team_station`
+--
+ALTER TABLE `team_station`
+  ADD CONSTRAINT `fk_location` FOREIGN KEY (`location_id`) REFERENCES `location` (`location_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `fk_team` FOREIGN KEY (`team_id`) REFERENCES `team` (`team_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

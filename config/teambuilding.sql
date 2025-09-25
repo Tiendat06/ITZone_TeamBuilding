@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.2
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Aug 25, 2024 at 07:04 PM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 8.2.0
+-- Host: db
+-- Generation Time: Sep 02, 2025 at 05:11 AM
+-- Server version: 8.0.43
+-- PHP Version: 8.2.27
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -28,11 +28,11 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `account` (
-  `account_id` varchar(50) NOT NULL,
-  `account_username` varchar(50) NOT NULL,
-  `account_password` varchar(50) NOT NULL,
-  `person_id` varchar(50) NOT NULL,
-  `role_id` varchar(50) NOT NULL
+  `account_id` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `account_username` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `account_password` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `person_id` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `role_id` varchar(50) COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -67,12 +67,12 @@ INSERT INTO `account` (`account_id`, `account_username`, `account_password`, `pe
 --
 
 CREATE TABLE `hint` (
-  `hint_id` varchar(50) NOT NULL,
+  `hint_id` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
   `hint_description` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `hint_end` datetime DEFAULT NULL,
-  `is_show` int(1) NOT NULL,
-  `hint_priority` int(1) NOT NULL,
-  `topic_id` varchar(50) NOT NULL
+  `is_show` int NOT NULL,
+  `hint_priority` int NOT NULL,
+  `topic_id` varchar(50) COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -124,14 +124,14 @@ INSERT INTO `hint` (`hint_id`, `hint_description`, `hint_end`, `is_show`, `hint_
 --
 
 CREATE TABLE `location` (
-  `location_id` varchar(50) NOT NULL,
-  `location_name` varchar(50) NOT NULL,
-  `location_img` varchar(50) NOT NULL,
-  `location_address` varchar(500) NOT NULL,
-  `bus_go` varchar(500) NOT NULL,
-  `bus_back` varchar(500) NOT NULL,
-  `location_map` varchar(1000) NOT NULL,
-  `member_id` varchar(50) NOT NULL
+  `location_id` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `location_name` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `location_img` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `location_address` varchar(500) COLLATE utf8mb4_general_ci NOT NULL,
+  `bus_go` varchar(500) COLLATE utf8mb4_general_ci NOT NULL,
+  `bus_back` varchar(500) COLLATE utf8mb4_general_ci NOT NULL,
+  `location_map` varchar(1000) COLLATE utf8mb4_general_ci NOT NULL,
+  `member_id` varchar(50) COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -159,9 +159,9 @@ INSERT INTO `location` (`location_id`, `location_name`, `location_img`, `locatio
 --
 
 CREATE TABLE `member` (
-  `member_id` varchar(50) NOT NULL,
-  `member_name` varchar(50) NOT NULL,
-  `member_phone` varchar(50) NOT NULL
+  `member_id` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `member_name` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `member_phone` varchar(50) COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -184,10 +184,10 @@ INSERT INTO `member` (`member_id`, `member_name`, `member_phone`) VALUES
 --
 
 CREATE TABLE `mentor` (
-  `mentor_id` varchar(50) NOT NULL,
-  `mentor_name` varchar(50) NOT NULL,
-  `mentor_phone` varchar(50) NOT NULL,
-  `mentor_key` varchar(50) NOT NULL
+  `mentor_id` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `mentor_name` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `mentor_phone` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `mentor_key` varchar(50) COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -209,8 +209,8 @@ INSERT INTO `mentor` (`mentor_id`, `mentor_name`, `mentor_phone`, `mentor_key`) 
 --
 
 CREATE TABLE `role` (
-  `role_id` varchar(50) NOT NULL,
-  `role_name` varchar(50) NOT NULL
+  `role_id` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `role_name` varchar(50) COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -230,25 +230,26 @@ INSERT INTO `role` (`role_id`, `role_name`) VALUES
 --
 
 CREATE TABLE `team` (
-  `team_id` varchar(50) NOT NULL,
-  `team_name` varchar(50) NOT NULL,
-  `team_phone` varchar(50) NOT NULL,
-  `team_route` varchar(50) NOT NULL,
-  `team_member` varchar(500) NOT NULL,
-  `mentor_id` varchar(50) NOT NULL
+  `team_id` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `team_name` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `team_phone` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `team_route` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `team_member` varchar(500) COLLATE utf8mb4_general_ci NOT NULL,
+  `mentor_id` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `completed_stations` int NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `team`
 --
 
-INSERT INTO `team` (`team_id`, `team_name`, `team_phone`, `team_route`, `team_member`, `mentor_id`) VALUES
-('TEA0000001', 'TEAM 1', '0123456789', '', '', 'MEN0000001'),
-('TEA0000002', 'TEAM 2', '0741852963', '', '', 'MEN0000002'),
-('TEA0000003', 'TEAM 3', '0741852969', '', '', 'MEN0000003'),
-('TEA0000004', 'TEAM 4', '0246798135', '', '', 'MEN0000004'),
-('TEA0000005', 'TEAM 5', '0321789654', '', '', 'MEN0000005'),
-('TEA0000006', 'TEAM 6', '0213546897', '', '', 'MEN0000006');
+INSERT INTO `team` (`team_id`, `team_name`, `team_phone`, `team_route`, `team_member`, `mentor_id`, `completed_stations`) VALUES
+('TEA0000001', 'TEAM 1', '0123456789', '', '', 'MEN0000001', 4),
+('TEA0000002', 'TEAM 2', '0741852963', '', '', 'MEN0000002', 0),
+('TEA0000003', 'TEAM 3', '0741852969', '', '', 'MEN0000003', 1),
+('TEA0000004', 'TEAM 4', '0246798135', '', '', 'MEN0000004', 3),
+('TEA0000005', 'TEAM 5', '0321789654', '', '', 'MEN0000005', 0),
+('TEA0000006', 'TEAM 6', '0213546897', '', '', 'MEN0000006', 0);
 
 -- --------------------------------------------------------
 
@@ -257,12 +258,12 @@ INSERT INTO `team` (`team_id`, `team_name`, `team_phone`, `team_route`, `team_me
 --
 
 CREATE TABLE `team_arrival` (
-  `team_arrival_id` varchar(50) NOT NULL,
-  `team_id` varchar(50) NOT NULL,
-  `location_id` varchar(50) NOT NULL,
-  `is_show_next_location` int(1) NOT NULL,
-  `team_arrival_priority` int(1) NOT NULL,
-  `is_open_next_location` int(1) NOT NULL
+  `team_arrival_id` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `team_id` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `location_id` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `is_show_next_location` int NOT NULL,
+  `team_arrival_priority` int NOT NULL,
+  `is_open_next_location` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -271,14 +272,14 @@ CREATE TABLE `team_arrival` (
 
 INSERT INTO `team_arrival` (`team_arrival_id`, `team_id`, `location_id`, `is_show_next_location`, `team_arrival_priority`, `is_open_next_location`) VALUES
 ('TAV0000001', 'TEA0000001', 'LOC0000007', 1, 1, 0),
-('TAV0000002', 'TEA0000001', 'LOC0000001', 0, 2, 0),
+('TAV0000002', 'TEA0000001', 'LOC0000001', 1, 2, 0),
 ('TAV0000003', 'TEA0000001', 'LOC0000002', 0, 3, 0),
 ('TAV0000004', 'TEA0000001', 'LOC0000003', 0, 4, 0),
 ('TAV0000005', 'TEA0000001', 'LOC0000005', 0, 5, 0),
 ('TAV0000006', 'TEA0000001', 'LOC0000006', 0, 6, 0),
 ('TAV0000007', 'TEA0000002', 'LOC0000008', 1, 1, 0),
-('TAV0000008', 'TEA0000002', 'LOC0000001', 0, 2, 0),
-('TAV0000009', 'TEA0000002', 'LOC0000005', 0, 3, 0),
+('TAV0000008', 'TEA0000002', 'LOC0000001', 1, 2, 1),
+('TAV0000009', 'TEA0000002', 'LOC0000005', 1, 3, 0),
 ('TAV0000010', 'TEA0000002', 'LOC0000003', 0, 4, 0),
 ('TAV0000011', 'TEA0000002', 'LOC0000002', 0, 5, 0),
 ('TAV0000012', 'TEA0000002', 'LOC0000006', 0, 6, 0),
@@ -289,11 +290,11 @@ INSERT INTO `team_arrival` (`team_arrival_id`, `team_id`, `location_id`, `is_sho
 ('TAV0000017', 'TEA0000003', 'LOC0000002', 0, 5, 0),
 ('TAV0000018', 'TEA0000003', 'LOC0000006', 0, 6, 0),
 ('TAV0000019', 'TEA0000004', 'LOC0000010', 1, 1, 0),
-('TAV0000020', 'TEA0000004', 'LOC0000001', 0, 2, 0),
-('TAV0000021', 'TEA0000004', 'LOC0000002', 0, 3, 0),
-('TAV0000022', 'TEA0000004', 'LOC0000005', 0, 4, 0),
-('TAV0000023', 'TEA0000004', 'LOC0000003', 0, 5, 0),
-('TAV0000024', 'TEA0000004', 'LOC0000006', 0, 6, 0),
+('TAV0000020', 'TEA0000004', 'LOC0000001', 1, 2, 1),
+('TAV0000021', 'TEA0000004', 'LOC0000002', 1, 3, 1),
+('TAV0000022', 'TEA0000004', 'LOC0000005', 1, 4, 1),
+('TAV0000023', 'TEA0000004', 'LOC0000003', 1, 5, 1),
+('TAV0000024', 'TEA0000004', 'LOC0000006', 1, 6, 0),
 ('TAV0000025', 'TEA0000005', 'LOC0000011', 1, 1, 0),
 ('TAV0000026', 'TEA0000005', 'LOC0000001', 0, 2, 0),
 ('TAV0000027', 'TEA0000005', 'LOC0000003', 0, 3, 0),
@@ -314,12 +315,12 @@ INSERT INTO `team_arrival` (`team_arrival_id`, `team_id`, `location_id`, `is_sho
 --
 
 CREATE TABLE `team_member` (
-  `team_member_id` varchar(50) NOT NULL,
-  `team_member_name` varchar(500) NOT NULL,
-  `team_member_gender` varchar(10) NOT NULL,
-  `team_member_phone` varchar(50) NOT NULL,
-  `is_team_leader` int(1) DEFAULT NULL,
-  `team_id` varchar(50) NOT NULL
+  `team_member_id` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `team_member_name` varchar(500) COLLATE utf8mb4_general_ci NOT NULL,
+  `team_member_gender` varchar(10) COLLATE utf8mb4_general_ci NOT NULL,
+  `team_member_phone` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `is_team_leader` int DEFAULT NULL,
+  `team_id` varchar(50) COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -347,13 +348,13 @@ INSERT INTO `team_member` (`team_member_id`, `team_member_name`, `team_member_ge
 --
 
 CREATE TABLE `team_puzzle` (
-  `team_puzzle_id` varchar(50) NOT NULL,
-  `team_id` varchar(50) NOT NULL,
-  `topic_id` varchar(50) NOT NULL,
+  `team_puzzle_id` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `team_id` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `topic_id` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
   `time_end` datetime DEFAULT NULL,
   `time_fine` datetime DEFAULT NULL,
-  `is_done` int(1) DEFAULT NULL,
-  `is_clicked` int(1) NOT NULL
+  `is_done` int DEFAULT NULL,
+  `is_clicked` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -361,26 +362,26 @@ CREATE TABLE `team_puzzle` (
 --
 
 INSERT INTO `team_puzzle` (`team_puzzle_id`, `team_id`, `topic_id`, `time_end`, `time_fine`, `is_done`, `is_clicked`) VALUES
-('TPZ0000001', 'TEA0000001', 'TOP0000001', NULL, NULL, NULL, 0),
-('TPZ0000002', 'TEA0000001', 'TOP0000002', NULL, NULL, NULL, 0),
-('TPZ0000003', 'TEA0000001', 'TOP0000003', NULL, NULL, NULL, 0),
-('TPZ0000004', 'TEA0000001', 'TOP0000005', NULL, NULL, NULL, 0),
-('TPZ0000005', 'TEA0000001', 'TOP0000007', NULL, NULL, NULL, 0),
-('TPZ0000006', 'TEA0000002', 'TOP0000001', NULL, NULL, NULL, 0),
+('TPZ0000001', 'TEA0000001', 'TOP0000001', '2025-08-28 15:58:45', NULL, 1, 1),
+('TPZ0000002', 'TEA0000001', 'TOP0000002', '2025-08-31 12:55:33', NULL, 1, 1),
+('TPZ0000003', 'TEA0000001', 'TOP0000003', '2025-08-31 12:57:16', NULL, 1, 1),
+('TPZ0000004', 'TEA0000001', 'TOP0000005', '2025-08-31 13:03:53', NULL, 1, 1),
+('TPZ0000005', 'TEA0000001', 'TOP0000007', '2025-08-28 15:57:46', NULL, 1, 1),
+('TPZ0000006', 'TEA0000002', 'TOP0000001', NULL, NULL, 1, 0),
 ('TPZ0000007', 'TEA0000002', 'TOP0000002', NULL, NULL, NULL, 0),
 ('TPZ0000008', 'TEA0000002', 'TOP0000003', NULL, NULL, NULL, 0),
 ('TPZ0000009', 'TEA0000002', 'TOP0000005', NULL, NULL, NULL, 0),
-('TPZ0000010', 'TEA0000002', 'TOP0000008', NULL, NULL, NULL, 0),
+('TPZ0000010', 'TEA0000002', 'TOP0000008', '2025-08-30 22:53:17', '2025-08-30 22:26:25', 0, 1),
 ('TPZ0000011', 'TEA0000003', 'TOP0000001', NULL, NULL, NULL, 0),
 ('TPZ0000012', 'TEA0000003', 'TOP0000002', NULL, NULL, NULL, 0),
 ('TPZ0000013', 'TEA0000003', 'TOP0000003', NULL, NULL, NULL, 0),
 ('TPZ0000014', 'TEA0000003', 'TOP0000005', NULL, NULL, NULL, 0),
 ('TPZ0000015', 'TEA0000003', 'TOP0000009', NULL, NULL, NULL, 0),
-('TPZ0000016', 'TEA0000004', 'TOP0000001', NULL, NULL, NULL, 0),
-('TPZ0000017', 'TEA0000004', 'TOP0000002', NULL, NULL, NULL, 0),
-('TPZ0000018', 'TEA0000004', 'TOP0000003', NULL, NULL, NULL, 0),
-('TPZ0000019', 'TEA0000004', 'TOP0000005', NULL, NULL, NULL, 0),
-('TPZ0000020', 'TEA0000004', 'TOP0000010', NULL, NULL, NULL, 0),
+('TPZ0000016', 'TEA0000004', 'TOP0000001', '2025-08-31 13:27:27', NULL, 1, 1),
+('TPZ0000017', 'TEA0000004', 'TOP0000002', '2025-08-31 13:29:32', NULL, 1, 1),
+('TPZ0000018', 'TEA0000004', 'TOP0000003', '2025-09-01 15:33:28', NULL, 1, 1),
+('TPZ0000019', 'TEA0000004', 'TOP0000005', '2025-08-31 14:05:28', NULL, 0, 1),
+('TPZ0000020', 'TEA0000004', 'TOP0000010', '2025-08-31 13:26:07', NULL, 1, 1),
 ('TPZ0000021', 'TEA0000005', 'TOP0000001', NULL, NULL, NULL, 0),
 ('TPZ0000022', 'TEA0000005', 'TOP0000002', NULL, NULL, NULL, 0),
 ('TPZ0000023', 'TEA0000005', 'TOP0000003', NULL, NULL, NULL, 0),
@@ -399,11 +400,11 @@ INSERT INTO `team_puzzle` (`team_puzzle_id`, `team_id`, `topic_id`, `time_end`, 
 --
 
 CREATE TABLE `topic` (
-  `topic_id` varchar(50) NOT NULL,
-  `topic_link` varchar(500) NOT NULL,
-  `topic_answer` varchar(50) NOT NULL,
-  `topic_img` varchar(50) NOT NULL,
-  `location_id` varchar(50) NOT NULL
+  `topic_id` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `topic_link` varchar(500) COLLATE utf8mb4_general_ci NOT NULL,
+  `topic_answer` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `topic_img` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `location_id` varchar(50) COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --

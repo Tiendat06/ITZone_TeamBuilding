@@ -61,6 +61,12 @@
                     } else if($_GET['param_2'] == 'view_topic_hint'){
                         $teamMiddleWare->view_topic_hint();
                     }
+                       else if($_GET['param_2'] == 'get_special_topic'){
+                        $teamMiddleWare->get_special_topic();
+                    }
+                    else if($_GET['param_2'] == 'submit_special_puzzle_answer'){
+                        $teamMiddleWare->submit_special_puzzle_answer();
+                    }
                     break;
             }
         } else if (isset($_GET['param_1'])){

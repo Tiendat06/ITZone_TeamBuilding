@@ -23,6 +23,40 @@ class  GuardMiddleWare{
             ));
         }
     }
+    public function update_special_station_result() {
+        $content = file_get_contents('php://input');
+        $data = json_decode($content, true);
+
+        if (!empty($data['team_id']) && isset($data['is_success'])) {
+            $team_id = $data['team_id'];
+            $is_success = (bool)$data['is_success'];
+            $this->guardController->update_special_station_result($team_id, $is_success);
+        } else {
+            echo json_encode([
+                'status' => false,
+                'message' => 'Thiếu tham số đầu vào (team_id, is_success)'
+            ]);
+        }
+    }
+     public function activate_special_puzzle() {
+        $content = file_get_contents('php://input');
+        $data = json_decode($content, true);
+
+        if (!empty($data['team_id'])) {
+            $team_id = $data['team_id'];
+            $result = $this->guardController->activate_special_puzzle($team_id);
+            echo json_encode($result);
+        } else {
+            echo json_encode([
+                'status' => false,
+                'message' => 'Thiếu tham số team_id'
+            ]);
+        }
+    }
+    public function activate_special_puzzle_input() {
+    $result = $this->guardController->activate_special_puzzle_input();
+    echo json_encode($result);
+    }
 
     public function index()
     {
