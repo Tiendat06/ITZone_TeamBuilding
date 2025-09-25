@@ -9,6 +9,40 @@ class TeamMiddleWare{
         $this->teamController = new TeamController();
         $this->teamArrivalService = new TeamArrivalService();
     }
+    public function get_special_topic() {
+    // Gọi service/controller để lấy topic đặc biệt
+    $special_topic = $this->teamController->get_special_topic(); }// hoặc personService nếu dùng service riêng
+    public function submit_special_puzzle_answer() {
+    $content = file_get_contents('php://input');
+    $data = json_decode($content, true);
+
+    // Check không bỏ trống
+    if (!isset($data['answer']) || trim($data['answer']) === '') {
+        echo json_encode([
+            'status'  => false,
+            'message' => 'Không được để trống đáp án'
+        ]);
+        return;
+    }
+    // Lấy team_id từ session
+    if (!isset($_SESSION['team_id']) || empty($_SESSION['team_id'])) {
+        echo json_encode([
+            'status'  => false,
+            'message' => 'Không tìm thấy team_id trong session'
+        ]);
+        return;
+    }
+
+    $team_id = $_SESSION['team_id'];
+    // $team_id = "TEA0000002"; // Hardcode tạm thời cho việc test
+    $answer  = trim($data['answer']);
+
+    // Gọi xuống controller
+    $result = $this->teamController->submit_special_puzzle_answer($team_id, $answer);
+
+    echo json_encode($result);
+    }
+  
 
     public function get_topic_hint(){
         $content = trim(file_get_contents('php://input'));
@@ -147,7 +181,7 @@ class TeamMiddleWare{
             }
         }
     }
-
+    
     public function game_mentor()
     {
         if ((!isset($_SESSION['person_id']) && !isset($_SESSION['role_name'])) || $_SESSION['role_name'] != 'team') {

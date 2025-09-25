@@ -9,7 +9,6 @@ class TeamPuzzleService{
 
     public function getTeamPuzzlesByTeamIdAndTopicId($topic_id): array{
         $team_id = $_SESSION['person_id'];
-
         return $this->teamPuzzleRepository->getTeamPuzzlesByTeamIdAndTopicId($team_id, $topic_id);
     }
 

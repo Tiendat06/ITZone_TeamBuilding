@@ -11,4 +11,5 @@
     include "./app/models/TeamArrival.php";
     include "./app/models/TeamPuzzle.php";
     include "./app/models/Topic.php";
+    include "./app/models/TeamStation.php";
 ?>

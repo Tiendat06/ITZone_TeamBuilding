@@ -24,7 +24,7 @@ class Team extends Person{
     public function getMentorId(){
         return $this->mentor_id;
     }
-
+    
     public function setTeamRoute($team_route){
         $this->team_route = $team_route;
     }
