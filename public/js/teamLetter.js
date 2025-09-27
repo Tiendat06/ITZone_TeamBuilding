@@ -13,7 +13,7 @@ class teamLetter {
         const toastMessage = document.getElementById('toast-message-modal');
         const modal = document.getElementById('exampleModal');
         
-        
+
         
         fetch('/team/get_special_topic', {
                 method: 'POST',
@@ -21,11 +21,12 @@ class teamLetter {
             .then(response => response.json())
             .then(data=> {
                 const status = data['status'];
-                // const specialStation = data.special_station;
+                const specialStation = data.special_station;
                 // console.log(JSON.stringify(specialStation, null, 2));
-                console.log(status);
-                if(status==false) {
-                    modalBody.innerHTML=data['message'];
+                // console.log(status);
+                console.log(data);
+                if(data['special_station']['status']==false) {
+                    modalBody.innerHTML=data['special_station']['message'];
                     modalFooter.style.display = 'none';
                 } else {
                     modalBody.innerHTML=data['special_station']['data']['topic_link'];
@@ -83,8 +84,6 @@ class teamLetter {
                             '/public/img/topic/icon-success.png'
                         );
                         //sucess
-
-                        showToast(message, true);
                     } else if (data['status']===false && (count<0 || count==undefined)) {
                             
                         updateModal(
