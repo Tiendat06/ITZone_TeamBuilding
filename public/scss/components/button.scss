@@ -1,20 +1,37 @@
-.itz-btn-normal, .itz-btn-focus{
+.itz-btn-normal,
+.itz-btn-focus {
   color: $normal-color;
 }
 
-.itz-btn-home{
+.itz-btn-home {
   background: linear-gradient(to right, $gradient-color-1, $gradient-color-2);
 }
 
-.itz-btn-hover{
+.itz-btn-hover {
   background: linear-gradient(to right, $gradient-color-3, $gradient-color-4, $gradient-color-5);
 }
 
-.itz-btn-active{
+.itz-btn-active {
   color: $active-color;
 }
 
-.itz-btn-disable{
+.itz-btn-disable {
   color: $disable-color;
 }
 
+.itz-btn-trigger {
+  background-color: transparent;
+  background-image: url('/public/img/topic/icon-special-letter.png');
+  background-size: cover;
+  background-position: center;
+  border: none;
+}
+
+.itz-btn-modal {
+  font-size: $sub-title-size;
+  font-style: $text-font;
+  border: 5px solid #3F3D70;
+  border-radius: 15px;
+  display: inline-block;
+  text-shadow: 0px 4px 4px gray;
+}

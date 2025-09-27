@@ -4,6 +4,7 @@ import log from "./log.js";
 import support from './support.js';
 import guard from './guard.js'
 import team from "./team.js";
+import teamLetter from './teamLetter.js';
 
 // site.index();
 // site.ajaxTest();
@@ -26,7 +27,7 @@ window.translateReturn = () => {
 window.fetchViewTopicHint = () => {
     location.fetchViewTopicHint();
 }
-window.topicCountDown = (time_end)=> {
+window.topicCountDown = (time_end) => {
     location.topicCountDown(time_end)
 }
 window.fetchCheckDisableInput = (topic_id) => {
@@ -80,4 +81,8 @@ window.searchUser = () => {
 
 window.getTeamMember = () => {
     support.getTeamMember();
+}
+//teamLetter
+window.checkLetterAnswer = () => {
+    teamLetter.checkLetterAnswer();
 }
