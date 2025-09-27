@@ -193,10 +193,10 @@ public function solveSpecialPuzzle($team_id, $answer): array {
             'message' => 'Không tìm thấy dữ liệu mật thư đặc biệt'
         ];
     }
-
     $currentClick = (int) $puzzle['is_clicked'];
     // Nếu đã bị khóa sau 3 lần sai
     if ($currentClick === 4) {
+        $this->teamPuzzleRepository->updateTeamIsDoneByTopicIdAndTeamId( $special_topic->getTopicId(),$team_id,1);
         return [
             'status'  => false,
             'message' => 'Bạn đã hết số lần nhập đáp án'
@@ -252,6 +252,23 @@ public function getSpecialPuzzle(): array {
     $puzzle = $this->teamPuzzleRepository
                    ->getTeamPuzzlesByTeamIdAndTopicId($team_id, $special_topic->getTopicId());
     $is_done = (int) $puzzle['is_done'];
+    $is_success = (int) $puzzle['is_clicked'];
+    $is_input =  (int) $puzzle['is_clicked'];
+    if ($is_done === 1) {
+        $is_done = true;
+    }
+    else {
+        $is_done = false;
+    }
+    if($is_success === 4){
+        $is_success = false;
+        $is_input_open = false;
+    } else if($is_success === -1){
+        $is_success = true;
+        $is_input_open = false;
+    } else{
+        $is_success = false; 
+    }
     return [
     'status' => true,
     'data'   => [
@@ -260,9 +277,11 @@ public function getSpecialPuzzle(): array {
         'topic_answer' => $special_topic->getTopicAnswer(),
         'topic_img'    => $special_topic->getTopicImg(),
         'location_id'  => $special_topic->getLocationId(),
+        'is_input_open' => $is_input_open,
+        'is_done' => $is_done,
+        'is_success' => $is_success,
+        'is_input' => $is_input,
     ],
-    'is_input_open' => $is_input_open,
-    'is_done' => $is_done
 ];
 
 }
