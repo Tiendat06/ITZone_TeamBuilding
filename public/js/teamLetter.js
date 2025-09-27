@@ -20,15 +20,31 @@ class teamLetter {
             })
             .then(response => response.json())
             .then(data=> {
-                const status = data['status'];
-                const specialStation = data.special_station;
                 // console.log(JSON.stringify(specialStation, null, 2));
                 // console.log(status);
                 console.log(data);
                 if(data['special_station']['status']==false) {
+
                     modalBody.innerHTML=data['special_station']['message'];
                     modalFooter.style.display = 'none';
-                } else {
+                } else if(data['special_station']['data']['is_done']==true && data['special_station']['data']['is_success']==true) {
+
+                    updateModal(
+                            "Thành công",
+                            `<span style="color: white"> Chúc mừng bạn đã trả lời đúng </span> <br> Cảm ơn bạn đã tham gia trò chơi`,
+                            '/public/img/topic/icon-success.png'
+                        );
+
+                } else if(data['special_station']['data']['is_done']==true && data['special_station']['data']['is_success']==false) {
+
+                    updateModal(
+                            "Thất bại",
+                            `<span style="color: white"> Rất tiếc, bạn đã trả lời sai </span> <br> Cảm ơn bạn đã tham gia trò chơi`,
+                            '/public/img/topic/icon-cry.png'
+                        );
+                }
+                else {
+
                     modalBody.innerHTML=data['special_station']['data']['topic_link'];
                 }
 
@@ -84,7 +100,7 @@ class teamLetter {
                             '/public/img/topic/icon-success.png'
                         );
                         //sucess
-                    } else if (data['status']===false && (count<0 || count==undefined)) {
+                    } else if (data['status']===false && (count<=0 || count==undefined) && answer!='') {
                             
                         updateModal(
                             "Thất bại",
