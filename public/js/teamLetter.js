@@ -12,7 +12,31 @@ class teamLetter {
         const toast = document.getElementById('toast-modal');
         const toastMessage = document.getElementById('toast-message-modal');
         const modal = document.getElementById('exampleModal');
+        
+        
+        
+        fetch('/team/get_special_topic', {
+                method: 'POST',
+            })
+            .then(response => response.json())
+            .then(data=> {
+                const status = data['status'];
+                // const specialStation = data.special_station;
+                // console.log(JSON.stringify(specialStation, null, 2));
+                console.log(status);
+                if(status==false) {
+                    modalBody.innerHTML=data['message'];
+                    modalFooter.style.display = 'none';
+                } else {
+                    modalBody.innerHTML=data['special_station']['data']['topic_link'];
+                }
 
+            })
+            .catch(error=> {
+                console.error("Error:",error);
+            })
+        
+        
         const showToast = (message, isSuccess) => {
             toastMessage.innerHTML = message;
             toast.classList.remove('d-none', isSuccess ? 'bg-danger' : 'bg-success');
@@ -33,16 +57,14 @@ class teamLetter {
             modalContinue.classList.remove('d-none');
             modalFooter.style.display = 'none';
         };
+        
 
+
+        
         submitButton.addEventListener('click', () => {
-            const answer = inputField.value.trim();
+            const answer = inputField.value.trim();            
 
-            if (!answer) {
-                showToast("Vui lòng nhập đán án!", false);
-                return;
-            }
-
-            fetch('http://localhost:3000/check-answer', {
+            fetch('/team/submit_special_puzzle_answer', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -51,25 +73,26 @@ class teamLetter {
             })
                 .then(response => response.json())
                 .then(data => {
-                    const { status, message } = data;
-                    let numberArr = message.match(/\d+/);
-                    let count;
-                    if (numberArr) {
-                        count = numberArr[0];
-                    }
-                    if (status === true) {
+                    const message =data['message'];
+                    const count=data['attempts_left'];
+                    console.log(count); 
+                    if (data['status'] === true) {
                         updateModal(
                             "Thành công",
                             `<span style="color: white"> Chúc mừng bạn đã trả lời đúng </span> <br> Cảm ơn bạn đã tham gia trò chơi`,
                             '/public/img/topic/icon-success.png'
                         );
+                        //sucess
+
                         showToast(message, true);
-                    } else if (count === 3) {
+                    } else if (data['status']===false && (count<0 || count==undefined)) {
+                            
                         updateModal(
                             "Thất bại",
                             `<span style="color: white"> Rất tiếc, bạn đã trả lời sai </span> <br> Cảm ơn bạn đã tham gia trò chơi`,
                             '/public/img/topic/icon-cry.png'
                         );
+                        //failed
                         showToast(message, false);
                     } else {
                         inputField.value = '';

@@ -25,7 +25,7 @@ class TeamMiddleWare{
         return;
     }
     // Lấy team_id từ session
-    if (!isset($_SESSION['team_id']) || empty($_SESSION['team_id'])) {
+    if (!isset($_SESSION['person_id']) || empty($_SESSION['person_id'])) {
         echo json_encode([
             'status'  => false,
             'message' => 'Không tìm thấy team_id trong session'
@@ -33,7 +33,7 @@ class TeamMiddleWare{
         return;
     }
 
-    $team_id = $_SESSION['team_id'];
+    $team_id = $_SESSION['person_id'];
     // $team_id = "TEA0000002"; // Hardcode tạm thời cho việc test
     $answer  = trim($data['answer']);
 

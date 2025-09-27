@@ -33,7 +33,7 @@ class TeamController{
         }
     }
     public function get_special_topic(){
-        $special_topic = $this->$personService->getSpecialPuzzle();
+        $special_topic = $this->personService->getSpecialPuzzle();
         echo json_encode(array(
             'status' => true,
             'special_station' => $special_topic

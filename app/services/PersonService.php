@@ -219,12 +219,12 @@ public function solveSpecialPuzzle($team_id, $answer): array {
             return [
                 'status'  => false,
                 'message' => 'Sai lần thứ 3. Ô nhập đã bị khóa.',
-                'attempts_left' => 0
+                'attempts_left' => -1
             ];
         }
         return [
             'status'  => false,
-            'message' => "Sai rồi! Bạn còn " . (3 - $newClick) . " lần thử.",
+            'message' => "Sai rồi! Bạn còn " . (3 - $newClick+1) . " lần thử.",
             'attempts_left' => 3 - $newClick
         ];
     }
