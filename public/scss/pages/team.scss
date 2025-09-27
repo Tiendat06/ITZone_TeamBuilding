@@ -46,9 +46,10 @@
     }
 
     &__btn {
+      height: 42px;
       color: $normal-color;
-      border: 5px solid #3F3D70;
-      padding: 10px;
+      border: none;
+      padding: 5px;
       width: 25%;
     }
 
@@ -80,14 +81,20 @@
     }
 
     &__inp {
-      width: 65%;
+      height: 42px;
+      width: 70%;
       color: white;
       margin-left: 5px;
       border: 1.5px solid white;
       font-size: $sub-title-size;
       background-color: transparent;
-      padding: 10px 12px;
+      padding: 10px;
       border-radius: 12px;
+
+      &::placeholder {
+        opacity: 0.8;
+        color: white;
+      }
 
       &:focus-visible {
         outline: none;
