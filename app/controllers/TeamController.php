@@ -35,17 +35,16 @@ class TeamController{
     public function get_special_topic(){
         $special_topic = $this->$personService->getSpecialPuzzle();
         echo json_encode(array(
-            'status' => true,
             'special_station' => $special_topic
         ));
     }
     public function submit_special_puzzle_answer( $team_id,  $answer): array {
     return $this->personService->solveSpecialPuzzle($team_id, $answer);
     }
-    public function sendanserspice($inputKey){
-        $result = $this->personService->solveSpecialPuzzleInput($inputKey);
-        echo json_encode($result);
-    }
+    // public function sendanserspice($inputKey){
+    //     $result = $this->personService->solveSpecialPuzzleInput($inputKey);
+    //     echo json_encode($result);
+    // }
 //    [POST, FETCH] /team/update_topic_is_done
     public function update_topic_is_done($topic_id, $is_done)
     {
