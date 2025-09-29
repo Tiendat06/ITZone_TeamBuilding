@@ -159,7 +159,6 @@ class TeamPuzzleRepository{
             SET `is_clicked` = CASE
                                   WHEN `is_clicked` IS NULL THEN 1
                                   WHEN `is_clicked` < 3 THEN `is_clicked` + 1
-                                  WHEN `is_clicked` = 3 THEN 4
                                   ELSE `is_clicked`
                                END
             WHERE `team_id` = ? 
