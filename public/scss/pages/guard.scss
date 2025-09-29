@@ -167,7 +167,14 @@
 
   }
 
+}
 
+  .guard-question__confirm {
+  margin-bottom: 15%;
+    &__btn {
+      border: 0;
+      background-color: rgba(0, 0, 0, 0);
+}
 
 
 }
