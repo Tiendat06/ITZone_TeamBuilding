@@ -195,8 +195,8 @@ public function solveSpecialPuzzle($team_id, $answer): array {
     }
     $currentClick = (int) $puzzle['is_clicked'];
     // Nếu đã bị khóa sau 3 lần sai
-    if ($currentClick === 4) {
-        $this->teamPuzzleRepository->updateTeamIsDoneByTopicIdAndTeamId( $special_topic->getTopicId(),$team_id,1);
+    if ($currentClick === 3) {
+
         return [
             'status'  => false,
             'message' => 'Bạn đã hết số lần nhập đáp án'
@@ -215,16 +215,17 @@ public function solveSpecialPuzzle($team_id, $answer): array {
     } else {
         $newClick = $this->teamPuzzleRepository->incrementSpecialPuzzleClick($team_id);
 
-        if ($newClick === 4) {
+        if ($newClick === 3) {
+            $this->teamPuzzleRepository->updateTeamIsDoneByTopicIdAndTeamId( $special_topic->getTopicId(),$team_id,1);
             return [
                 'status'  => false,
                 'message' => 'Sai lần thứ 3. Ô nhập đã bị khóa.',
-                'attempts_left' => -1
+                'attempts_left' => 0
             ];
         }
         return [
             'status'  => false,
-            'message' => "Sai rồi! Bạn còn " . (3 - $newClick+1) . " lần thử.",
+            'message' => "Sai rồi! Bạn còn " . (3 - $newClick) . " lần thử.",
             'attempts_left' => 3 - $newClick
         ];
     }
