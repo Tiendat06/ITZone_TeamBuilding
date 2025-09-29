@@ -261,7 +261,7 @@ public function getSpecialPuzzle(): array {
     else {
         $is_done = false;
     }
-    if($is_success === 4){
+    if($is_success === 3){
         $is_success = false;
         $is_input_open = false;
     } else if($is_success === -1){

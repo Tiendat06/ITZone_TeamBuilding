@@ -20,11 +20,8 @@ class teamLetter {
             })
             .then(response => response.json())
             .then(data=> {
-                // console.log(JSON.stringify(specialStation, null, 2));
-                // console.log(status);
                 console.log(data);
                 if(data['special_station']['status']==false) {
-
                     modalBody.innerHTML=data['special_station']['message'];
                     modalFooter.style.display = 'none';
                 } else if(data['special_station']['data']['is_done']==true && data['special_station']['data']['is_success']==true) {
