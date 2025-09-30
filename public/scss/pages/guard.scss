@@ -172,8 +172,21 @@
   .guard-question__confirm {
   margin-bottom: 15%;
     &__btn {
+      width: 45%;
+      height: 35px;
       border: 0;
       background-color: rgba(0, 0, 0, 0);
+      box-shadow: 0 1px 8px 0 rgba(145 145 145 / 60%);
+      font-size: medium;
+      &__sucess {
+        padding-right: 5%;
+        color: #86DE8A;
+      }
+
+      &__failure {
+        padding-right: 5%;
+        color:#F44336;
+      }
 }
 
 

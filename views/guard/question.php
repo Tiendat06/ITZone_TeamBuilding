@@ -82,8 +82,8 @@
             </div>
             <div class="modal-body">
                 <div class="guard-question__confirm d-flex justify-content-around">
-                <button type="button" class="guard-question__confirm__btn"><i class="fa-thin fa-check"></i>Thành công</button>
-                <button type="button" class="guard-question__confirm__btn">Thất bại</button>
+                <button type="button" class="rounded guard-question__confirm__btn"><i class="guard-question__confirm__btn__sucess fa fa-circle-check"></i>Thành công</button>
+                <button type="button" class="rounded guard-question__confirm__btn"><i class="guard-question__confirm__btn__failure fa-solid fa-circle-xmark"></i></i>Thất bại</button>
                 </div>
                 <h6 class="">Mở khóa mật thư</h6>
                 <input type="hidden" name="" id="modal__mentor-id">
@@ -98,7 +98,7 @@
                 </div>
             </div>
             <div class="modal-footer border-0">
-                <button class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                <button class="btn btn-dark" data-bs-dismiss="modal">
                     Đóng
                 </button>
             </div>
