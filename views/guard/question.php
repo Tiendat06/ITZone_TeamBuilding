@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @var $teams
  * @var $team_arrival_progress
@@ -45,7 +46,7 @@
                         $text = 'Đã mở';
                         $bg_status = 'background-color: #86de8a !important;';
                     }
-                    ?>
+                ?>
                     <div class="mt-1 mb-3 d-flex flex-row justify-content-space-between guard-question-information">
                         <div class="d-flex flex-column justify-content-space-between guard-question-information__box">
                             <div class="guard-question-information__title"><?= $team_name ?></div>
@@ -58,7 +59,7 @@
                             <img src="/public/img/icon/<?= $icon_img ?>" alt="lock_icon">
                         </div>
                     </div>
-                    <?php
+                <?php
                 }
                 ?>
 
@@ -68,8 +69,11 @@
     </div>
 </div>
 
-<div class="modal fade" id="check-key" aria-labelledby="modalToggleLabel" tabindex="-1" style="display: none;"
-    aria-hidden="true" data-bs-backdrop="static">
+<!-- <div class="modal fade" id="check-key" aria-labelledby="modalToggleLabel" tabindex="-1" style="display: none;" aria-hidden="true" data-bs-backdrop="static">
+    <div class="modal-dialog modal-sm modal-dialog-centered"> -->
+
+
+<div class="modal fade" id="check-key" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-sm modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header border-0">
@@ -81,9 +85,9 @@
                     style="margin-bottom:10%;"></button>
             </div>
             <div class="modal-body">
-                <div class="guard-question__confirm d-flex justify-content-around">
-                <button type="button" class="rounded guard-question__confirm__btn"><i class="guard-question__confirm__btn__sucess fa fa-circle-check"></i>Thành công</button>
-                <button type="button" class="rounded guard-question__confirm__btn"><i class="guard-question__confirm__btn__failure fa-solid fa-circle-xmark"></i></i>Thất bại</button>
+                <div class="confirm d-flex justify-content-around">
+                    <button type="button" class="confirm__btn confirm__btn--success"><i class=" fa fa-circle-check"></i>Thành công</button>
+                    <button type="button" class="confirm__btn confirm__btn--failure"><i class=" fa-solid fa-circle-xmark"></i></i>Thất bại</button>
                 </div>
                 <h6 class="">Mở khóa mật thư</h6>
                 <input type="hidden" name="" id="modal__mentor-id">
@@ -118,11 +122,15 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', () => {
+        if (window.confirmHandling) {
+            confirmHandling();
+        }
         if (window.onClickBtnLock) {
             onClickBtnLock();
         }
         if (window.fetchUpdateNextPriority) {
             fetchUpdateNextPriority();
         }
+
     })
 </script>

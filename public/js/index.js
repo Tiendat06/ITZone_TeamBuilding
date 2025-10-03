@@ -67,6 +67,9 @@ window.onClickBtnLock = () => {
 window.fetchUpdateNextPriority = () => {
     guard.fetchUpdateNextPriority();
 }
+window.confirmHandling = () => {
+    guard.confirmHandling();
+};
 
 // support
 window.getLocationFetch = () => {
