@@ -1,4 +1,3 @@
-
 class Guard {
     constructor() { }
 
@@ -79,18 +78,42 @@ class Guard {
                 })
         })
     }
-    // checkAllTeamDone = () => {
-    //     let location_id = $(this).data('location_id');
-    //     fetch('/guard/#', {
-    //         method: 'POST',
-    //         headers: {
-    //             'Content-Type': 'application/json',
-    //         },
-    //         body: JSON.stringify({ location_id })
-    //     }).then(response => response.json()).then(data => {
 
-    //     })
-    // }
+
+
+
+    checkAllTeamsDone = () => {
+        console.log('Tiến độ: ', teamArrivalProgress);
+
+        if (teamArrivalProgress >= 6) {
+            // Tất cả các team đã hoàn thành
+            const modalTitle = document.querySelector('.modal-header');
+            const modalBody = document.querySelector('.modal-body');
+            const modalFooter = document.querySelector('.modal-footer');
+
+            // Thay đổi nội dung của modal
+            modalTitle.style.display = 'block';
+            modalTitle.innerHTML = `<h3 style = 'text-align: center'>Hoàn thành nhiệm vụ</h3>`;
+            modalBody.innerHTML = `
+                <div class="text-center">
+                    <img src="/public/img/topic/guard_finish.png" alt="success" style="width: 70%; margin-bottom: 20px;">
+                    <p>Tất cả mật thư của trạm này đã được mở khóa, hãy tập hợp với team hậu cần hoặc di chuyển cùng các team khác để chuẩn bị về SAB và thực hiện thử thách cuối cùng.</p>
+                </div>
+            `;
+            modalFooter.innerHTML = `
+                <button class="btn btn-dark" data-bs-dismiss="modal">Đóng</button>
+            `;
+
+            // Hiển thị modal
+            const modal = new bootstrap.Modal(document.getElementById('check-key'), {
+                backdrop: 'static',
+                keyboard: false
+            });
+            modal.show();
+        } else {
+            console.log('Vẫn còn đội chưa hoàn thành.');
+        }
+    };
 }
 
 export default new Guard;

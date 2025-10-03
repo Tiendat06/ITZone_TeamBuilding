@@ -90,9 +90,11 @@
                     <button type="button" class="confirm__btn confirm__btn--failure"><i class=" fa-solid fa-circle-xmark"></i></i>Thất bại</button>
                 </div>
                 <h6 class="">Mở khóa mật thư</h6>
+                <h6 class="text">Mở khóa mật thư</h6>
                 <input type="hidden" name="" id="modal__mentor-id">
                 <input type="hidden" name="" id="modal__team_id">
                 <input type="hidden" name="" id="modal__next_priority">
+                <input type="hidden" id="location_id" value="<?= $location_id ?>">
                 <div class="input-group">
                     <input type="text" id="modal__input-key" class="form-control" placeholder="Nhập mã định danh mentor"
                         aria-describedby="btn__check-key" />
@@ -121,6 +123,7 @@
 </div>
 
 <script>
+    const teamArrivalProgress = <?= $team_arrival_progress ?>;
     document.addEventListener('DOMContentLoaded', () => {
         if (window.confirmHandling) {
             confirmHandling();
@@ -130,6 +133,9 @@
         }
         if (window.fetchUpdateNextPriority) {
             fetchUpdateNextPriority();
+        }
+        if (window.checkAllTeamsDone) {
+            checkAllTeamsDone();
         }
 
     })

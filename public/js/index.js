@@ -71,6 +71,10 @@ window.confirmHandling = () => {
     guard.confirmHandling();
 };
 
+window.checkAllTeamsDone = () => {
+    guard.checkAllTeamsDone();
+}
+
 // support
 window.getLocationFetch = () => {
     support.getLocationFetch();
