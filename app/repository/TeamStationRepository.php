@@ -121,7 +121,7 @@ class TeamStationRepository {
         $stmt->close();
         return (int)$row['total'];
     }
-      // Kiểm tra team đã xong (is_done = 1) ở location chưa
+    // Kiểm tra team đã xong (is_done = 1) ở location chưa
     public function checkTeamIsDone( $team_id,  $location_id): bool {
         $sql = "SELECT * FROM `team_station`
                 WHERE `team_id` = ? AND `location_id` = ? AND `is_done` = 1";

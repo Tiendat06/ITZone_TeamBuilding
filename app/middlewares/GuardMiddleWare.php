@@ -1,21 +1,24 @@
 <?php
 
-class  GuardMiddleWare{
+class  GuardMiddleWare
+{
     private GuardController $guardController;
     public function __construct()
     {
         $this->guardController = new GuardController();
     }
 
-    public function update_next_location(){
+    public function update_next_location()
+    {
         $content = file_get_contents('php://input');
         $data = json_decode($content, true);
-        if(!empty($data['team_id']) && !empty($data['mentor_id']) && !empty($data['next_priority']) && !empty($data['input'])){
+        if (!empty($data['team_id']) && !empty($data['mentor_id']) && !empty($data['next_priority']) && !empty($data['input'])) {
             $team_id = $data['team_id'];
             $mentor_id = $data['mentor_id'];
             $next_priority = $data['next_priority'];
             $inputKey = $data['input'];
-            $this->guardController->update_next_location($team_id, $mentor_id, $next_priority, $inputKey);
+            $is_success = $data['is_success'] ?? false;
+            $this->guardController->update_next_location($team_id, $mentor_id, $next_priority, $inputKey, $is_success);
         } else {
             echo json_encode(array(
                 'status' => false,
@@ -23,7 +26,8 @@ class  GuardMiddleWare{
             ));
         }
     }
-    public function update_special_station_result() {
+    public function update_special_station_result()
+    {
         $content = file_get_contents('php://input');
         $data = json_decode($content, true);
 
@@ -38,7 +42,8 @@ class  GuardMiddleWare{
             ]);
         }
     }
-     public function activate_special_puzzle() {
+    public function activate_special_puzzle()
+    {
         $content = file_get_contents('php://input');
         $data = json_decode($content, true);
 
@@ -53,9 +58,10 @@ class  GuardMiddleWare{
             ]);
         }
     }
-    public function activate_special_puzzle_input() {
-    $result = $this->guardController->activate_special_puzzle_input();
-    echo json_encode($result);
+    public function activate_special_puzzle_input()
+    {
+        $result = $this->guardController->activate_special_puzzle_input();
+        echo json_encode($result);
     }
 
     public function index()
@@ -71,18 +77,17 @@ class  GuardMiddleWare{
     {
         if ((!isset($_SESSION['person_id']) && !isset($_SESSION['role_name'])) || $_SESSION['role_name'] != 'guard') {
             header('location: /');
-        } else{
+        } else {
             $this->guardController->question();
         }
     }
 
-    public function guard_rule(){
+    public function guard_rule()
+    {
         if ((!isset($_SESSION['person_id']) && !isset($_SESSION['role_name'])) || $_SESSION['role_name'] != 'guard') {
             header('location: /');
-        } else{
+        } else {
             $this->guardController->guard_rule();
         }
     }
 }
-
-?>
