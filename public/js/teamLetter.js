@@ -39,14 +39,21 @@ class TeamLetter {
         })
             .then(response => response.json())
             .then(data => {
+                console.log(data);
                 const special_station = data.special_station;
                 const status = special_station.status;
                 if (status === false) {
+                    //If the special letter is not opened to the teams
                     modalBody.innerHTML = data.special_station.message;
                     modalFooter.style.display = 'none';
                 } else if (status === true) {
                     modalBody.innerHTML = special_station.data.topic_link;
                     const { is_done, is_success } = special_station.data;
+                    if(special_station.data.is_input_open===false && is_done===false) {
+                        //if the special letter IS open for the teams, but the input button is blocked
+                        modalFooter.style.display='none';
+                    } else if(special_station.data.is_input_open===true || is_done===true) {
+                    //If the team has finished
                     if (is_done === true && is_success === true)
                         updateModal(
                             "Thành công",
@@ -60,6 +67,7 @@ class TeamLetter {
                             '/public/img/topic/icon-cry.png'
                         );
                     }
+                }
                 }
             })
 

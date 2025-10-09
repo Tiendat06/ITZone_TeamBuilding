@@ -131,9 +131,11 @@
             getBusBack();
         }
     })
-    window.addEventListener('DOMContentLoaded', () => {
-        if (window.checkLetterAnswer) {
-            checkLetterAnswer();
-        }
+    $(function() {
+        $(document).on('click', '.team-letter__trigger', function () {
+            if (window.checkLetterAnswer) {
+                checkLetterAnswer();
+            }
+        });
     });
 </script>
