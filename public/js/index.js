@@ -4,7 +4,7 @@ import log from "./log.js";
 import support from './support.js';
 import guard from './guard.js'
 import team from "./team.js";
-import teamLetter from './teamLetter.js';
+import TeamLetter from './teamLetter.js';
 
 // site.index();
 // site.ajaxTest();
@@ -91,5 +91,5 @@ window.getTeamMember = () => {
 }
 //teamLetter
 window.checkLetterAnswer = () => {
-    teamLetter.checkLetterAnswer();
+    TeamLetter.checkLetterAnswer();
 }

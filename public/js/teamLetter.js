@@ -1,4 +1,4 @@
-class teamLetter {
+class TeamLetter {
     constructor() { };
     checkLetterAnswer() {
         const inputField = document.getElementById('team--letter-input');
@@ -106,4 +106,4 @@ class teamLetter {
 
     }
 }
-export default new teamLetter;
+export default new TeamLetter;
