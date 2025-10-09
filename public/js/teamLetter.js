@@ -41,19 +41,19 @@ class TeamLetter {
             .then(data => {
                 const special_station = data.special_station;
                 const status = special_station.status;
-                if (status == false) {
+                if (status === false) {
                     modalBody.innerHTML = data.special_station.message;
                     modalFooter.style.display = 'none';
-                } else if (status == true) {
+                } else if (status === true) {
                     modalBody.innerHTML = special_station.data.topic_link;
                     const { is_done, is_success } = special_station.data;
-                    if (is_done == true && is_success == true)
+                    if (is_done === true && is_success === true)
                         updateModal(
                             "Thành công",
                             `<span style="color: white"> Chúc mừng bạn đã trả lời đúng </span> <br> Cảm ơn bạn đã tham gia trò chơi`,
                             '/public/img/topic/icon-success.png'
                         );
-                    else if (is_done == true && is_success == false) {
+                    else if (is_done === true && is_success === false) {
                         updateModal(
                             "Thất bại",
                             `<span style="color: white"> Rất tiếc, bạn đã trả lời sai </span> <br> Cảm ơn bạn đã tham gia trò chơi`,
@@ -86,7 +86,7 @@ class TeamLetter {
                         inputField.value = '';
                         inputField.style.border = "1px solid red";
                         showToast(message, status);
-                        if ((attempts_left <= 0 || attempts_left == undefined) && answer != '')
+                        if ((attempts_left <= 0 || attempts_left === undefined) && answer != '')
                             updateModal(
                                 "Thất bại",
                                 `<span style="color: white"> Rất tiếc, bạn đã trả lời sai </span> <br> Cảm ơn bạn đã tham gia trò chơi`,
