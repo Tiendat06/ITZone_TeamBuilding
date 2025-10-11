@@ -173,6 +173,18 @@ class TeamArrivalRepository{
         return $affected_row;
     }
 
+    public function updateIsShowNextLocationForSpecialLetter($team_id, $location_id): bool{
+        $sql = "UPDATE `team_arrival`
+        SET `is_show_next_location` = 1
+        WHERE `team_id` = ? AND `location_id` = ?";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bind_param('ss', $team_id, $location_id);
+        $stmt->execute();
+        $affected_row = $stmt->affected_rows;
+        $stmt->close();
+        return $affected_row;
+    }
+
     public function updateIsOpenNextLocationByTeamIdAndLocationId($team_id, $location_id): bool{
         $sql = "UPDATE `team_arrival`
          SET `is_open_next_location` = 1
@@ -228,6 +240,19 @@ class TeamArrivalRepository{
             return $row['location_id'];
         }
         return '';
+    }
+
+    public function openSpecialLetterInput($location_id){
+        $sql = "UPDATE `team_arrival`
+                SET `is_open_next_location` = 1
+                WHERE `is_show_next_location` = 1
+                AND `location_id` = ?";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bind_param('s', $location_id);
+        $stmt->execute();
+        $affected_row = $stmt->affected_rows;
+        $stmt->close();
+        return $affected_row;
     }
 }
 

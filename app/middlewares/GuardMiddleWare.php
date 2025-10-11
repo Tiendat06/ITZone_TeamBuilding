@@ -90,4 +90,14 @@ class  GuardMiddleWare
             $this->guardController->guard_rule();
         }
     }
+
+    public function open_special_letter_input() {
+        if ((!isset($_SESSION['person_id']) && !isset($_SESSION['role_name'])) || $_SESSION['role_name'] != 'guard') {
+            echo json_encode(array(
+                'status' => false,
+                'data' => null
+            ));
+        }
+        return $this->guardController->open_special_letter_input();
+    }
 }

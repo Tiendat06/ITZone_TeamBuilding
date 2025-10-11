@@ -43,6 +43,9 @@
                     else if ($_GET['param_2'] == 'activate_special_puzzle_input') {
                         $guardMiddleWare->activate_special_puzzle_input();
                     }
+                    else if ($_GET['param_2'] == 'open_special_letter_input') {
+                        $guardMiddleWare->open_special_letter_input();
+                    }
                     break;
             }
         } else if (isset($_GET['param_1'])){

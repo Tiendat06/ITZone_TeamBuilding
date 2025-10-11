@@ -1283,7 +1283,7 @@ a {
   height: 20vw;
 }
 .team .team-letter__content {
-  font-family: Patrick Hand;
+  /*font-family: Patrick Hand;*/
   font-weight: 400;
   font-style: Regular;
   font-size: 18px;
@@ -1310,8 +1310,8 @@ a {
   outline: none;
 }
 .team .team-letter__background {
-  padding-top: 5%;
-  padding-bottom: 5%;
+  /*padding-top: 5%;*/
+  /*padding-bottom: 5%;*/
   border-radius: 5%;
   background: linear-gradient(141deg, rgb(30, 34, 71) 0%, rgb(55, 55, 109) 50%);
 }

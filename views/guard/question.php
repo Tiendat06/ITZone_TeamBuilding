@@ -4,6 +4,8 @@
  * @var $teams
  * @var $team_arrival_progress
  * @var $team_arrival_percent_complete
+ * @var $location_id
+ * @var $realGuardId
  */
 ?>
 
@@ -23,12 +25,12 @@
         <div class="row d-flex flex-column guard-question-container">
             <div class=" guard-question-progressbar d-flex flex-row justify-content-center">
                 <div class="guard-question-progressbar__title" style="width: 60px">Tiến độ</div>
-                <span class="progressbar">
+                <div class="progressbar">
                     <div style="width: <?= $team_arrival_percent_complete ?>%" class="progressbar__active"></div>
                     <div class="progressbar__number align-content-start" style="width: 60px">
                         <?= $team_arrival_progress ?>/6
                     </div>
-                </span>
+                </div>
             </div>
             <div class="row col-md-12 guard-question-table">
                 <?php
@@ -38,34 +40,64 @@
                     $mentor_id = $row['mentor_id'];
                     $team_arrival_priority = $row['team_arrival_priority'];
                     $is_open_next_location = $row['is_open_next_location'];
+                    $is_show_next_location = $row['is_show_next_location'];
+                    $is_unlock_next_station = $realGuardId !== 'GUA0000007' ? $is_open_next_location : $is_show_next_location;
                     $icon_img = 'icon_lock.png';
                     $text = 'Khóa';
                     $bg_status = '';
-                    if ($is_open_next_location == 1) {
-                        $icon_img = 'icon-unlock.png';
+                    if ($is_unlock_next_station == 1) {
+                        if ($realGuardId !== 'GUA0000007')
+                            $icon_img = 'icon-unlock.png';
                         $text = 'Đã mở';
                         $bg_status = 'background-color: #86de8a !important;';
                     }
-                ?>
+                    if ($is_open_next_location == 1 && $realGuardId === 'GUA0000007'){
+                        $icon_img = 'icon-unlock.png';
+                    }
+                    ?>
                     <div class="mt-1 mb-3 d-flex flex-row justify-content-space-between guard-question-information">
                         <div class="d-flex flex-column justify-content-space-between guard-question-information__box">
                             <div class="guard-question-information__title"><?= $team_name ?></div>
                             <div style="<?= $bg_status ?>" class="guard-question-information__status"><?= $text ?></div>
                         </div>
-                        <div data-bs-toggle="modal" <?= $is_open_next_location == 0 ? 'data-bs-target="#check-key"' : "" ?>
-                            data-team_id="<?= $team_id ?>" data-team_name="<?= $team_name ?>"
-                            data-team_next_priority="<?= $team_arrival_priority + 1 ?>" data-mentor_id="<?= $mentor_id ?>"
-                            class="d-flex align-items-center guard-btn__lock justify-content-end guard-question-information__icon">
+                        <div data-bs-toggle="modal" <?= $is_unlock_next_station == 0 && $realGuardId !== 'GUA0000007' ? 'data-bs-target="#check-key"' : "" ?>
+                             data-team_id="<?= $team_id ?>" data-team_name="<?= $team_name ?>"
+                             data-team_next_priority="<?= $team_arrival_priority + 1 ?>"
+                             data-mentor_id="<?= $mentor_id ?>"
+                             class="d-flex align-items-center guard-btn__lock justify-content-end guard-question-information__icon">
                             <img src="/public/img/icon/<?= $icon_img ?>" alt="lock_icon">
                         </div>
                     </div>
-                <?php
+                    <?php
                 }
                 ?>
 
             </div>
         </div>
 
+        <?php
+        if ($realGuardId == "GUA0000007") {
+            ?>
+            <div style="width: 85%" class="confirm d-flex flex-wrap justify-content-around mt-4">
+                <h6 class="col-lg-12 col-md-12 col-sm-12 guard-question-title__para itz-btn-hover">Kích hoạt vùng nhập
+                    mật thư </h6>
+                <div style="width: 100%; height: auto; border-radius: 15px"
+                     class="p-2 d-flex justify-content-between align-items-center col-lg-12 col-md-12 col-sm-12 confirm__btn">
+                    <div class="col-lg-1 col-md-1 col-sm-1">
+                        <img src="/public/img/icon/icon-success.png" alt="icon">
+                    </div>
+                    <div style="padding: 0 5px 0 10px" class="col-lg-8 col-md-8 col-sm-8">
+                        <span style="color: #000000">Nhấn vào để kích hoạt vùng nhập mật thư.</span>
+                    </div>
+                    <button id="special-letter__btn--open" style="height: 30px; width: auto; margin-right: 5px"
+                            class="confirm__btn confirm__btn--secondary col-lg-3 col-md-3 col-sm-3">
+                        Kích hoạt
+                    </button>
+                </div>
+            </div>
+            <?php
+        }
+        ?>
     </div>
 </div>
 
@@ -73,7 +105,8 @@
     <div class="modal-dialog modal-sm modal-dialog-centered"> -->
 
 
-<div class="modal fade" id="check-key" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal fade" id="check-key" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+     aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-sm modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header border-0">
@@ -82,14 +115,17 @@
                     <h6 class="text-muted">Xác nhận thử thách đồng đội</h6>
                 </div>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
-                    style="margin-bottom:10%;"></button>
+                        style="margin-bottom:10%;"></button>
             </div>
             <div class="modal-body">
                 <div class="confirm d-flex justify-content-around">
-                    <button type="button" class="confirm__btn confirm__btn--success"><i class=" fa fa-circle-check"></i>Thành công</button>
-                    <button type="button" class="confirm__btn confirm__btn--failure"><i class=" fa-solid fa-circle-xmark"></i></i>Thất bại</button>
+                    <button type="button" class="confirm__btn confirm__btn--success"><i class=" fa fa-circle-check"></i>Thành
+                        công
+                    </button>
+                    <button type="button" class="confirm__btn confirm__btn--failure"><i
+                                class=" fa-solid fa-circle-xmark"></i></i>Thất bại
+                    </button>
                 </div>
-                <h6 class="">Mở khóa mật thư</h6>
                 <h6 class="text">Mở khóa mật thư</h6>
                 <input type="hidden" name="" id="modal__mentor-id">
                 <input type="hidden" name="" id="modal__team_id">
@@ -97,7 +133,7 @@
                 <input type="hidden" id="location_id" value="<?= $location_id ?>">
                 <div class="input-group">
                     <input type="text" id="modal__input-key" class="form-control" placeholder="Nhập mã định danh mentor"
-                        aria-describedby="btn__check-key" />
+                           aria-describedby="btn__check-key"/>
                     <button class="btn btn-secondary" type="button" id="btn__check-key">
                         <img src="/public/img/icon/icon-key.png" alt="">
                     </button>
@@ -136,6 +172,9 @@
         }
         if (window.checkAllTeamsDone) {
             checkAllTeamsDone();
+        }
+        if (window.fetchOpenSpecialLetterInput){
+            fetchOpenSpecialLetterInput();
         }
 
     })

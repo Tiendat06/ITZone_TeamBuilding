@@ -19,7 +19,7 @@
         </div>
     </div>
     <div class="team-letter">
-        <button type="button" class="itz-btn-trigger team-letter__trigger" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
+        <button id="special-letter-btn" type="button" class="itz-btn-trigger team-letter__trigger" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="team-letter__background modal-content">
@@ -34,27 +34,24 @@
                     </div>
 
                     <div class="team-letter__footer">
-                        <div class="form-group d-flex justify-content-between">
+                        <div id="team-letter__footer--inp" class="form-group d-flex justify-content-between">
                             <input id="team--letter-input" placeholder="Nhập đáp án" type="text" class="team-letter__inp">
                             <button id="team--letter-btn" type="submit" class="itz-btn-modal team-letter__btn">Gửi</button>
                         </div>
                     </div>
                     <button class="itz-btn-normal itz-btn-modal team-letter__continue d-none">Tiếp tục</button>
-
-                    <div id="toast-modal" class="bs-toast d-none toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
-                        <div class="toast-body position-relative w-100 d-flex flex-wrap justify-content-between align-items-center">
-                            <span id="toast-message-modal">Chúc mừng bạn đã tìm ra đáp án</span>
-                            <div class="toast-icon" id="toast-close-modal">
-                                <i class="toast-icon--inner fa-regular fa-rectangle-xmark"></i>
-                            </div>
-                            <img style="width: 30px" class="toast-body__cloud" src="/public/img/icon/icon-cloud.png" alt="">
-                        </div>
+                </div>
+            </div>
+            <div id="toast-modal" class="bs-toast d-none toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-body position-relative w-100 d-flex flex-wrap justify-content-between align-items-center">
+                    <span id="toast-message-modal">Chúc mừng bạn đã tìm ra đáp án</span>
+                    <div class="toast-icon" id="toast-close-modal">
+                        <i class="toast-icon--inner fa-regular fa-rectangle-xmark"></i>
                     </div>
-
+                    <img style="width: 30px" class="toast-body__cloud" src="/public/img/icon/icon-cloud.png" alt="">
                 </div>
             </div>
         </div>
-
 
     </div>
 

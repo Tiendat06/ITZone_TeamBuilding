@@ -1,5 +1,6 @@
 class Guard {
-    constructor() { }
+    constructor() {
+    }
 
     onClickBtnLock = () => {
         // console.log('ahihi');
@@ -20,8 +21,9 @@ class Guard {
         console.log('confirmHandling');
         const confirmBtnSuccess = document.querySelector(".confirm__btn--success");
         const confirmBtnFailure = document.querySelector(".confirm__btn--failure");
-        console.log(confirmBtnSuccess);
-        console.log(confirmBtnFailure);
+        const confirmBtnSecondary = document.querySelector(".confirm__btn--secondary");
+        // console.log(confirmBtnSuccess);
+        // console.log(confirmBtnFailure);
         confirmBtnSuccess.addEventListener('click', () => {
             this.is_success = true;
             confirmBtnSuccess.style.backgroundColor = '#86DE8A2B';
@@ -33,8 +35,12 @@ class Guard {
             confirmBtnSuccess.style.backgroundColor = 'white';
             this.is_success = false;
         })
-    }
 
+        confirmBtnSecondary.addEventListener('click', () => {
+            confirmBtnSecondary.style.backgroundColor = '#F2F2F2';
+            // this.is_success = true;
+        })
+    }
 
 
     fetchUpdateNextPriority = () => {
@@ -80,8 +86,6 @@ class Guard {
     }
 
 
-
-
     checkAllTeamsDone = () => {
         console.log('Tiến độ: ', teamArrivalProgress);
 
@@ -114,6 +118,39 @@ class Guard {
             console.log('Vẫn còn đội chưa hoàn thành.');
         }
     };
+
+    fetchOpenSpecialLetterInput = () => {
+        $('#special-letter__btn--open').click(function () {
+            fetch('/guard/open_special_letter_input', {
+                method: 'POST'
+            })
+                .then(res => res.json())
+                .then(async (data) => {
+                    if (data['status'] === true) {
+                        $('#toast-message').html('Cập nhật thành công! Chờ 3s để cập nhật');
+                        $('#toast').removeClass('d-none').addClass('bg-success');
+
+                        let timerId = await new Promise(resolve => setTimeout(() => {
+                            $('#toast').addClass('d-none').removeClass('bg-success');
+                            resolve();
+                        }, 3000))
+                        clearTimeout(timerId);
+                        window.location = '/guard/question'
+                    } else {
+                        $('#toast-message').html('Cập nhật thất bại!');
+                        $('#toast').removeClass('d-none').addClass('bg-danger');
+
+                        let timerId = await new Promise(resolve => setTimeout(() => {
+                            $('#toast').addClass('d-none').removeClass('bg-danger');
+                            resolve();
+                        }, 3000))
+                        clearTimeout(timerId);
+                    }
+                })
+                .catch(err => console.log(err))
+        })
+
+    }
 }
 
 export default new Guard;

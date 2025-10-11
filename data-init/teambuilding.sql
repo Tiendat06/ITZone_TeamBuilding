@@ -38,7 +38,7 @@ CREATE TABLE `account` (
 --
 -- Dumping data for table `account`
 --
-
+    
 INSERT INTO `account` (`account_id`, `account_username`, `account_password`, `person_id`, `role_id`) VALUES
 ('ACC0000001', 'mentor01', 'mentor01_ITZone', 'MEN0000001', 'ROL0000001'),
 ('ACC0000002', 'mentor02', 'mentor02_ITZone', 'MEN0000002', 'ROL0000001'),
@@ -52,6 +52,7 @@ INSERT INTO `account` (`account_id`, `account_username`, `account_password`, `pe
 ('ACC0000010', 'guard10', 'guard04_ITZone', 'GUA0000004', 'ROL0000002'),
 ('ACC0000011', 'guard11', 'guard05_ITZone', 'GUA0000005', 'ROL0000002'),
 ('ACC0000012', 'guard12', 'guard06_ITZone', 'GUA0000006', 'ROL0000002'),
+('ACC0000020', 'guard13', 'guard07_ITZone', 'GUA0000007', 'ROL0000002'),
 ('ACC0000013', 'support13', 'support01_ITZone', 'SUP0000001', 'ROL0000003'),
 ('ACC0000014', 'team01', 'team01_ITZone', 'TEA0000001', 'ROL0000004'),
 ('ACC0000015', 'team02', 'team02_ITZone', 'TEA0000002', 'ROL0000004'),
