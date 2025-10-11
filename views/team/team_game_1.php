@@ -22,18 +22,18 @@
         <button id="special-letter-btn" type="button" class="itz-btn-trigger team-letter__trigger" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
-                <div class="team-letter__background modal-content">
+                <div class="team-letter__background modal-content p-2">
                     <div class="modal-header flex-column" style="border:none;">
+                        <button style="font-size: 18px" type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                         <h1 class="team-letter__status d-none"></h1>
                         <img class="team-letter__icon" src="/public/img/topic/icon-special-letter.png" alt="">
                         <h1 class="modal-title fs-5 team-letter__header" id="exampleModalLabel">MẬT THƯ ĐẶC BIỆT</h1>
-
                     </div>
                     <div class="modal-body team-letter__content">
-                        <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
+
                     </div>
 
-                    <div class="team-letter__footer">
+                    <div class="team-letter__footer p-2">
                         <div id="team-letter__footer--inp" class="form-group d-flex justify-content-between">
                             <input id="team--letter-input" placeholder="Nhập đáp án" type="text" class="team-letter__inp">
                             <button id="team--letter-btn" type="submit" class="itz-btn-modal team-letter__btn">Gửi</button>
