@@ -36,10 +36,11 @@ class Guard {
             this.is_success = false;
         })
 
-        confirmBtnSecondary.addEventListener('click', () => {
-            confirmBtnSecondary.style.backgroundColor = '#F2F2F2';
-            // this.is_success = true;
-        })
+        if (confirmBtnSecondary !== null && confirmBtnSecondary !== undefined)
+            confirmBtnSecondary.addEventListener('click', () => {
+                confirmBtnSecondary.style.backgroundColor = '#F2F2F2';
+                // this.is_success = true;
+            })
     }
 
 

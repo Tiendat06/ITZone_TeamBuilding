@@ -41,7 +41,7 @@
                     $team_arrival_priority = $row['team_arrival_priority'];
                     $is_open_next_location = $row['is_open_next_location'];
                     $is_show_next_location = $row['is_show_next_location'];
-                    $is_unlock_next_station = $realGuardId !== 'GUA0000007' ? $is_open_next_location : $is_show_next_location;
+                    $is_unlock_next_station = $realGuardId !== 'GUA0000007' && $realGuardId !== 'GUA0000006' ? $is_open_next_location : $is_show_next_location;
                     $icon_img = 'icon_lock.png';
                     $text = 'Khóa';
                     $bg_status = '';
@@ -91,7 +91,7 @@
                     </div>
                     <button id="special-letter__btn--open" style="height: 30px; width: auto; margin-right: 5px"
                             class="confirm__btn confirm__btn--secondary col-lg-3 col-md-3 col-sm-3">
-                        Kích hoạt
+                        <span style="color: #000000">Kích hoạt</span>
                     </button>
                 </div>
             </div>

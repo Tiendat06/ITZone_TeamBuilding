@@ -39,7 +39,7 @@ class TeamController{
         ));
     }
     public function submit_special_puzzle_answer( $team_id,  $answer): array {
-    return $this->personService->solveSpecialPuzzle($team_id, $answer);
+        return $this->personService->solveSpecialPuzzle($team_id, $answer);
     }
     // public function sendanserspice($inputKey){
     //     $result = $this->personService->solveSpecialPuzzleInput($inputKey);
