@@ -11,7 +11,9 @@ class TeamMiddleWare{
     }
     public function get_special_topic() {
     // Gọi service/controller để lấy topic đặc biệt
-    $special_topic = $this->teamController->get_special_topic(); }// hoặc personService nếu dùng service riêng
+    $special_topic = $this->teamController->get_special_topic();
+    }// hoặc personService nếu dùng service riêng
+
     public function submit_special_puzzle_answer() {
     $content = file_get_contents('php://input');
     $data = json_decode($content, true);

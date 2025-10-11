@@ -10,9 +10,13 @@ class  GuardMiddleWare
 
     public function update_next_location()
     {
+        $guardId = $_SESSION['person_id'];
         $content = file_get_contents('php://input');
         $data = json_decode($content, true);
-        if (!empty($data['team_id']) && !empty($data['mentor_id']) && !empty($data['next_priority']) && !empty($data['input'])) {
+        if (!empty($data['team_id'])
+            && !empty($data['mentor_id'])
+            && (!empty($data['next_priority']) || $guardId === 'GUA0000006')
+            && !empty($data['input'])) {
             $team_id = $data['team_id'];
             $mentor_id = $data['mentor_id'];
             $next_priority = $data['next_priority'];

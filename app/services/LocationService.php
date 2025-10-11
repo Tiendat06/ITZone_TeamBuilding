@@ -1,10 +1,12 @@
 <?php
 
-class LocationService{
+class LocationService
+{
     private LocationRepository $locationRepository;
     private TopicRepository $topicRepository;
     private TeamPuzzleRepository $teamPuzzleRepository;
     private PersonRepository $personRepository;
+
     public function __construct()
     {
         $this->locationRepository = new LocationRepository();
@@ -13,11 +15,13 @@ class LocationService{
         $this->personRepository = new PersonRepository();
     }
 
-    public function getLocations(): array {
+    public function getLocations(): array
+    {
         return $this->locationRepository->getLocations();
     }
 
-    public function getLocationByLocationId($location_id): array{
+    public function getLocationByLocationId($location_id): array
+    {
         $location_data = $this->locationRepository->getLocationByLocationId($location_id);
 
         return array(
@@ -29,7 +33,8 @@ class LocationService{
         );
     }
 
-    public function index($location_id): array{
+    public function index($location_id): array
+    {
         $topic = $this->topicRepository->getTopicByLocationId($location_id);
         $topic_id = $topic->getTopicId();
         $topic_link = $topic->getTopicLink();
@@ -37,7 +42,7 @@ class LocationService{
         $team_puzzle = $this->teamPuzzleRepository->getTeamPuzzlesByTeamIdAndTopicId($team_id, $topic_id);
         $team_end_topic = $team_puzzle['time_end'];
 
-        if(!$this->teamPuzzleRepository->isTeamClickedTopicByTeamIdAndTopicId($team_id, $topic_id)){
+        if (!$this->teamPuzzleRepository->isTeamClickedTopicByTeamIdAndTopicId($team_id, $topic_id)) {
             $time_end = new DateTime('now', new DateTimeZone('Asia/Ho_Chi_Minh'));
             $time_end->modify('+30 minutes 3 seconds');
             $formatted_time_end = $time_end->format('Y-m-d H:i:s');
@@ -53,38 +58,28 @@ class LocationService{
         );
     }
 
-    public function checkTopicAnswerIsCorrect($topic_answer, $location_id): array{
-        $trim_topic_answer = preg_replace('/\s+/', '', $topic_answer);
-
+    public function checkTopicAnswerIsCorrect($topic_answer, $location_id): array
+    {
         $location = $this->locationRepository->getLocationByLocationId($location_id);
         $topic = $this->topicRepository->getTopicByLocationId($location_id);
         $topic_answer_db = $topic->getTopicAnswer();
         $location_address = $location->getLocationAddress();
         $location_name = $location->getLocationName();
-        $new_topic_answer = '';
-
-        if(strlen($trim_topic_answer) < strlen($topic_answer_db)){
-            return array(
-                'is_correct' => $topic_answer_db === $new_topic_answer,
-            );
-        }
-
-        for($i = 0; $i < strlen($topic_answer_db); $i++){
-            $new_topic_answer .= $trim_topic_answer[$i];
-        }
 
         return array(
-            'is_correct' => $topic_answer_db === $new_topic_answer,
+            'is_correct' => $topic_answer_db === $topic_answer,
             'location_address' => $location_address,
             'location_name' => $location_name
         );
     }
 
-    public function getAnswerByLocationId($location_id): Location{
+    public function getAnswerByLocationId($location_id): Location
+    {
         return $this->locationRepository->getLocationByLocationId($location_id);
     }
 
-    public function checkMentorKey($topic_answer): array{
+    public function checkMentorKey($topic_answer): array
+    {
         $team_id = $_SESSION['person_id'];
         $team_member = $this->personRepository->getTeamMemberByTeamIdOrMentorId($team_id);
 
@@ -94,12 +89,14 @@ class LocationService{
         );
     }
 
-    public function getLocationDataByPersonId(): Location {
+    public function getLocationDataByPersonId(): Location
+    {
         $person_id = $_SESSION['person_id'];
         return $this->locationRepository->getLocationDataByPersonId($person_id);
     }
 
-    public function getLocationDataByGuardId($person_id): Location {
+    public function getLocationDataByGuardId($person_id): Location
+    {
         return $this->locationRepository->getLocationDataByPersonId($person_id);
     }
 

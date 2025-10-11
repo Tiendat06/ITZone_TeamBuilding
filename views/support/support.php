@@ -49,6 +49,13 @@
                             <span class="support-content__contact--phone col-sm-4 col-md-4">0356779197</span>
                         </div>
 
+                        <div class="support-content__contact--item d-flex flex-wrap">
+                            <div class="support-content__contact--info d-flex flex-wrap align-items-center col-sm-8 col-md-8">
+                                <img style="width: 30px" class="support-content__contact--img" src="/public/img/icon/icon-phone.png" alt="">
+                                <span style="margin-left: 5px" class="mb-0 support-content__contact--para">Tuấn Kiệt</span>
+                            </div>
+                            <span class="support-content__contact--phone col-sm-4 col-md-4">0981530964</span>
+                        </div>
 
                     </div>
 

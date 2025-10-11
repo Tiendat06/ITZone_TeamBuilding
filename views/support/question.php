@@ -24,7 +24,7 @@
                             <div class="support-question__location--item-inner col-sm-12 d-flex justify-content-center">
                                 <div class="support-question__location--item-mid d-flex flex-wrap justify-content-center">
                                     <img src="/public/img/icon/carbon_map.png" class="mt-2" alt="">
-                                    <p class="mb-0 text-light support-question__item--para mt-2">Phố đi bộ</p>
+                                    <p class="mb-0 text-light support-question__item--para mt-2">Bến bạch đằng</p>
                                 </div>
                             </div>
                             <div class="support-question__location--item-inner col-sm-12 d-flex justify-content-center">
@@ -36,7 +36,7 @@
                             <div class="support-question__location--item-inner col-sm-12 d-flex justify-content-center">
                                 <div class="support-question__location--item-mid d-flex flex-wrap justify-content-center">
                                     <img src="/public/img/icon/carbon_map.png" class="mt-2" alt="">
-                                    <p class="mb-0 text-light support-question__item--para mt-2">Công viên</p>
+                                    <p class="mb-0 text-light support-question__item--para mt-2">Nhà hát TP.HCM</p>
                                 </div>
                             </div>
                         </div>

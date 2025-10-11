@@ -53,8 +53,8 @@ class GuardController{
         $guardId = $_SESSION['person_id'];
         $realGuardId = $guardId;
         $location = $this->locationService->getLocationDataByPersonId();
-        if ($guardId == "GUA0000007") {
-//            $guardId = "GUA0000006";
+        if ($guardId == "GUA0000006") {
+            $guardId = "GUA0000007";
             $location = $this->locationService->getLocationDataByGuardId($guardId);
         }
         $location_id = $location->getLocationId();
