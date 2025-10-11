@@ -1,5 +1,7 @@
 class teamLetter {
-    constructor() { };
+    constructor() {
+    };
+
     checkLetterAnswer() {
         const inputField = document.getElementById('team--letter-input');
         const submitButton = document.getElementById('team--letter-btn');
@@ -34,34 +36,46 @@ class teamLetter {
             modalFooter.style.display = 'none';
         };
 
-        fetch('/team/get_special_topic', {
-            method: 'POST',
-        })
-            .then(response => response.json())
-            .then(data => {
-                const special_station = data.special_station;
-                const status = special_station.status;
-                if (status == false) {
-                    modalBody.innerHTML = data.special_station.message;
-                    modalFooter.style.display = 'none';
-                } else if (status == true) {
-                    modalBody.innerHTML = special_station.data.topic_link;
-                    const { is_done, is_success } = special_station.data;
-                    if (is_done == true && is_success == true)
-                        updateModal(
-                            "Thành công",
-                            `<span style="color: white"> Chúc mừng bạn đã trả lời đúng </span> <br> Cảm ơn bạn đã tham gia trò chơi`,
-                            '/public/img/topic/icon-success.png'
-                        );
-                    else if (is_done == true && is_success == false) {
-                        updateModal(
-                            "Thất bại",
-                            `<span style="color: white"> Rất tiếc, bạn đã trả lời sai </span> <br> Cảm ơn bạn đã tham gia trò chơi`,
-                            '/public/img/topic/icon-cry.png'
-                        );
-                    }
-                }
+        $('#special-letter-btn').click(function () {
+            fetch('/team/get_special_topic', {
+                method: 'POST',
             })
+                .then(response => response.json())
+                .then(data => {
+                    const special_station = data.special_station;
+                    const status = special_station.status;
+                    if (status === false) {
+                        modalBody.innerHTML = data.special_station.message;
+                        modalFooter.style.display = 'none';
+                    } else if (status === true) {
+                        modalBody.innerHTML = special_station.data.topic_link;
+                        const {is_done, is_success, is_input_open} = special_station.data;
+
+                        const teamLetterInput = $('#team-letter__footer--inp');
+                        if(is_input_open){
+                            if (teamLetterInput.hasClass('d-none'))
+                                teamLetterInput.removeClass('d-none')
+                        } else{
+                            if (!teamLetterInput.hasClass('d-none'))
+                                teamLetterInput.addClass('d-none')
+                        }
+
+                        if (is_done === true && is_success === true)
+                            updateModal(
+                                "Thành công",
+                                `<span style="color: white"> Chúc mừng bạn đã trả lời đúng </span> <br> Cảm ơn bạn đã tham gia trò chơi`,
+                                '/public/img/topic/icon-success.png'
+                            );
+                        else if (is_done === true && is_success === false) {
+                            updateModal(
+                                "Thất bại",
+                                `<span style="color: white"> Rất tiếc, bạn đã trả lời sai </span> <br> Cảm ơn bạn đã tham gia trò chơi`,
+                                '/public/img/topic/icon-cry.png'
+                            );
+                        }
+                    }
+                })
+        })
 
         submitButton.addEventListener('click', () => {
             const answer = inputField.value.trim();
@@ -71,11 +85,11 @@ class teamLetter {
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ answer }),
+                body: JSON.stringify({answer}),
             })
                 .then(response => response.json())
                 .then(data => {
-                    const { status, message, attempts_left } = data;
+                    const {status, message, attempts_left} = data;
                     if (status === true) {
                         updateModal(
                             "Thành công",
@@ -86,7 +100,7 @@ class teamLetter {
                         inputField.value = '';
                         inputField.style.border = "1px solid red";
                         showToast(message, status);
-                        if ((attempts_left <= 0 || attempts_left == undefined) && answer != '')
+                        if ((attempts_left <= 0 || attempts_left === undefined) && answer !== '')
                             updateModal(
                                 "Thất bại",
                                 `<span style="color: white"> Rất tiếc, bạn đã trả lời sai </span> <br> Cảm ơn bạn đã tham gia trò chơi`,
@@ -105,5 +119,12 @@ class teamLetter {
         ;
 
     }
+
+    checkOpenInputText = () => {
+        $("#special-letter-btn").click(function () {
+            fetch('/')
+        })
+    }
 }
+
 export default new teamLetter;

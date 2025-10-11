@@ -50,7 +50,13 @@ class GuardController{
 //    [GET] /guard/question
     public function question()
     {
+        $guardId = $_SESSION['person_id'];
+        $realGuardId = $guardId;
         $location = $this->locationService->getLocationDataByPersonId();
+        if ($guardId == "GUA0000007") {
+//            $guardId = "GUA0000006";
+            $location = $this->locationService->getLocationDataByGuardId($guardId);
+        }
         $location_id = $location->getLocationId();
         $teams = $this->teamArrivalService->getTeamArrivalAndTeamByLocationId($location_id);
         $team_arrival_progress = $this->teamArrivalService->getTeamArrivalsByLocationIdAndIsOpenNextLocation($location_id);
@@ -67,6 +73,15 @@ class GuardController{
         $content = 'guard-rule';
         $footer = 'rule';
         include "./views/layout/index.php";
+    }
+
+    public function open_special_letter_input()
+    {
+        $affected_rows = $this->personService->openSpecialLetterInput();
+        echo json_encode(array(
+            'status' => true,
+            'data' => $affected_rows > 0
+        ));
     }
 }
 

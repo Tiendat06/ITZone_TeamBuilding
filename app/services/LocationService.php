@@ -98,7 +98,11 @@ class LocationService{
         $person_id = $_SESSION['person_id'];
         return $this->locationRepository->getLocationDataByPersonId($person_id);
     }
-    
+
+    public function getLocationDataByGuardId($person_id): Location {
+        return $this->locationRepository->getLocationDataByPersonId($person_id);
+    }
+
 }
 
 ?>

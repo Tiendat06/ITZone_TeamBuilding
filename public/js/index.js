@@ -75,6 +75,10 @@ window.checkAllTeamsDone = () => {
     guard.checkAllTeamsDone();
 }
 
+window.fetchOpenSpecialLetterInput = () => {
+    guard.fetchOpenSpecialLetterInput();
+}
+
 // support
 window.getLocationFetch = () => {
     support.getLocationFetch();
