@@ -45,7 +45,7 @@
                         $team_member_name = $row['team_member_name'];
                         $team_member_phone = $row['team_member_phone'];
                         $is_done = $row['is_done'];
-                        if($is_done != null){
+                        if($is_done == 0 || $is_done == 1){
                 ?>
                         <div class="mentor-member d-flex flex-wrap">
                             <div class="mentor-member__logo">
